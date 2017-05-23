@@ -1,0 +1,39 @@
+.heading {
+  background-color: #F8F8F8;
+  border-bottom: 2px solid #DDDDDD;
+  /*margin-top: -16px;*/
+  margin-bottom: 24px;
+}
+
+.heading .nav-tabs {
+  border-bottom: 0;
+  margin-left: -12px;
+}
+
+.heading-title {
+  /*padding-bottom: 16px;*/
+  margin: 40px 0 24px;
+  color: #6C9B41;
+}
+
+.box {
+  background-color: white;
+  padding: 24px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+}
+
+.page-header {
+  color: #18879B;
+  font-size: 24px;
+  margin: 40px 0 16px;
+  padding-bottom: 8px;
+}
+
+
+.fa-right {
+  margin-right: 5px;
+}
+
+.fa-left {
+  margin-left: 5px;
+}

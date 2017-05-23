@@ -1,0 +1,66 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#recruit-header" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ site.baseurl }}/">
+        <img class="navbar-brand-images"src="{{ site.baseurl }}/assets/images/logo/sprout.svg" alt="">
+        <span class="navbar-brand-text">RECRUIT</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="recruit-header">
+      <ul class="nav navbar-nav navbar-right nav-lg">
+        <li class="{% if
+          page.url contains '/recruit/jobs/' or
+          page.url contains '/recruit/jobs/profile/job-information.html' or
+          page.url contains '/recruit/jobs/profile/forms-and-letters.html' or
+          page.url contains '/recruit/jobs/profile/process-and-team.html' or
+          page.url contains '/recruit/jobs/profile/applicants.html'
+          %} active {% endif %}">
+          <a href="{{ site.baseurl }}/recruit/jobs/">Jobs</a>
+        </li>
+        <li class="{% if page.url == '/recruit/applicants/' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/recruit/applicants/">Applicants</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Setup<span class="fa fa-angle-down fa-lg fa-left"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Company</a></li>
+            <li><a href="#">Templates</a></li>
+            <li><a href="#">Incentives</a></li>
+            <li><a href="#">Skills</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reports<span class="fa fa-angle-down fa-lg fa-left"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Recruitment Funnel</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Activity Logs</a></li>
+          </ul>
+        </li>
+        <li><a class="btn btn-link"><span class="fa fa-search"></span></a></li>
+        <li><a class="btn btn-link"><span class="fa fa-bell-o"></span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jasper Lepardo<span class="fa fa-angle-down fa-lg fa-left"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">My Profile</a></li>
+            <li><a href="#">My Referrals</a></li>
+            <li><a href="#">My Applicants</a></li>
+            <li><a href="#">My Team</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Tutorial</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Change Password</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

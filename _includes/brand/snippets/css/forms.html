@@ -1,0 +1,575 @@
+<div class="well well-lg js-html-inspector">
+  <div class="form-group has-icon left has-reset">
+    <label class="form-label" for="sample-text-input">Sample Text Input</label>
+    <input type="text" class="form-control" id="sample-text-input" aria-describedby="sample-text-input-help" placeholder="Enter Sample Text" required="">
+    <button type="reset" name="button" class="form-reset">&times;</button>
+    <span class="form-icon"><i class="glyphicon glyphicon-envelope"></i></span>
+    <small id="sample-text-input-help" class="form-text text-muted">Example help text that remains unchanged.</small>
+  </div>
+</div>
+
+<form>
+
+  <div class="row">
+
+    <div class="col-md-6 js-html-inspector">
+      <div class="form-group">
+        <label class="form-label" for="text-input">Text Input</label>
+        <input type="text" class="form-control" id="text-input" aria-describedby="text-input-help" placeholder="Enter text here">
+        <small id="text-input-help" class="form-text text-muted">Example help text that remains unchanged.</small>
+      </div>
+    </div>
+
+    <div class="col-md-6 js-html-inspector">
+      <div class="form-group">
+        <label class="form-label" for="password-input">Password Input</label>
+        <input type="password" class="form-control" id="password-input" aria-describedby="password-input-help" placeholder="Enter password here">
+        <small id="password-input-help" class="form-text text-muted">Example help text that remains unchanged.</small>
+      </div>
+    </div>
+
+    <div class="col-md-6 js-html-inspector">
+      <div class="form-group">
+        <label class="form-label" for="select-option">Select option</label>
+        <select class="form-control selectpicker" id="select-option" aria-describedby="select-option-help">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <small id="select-option-help" class="form-text text-muted">Example help text that remains unchanged.</small>
+      </div>
+    </div>
+
+    <div class="col-md-6 js-html-inspector">
+      <div class="form-group">
+        <label class="form-label" for="multiple-select-option">Multiple Select Option</label>
+        <select class="form-control selectpicker" id="multiple-select-option" aria-describedby="multiple-select-option-help" multiple="">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+        <small id="multiple-select-option-help" class="form-text text-muted">Example help text that remains unchanged.</small>
+      </div>
+    </div>
+
+    <div class="col-md-12 js-html-inspector">
+      <div class="form-group">
+        <label class="form-label" for="textarea">Textarea</label>
+        <textarea class="form-control" id="textarea" aria-describedby="textarea-help"></textarea>
+        <small id="textarea-help" class="form-text text-muted">Example help text that remains unchanged.</small>
+      </div>
+    </div>
+
+    <div class="col-md-6 js-html-inspector">
+      <div class="form-group has-reset">
+        <label class="form-label" for="datepicker">Datepicker</label>
+        <input type="text" class="form-control datepicker" id="datepicker" aria-describedby="datepicker-help" required="">
+        <small id="datepicker-help" class="form-text text-muted">Example help text that remains unchanged.</small>
+        <button type="reset" name="button" class="form-reset">&times;</button>
+      </div>
+    </div>
+
+    <div class="col-md-6 js-html-inspector">
+      <div class="form-group">
+        <label class="form-label" for="daterange">Date Range</label>
+        <div class="input-daterange input-group" id="daterange">
+          <input type="text" class="form-control" name="start" />
+          <span class="input-group-addon">to</span>
+          <input type="text" class="form-control" name="end" />
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="lead">Form Sizes</p>
+
+  <div class="row">
+
+    <div class="col-md-6 js-html-inspector">
+      <div class="form-group form-group-lg has-icon left has-reset">
+        <label class="form-label" for="sample-text-input-lg">Sample Text Input Large</label>
+        <input type="text" class="form-control" id="sample-text-input-lg" aria-describedby="sample-text-input-lg-help" placeholder="Enter Sample Text" required="">
+        <button type="reset" name="button" class="form-reset">&times;</button>
+        <span class="form-icon"><i class="glyphicon glyphicon-envelope"></i></span>
+        <small id="sample-text-input-lg-help" class="form-text text-muted">Example help text that remains unchanged.</small>
+      </div>
+    </div>
+
+    <div class="col-md-6 js-html-inspector">
+      <div class="form-group form-group-sm has-icon right has-reset">
+        <label class="form-label" for="sample-text-input-sm">Sample Text Input Small</label>
+        <input type="text" class="form-control" id="sample-text-input-sm" aria-describedby="sample-text-input-sm-help" placeholder="Enter Sample Text" required="">
+        <button type="reset" name="button" class="form-reset">&times;</button>
+        <span class="form-icon"><i class="glyphicon glyphicon-envelope"></i></span>
+        <small id="sample-text-input-sm-help" class="form-text text-muted">Example help text that remains unchanged.</small>
+      </div>
+    </div>
+
+  </div>
+
+</form>
+
+
+<!-- Inline form -->
+<p class="lead">Form Inline</p>
+<div class="js-html-inspector">
+  <form class="form-inline">
+    <div class="form-group has-icon left has-reset">
+      <input class="form-control" id="example-text-input-inline" type="text" placeholder="Search" required="">
+      <button type="reset" name="button" class="form-reset">&times;</button>
+      <span class="form-icon"><i class="glyphicon glyphicon-search"></i></span>
+    </div>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</div>
+
+<!-- Horizontal form -->
+<p class="lead">Form Horizontal</p>
+<div class="js-html-inspector">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label class="col-sm-3 form-label" for="example-text-input-horizontal">
+        Default Input
+      </label>
+      <div class="col-sm-9">
+        <input class="form-control" id="example-text-input-horizontal" type="text" placeholder="Enter text here">
+      </div>
+    </div>
+      <!-- Static control -->
+      <div class="form-group">
+        <label class="col-sm-3 form-label">Static control</label>
+        <div class="col-sm-9">
+          <p class="form-control-static">p.form-control-static</p>
+        </div>
+      </div>
+
+      <!-- Disabled input -->
+      <div class="form-group">
+        <label class="col-sm-3 form-label">Disabled input</label>
+        <div class="col-sm-9">
+          <input class="form-control" type="text" placeholder="Enter text here" disabled>
+        </div>
+      </div>
+
+  </form>
+
+</div>
+
+<!-- Validation states -->
+<p class="lead">Validation States</p>
+
+<div class="js-html-inspector">
+
+  <form class="form-horizontal">
+    <!-- Success state -->
+    <div class="form-group has-success">
+      <label class="col-sm-3 form-label" for="input-success">Input with success</label>
+      <div class="col-sm-9">
+        <input class="form-control" id="input-success" type="text" placeholder="Enter text here">
+        <small class="form-text text-muted">Example help text that remains unchanged.</small>
+      </div>
+    </div>
+    <div class="form-group has-success has-feedback">
+      <label class="col-sm-3 form-label" for="input-success-2">Input with success</label>
+      <div class="col-sm-9">
+        <input class="form-control" id="input-success-2" type="text" placeholder="Enter text here">
+        <span class="glyphicon glyphicon-ok form-feedback"></span>
+      </div>
+    </div>
+
+    <!-- Warning state -->
+    <div class="form-group has-warning">
+      <label class="col-sm-3 form-label" for="input-warning">Input with feedback</label>
+      <div class="col-sm-9">
+        <input class="form-control" id="input-warning" type="text" placeholder="Enter text here">
+        <small class="form-text text-muted">Example help text that remains unchanged.</small>
+      </div>
+    </div>
+    <div class="form-group has-warning has-feedback">
+      <label class="col-sm-3 form-label" for="input-warning-2">Input with feedback</label>
+      <div class="col-sm-9">
+        <input class="form-control" id="input-warning-2" type="text" placeholder="Enter text here">
+        <span class="glyphicon glyphicon-warning-sign form-feedback"></span>
+      </div>
+    </div>
+
+    <!-- Error state -->
+    <div class="form-group has-error">
+      <label class="col-sm-3 form-label" for="input-error">Input with error</label>
+      <div class="col-sm-9">
+        <input class="form-control" id="input-error" type="text" placeholder="Enter text here">
+        <small class="form-text text-muted">Example help text that remains unchanged.</small>
+      </div>
+    </div>
+
+
+    <div class="form-group has-error has-feedback">
+      <label class="col-sm-3 form-label" for="input-error-2">Input with feedback</label>
+      <div class="col-sm-9">
+        <input class="form-control" id="input-error-2" type="text" placeholder="Enter text here">
+        <span class="glyphicon glyphicon-remove form-feedback"></span>
+      </div>
+    </div>
+
+  </form>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="form-group form-group-lg">
+  <label class="col-sm-3 form-label" for="example-text-input-horizontal-lg">
+    Large Input
+  </label>
+  <div class="col-sm-9">
+    <input class="form-control" id="example-text-input-horizontal-lg" type="text" placeholder="Enter text here">
+  </div>
+</div>
+<div class="form-group form-group-sm">
+  <label class="col-sm-3 form-label" for="example-text-input-horizontal-sm">
+    Small Input
+  </label>
+  <div class="col-sm-9">
+    <input class="form-control" id="example-text-input-horizontal-sm" type="text" placeholder="Enter text here">
+  </div>
+</div> -->
+
+  <!-- Checkbox -->
+  <!-- <div class="form-group">
+    <label class="col-sm-3 form-label">Checkboxes</label>
+    <div class="col-sm-9">
+      <div class="form-checkbox">
+        <label>
+          <input type="checkbox">
+          .checkbox input[type="checkbox"]
+        </label>
+      </div>
+    </div>
+  </div> -->
+  <!-- Inline checkboxes -->
+  <!-- <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+      <label class="form-checkbox-inline">
+        <input type="checkbox" value="option1">
+        label.checkbox-inline Checkbox #1
+      </label>
+      <label class="form-checkbox-inline">
+        <input type="checkbox" value="option2">
+        Checkbox #2
+      </label>
+      <label class="checkbox-inline disabled">
+        <input type="checkbox" value="option3" disabled>
+        Disabled checkbox #3
+      </label>
+    </div>
+  </div> -->
+
+  <!-- Radio -->
+  <!-- <div class="form-group">
+    <label class="col-sm-3 form-label">Radios</label>
+    <div class="col-sm-9">
+      <div class="form-radio">
+        <label>
+          <input name="optionsRadios" type="radio" value="option1" checked>
+          .radio input[type="radio"]
+        </label>
+      </div>
+    </div>
+  </div> -->
+  <!-- Inline radios -->
+  <!-- <div class="form-group">
+    <div class="col-sm-offset-3 col-sm-9">
+      <label class="form-radio-inline">
+        <input name="optionsRadios2" type="radio" value="option1" checked>
+        label.radio-inline Radio #1
+      </label>
+      <label class="form-radio-inline">
+        <input name="optionsRadios2" type="radio" value="option2">
+        Radio #2
+      </label>
+      <label class="radio-inline disabled">
+        <input name="optionsRadios2" type="radio" value="option3" disabled>
+        Disabled radio #3
+      </label>
+    </div>
+  </div> -->
+
+  <!-- Select -->
+  <!-- <div class="form-group">
+    <label class="col-sm-3 form-label">select.form-control</label>
+    <div class="col-sm-4">
+      <select class="form-control">
+        <option>option</option>
+        <option>Option #2</option>
+        <option>Option #3</option>
+      </select>
+      <br>
+      <select class="form-control" disabled>
+        <option>select[disabled]</option>
+      </select>
+    </div>
+    <div class="col-sm-5">
+      <br class="visible-xs">
+      <p><strong>select.form-control[multiple]</strong></p>
+      <select class="form-control" multiple>
+        <option>Option #1</option>
+        <option selected>option[selected]</option>
+        <option>Option #3</option>
+        <option selected>Selected option #4</option>
+        <option>Option #5</option>
+      </select>
+    </div>
+  </div> -->
+
+
+
+
+
+<!--
+    <p class="lead">Textual Inputs</p>
+
+    <div class="form-group">
+      <label for="example-text-input" class="col-2 col-form-label">Text</label>
+      <div class="col-10">
+        <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="example-search-input" class="col-2 col-form-label">Search</label>
+      <div class="col-10">
+        <input class="form-control" type="search" value="How do I shoot web" id="example-search-input">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="example-email-input" class="col-2 col-form-label">Email</label>
+      <div class="col-10">
+        <input class="form-control" type="email" value="bootstrap@example.com" id="example-email-input">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="example-url-input" class="col-2 col-form-label">URL</label>
+      <div class="col-10">
+        <input class="form-control" type="url" value="https://getbootstrap.com" id="example-url-input">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="example-tel-input" class="col-2 col-form-label">Telephone</label>
+      <div class="col-10">
+        <input class="form-control" type="tel" value="1-(555)-555-5555" id="example-tel-input">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="example-password-input" class="col-2 col-form-label">Password</label>
+      <div class="col-10">
+        <input class="form-control" type="password" value="hunter2" id="example-password-input">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="example-number-input" class="col-2 col-form-label">Number</label>
+      <div class="col-10">
+        <input class="form-control" type="number" value="42" id="example-number-input">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="example-datetime-local-input" class="col-2 col-form-label">Date and time</label>
+      <div class="col-10">
+        <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label for="example-date-input" class="col-2 col-form-label">Date</label>
+      <div class="col-10">
+        <input class="" type="range" min="0" max="100" step="10" />
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="example-date-input" class="col-2 col-form-label">Date</label>
+      <div class="col-10">
+        <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="example-month-input" class="col-2 col-form-label">Month</label>
+      <div class="col-10">
+        <input class="form-control" type="month" value="2011-08" id="example-month-input">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="example-week-input" class="col-2 col-form-label">Week</label>
+      <div class="col-10">
+        <input class="form-control" type="week" value="2011-W33" id="example-week-input">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="example-time-input" class="col-2 col-form-label">Time</label>
+      <div class="col-10">
+        <input class="form-control" type="time" value="13:45:00" id="example-time-input">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="example-color-input" class="col-2 col-form-label">Color</label>
+      <div class="col-10">
+        <input class="form-control" type="color" value="#563d7c" id="example-color-input">
+      </div>
+    </div> -->
+    <!-- Textarea -->
+    <!-- <div class="form-group">
+      <label for="" class="form-label">Text Area</label>
+      <textarea class="form-control" rows="3">Enter text here</textarea>
+      <small class="form-text text-muted">Example help text that remains unchanged.</small>
+    </div> -->
+
+    <!-- File input -->
+    <!-- <div class="form-group">
+      <label for="example-file-input">input[type="file"]</label>
+      <input id="example-file-input" type="file">
+      <small class="form-text text-muted">
+        .form-text text-muted: Wrap labels and controls in
+        <code>.form-group</code>
+        for optimum spacing.
+      </small>
+    </div> -->
+
+    <!-- Button -->
+    <!-- <div class="form-group">
+      <button class="btn btn-default" type="submit">Submit</button>
+    </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+      <div class="form-group">
+        <label class="form-label" for="exampleInputFile">File input</label>
+        <input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+        <small id="fileHelp" class="form-text text-muted text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+      </div>
+
+
+
+
+
+
+
+      <div class="form-checkbox">
+        <label>
+          <input type="checkbox" value="">
+          Option one is this and that&mdash;be sure to include why it's great
+        </label>
+      </div>
+      <div class="form-checkbox disabled">
+        <label>
+          <input type="checkbox" value="" disabled>
+          Option two is disabled
+        </label>
+      </div>
+
+      <div class="form-radio">
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+          Option one is this and that&mdash;be sure to include why it's great
+        </label>
+      </div>
+      <div class="form-radio">
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+          Option two can be something else and selecting it will deselect option one
+        </label>
+      </div>
+      <div class="form-radio disabled">
+        <label>
+          <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+          Option three is disabled
+        </label>
+      </div>
+
+
+
+
+
+
+
+
+
+      <label class="form-checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+      </label>
+      <label class="form-checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+      </label>
+      <label class="form-checkbox-inline">
+        <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+      </label>
+
+      <label class="form-radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+      </label>
+      <label class="form-radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+      </label>
+      <label class="form-radio-inline">
+        <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+      </label>
+
+
+
+
+
+
+ -->
+
+
+
+    <!-- Inputs with different sizes -->

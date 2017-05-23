@@ -1,0 +1,11 @@
+
+// Navs sizes
+@mixin nav-size($padding-vertical, $padding-horizontal, $font-size) {
+  > li {
+    > a {
+      padding: $padding-vertical $padding-horizontal;
+      font-size: $font-size;
+
+    }
+  }
+}

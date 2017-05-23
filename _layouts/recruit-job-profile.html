@@ -1,0 +1,34 @@
+---
+layout: recruit
+---
+
+<div class="row">
+
+  <div class="col-lg-2 col-md-3">
+    {% include recruit/components/nav/side-nav/job-profile.html %}
+  </div>
+
+  <div class="col-lg-9 col-md-8" style="background-color: white; padding: 30px; box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);">
+    {{ content }}
+  </div>
+  <div class="col-md-1">
+
+    <a href="#" class="btn btn-link btn-block"><span class="fa fa-search"></span></a>
+
+    <a href="#" class="btn btn-link btn-block"><span class="fa fa-angle-up fa-lg"></span></a>
+
+    <a href="#" class="btn btn-link btn-block"><span class="fa fa-angle-down fa-lg"></span></a>
+
+    <div class="dropdown">
+      <a href="#" class="btn btn-link btn-block dropdown-toggle" data-toggle="dropdown"><span class="fa fa-bars"></span></a>
+      <ul class="dropdown-menu dropdown-menu-right">
+        <li><a href="#">Information</a></li>
+        <li><a href="#">Responsibilities</a></li>
+        <li><a href="#">Requirements</a></li>
+        <li><a href="#">Skills</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,20 @@
+<div id="main-navigation">
+  <div class="container">
+    <nav>
+      <ul class="nav nav-pills">
+        <li class="{% if page.url == '/' %} active {% endif %}">
+            <a href="{{ site.baseurl }}/">Home</a>
+        </li>
+        <li class="{% if page.url == '/css.html' %} active {% endif %}">
+            <a href="{{ site.baseurl }}/css.html">CSS</a>
+        </li>
+        <li class="{% if page.url == '/component.html' %} active {% endif %}">
+            <a href="{{ site.baseurl }}/component.html">Component</a>
+        </li>
+        <li class="{% if page.url == '/javascript.html' %} active {% endif %}">
+            <a href="{{ site.baseurl }}/javascript.html">JavaScript</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

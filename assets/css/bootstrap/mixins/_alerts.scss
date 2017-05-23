@@ -1,0 +1,29 @@
+// Alerts
+
+// @mixin alert-variant($background, $border, $text-color) {
+@mixin alert-variant($background) {
+  background-color: $background;
+  // border-color: darken(adjust-hue($base-color, -10), 7.5%);
+  // color: $text-color;
+  color: white;
+
+  // hr {
+  //   border-top-color: darken($base-color, 5%);
+  // }
+  .alert-link {
+    // color: darken($text-color, 10%);
+    color: white;
+  }
+}
+
+
+
+
+
+
+@mixin alert-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  line-height: $line-height;
+  border-radius: $border-radius;
+}

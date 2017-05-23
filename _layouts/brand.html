@@ -1,0 +1,22 @@
+---
+layout: global
+---
+
+<header>
+  {% include brand/components/nav/main-navigation.html %}
+</header>
+
+<!-- <div class="heading">
+  <div class="container">
+    <span class="pull-right hide" style="margin-top: 40px; {% if page.url == '/recruit/jobs/' %} display: block !important; {% endif %}">
+      <a href="#" class="btn btn-primary btn-pills"><span class="fa fa-plus fa-right"></span>Add Job</a>
+    </span>
+    <h1 class="heading-title">{{ page.heading-title }}</h1>
+  </div>
+</div> -->
+
+<main class="container">
+  {{ content }}
+</main>
+
+{% include brand/components/modal.html %}

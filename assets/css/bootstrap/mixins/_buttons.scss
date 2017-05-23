@@ -1,0 +1,117 @@
+// Button variants
+//
+// Easily pump out default styles, as well as :hover, :focus, :active,
+// and disabled options for all buttons
+
+@mixin button-variant($color, $background, $border) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  &:focus,
+  &.focus {
+    color: $color;
+    background-color: darken($background, 10%);
+        border-color: darken($border, 10%);
+  }
+  &:hover {
+    color: $color;
+    background-color: darken($background, 15%);
+        border-color: darken($border, 15%);
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    &,
+    &:hover,
+    &:focus,
+    &.focus {
+      color: $color;
+      background-color: darken($background, 10%);
+          border-color: darken($border, 10%);
+    }
+
+    // &:hover,
+    // &:focus,
+    // &.focus {
+    // &:hover,
+    // &:focus,
+    // &.focus {
+    //   color: $color;
+    //   background-color: darken($background, 17%);
+    //       border-color: darken($border, 25%);
+    // }
+  }
+  &:active,
+  &.active,
+  .open > &.dropdown-toggle {
+    background-image: none;
+  }
+  // &.disabled,
+  // &[disabled],
+  // fieldset[disabled] & {
+  //   &:hover,
+  //   &:focus,
+  //   &.focus {
+  //     background-color: $background;
+  //         border-color: $border;
+  //   }
+  // }
+
+  .badge {
+    color: $background;
+    background-color: $color;
+  }
+}
+
+@mixin button-outline-variant($color, $color-hover: #fff) {
+  color: $color;
+  background-image: none;
+  background-color: transparent;
+  border-color: $color;
+
+  &:hover {
+    color: $color-hover;
+    background-color: darken($color, 15%);
+    border-color: darken($color, 15%);
+  }
+
+  &:focus,
+  &.focus {
+    // box-shadow: 0 0 0 2px rgba($color, .5);
+  }
+
+  // &.disabled,
+  // &:disabled {
+  //   color: $color;
+  //   background-color: transparent;
+  // }
+
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    // color: $color-hover;
+    // background-color: $color;
+    // border-color: $color;
+    color: $color-hover;
+    background-color: darken($color, 10%);
+        border-color: darken($color, 10%);
+  }
+}
+
+
+// Button sizes
+@mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius, $height) {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  // line-height: $line-height;
+  border-radius: $border-radius;
+  height: $height;
+}
+
+@mixin button-pills($padding-vertical, $padding-horizontal, $border-radius) {
+  &.btn-pills {
+    padding: $padding-vertical $padding-horizontal;
+    border-radius: $border-radius;
+  }
+}

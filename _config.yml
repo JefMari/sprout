@@ -1,0 +1,7 @@
+markdown: kramdown
+baseurl: /sprout
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+port: 3881

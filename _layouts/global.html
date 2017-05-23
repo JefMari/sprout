@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+
+    {% include meta-data.html %}
+    <title>{{ page.meta-title }} | Sprout Solutions</title>
+    {% include favicon.html %}
+
+    <!-- Open Sans Font -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/b78101ceb0.js"></script>
+
+    {% include stylesheet.html %}
+
+  </head>
+
+  <body data-spy="scroll" data-target="#sidebar" style="margin-top: 70px;">
+
+    {{ content }}
+
+    <footer>
+      {% include footer.html %}
+    </footer>
+
+    {% include javascript.html %}
+
+  </body>
+
+</html>

@@ -1,0 +1,12 @@
+// Panels
+
+@mixin modal-variant($border, $color) {
+
+  .modal-content {
+    border-top-color: $border;
+    > .modal-header .modal-title {
+      color: $color;
+    }
+  }
+
+}
