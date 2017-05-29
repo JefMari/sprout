@@ -1,20 +1,18 @@
 // Alerts
 
-// @mixin alert-variant($background, $border, $text-color) {
-@mixin alert-variant($background) {
+@mixin alert-variant($background, $border, $body-color: #FFFFFF) {
   background-color: $background;
-  // border-color: darken(adjust-hue($base-color, -10), 7.5%);
-  // color: $text-color;
-  color: white;
+  border-color: $border;
+  color: $body-color;
 
-  // hr {
-  //   border-top-color: darken($base-color, 5%);
-  // }
+  hr {
+    border-top-color: darken($border, 5%);
+  }
   .alert-link {
-    // color: darken($text-color, 10%);
-    color: white;
+    color: darken($body-color, 10%);
   }
 }
+
 
 
 

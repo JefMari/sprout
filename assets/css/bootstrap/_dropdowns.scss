@@ -60,7 +60,7 @@
 
   // Dividers (basically an hr) within the dropdown
   .divider {
-    @include nav-divider($dropdown-divider-bg);
+    @include nav-divider;
   }
 
   // Links within the dropdown menu
@@ -115,7 +115,7 @@
     text-decoration: none;
     background-color: transparent;
     background-image: none; // Remove CSS gradient
-    @include reset-filter;
+    // @include reset-filter;
     cursor: $default-disabled-cursor;
   }
 }

@@ -1,19 +1,19 @@
 .media {
   // Proper spacing between instances of .media
-  margin-top: 15px;
+  // margin-top: 15px;
 
   &:first-child {
-    margin-top: 0;
+    // margin-top: 0;
   }
 }
 
 .media,
-.media-body {
+.media-content {
   zoom: 1;
   overflow: hidden;
 }
 
-.media-body {
+.media-content {
   width: 10000px;
 }
 
@@ -28,35 +28,48 @@
 
 .media-right,
 .media > .pull-right {
-  padding-left: 10px;
+  padding-left: 16px;
 }
 
 .media-left,
 .media > .pull-left {
-  padding-right: 10px;
+  padding-right: 16px;
 }
 
 .media-left,
 .media-right,
-.media-body {
+.media-content {
   display: table-cell;
   vertical-align: top;
 }
 
-.media-middle {
+.media-content-middle {
   vertical-align: middle;
 }
 
-.media-bottom {
+.media-content-bottom {
   vertical-align: bottom;
 }
 
 // Reset margins on headings for tighter default spacing
 .media-heading {
-  margin-top: 0;
-  margin-bottom: 5px;
+  // margin-top: 0;
+  // margin-bottom: 5px;
+}
+.media-body {
+  // margin-top: 16px;
+  // margin-bottom: 16px;
 }
 
+.media-title {
+  margin: 0;
+}
+
+.media-subtitle {
+  margin: 0;
+  margin-top: 4px;
+  color: #747C83;
+}
 // Media list variation
 //
 // Undo default ul/ol styles

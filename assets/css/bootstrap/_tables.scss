@@ -62,10 +62,12 @@ th {
 
     font-size: $font-size-sm;
     text-transform: uppercase;
+    white-space: nowrap;
     line-height: $line-height-sm;
+    color: $text-muted;
 
-    padding-top: $table-cell-padding-sm-y;
-    padding-bottom: $table-cell-padding-sm-y;
+    // padding-top: $table-cell-padding-sm-y;
+    // padding-bottom: $table-cell-padding-sm-y;
 
   }
   // Remove top border from thead by default
@@ -101,7 +103,7 @@ th {
   }
 }
 
-.table-sm {
+.table-lg {
   td {
     padding-top: $table-cell-padding-lg-y;
     padding-bottom: $table-cell-padding-lg-y;

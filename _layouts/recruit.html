@@ -8,10 +8,10 @@ layout: global
 
 <div class="heading">
   <div class="container">
-    <span class="pull-right hide" style="margin-top: 40px; {% if page.url == '/recruit/jobs/' %} display: block !important; {% endif %}">
-      <a href="#" class="btn btn-primary btn-pills"><span class="fa fa-plus fa-right"></span>Add Job</a>
+    <span class="pull-right hide" style="{% if page.url == '/recruit/jobs/' %} display: block !important; {% endif %}">
+      <button class="btn btn-warning btn-pills" data-toggle="modal" data-target="#modal-template"><span class="fa fa-plus fa-right"></span>Add New Job</button>
     </span>
-    <h1 class="heading-title">{{ page.heading-title }}</h1>
+    <h1 class="heading-title display-3">{{ page.heading-title }}</h1>
   </div>
 </div>
 

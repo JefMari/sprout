@@ -61,32 +61,31 @@
 //
 
 .alert-default {
-  @include alert-variant($alert-default);
-  color: $default-color;
+  @include alert-variant($alert-default, $alert-default, $default-color);
 }
 
 .alert-primary {
-  @include alert-variant($alert-primary);
+  @include alert-variant($alert-primary, $alert-primary);
 }
 
 .alert-secondary {
-  @include alert-variant($alert-secondary);
+  @include alert-variant($alert-secondary, $alert-secondary);
 }
 
 .alert-success {
-  @include alert-variant($alert-success);
+  @include alert-variant($alert-success, $alert-success);
 }
 
 .alert-info {
-  @include alert-variant($alert-info);
+  @include alert-variant($alert-info, $alert-info);
 }
 
 .alert-warning {
-  @include alert-variant($alert-warning);
+  @include alert-variant($alert-warning, $alert-warning);
 }
 
 .alert-danger {
-  @include alert-variant($alert-danger);
+  @include alert-variant($alert-danger, $alert-danger);
 }
 
 

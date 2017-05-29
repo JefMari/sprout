@@ -4,102 +4,205 @@
 // and disabled options for all buttons
 
 @mixin button-variant($color, $background, $border) {
+  $hover-background: darken($background, 15%);
+  $hover-border: darken($border, 15%);
+
+  $active-background: darken($background, 10%);
+  $active-border: darken($border, 10%);
+
+  $focus-background: darken($background, 10%);
+  $focus-border: darken($border, 10%);
+
   color: $color;
   background-color: $background;
   border-color: $border;
 
+  // Hover and focus styles are shared
+  @include hover {
+    color: $color;
+    background-color: $hover-background;
+    border-color: $hover-border;
+  }
+
   &:focus,
   &.focus {
     color: $color;
-    background-color: darken($background, 10%);
-        border-color: darken($border, 10%);
+    background-color: $focus-background;
+    border-color: $focus-border;
   }
-  &:hover {
+
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
     color: $color;
-    background-color: darken($background, 15%);
-        border-color: darken($border, 15%);
-  }
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    &,
-    &:hover,
-    &:focus,
-    &.focus {
-      color: $color;
-      background-color: darken($background, 10%);
-          border-color: darken($border, 10%);
-    }
-
-    // &:hover,
-    // &:focus,
-    // &.focus {
-    // &:hover,
-    // &:focus,
-    // &.focus {
-    //   color: $color;
-    //   background-color: darken($background, 17%);
-    //       border-color: darken($border, 25%);
-    // }
-  }
-  &:active,
-  &.active,
-  .open > &.dropdown-toggle {
-    background-image: none;
-  }
-  // &.disabled,
-  // &[disabled],
-  // fieldset[disabled] & {
-  //   &:hover,
-  //   &:focus,
-  //   &.focus {
-  //     background-color: $background;
-  //         border-color: $border;
-  //   }
-  // }
-
-  .badge {
-    color: $background;
-    background-color: $color;
+    background-color: $active-background;
+    background-image: none; // Remove the gradient for the pressed/active state
+    border-color: $active-border;
   }
 }
 
-@mixin button-outline-variant($color, $color-hover: #fff) {
+@mixin button-outline-variant($color, $color-hover: #FFFFFF) {
+  $hover-background: darken($color, 15%);
+  $hover-border: darken($color, 15%);
+
+  $active-background: darken($color, 10%);
+  $active-border: darken($color, 10%);
+
+  $focus-background: darken($color, 10%);
+  $focus-border: darken($color, 10%);
+
   color: $color;
   background-image: none;
   background-color: transparent;
   border-color: $color;
 
-  &:hover {
+  @include hover {
     color: $color-hover;
-    background-color: darken($color, 15%);
-    border-color: darken($color, 15%);
+    background-color: $hover-background;
+    border-color: $hover-border;
   }
 
   &:focus,
   &.focus {
-    // box-shadow: 0 0 0 2px rgba($color, .5);
+    color: $color-hover;
+    background-color: $focus-background;
+    border-color: $focus-border;
   }
-
-  // &.disabled,
-  // &:disabled {
-  //   color: $color;
-  //   background-color: transparent;
-  // }
 
   &:active,
   &.active,
   .show > &.dropdown-toggle {
-    // color: $color-hover;
-    // background-color: $color;
-    // border-color: $color;
     color: $color-hover;
-    background-color: darken($color, 10%);
-        border-color: darken($color, 10%);
+    background-color: $active-background;
+    border-color: $active-border;
   }
 }
 
+// Button sizes
+// @mixin button-size($padding-y, $padding-x, $font-size, $border-radius) {
+//   padding: $padding-y $padding-x;
+//   font-size: $font-size;
+//   @include border-radius($border-radius);
+// }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// @mixin button-variant($color, $background, $border) {
+//   color: $color;
+//   background-color: $background;
+//   border-color: $border;
+//
+//   &:focus,
+//   &.focus {
+//     color: $color;
+//     background-color: darken($background, 10%);
+//         border-color: darken($border, 10%);
+//   }
+//   &:hover {
+//     color: $color;
+//     background-color: darken($background, 15%);
+//         border-color: darken($border, 15%);
+//   }
+//   &:active,
+//   &.active,
+//   .open > &.dropdown-toggle {
+//     &,
+//     &:hover,
+//     &:focus,
+//     &.focus {
+//       color: $color;
+//       background-color: darken($background, 10%);
+//           border-color: darken($border, 10%);
+//     }
+//
+//     // &:hover,
+//     // &:focus,
+//     // &.focus {
+//     // &:hover,
+//     // &:focus,
+//     // &.focus {
+//     //   color: $color;
+//     //   background-color: darken($background, 17%);
+//     //       border-color: darken($border, 25%);
+//     // }
+//   }
+//   &:active,
+//   &.active,
+//   .open > &.dropdown-toggle {
+//     background-image: none;
+//   }
+//   // &.disabled,
+//   // &[disabled],
+//   // fieldset[disabled] & {
+//   //   &:hover,
+//   //   &:focus,
+//   //   &.focus {
+//   //     background-color: $background;
+//   //         border-color: $border;
+//   //   }
+//   // }
+//
+//   .badge {
+//     color: $background;
+//     background-color: $color;
+//   }
+// }
+//
+// @mixin button-outline-variant($color, $color-hover: #fff) {
+//   color: $color;
+//   background-image: none;
+//   background-color: transparent;
+//   border-color: $color;
+//
+//   &:hover {
+//     color: $color-hover;
+//     background-color: darken($color, 15%);
+//     border-color: darken($color, 15%);
+//   }
+//
+//   &:focus,
+//   &.focus {
+//     // box-shadow: 0 0 0 2px rgba($color, .5);
+//   }
+//
+//   // &.disabled,
+//   // &:disabled {
+//   //   color: $color;
+//   //   background-color: transparent;
+//   // }
+//
+//   &:active,
+//   &.active,
+//   .show > &.dropdown-toggle {
+//     // color: $color-hover;
+//     // background-color: $color;
+//     // border-color: $color;
+//     color: $color-hover;
+//     background-color: darken($color, 10%);
+//         border-color: darken($color, 10%);
+//   }
+// }
+//
+//
 // Button sizes
 @mixin button-size($padding-vertical, $padding-horizontal, $font-size, $border-radius, $height) {
   padding: $padding-vertical $padding-horizontal;

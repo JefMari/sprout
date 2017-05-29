@@ -3,6 +3,7 @@
   border-bottom: 2px solid #DDDDDD;
   /*margin-top: -16px;*/
   margin-bottom: 24px;
+  padding: 40px 0 24px;
 }
 
 .heading .nav-tabs {
@@ -12,7 +13,7 @@
 
 .heading-title {
   /*padding-bottom: 16px;*/
-  margin: 40px 0 24px;
+  margin: 0;
   color: #6C9B41;
 }
 
@@ -36,4 +37,49 @@
 
 .fa-left {
   margin-left: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+#job-request-table td {
+  vertical-align: middle;
+}
+
+#job-request-table th:nth-last-child(-n+5),
+#job-request-table td:nth-last-child(-n+5) {
+  text-align: center;
+}
+
+#job-request-table th:nth-last-child(-n+5),
+#job-request-table td:nth-last-child(-n+5) {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+#hiring-process .media-object {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 26px;
+  padding: 5px;
 }

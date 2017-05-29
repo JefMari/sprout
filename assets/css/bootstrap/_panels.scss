@@ -24,6 +24,7 @@
   padding: $panel-heading-padding;
   // border-bottom: 1px solid transparent;
   // @include border-top-radius($panel-border-radius);
+  @include clearfix;
 
   > .dropdown {
     margin-top: -(($padding-base-y)/2)+1;
@@ -59,6 +60,7 @@
   background-color: $panel-footer-bg;
   border-top: 1px solid $panel-inner-border-color;
   // @include border-bottom-radius(($panel-border-radius - 1));
+  @include clearfix;
 }
 
 

@@ -21,7 +21,7 @@
     // Account for jankitude on images
     > img,
     > a > img {
-      @include img-responsive;
+      @include img-fluid;
       line-height: 1;
     }
 
@@ -96,7 +96,8 @@
   left: 0;
   bottom: 0;
   width: $carousel-control-width;
-  @include opacity($carousel-control-opacity);
+  // @include opacity($carousel-control-opacity);
+  opacity: $carousel-control-opacity;
   font-size: $carousel-control-font-size;
   color: $carousel-control-color;
   text-align: center;
@@ -107,12 +108,12 @@
 
   // Set gradients for backgrounds
   &.left {
-    @include gradient-horizontal($start-color: rgba(0,0,0,.5), $end-color: rgba(0,0,0,.0001));
+    // @include gradient-horizontal($start-color: rgba(0,0,0,.5), $end-color: rgba(0,0,0,.0001));
   }
   &.right {
     left: auto;
     right: 0;
-    @include gradient-horizontal($start-color: rgba(0,0,0,.0001), $end-color: rgba(0,0,0,.5));
+    // @include gradient-horizontal($start-color: rgba(0,0,0,.0001), $end-color: rgba(0,0,0,.5));
   }
 
   // Hover/focus state
@@ -121,7 +122,8 @@
     outline: 0;
     color: $carousel-control-color;
     text-decoration: none;
-    @include opacity(.9);
+    // @include opacity(.9);
+    opacity: .9;
   }
 
   // Toggles

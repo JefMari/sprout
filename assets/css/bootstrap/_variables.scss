@@ -1,7 +1,91 @@
 $bootstrap-sass-asset-helper: false !default;
-//
 // Variables
-// --------------------------------------------------
+//
+// Copy settings from this file into the provided `_custom.scss` to override
+// the Bootstrap defaults without modifying key, versioned files.
+
+
+// Table of Contents
+//
+// Colors
+// Options
+// Spacing
+// Body
+// Links
+// Grid breakpoints
+// Grid containers
+// Grid columns
+// Fonts
+// Components
+// Tables
+// Buttons
+// Forms
+// Dropdowns
+// Z-index master list
+// Navbar
+// Navs
+// Pagination
+// Jumbotron
+// Form states and alerts
+// Cards
+// Tooltips
+// Popovers
+// Badges
+// Modals
+// Alerts
+// Progress bars
+// List group
+// Image thumbnails
+// Figures
+// Breadcrumbs
+// Carousel
+// Close
+// Code
+
+@mixin _assert-ascending($map, $map-name) {
+  $prev-key: null;
+  $prev-num: null;
+  @each $key, $num in $map {
+    @if $prev-num == null {
+      // Do nothing
+    } @else if not comparable($prev-num, $num) {
+      @warn "Potentially invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} whose unit makes it incomparable to #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    } @else if $prev-num >= $num {
+      @warn "Invalid value for #{$map-name}: This map must be in ascending order, but key '#{$key}' has value #{$num} which isn't greater than #{$prev-num}, the value of the previous key '#{$prev-key}' !";
+    }
+    $prev-key: $key;
+    $prev-num: $num;
+  }
+}
+
+// Replace `$search` with `$replace` in `$string`
+// @author Hugo Giraudel
+// @param {String} $string - Initial string
+// @param {String} $search - Substring to replace
+// @param {String} $replace ('') - New value
+// @return {String} - Updated string
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+
+@mixin _assert-starts-at-zero($map) {
+  $values: map-values($map);
+  $first-value: nth($values, 1);
+  @if $first-value != 0 {
+    @warn "First breakpoint in `$grid-breakpoints` must start at 0, but starts at #{$first-value}.";
+  }
+}
+
+
+// General variable structure
+//
+// Variable format should follow the `$component-modifier-state-property` order.
 
 
 //
@@ -20,8 +104,8 @@ $gray-lighter:                              lighten($gray-base, 93.5%) !default;
 
 $sprout-grey:                               #F8F8F8 !default;
 $sprout-grey-100:                           #F0F0F0 !default; // For body backgroud color
-$sprout-grey-200:                           #BBBBBB !default; // For dropdown and input border
-// $sprout-grey-300:                           #AAAAAA !default; // For disabled color
+$sprout-grey-300:                           #DDDDDD !default; // For befault border color
+$sprout-grey-300:                           #BBBBBB !default; // For dropdown and input border
 $sprout-grey-400:                           #747C83 !default; // For text muted
 $sprout-grey-500:                           #666666 !default;
 $sprout-grey-700:                           #555555 !default; // Used for links
@@ -31,7 +115,7 @@ $sprout-grey-900:                           #222222 !default; // For heading tex
 //== Primary Colors
 //
 
-$brand-default:                             $sprout-grey-100 !default;
+$brand-default:                             #EEEEEE !default;
 
 $brand-primary:                             #18879B !default;
 $brand-secondary:                           #4D4131 !default;
@@ -43,6 +127,8 @@ $brand-danger:                              #D95347 !default;
 
 $brand-light:                               #F8F8F8 !default;
 $brand-dark:                                #454546 !default;
+
+$brand-inverse:                                #454546 !default;
 
 //== Base Colors
 //
@@ -74,49 +160,193 @@ $danger-light:                              lighten($danger-base, 37.5%) !defaul
 
 $dark-light:                                lighten($dark-base, 45%) !default;
 
+
+
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-rounded:            true !default;
+$enable-shadows:            false !default;
+$enable-gradients:          false !default;
+$enable-transitions:        true !default;
+$enable-hover-media-query:  false !default;
+$enable-grid-classes:       true !default;
+$enable-print-styles:       true !default;
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer:   1rem !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: ($spacer-x * .25),
+    y: ($spacer-y * .25)
+  ),
+  2: (
+    x: ($spacer-x * .5),
+    y: ($spacer-y * .5)
+  ),
+  3: (
+    x: $spacer-x,
+    y: $spacer-y
+  ),
+  4: (
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 1.5)
+  ),
+  5: (
+    x: ($spacer-x * 3),
+    y: ($spacer-y * 3)
+  )
+) !default;
+$border-width: 1px !default;
+
+// This variable affects the `.h-*` and `.w-*` classes.
+$sizes: (
+  25: 25%,
+  50: 50%,
+  75: 75%,
+  100: 100%
+) !default;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 //== Scaffolding
 //
 
-$body-bg:                                   $brand-default !default;
+$body-bg:                                   $sprout-grey-100 !default;
 $body-color:                                $brand-dark !default;
 
 //== Default Colors
 //
 
 $default-bg:                                $sprout-grey !default;
-$default-border-color:                      #DDDDDD !default;
+$default-border-color:                      $sprout-grey-300 !default;
 $default-color:                             $body-color !default;
 
 $default-hover-bg:                          $sprout-grey-100 !default;
-$default-hover-border-color:                      $default-border-color !default;
+$default-hover-border-color:                $default-border-color !default;
 $default-hover-color:                       $default-color !default;
 
 $default-active-bg:                         $brand-primary !default;
-$default-active-border-color:                     $brand-primary !default;
+$default-active-border-color:               $brand-primary !default;
 $default-active-color:                      #FFFFFF !default;
 
 $default-disabled-bg:                       #EAEAEA !default;
-$default-disabled-border-color:                   #CCCCCC !default;
+$default-disabled-border-color:             #CCCCCC !default;
 $default-disabled-color:                    #AAAAAA !default;
 
-
 $default-link-bg:                           transparent !default;
-$default-link-border-color:                       $default-border-color !default;
+$default-link-border-color:                 $default-border-color !default;
 $default-link-color:                        $default-color !default;
 
 $default-link-hover-bg:                     transparent !default;
-$default-link-hover-border-color:                 $brand-info !default;
+$default-link-hover-border-color:           $brand-info !default;
 $default-link-hover-color:                  $brand-info !default;
 
 $default-link-active-bg:                    transparent !default;
-$default-link-active-border-color:                $brand-primary !default;
+$default-link-active-border-color:          $brand-primary !default;
 $default-link-active-color:                 $brand-primary !default;
 
 $default-link-disabled-bg:                  transparent !default;
-$default-link-disabled-border-color:              $default-disabled-border-color !default;
+$default-link-disabled-border-color:        $default-disabled-border-color !default;
 $default-link-disabled-color:               $default-disabled-color !default;
 
 $default-disabled-cursor:                   not-allowed !default;
+
+
+
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include _assert-starts-at-zero($grid-breakpoints);
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+) !default;
+@include _assert-ascending($container-max-widths, "$container-max-widths");
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+// $grid-columns:               12 !default;
+$grid-gutter-width-base:     30px !default;
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-base,
+  sm: $grid-gutter-width-base,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: $grid-gutter-width-base
+) !default;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //== Link Colors
 //
@@ -143,15 +373,30 @@ $font-family-base:                          $font-family-sans-serif !default;
 // $font-size-sm:                              ceil(($font-size-base * 0.85)) !default; // ~12px
 
 $font-size-base:                            14px !default;
-$font-size-lg:                              floor(($font-size-base * 1.15)) !default; // ~16px
+$font-size-lg:                              ceil(($font-size-base * 1.1)) !default; // ~16px
 $font-size-sm:                              ceil(($font-size-base * 0.85)) !default; // ~12px
 
-$font-size-h1:                              floor(($font-size-base * 2.3)) !default; // ~36px
-$font-size-h2:                              floor(($font-size-base * 2.15)) !default; // ~30px
-$font-size-h3:                              ceil(($font-size-base * 1.7)) !default; // ~24px
-$font-size-h4:                              ceil(($font-size-base * 1.25)) !default; // ~18px
-$font-size-h5:                              $font-size-base !default;
-$font-size-h6:                              ceil(($font-size-base * 0.85)) !default; // ~12px
+// $font-size-h1:                              floor(($font-size-base * 2.3)) !default; // ~36px
+// $font-size-h2:                              floor(($font-size-base * 2.15)) !default; // ~30px
+// $font-size-h3:                              ceil(($font-size-base * 1.7)) !default; // ~24px
+// $font-size-h4:                              ceil(($font-size-base * 1.25)) !default; // ~18px
+// $font-size-h5:                              $font-size-base !default;
+// $font-size-h6:                              ceil(($font-size-base * 0.85)) !default; // ~12px
+
+
+$font-weight-normal: normal !default;
+$font-weight-bold: bold !default;
+
+
+
+
+$font-size-h1:                              ceil(($font-size-base * 4)) !default; // ~56px
+$font-size-h2:                              ceil(($font-size-base * 3.1)) !default; // ~45px
+$font-size-h3:                              ceil(($font-size-base * 2.25)) !default; // ~34px
+$font-size-h4:                              ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h5:                              ceil(($font-size-base * 1.4)) !default; // ~21px
+$font-size-h6:                              ceil(($font-size-base * 1.1)) !default; // ~16px
+
 
 $line-height-base:                          1.428571429 !default; // 20/14
 $line-height-lg:                            1.3333333 !default; // extra decimals for Win 8.1 Chrome
@@ -163,6 +408,7 @@ $headings-font-family:                      inherit !default;
 $headings-font-weight:                      500 !default;
 $headings-line-height:                      1.125 !default;
 $headings-color:                            $sprout-grey-900 !default;
+$headings-sm-color:                         $sprout-grey-400 !default;
 
 //== Iconography
 //
@@ -189,13 +435,18 @@ $padding-lg-x:                              24px !default;
 $padding-sm-y:                              4px !default;
 $padding-sm-x:                              8px !default;
 
+$padding-xs-y:                              0 !default;
+$padding-xs-x:                              4px !default;
+
 $padding-base:                              $padding-base-y $padding-base-x !default;
 $padding-lg:                                $padding-lg-y $padding-lg-x !default;
 $padding-sm:                                $padding-sm-y $padding-sm-x !default;
 
+$border-radius:                        2px !default;
 $border-radius-base:                        2px !default;
 $border-radius-lg:                          2px !default;
 $border-radius-sm:                          2px !default;
+$border-radius-xs:                          2px !default;
 
 $transition-base:                           all .2s ease-in-out !default;
 $transition-fade:                           opacity .15s linear !default;
@@ -207,13 +458,28 @@ $caret-width-lg:                            5px !default;
 //== Z-index master list
 //
 
-$zindex-navbar:                             1000 !default;
-$zindex-dropdown:                           1000 !default;
-$zindex-popover:                            1060 !default;
-$zindex-tooltip:                            1070 !default;
+
+
+$zindex-dropdown-backdrop:  990 !default;
+$zindex-navbar:             1000 !default;
+$zindex-dropdown:           1000 !default;
+$zindex-fixed:              1030 !default;
+$zindex-sticky:             1030 !default;
+$zindex-modal-backdrop:     1040 !default;
+$zindex-modal:              1050 !default;
+$zindex-popover:            1060 !default;
+$zindex-tooltip:            1070 !default;
+
+
+
+
+// $zindex-navbar:                             1000 !default;
+// $zindex-dropdown:                           1000 !default;
+// $zindex-popover:                            1060 !default;
+// $zindex-tooltip:                            1070 !default;
 $zindex-navbar-fixed:                       1030 !default;
 $zindex-modal-background:                   1040 !default;
-$zindex-modal:                              1050 !default;
+// $zindex-modal:                              1050 !default;
 
 //== Media queries breakpoints
 //
@@ -252,9 +518,9 @@ $screen-md-max:                             ($screen-lg-min - 1) !default;
 $screen-lg-max:                             ($screen-xl-min - 1) !default;
 $screen-xl-max:                             ($screen-hd-min - 1) !default;
 
-//== Grid system
+// //== Grid system
+// //
 //
-
 $grid-columns:                              12 !default;
 $grid-gutter-width:                         24px !default;
 $grid-float-breakpoint:                     $screen-md-min !default;
@@ -269,11 +535,11 @@ $container-sm:                              $container-mobile !default;
 $container-desktop:                         (946px + $grid-gutter-width) !default;
 $container-md:                              $container-desktop !default;
 
-$container-lg-desktop:                      (1146px + $grid-gutter-width) !default;
+$container-lg-desktop:                      (1176px + $grid-gutter-width) !default;
 $container-lg:                              $container-lg-desktop !default;
-
-$container-xl-desktop:                      (1176px + $grid-gutter-width) !default;
-$container-xl:                              $container-xl-desktop !default;
+//
+// $container-xl-desktop:                      (1176px + $grid-gutter-width) !default;
+// $container-xl:                              $container-xl-desktop !default;
 
 $container-hd-desktop:                      (1416px + $grid-gutter-width) !default;
 $container-hd:                              $container-hd-desktop !default;
@@ -323,11 +589,12 @@ $btn-font-weight:                           normal !default;
 $btn-height-base:                           36px !default;
 $btn-height-lg:                             44px !default;
 $btn-height-sm:                             28px !default;
+$btn-height-xs:                             20px !default;
 
 $btn-transition:                            all .2s ease-in-out !default;
 
-$btn-default-bg:                            $default-bg !default;
-$btn-default-border-color:                        $default-border-color !default;
+$btn-default-bg:                            $brand-default !default;
+$btn-default-border-color:                  $default-border-color !default;
 $btn-default-color:                         $default-color !default;
 
 $btn-primary-bg:                            $brand-primary !default;
@@ -359,10 +626,12 @@ $btn-link-disabled-color:                   $default-disabled-color !default;
 $btn-border-radius-base:                    $border-radius-base !default;
 $btn-border-radius-lg:                      $border-radius-lg !default;
 $btn-border-radius-sm:                      $border-radius-sm !default;
+$btn-border-radius-xs:                      $border-radius-xs !default;
 
 $btn-pills-border-radius-base:              $btn-height-base/2 !default;
 $btn-pills-border-radius-lg:                $btn-height-lg/2 !default;
 $btn-pills-border-radius-sm:                $btn-height-sm/2 !default;
+$btn-pills-border-radius-xs:                $btn-height-xs/2 !default;
 
 //== Forms
 //
@@ -370,7 +639,7 @@ $btn-pills-border-radius-sm:                $btn-height-sm/2 !default;
 $input-bg:                                  transparent !default;
 
 $input-color:                               $default-color !default;
-$input-border-color:                              $sprout-grey-200 !default;
+$input-border-color:                              $sprout-grey-300 !default;
 
 $input-placeholder-color:                   $sprout-grey-400 !default;
 
@@ -409,7 +678,7 @@ $dropdown-padding:                          $padding-base-y 0 !default;
 
 $dropdown-header-color:                     $sprout-grey-400 !default;
 
-$dropdown-border-color:                           $sprout-grey-200 !default;
+$dropdown-border-color:                           $sprout-grey-300 !default;
 $dropdown-divider-bg:                       $default-border-color !default;
 
 $dropdown-link-color:                       $default-link-color !default;
@@ -461,7 +730,7 @@ $navbar-default-brand-hover-color:          $navbar-default-brand-color !default
 
 // Navbar toggle
 $navbar-default-toggle-bg:                  #888 !default;
-$navbar-default-toggle-border-color:              #ddd !default;
+$navbar-default-toggle-border-color:        #ddd !default;
 $navbar-default-toggle-hover-bg:            #ddd !default;
 
 
@@ -470,10 +739,10 @@ $navbar-default-toggle-hover-bg:            #ddd !default;
 $navbar-inverse-bg:                         $brand-secondary !default;
 // $navbar-inverse-border-color:               darken($navbar-inverse-bg, 10%) !default;
 $navbar-inverse-border-color:               $brand-secondary !default;
-$navbar-inverse-color:                      $sprout-grey-200 !default;
+$navbar-inverse-color:                      $sprout-grey-300 !default;
 
 // Inverted navbar links
-$navbar-inverse-link-color:                 $sprout-grey-200 !default;
+$navbar-inverse-link-color:                 $sprout-grey-300 !default;
 
 $navbar-inverse-link-hover-bg:              transparent !default;
 $navbar-inverse-link-hover-color:           #FFFFFF !default;
@@ -778,32 +1047,32 @@ $panel-body-padding:          $padding-lg-x !default;
 // $panel-border-radius:         $border-radius-base !default;
 
 //** Border color for elements within panels
-$panel-inner-border-color:          $default-border-color !default;
-$panel-footer-bg:             $default-bg !default;
+$panel-inner-border-color:    $default-border-color !default;
+$panel-footer-bg:             #f0f0f0 !default;
 $panel-footer-padding:        $panel-heading-padding !default;
 
 $panel-default-color:         $default-color !default;
-$panel-default-border-color:        $brand-default !default;
+$panel-default-border-color:  $brand-default !default;
 $panel-default-heading-bg:    $brand-default !default;
 
 $panel-primary-color:         #FFFFFF !default;
-$panel-primary-border-color:        $brand-primary !default;
+$panel-primary-border-color:  $brand-primary !default;
 $panel-primary-heading-bg:    $brand-primary !default;
 
 $panel-success-color:         #FFFFFF !default;
-$panel-success-border-color:        $state-success-border-color !default;
+$panel-success-border-color:  $state-success-border-color !default;
 $panel-success-heading-bg:    $state-success-bg !default;
 
 $panel-info-color:            #FFFFFF !default;
-$panel-info-border-color:           $state-info-border-color !default;
+$panel-info-border-color:     $state-info-border-color !default;
 $panel-info-heading-bg:       $state-info-bg !default;
 
 $panel-warning-color:         #FFFFFF !default;
-$panel-warning-border-color:        $state-warning-border-color !default;
+$panel-warning-border-color:  $state-warning-border-color !default;
 $panel-warning-heading-bg:    $state-warning-bg !default;
 
 $panel-danger-color:          #FFFFFF !default;
-$panel-danger-border-color:         $state-danger-border-color !default;
+$panel-danger-border-color:   $state-danger-border-color !default;
 $panel-danger-heading-bg:     $state-danger-bg !default;
 
 
@@ -813,7 +1082,7 @@ $panel-danger-heading-bg:     $state-danger-bg !default;
 
 $thumbnail-padding:           4px !default;
 $thumbnail-bg:                $body-bg !default;
-$thumbnail-border-color:            $default-border-color !default;
+$thumbnail-border-color:      $default-border-color !default;
 $thumbnail-border-radius:     $border-radius-base !default;
 $thumbnail-caption-color:     $body-color !default;
 $thumbnail-caption-padding:   9px !default;
@@ -824,7 +1093,7 @@ $thumbnail-caption-padding:   9px !default;
 //##
 
 $well-bg:                     $default-bg !default;
-$well-border-color:                 $default-border-color !default;
+$well-border-color:           $default-border-color !default;
 
 
 //== Badges
@@ -905,7 +1174,6 @@ $text-muted:                  $sprout-grey-400 !default;
 
 $abbr-border-color:                 $gray-light !default;
 
-$headings-sm-color:           $gray-light !default;
 
 $blockquote-sm-color:         $gray-light !default;
 $blockquote-font-size:        ($font-size-base * 1.25) !default;
