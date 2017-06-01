@@ -51,10 +51,10 @@
 .modal-content {
   position: relative;
   background-color: $modal-content-bg;
-  // border: 1px solid $modal-content-fallback-border-color; //old browsers fallback (ie8 etc)
+  // border: 1px solid $modal-content-fallback-border; //old browsers fallback (ie8 etc)
   // border: 1px solid $modal-content-border;
   // border-radius: $border-radius-lg;
-  border-top: 3px solid $modal-content-border-color;
+  border-top: 3px solid $modal-content-border;
   @include box-shadow(0 3px 9px rgba(0,0,0,.5));
   background-clip: padding-box;
   // Remove focus outline from opened modal
@@ -68,7 +68,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  z-index: $zindex-modal-background;
+  z-index: $zindex-modal-backdrop;
   background-color: $modal-backdrop-bg;
   // Fade for backdrop
   // &.fade { @include opacity(0); }
@@ -113,7 +113,7 @@
 .modal-footer {
   padding: $modal-footer-padding;
   text-align: right; // right align buttons
-  border-top: 1px solid $modal-footer-border-color;
+  border-top: 1px solid $modal-footer-border;
   background-color: $modal-footer-bg;
   @include clearfix; // clear it in case folks use .pull-* classes on buttons
 
@@ -163,17 +163,17 @@
 
 // Contextual variations
 .modal-primary {
-  @include modal-variant($modal-primary-content-border-color, $modal-primary-title-color);
+  @include modal-variant($modal-primary-content-border, $modal-primary-title-color);
 }
 .modal-success {
-  @include modal-variant($modal-success-content-border-color, $modal-success-title-color);
+  @include modal-variant($modal-success-content-border, $modal-success-title-color);
 }
 .modal-info {
-  @include modal-variant($modal-info-content-border-color, $modal-info-title-color);
+  @include modal-variant($modal-info-content-border, $modal-info-title-color);
 }
 .modal-warning {
-  @include modal-variant($modal-warning-content-border-color, $modal-warning-title-color);
+  @include modal-variant($modal-warning-content-border, $modal-warning-title-color);
 }
 .modal-danger {
-  @include modal-variant($modal-danger-content-border-color, $modal-danger-title-color);
+  @include modal-variant($modal-danger-content-border, $modal-danger-title-color);
 }

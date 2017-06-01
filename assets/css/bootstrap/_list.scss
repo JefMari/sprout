@@ -6,7 +6,7 @@
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: ($line-height-computed / 2);
+  margin-bottom: ($spacer-y / 2);
   ul,
   ol {
     margin-bottom: 0;
@@ -17,7 +17,7 @@ ol {
 
 .list {
   padding-left: 0;
-  margin-bottom: $line-height-computed;
+  margin-bottom: $spacer-y;
   list-style: none;
   > li {
     padding: 5px 0;
@@ -43,7 +43,7 @@ ol {
     // @include paragraph;
     &.divider {
       display: inline-block;
-      width: $line-height-computed;
+      width: $spacer-x;
       text-align: center;
 
       &::before {
@@ -102,7 +102,7 @@ ol {
         margin: 10px 0 50px;
         padding: 10px 0;
         padding-left: 20px;
-        border-left: 5px solid $default-border-color;
+        border-left: 5px solid $default-border;
         > .list {
           &:first-child {
             margin-top: -5px;
@@ -292,7 +292,7 @@ ol {
       @include transition($btn-transition);
 
       &:hover {
-        border-color: $brand-success;
+        border: $brand-success;
         // background-color: $default-hover-bg;
         // color: $default-hover-color;
       }
@@ -392,7 +392,7 @@ ol {
 
 .list-bordered {
   > li {
-    border-bottom: 1px solid $default-border-color;
+    border-bottom: 1px solid $default-border;
     &:last-child {
       border-bottom: none;
     }
@@ -437,7 +437,7 @@ ol {
       > li {
         padding: 0 15px;
         border: 0;
-        border-right: 1px solid $default-border-color;
+        border-right: 1px solid $default-border;
         &:last-child {
           border: 0;
         }

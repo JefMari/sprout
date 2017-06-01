@@ -5,7 +5,7 @@
 
 // Base class
 .panel {
-  margin-bottom: $line-height-computed;
+  margin-bottom: $panel-margin-bottom;
   background-color: $panel-bg;
   // border: solid transparent;
   // border-width: 3px 0 0;
@@ -58,7 +58,7 @@
 .panel-footer {
   padding: $panel-footer-padding;
   background-color: $panel-footer-bg;
-  border-top: 1px solid $panel-inner-border-color;
+  border-top: 1px solid $panel-inner-border;
   // @include border-bottom-radius(($panel-border-radius - 1));
   @include clearfix;
 }
@@ -176,7 +176,7 @@
   > .panel-body + .table-responsive,
   > .table + .panel-body,
   > .table-responsive + .panel-body {
-    border-top: 1px solid $table-border-color;
+    border-top: 1px solid $table-border;
   }
   > .table > tbody:first-child > tr:first-child th,
   > .table > tbody:first-child > tr:first-child td {
@@ -231,7 +231,7 @@
 // the help of our collapse JavaScript plugin.
 
 .panel-group {
-  margin-bottom: $line-height-computed;
+  margin-bottom: $panel-margin-bottom;
 
   // Tighten up margin so it's only between panels
   .panel {
@@ -248,14 +248,14 @@
 
     + .panel-collapse > .panel-body,
     + .panel-collapse > .list-group {
-      border-top: 1px solid $panel-inner-border-color;
+      border-top: 1px solid $panel-inner-border;
     }
   }
 
   .panel-footer {
     border-top: 0;
     + .panel-collapse .panel-body {
-      border-bottom: 1px solid $panel-inner-border-color;
+      border-bottom: 1px solid $panel-inner-border;
     }
   }
 }
@@ -263,20 +263,21 @@
 
 // Contextual variations
 .panel-default {
-  @include panel-variant($panel-default-border-color, $panel-default-color, $panel-default-heading-bg, $panel-default-border-color);
+  @include panel-variant($panel-default-border, $panel-default-color, $panel-default-heading-bg, $panel-default-border);
+  @include box-shadow(none);
 }
 .panel-primary {
-  @include panel-variant($panel-primary-border-color, $panel-primary-color, $panel-primary-heading-bg, $panel-primary-border-color);
+  @include panel-variant($panel-primary-border, $panel-primary-color, $panel-primary-heading-bg, $panel-primary-border);
 }
 .panel-success {
-  @include panel-variant($panel-success-border-color, $panel-success-color, $panel-success-heading-bg, $panel-success-border-color);
+  @include panel-variant($panel-success-border, $panel-success-color, $panel-success-heading-bg, $panel-success-border);
 }
 .panel-info {
-  @include panel-variant($panel-info-border-color, $panel-info-color, $panel-info-heading-bg, $panel-info-border-color);
+  @include panel-variant($panel-info-border, $panel-info-color, $panel-info-heading-bg, $panel-info-border);
 }
 .panel-warning {
-  @include panel-variant($panel-warning-border-color, $panel-warning-color, $panel-warning-heading-bg, $panel-warning-border-color);
+  @include panel-variant($panel-warning-border, $panel-warning-color, $panel-warning-heading-bg, $panel-warning-border);
 }
 .panel-danger {
-  @include panel-variant($panel-danger-border-color, $panel-danger-color, $panel-danger-heading-bg, $panel-danger-border-color);
+  @include panel-variant($panel-danger-border, $panel-danger-color, $panel-danger-heading-bg, $panel-danger-border);
 }

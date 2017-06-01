@@ -140,7 +140,7 @@
   position: fixed;
   right: 0;
   left: 0;
-  z-index: $zindex-navbar-fixed;
+  z-index: $zindex-fixed;
 
   // Undo the rounded corners
   @media (min-width: $grid-float-breakpoint) {
@@ -274,7 +274,7 @@
         padding: 5px 15px 5px 25px;
       }
       > li > a {
-        line-height: $line-height-computed;
+        line-height: $line-height-base;
         &:hover,
         &:focus {
           background-image: none;
@@ -417,7 +417,7 @@
 // Default navbar
 .navbar-default {
   background-color: $navbar-default-bg;
-  border-color: $navbar-default-border-color;
+  border-color: $navbar-default-border;
 
   .navbar-brand {
     color: $navbar-default-brand-color;
@@ -461,7 +461,7 @@
   }
 
   .navbar-toggle {
-    border-color: $navbar-default-toggle-border-color;
+    border-color: $navbar-default-toggle-border;
     &:hover,
     &:focus {
       background-color: $navbar-default-toggle-hover-bg;
@@ -473,7 +473,7 @@
 
   .navbar-collapse,
   .navbar-form {
-    // border-color: $navbar-default-border;
+    // border: $navbar-default-border;
   }
 
   // Dropdown menu items
@@ -551,7 +551,7 @@
 
 .navbar-inverse {
   background-color: $navbar-inverse-bg;
-  border-color: $navbar-inverse-border-color;
+  border-color: $navbar-inverse-border;
 
   .navbar-brand {
     color: $navbar-inverse-brand-color;
@@ -596,7 +596,7 @@
 
   // Darken the responsive nav toggle
   .navbar-toggle {
-    border-color: $navbar-inverse-toggle-border-color;
+    border-color: $navbar-inverse-toggle-border;
     &:hover,
     &:focus {
       // background-color: $navbar-inverse-toggle-hover-bg;
@@ -608,7 +608,7 @@
 
   .navbar-collapse,
   .navbar-form {
-    // border-color: darken($navbar-inverse-bg, 7%);
+    // border: darken($navbar-inverse-bg, 7%);
   }
 
   // Dropdowns
@@ -626,10 +626,10 @@
       // Dropdowns get custom display
       .open .dropdown-menu {
         > .dropdown-header {
-          // border-color: $navbar-inverse-border;
+          // border: $navbar-inverse-border;
         }
         .divider {
-          background-color: $navbar-inverse-border-color;
+          background-color: $navbar-inverse-border;
         }
         > li > a {
           color: $navbar-inverse-link-color;

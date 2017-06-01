@@ -3,7 +3,6 @@
 // --------------------------------------------------
 
 
-// Dropdown arrow/caret
 .caret {
   display: inline-block;
   width: 0;
@@ -33,20 +32,16 @@
   top: 100%;
   left: 0;
   z-index: $zindex-dropdown;
-  display: none; // none by default, but block on "open" of the menu
+  display: none;
   float: left;
   min-width: 160px;
   padding: $dropdown-padding;
-  // margin: 2px 0 0; // override default ul
-  margin: 0; // override default ul
+  margin: 0;
   list-style: none;
   font-size: $font-size-base;
-  text-align: left; // Ensures proper alignment if parent has it changed (e.g., modal footer)
+  text-align: left;
   background-color: $dropdown-bg;
-  // border: 1px solid $dropdown-fallback-border; // IE8 fallback
-  // border: 1px solid $dropdown-border;
   border-radius: $border-radius-base;
-  // @include box-shadow(0 6px 12px rgba(0,0,0,.175));
   @include box-shadow(0 2px 4px rgba(0,0,0,.25));
   background-clip: padding-box;
 
@@ -69,7 +64,7 @@
     padding: $dropdown-link-padding;
     clear: both;
     font-weight: normal;
-    line-height: $line-height-computed;
+    line-height: $line-height-base;
     color: $dropdown-link-color;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
   }

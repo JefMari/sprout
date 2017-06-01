@@ -7,10 +7,10 @@
 .thumbnail {
   display: block;
   padding: $thumbnail-padding;
-  margin-bottom: $line-height-computed;
+  margin-bottom: $thumbnail-margin-bottom;
   line-height: $line-height-base;
   background-color: $thumbnail-bg;
-  border: 1px solid $thumbnail-border-color;
+  border: 1px solid $thumbnail-border;
   border-radius: $thumbnail-border-radius;
   @include transition(border .2s ease-in-out);
 

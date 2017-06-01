@@ -22,13 +22,13 @@ th {
 .table {
   width: 100%;
   max-width: 100%;
-  margin-bottom: $line-height-computed;
+  margin-bottom: $table-margin-bottom;
 
   th,
   td {
     padding: $table-cell-padding-y $table-cell-padding-x;
     vertical-align: top;
-    border-top: 1px solid $table-border-color;
+    border-top: 1px solid $table-border;
 
     &:first-child {
       padding-left: $table-cell-padding-x * 2;
@@ -58,13 +58,13 @@ th {
   // Bottom align for column headings
   th {
     vertical-align: bottom;
-    border-bottom: 2px solid $table-border-color;
+    border-bottom: 2px solid $table-border;
 
     font-size: $font-size-sm;
     text-transform: uppercase;
     white-space: nowrap;
     line-height: $line-height-sm;
-    color: $text-muted;
+    // color: $text-muted;
 
     // padding-top: $table-cell-padding-sm-y;
     // padding-bottom: $table-cell-padding-sm-y;
@@ -84,7 +84,7 @@ th {
 
   // Account for multiple tbody instances
   tbody + tbody {
-    border-top: 2px solid $table-border-color;
+    border-top: 2px solid $table-border;
   }
 
   // Nesting
@@ -115,11 +115,11 @@ th {
 // Add borders all around the table and between all the columns.
 
 .table-bordered {
-  border: 1px solid $table-border-color;
+  border: 1px solid $table-border;
 
   th,
   td {
-    border: 1px solid $table-border-color;
+    border: 1px solid $table-border;
 
     padding-left: $table-cell-padding-x * 2;
     padding-right: $table-cell-padding-x * 2;
@@ -197,7 +197,7 @@ table {
   th {
     color: $thead-inverse-color;
     background-color: $thead-inverse-bg;
-    border-bottom: 2px solid $thead-inverse-border-color;
+    border-bottom: 2px solid $thead-inverse-border;
   }
 }
 
@@ -215,7 +215,7 @@ table {
   th,
   td,
   thead th {
-    border-color: $body-bg;
+    border: $body-bg;
   }
 
   &.table-bordered {
@@ -238,10 +238,10 @@ table {
 
   @media screen and (max-width: $screen-xs-max) {
     width: 100%;
-    margin-bottom: ($line-height-computed * 0.75);
+    margin-bottom: ($spacer-y * 0.75);
     overflow-y: hidden;
     -ms-overflow-style: -ms-autohiding-scrollbar;
-    border: 1px solid $table-border-color;
+    border: 1px solid $table-border;
 
     // Tighten up spacing
     > .table {

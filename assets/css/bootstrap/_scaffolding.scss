@@ -27,7 +27,7 @@ html {
 body {
   font-family: $font-family-base;
   font-size: $font-size-base;
-  line-height: $line-height-computed;
+  line-height: $line-height-base;
   color: $body-color;
   background-color: $body-bg;
 }
@@ -94,7 +94,7 @@ img {
   padding: $thumbnail-padding;
   line-height: $line-height-base;
   background-color: $thumbnail-bg;
-  border: 1px solid $thumbnail-border-color;
+  border: 1px solid $thumbnail-border;
   border-radius: $thumbnail-border-radius;
   @include transition(all .2s ease-in-out);
 
@@ -111,10 +111,10 @@ img {
 // Horizontal rules
 
 hr {
-  margin-top:    $line-height-computed;
-  margin-bottom: $line-height-computed;
+  margin-top:    $spacer-y;
+  margin-bottom: $spacer-y;
   border: 0;
-  border-top: 1px solid $hr-border-color;
+  border-top: 1px solid $hr-border;
 }
 
 

@@ -14,11 +14,11 @@
       position: relative;
       float: left; // Collapse white-space
       padding: $padding-base-y $padding-base-x;
-      line-height: $line-height-computed;
+      line-height: $line-height-base;
       text-decoration: none;
       color: $pagination-color;
       background-color: $pagination-bg;
-      border: 1px solid $pagination-border-color;
+      border: 1px solid $pagination-border;
       margin-left: -1px;
     }
     &:first-child {
@@ -43,7 +43,7 @@
       z-index: 2;
       color: $pagination-hover-color;
       background-color: $pagination-hover-bg;
-      border-color: $pagination-hover-border-color;
+      border-color: $pagination-hover-border;
     }
   }
 
@@ -55,7 +55,7 @@
       z-index: 3;
       color: $pagination-active-color;
       background-color: $pagination-active-bg;
-      border-color: $pagination-active-border-color;
+      border-color: $pagination-active-border;
       cursor: default;
     }
   }
@@ -69,7 +69,7 @@
     > a:focus {
       color: $pagination-disabled-color;
       background-color: $pagination-disabled-bg;
-      border-color: $pagination-disabled-border-color;
+      border-color: $pagination-disabled-border;
       cursor: $default-disabled-cursor;
     }
   }

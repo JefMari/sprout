@@ -1,68 +1,82 @@
-//
-// Badges
-// --------------------------------------------------
-
-
 // Base class
+//
+// Requires one of the contextual, color modifier classes for `color` and
+// `background-color`.
+
 .badge {
   display: inline-block;
-  min-width: 10px;
-  padding: $badge-padding;
-  font-size: $font-size-sm;
+  padding: $badge-padding-y $badge-padding-x;
+  font-size: $badge-font-size;
   font-weight: $badge-font-weight;
-  color: $badge-color;
   line-height: $badge-line-height;
-  vertical-align: middle;
-  white-space: nowrap;
+  border: $badge-border-width solid transparent;
+  color: $badge-color;
   text-align: center;
-  background-color: $badge-bg;
-  border-radius: $badge-border-radius;
+  white-space: nowrap;
+  vertical-align: baseline;
+  @include border-radius();
 
-  // Empty badges collapse automatically (not available in IE8)
+  // Empty badges collapse automatically
   &:empty {
     display: none;
   }
-
-  // Quick fix for badges in buttons
-  .btn & {
-    position: relative;
-    top: -1px;
-  }
-
-  .btn-xs &,
-  .btn-group-xs > .btn & {
-    top: 0;
-    padding: 1px 5px;
-  }
-
-  // [converter] extracted a& to a.badge
-
-  // Account for badges in navs
-  .list-group-item.active > &,
-  .nav-pills > .active > a > & {
-    color: $badge-active-color;
-    background-color: $badge-active-bg;
-  }
-
-  .list-group-item > & {
-    float: right;
-  }
-
-  .list-group-item > & + & {
-    margin-right: 5px;
-  }
-
-  .nav-pills > li > a > & {
-    margin-left: 3px;
-  }
 }
 
-// Hover state, but only for links
+// Quick fix for badges in buttons
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+// scss-lint:disable QualifyingElement
+// Add hover effects, but only for links
 a.badge {
-  &:hover,
-  &:focus {
+  @include hover-focus {
     color: $badge-link-hover-color;
     text-decoration: none;
     cursor: pointer;
   }
+}
+// scss-lint:enable QualifyingElement
+
+// Pill badges
+//
+// Make them extra rounded with a modifier to replace v3's badges.
+
+.badge-pills {
+  padding-right: $badge-pills-padding-x;
+  padding-left: $badge-pills-padding-x;
+  @include border-radius($badge-pills-border-radius);
+}
+
+// Colors
+//
+// Contextual variations (linked badges get darker on :hover).
+
+.badge-default {
+  @include badge-variant($default-bg, $default-border, $default-color);
+}
+
+.badge-primary {
+  @include badge-variant($badge-primary);
+}
+
+.badge-inverse {
+  @include badge-variant($badge-inverse);
+}
+
+.badge-success {
+  @include badge-variant($badge-success);
+}
+
+.badge-info {
+  @include badge-variant($badge-info);
+}
+
+.badge-warning {
+  @include badge-variant($badge-warning);
+}
+
+.badge-danger {
+  @include badge-variant($badge-danger);
 }

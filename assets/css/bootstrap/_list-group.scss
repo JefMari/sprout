@@ -9,7 +9,7 @@
 
 .list-group {
   // No need to set list-style: none; since .list-group-item is block level
-  margin-bottom: ($grid-gutter-width/3)*2;
+  margin-bottom: ($grid-gutter-width-base/3)*2;
   padding-left: 0; // reset padding because ul and ol
 }
 
@@ -25,7 +25,7 @@
   // Place the border on the list items and negative margin up for better styling
   margin-bottom: -1px;
   background-color: $list-group-item-bg;
-  border: 1px solid $list-group-item-border-color;
+  border: 1px solid $list-group-item-border;
 
   // Round the first and last items
   &:first-child {
@@ -90,7 +90,7 @@ button.list-group-item {
     z-index: 2; // Place active items above their siblings for proper border styling
     color: $list-group-active-color;
     background-color: $list-group-active-bg;
-    border-color: $list-group-active-border-color;
+    border: $list-group-active-border;
 
     // Force color to inherit for custom content
     .list-group-item-heading,
@@ -112,7 +112,7 @@ button.list-group-item {
 
 @include list-group-item-variant(default, $list-group-item-default, $default-color);
 @include list-group-item-variant(primary, $list-group-item-primary);
-@include list-group-item-variant(secondary, $list-group-item-secondary);
+@include list-group-item-variant(inverse, $list-group-item-inverse);
 @include list-group-item-variant(success, $list-group-item-success);
 @include list-group-item-variant(info, $list-group-item-info);
 @include list-group-item-variant(warning, $list-group-item-warning);
