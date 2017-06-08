@@ -722,7 +722,7 @@ ol {
       -o-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out; }
       .list-links > li > a:hover {
-        border: #6C9B41; }
+        border-color: #6C9B41; }
     .list-links > li.active, .list-links > li.active:hover, .list-links > li.active:focus,
     .list-links > li.active > a,
     .list-links > li.active > a:hover,
@@ -3771,7 +3771,8 @@ tbody.collapse.in {
   .btn-group-justified > .btn-group {
     float: none;
     display: table-cell;
-    width: 1%; }
+    width: 1%;
+    -webkit-appearance: none; }
   .btn-group-justified > .btn-group .btn {
     width: 100%; }
   .btn-group-justified > .btn-group .dropdown-menu {

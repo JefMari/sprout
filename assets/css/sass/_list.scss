@@ -292,7 +292,7 @@ ol {
       @include transition($btn-transition);
 
       &:hover {
-        border: $brand-success;
+        border-color: $brand-success;
         // background-color: $default-hover-bg;
         // color: $default-hover-color;
       }

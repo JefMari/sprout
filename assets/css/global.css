@@ -52,17 +52,6 @@
 
 
 
-#job-request-table td {
-  vertical-align: middle;
-}
-
-#job-request-table th:nth-last-child(-n+6),
-#job-request-table td:nth-last-child(-n+6) {
-  text-align: center;
-}
-
-
-
 
 
 
@@ -155,4 +144,13 @@
 
 #job-list-table .table-responsive {
   min-height: calc(100vh - 377px);
+}
+
+#job-list-table td {
+  vertical-align: middle;
+}
+
+#job-list-table th:nth-last-child(-n+6),
+#job-list-table td:nth-last-child(-n+6) {
+  text-align: center;
 }

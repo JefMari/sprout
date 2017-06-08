@@ -216,6 +216,7 @@
     float: none;
     display: table-cell;
     width: 1%;
+    -webkit-appearance: none; // 2
   }
   > .btn-group .btn {
     width: 100%;
