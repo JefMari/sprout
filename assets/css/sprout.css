@@ -1019,8 +1019,8 @@ pre {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 12px;
-  padding-left: 12px; }
+  padding-right: 24px;
+  padding-left: 24px; }
   @media (min-width: 768px) {
     .container {
       padding-right: 12px;
@@ -1067,8 +1067,8 @@ pre {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding-right: 12px;
-  padding-left: 12px; }
+  padding-right: 24px;
+  padding-left: 24px; }
   @media (min-width: 768px) {
     .container-fluid {
       padding-right: 12px;
@@ -1091,8 +1091,8 @@ pre {
       padding-left: 12px; } }
 
 .row {
-  margin-right: -12px;
-  margin-left: -12px; }
+  margin-right: -24px;
+  margin-left: -24px; }
   .row::after {
     display: block;
     content: "";
@@ -1130,8 +1130,8 @@ pre {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 12px;
-  padding-left: 12px;
+  padding-right: 24px;
+  padding-left: 24px;
   float: left; }
   @media (min-width: 768px) {
     .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-hd-1, .col-hd-2, .col-hd-3, .col-hd-4, .col-hd-5, .col-hd-6, .col-hd-7, .col-hd-8, .col-hd-9, .col-hd-10, .col-hd-11, .col-hd-12, .col-hd, .col-qhd-1, .col-qhd-2, .col-qhd-3, .col-qhd-4, .col-qhd-5, .col-qhd-6, .col-qhd-7, .col-qhd-8, .col-qhd-9, .col-qhd-10, .col-qhd-11, .col-qhd-12, .col-qhd, .col-shd-1, .col-shd-2, .col-shd-3, .col-shd-4, .col-shd-5, .col-shd-6, .col-shd-7, .col-shd-8, .col-shd-9, .col-shd-10, .col-shd-11, .col-shd-12, .col-shd {
@@ -3048,8 +3048,8 @@ select[multiple].input-lg,
 .form-horizontal .form-checkbox {
   min-height: 29px; }
 .form-horizontal .form-group {
-  margin-right: -12px;
-  margin-left: -12px; }
+  margin-right: -24px;
+  margin-left: -24px; }
   .form-horizontal .form-group::after {
     display: block;
     content: "";

@@ -8,10 +8,10 @@ heading-title: Jobs
 
 <div class="row box" id="job-list">
 
-  <ul class="nav nav-sm pull-left" id="job-filter">
+  <ul class="nav nav-sm pull-left" id="job-list-filter">
     <li>
-      <a href="#dropdown-filter" data-toggle="collapse"><span class="fa fa-search fa-lg fa-right"></span>SEARCH / FILTER</a>
-      <div class="collapse" id="dropdown-filter">
+      <a href="#job-list-filter-dropdown" data-toggle="collapse"><span class="fa fa-search fa-lg fa-right"></span>SEARCH / FILTER</a>
+      <div class="collapse" id="job-list-filter-dropdown">
         <h6 class="h5">Search</h6>
         <div class="form-group form-group-lg has-icon left">
           <input type="search" class="form-control" id="search-job-name" placeholder="Search Job Name">
@@ -31,14 +31,7 @@ heading-title: Jobs
         </div>
         <div class="form-group">
           <label class="form-label" for="">Department</label>
-          <select class="form-control selectpicker" name="">
-            <option value="">All Department</option>
-            <option value="">Sales and Marketing</option>
-            <option value="">Customer Support</option>
-            <option value="">Engineering</option>
-            <option value="">Technology</option>
-          </select>
-          <select class="form-control" name="">
+          <select class="form-control selectpicker" name="" multiple="" data-live-search="true">
             <option value="">All Department</option>
             <option value="">Sales and Marketing</option>
             <option value="">Customer Support</option>
@@ -84,7 +77,7 @@ heading-title: Jobs
     </li>
   </ul>
 
-  <ul class="nav nav-sm pull-right">
+  <ul class="nav nav-sm pull-right" id="job-list-sort">
     <li class="active"><a href="#">ALL JOBS</a></li>
     <li><a href="#">OPEN</a></li>
     <li><a href="#">FOR APPROVAL</a></li>
@@ -94,13 +87,13 @@ heading-title: Jobs
 
   <div class="clearfix"></div>
 
-  <div class="panel panel-default" style="box-shadow: none;">
+  <div class="panel panel-default" id="job-list-table">
     <div class="table-responsive">
-      <table class="table table-hover" id="job-request-table">
+      <table class="table table-hover">
         <thead>
           <tr>
             <th class="col-sm-4"><a href="#"><span class="fa fa-sort fa-right"></span>Job Details</a></th>
-            <th class="col-sm-2"><span class="fa fa-sort fa-right"></span>Department</th>
+            <th class="col-sm-2"><a href="#"><span class="fa fa-sort fa-right"></span>Department</th></a>
             <th class="col-sm-1"><a href="#"><span class="fa fa-sort fa-right"></span>Date Added</a></th>
             <th class="col-sm-1"><a href="#"><span class="fa fa-sort fa-right"></span>Date Needed</a></th>
             <th class="col-sm-1"><a href="#"><span class="fa fa-sort fa-right"></span>Processing</a></th>
