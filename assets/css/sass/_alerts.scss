@@ -1,0 +1,84 @@
+//
+// Base styles
+//
+
+.alert {
+  padding: $alert-padding-y $alert-padding-x;
+  margin-top: $alert-margin-top;
+  margin-bottom: $alert-margin-bottom;
+  border: $alert-border-width solid transparent;
+  @include border-radius($alert-border-radius);
+}
+
+// Headings for larger alerts
+.alert-title {
+  // Specified to prevent conflicts of changing $headings-color
+  color: inherit;
+
+  font-weight: $alert-title-font-weight;
+}
+
+// Provide class for links that match alerts
+.alert-link {
+  font-weight: $alert-link-font-weight;
+}
+
+
+// Dismissible alerts
+//
+// Expand the right padding and account for the close button's positioning.
+
+.alert-dismissible {
+  // Adjust close link position
+  .close {
+    position: relative;
+    top: -$alert-padding-y;
+    right: -$alert-padding-x;
+    padding: $alert-padding-y $alert-padding-x;
+    color: inherit;
+  }
+}
+
+
+// Alternate styles
+//
+// Generate contextual modifier classes for colorizing the alert.
+
+.alert-default {
+  @include alert-variant($default-bg, $default-border, $default-color);
+}
+
+.alert-primary {
+  @include alert-variant($alert-primary);
+}
+
+.alert-inverse {
+  @include alert-variant($alert-inverse);
+}
+
+.alert-success {
+  @include alert-variant($alert-success);
+}
+
+.alert-info {
+  @include alert-variant($alert-info);
+}
+
+.alert-warning {
+  @include alert-variant($alert-warning);
+}
+
+.alert-danger {
+  @include alert-variant($alert-danger);
+}
+
+
+// Alert Sizes
+// --------------------------------------------------
+
+.alert-lg {
+  @include alert-size($alert-padding-y-lg, $alert-padding-x-lg, $font-size-lg, $line-height-lg, $btn-border-radius-lg);
+}
+.alert-sm {
+  @include alert-size($alert-padding-y-sm, $alert-padding-x-sm, $font-size-sm, $line-height-sm, $btn-border-radius-sm);
+}

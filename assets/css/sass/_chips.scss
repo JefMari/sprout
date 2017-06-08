@@ -1,0 +1,82 @@
+// Base class
+//
+// Requires one of the contextual, color modifier classes for `color` and
+// `background-color`.
+
+.chip {
+  display: inline-block;
+  padding: $chip-padding-y $chip-padding-x;
+  font-size: $chip-font-size;
+  font-weight: $chip-font-weight;
+  line-height: $chip-line-height;
+  border: $chip-border-width solid transparent;
+  color: $chip-color;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  @include border-radius();
+
+  // Empty chips collapse automatically
+  &:empty {
+    display: none;
+  }
+}
+
+// Quick fix for chips in buttons
+.btn .chip {
+  position: relative;
+  top: -1px;
+}
+
+// scss-lint:disable QualifyingElement
+// Add hover effects, but only for links
+a.chip {
+  @include hover-focus {
+    color: $chip-link-hover-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+// scss-lint:enable QualifyingElement
+
+// Pill chips
+//
+// Make them extra rounded with a modifier to replace v3's chips.
+
+.chip-pills {
+  padding-right: $chip-pills-padding-x;
+  padding-left: $chip-pills-padding-x;
+  @include border-radius($chip-pills-border-radius);
+}
+
+// Colors
+//
+// Contextual variations (linked chips get darker on :hover).
+
+.chip-default {
+  @include chip-variant($default-bg, $default-border, $default-color);
+}
+
+.chip-primary {
+  @include chip-variant($chip-primary);
+}
+
+.chip-success {
+  @include chip-variant($chip-success);
+}
+
+.chip-info {
+  @include chip-variant($chip-info);
+}
+
+.chip-warning {
+  @include chip-variant($chip-warning);
+}
+
+.chip-danger {
+  @include chip-variant($chip-danger);
+}
+
+.chip-inverse {
+  @include chip-variant($chip-inverse);
+}

@@ -1,7 +1,7 @@
 .heading {
   background-color: #F8F8F8;
   border-bottom: 2px solid #DDDDDD;
-  /*margin-top: -16px;*/
+  margin-top: -24px;
   margin-bottom: 24px;
   padding: 40px 0 24px;
 }
@@ -22,6 +22,7 @@
   padding: 24px;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
 }
+
 
 .page-header {
   color: #18879B;
@@ -55,16 +56,10 @@
   vertical-align: middle;
 }
 
-#job-request-table th:nth-last-child(-n+5),
-#job-request-table td:nth-last-child(-n+5) {
+#job-request-table th:nth-last-child(-n+6),
+#job-request-table td:nth-last-child(-n+6) {
   text-align: center;
 }
-
-#job-request-table th:nth-last-child(-n+5),
-#job-request-table td:nth-last-child(-n+5) {
-  text-align: center;
-}
-
 
 
 
@@ -82,4 +77,88 @@
   text-align: center;
   line-height: 26px;
   padding: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-heading {
+  margin-top: -24px;
+  margin-bottom: 16px;
+  padding: 24px 0 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.page-title {
+  margin: 0;
+  color: #6C9B41;
+  font-size: 24px;
+}
+
+.page-button {
+  float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+.dropdown-form {
+  padding: 8px 24px;
+}
+
+
+#job-filter {
+  margin-bottom: 16px;
+}
+
+#job-filter .dropdown-menu {
+  min-width: 350px;
+}
+
+
+.dropdown-menu-form .dropdown-form .form-group {
+  margin-bottom: 0;
+}
+
+
+#dropdown-filter {
+  padding: 24px;
+  position: absolute;
+  width: 350px;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+
+
+
+
+#job-list {
+  min-height: calc(100vh - 219px);
+  margin-bottom: 24px;
 }

@@ -1,0 +1,11 @@
+// Horizontal dividers
+//
+// Dividers (basically an hr) within dropdowns and nav lists
+
+@mixin nav-divider($color: $default-border-color) {
+  height: 1px;
+  margin-top: $spacer-y;
+  margin-bottom: $spacer-y;
+  overflow: hidden;
+  background-color: $color;
+}

@@ -13,7 +13,6 @@
 <script type="text/javascript">
   $('.datepicker').datepicker({
     todayBtn: "linked",
-    orientation: "right",
     autoclose: true,
     todayHighlight: true,
     datesDisabled: ['05/06/2017', '05/21/2017'],
@@ -22,7 +21,6 @@
 
   $('.input-daterange').datepicker({
     todayBtn: "linked",
-    orientation: "right",
     autoclose: true,
     todayHighlight: true,
     datesDisabled: ['05/06/2017', '05/21/2017'],
@@ -35,7 +33,8 @@
 
 <script type="text/javascript">
   $('.selectpicker').selectpicker({
-    style: 'btn-default',
+    style: 'btn-dropdown',
+    tickIcon: 'fa fa-check',
     template: {
       caret: '<span class="fa fa-angle-down fa-lg"></span>'
     },

@@ -1,0 +1,209 @@
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+.btn {
+  display: inline-block;
+  font-weight: $btn-font-weight;
+  line-height: $btn-line-height;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  @include user-select(none);
+  border: $btn-border-width solid transparent;
+  @include button-size($btn-padding-y, $btn-padding-x, $font-size-base, $btn-line-height, $btn-border-radius-base, $btn-height);
+  @include transition($btn-transition);
+  // cursor: pointer;
+  // touch-action: manipulation;
+
+  @include button-pills($btn-padding-y, $btn-padding-x, $btn-pills-border-radius-base);
+
+  @include hover-focus {
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    outline: 0;
+    // box-shadow: $btn-focus-box-shadow;
+  }
+
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    cursor: $default-disabled-cursor;
+    // opacity: .65;
+    // @include box-shadow(none);
+  }
+
+  &:active,
+  &.active {
+    background-image: none;
+    // @include box-shadow($btn-focus-box-shadow, $btn-active-box-shadow);
+  }
+}
+
+// Future-proof disabling of clicks on `<a>` elements
+a.btn.disabled,
+fieldset[disabled] a.btn {
+  pointer-events: none;
+}
+
+
+  //
+  // Alternate buttons
+  //
+
+.btn-default {
+  @include button-variant($default-bg, $default-border, $default-color);
+}
+
+.btn-primary {
+  @include button-variant($btn-primary);
+}
+
+.btn-success {
+  @include button-variant($btn-success);
+}
+.btn-info {
+  @include button-variant($btn-info);
+}
+.btn-warning {
+  @include button-variant($btn-warning);
+}
+.btn-danger {
+  @include button-variant($btn-danger);
+}
+
+.btn-inverse {
+  @include button-variant($btn-inverse);
+}
+
+.btn-dropdown {
+  @include button-variant($btn-dropdown-bg, $btn-dropdown-border-color, $btn-dropdown-color);
+}
+
+
+
+
+
+
+
+
+
+
+// Remove all backgrounds
+.btn-outline-default {
+  @include button-outline-variant(#747C83);
+}
+
+.btn-outline-primary {
+  @include button-outline-variant($btn-primary);
+}
+.btn-outline-success {
+  @include button-outline-variant($btn-success);
+}
+.btn-outline-info {
+  @include button-outline-variant($btn-info);
+}
+.btn-outline-warning {
+  @include button-outline-variant($btn-warning);
+}
+.btn-outline-danger {
+  @include button-outline-variant($btn-danger);
+}
+
+.btn-outline-inverse {
+  @include button-outline-variant($btn-inverse);
+}
+
+
+
+// Link buttons
+// -------------------------
+
+// Make a button look and behave like a link
+.btn-link {
+  font-weight: $font-weight-normal;
+  color: $link-color;
+  border-radius: 0;
+
+  &,
+  &:active,
+  &.active,
+  &:disabled {
+    background-color: transparent;
+    @include box-shadow(none);
+  }
+
+  &,
+  &:focus,
+  &:active {
+    border: transparent;
+  }
+
+  @include hover {
+    border-color: transparent;
+  }
+
+  @include hover-focus {
+    color: $link-hover-color;
+    text-decoration: $link-hover-decoration;
+    background-color: transparent;
+  }
+
+  &:disabled {
+    color: $link-disabled-color;
+
+    @include hover-focus {
+      text-decoration: none;
+    }
+  }
+}
+
+// Button Sizes
+// --------------------------------------------------
+
+.btn-lg {
+  // line-height: ensure even-numbered height of button next to large input
+  @include button-size($btn-padding-y-lg, $btn-padding-x-lg, $font-size-lg, $btn-line-height-lg, $btn-border-radius-lg, $btn-height-lg);
+  @include button-pills($btn-padding-y-lg, $btn-padding-x-lg, $btn-pills-border-radius-lg);
+}
+
+.btn-sm {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($btn-padding-y-sm, $btn-padding-x-sm, $font-size-sm, $btn-line-height-sm, $btn-border-radius-sm, $btn-height-sm);
+  @include button-pills($btn-padding-y-sm, $btn-padding-x-sm, $btn-pills-border-radius-sm);
+}
+.btn-xs {
+  // line-height: ensure proper height of button next to small input
+  @include button-size($btn-padding-y-xs, $btn-padding-x-xs, $font-size-xs, $btn-line-height-xs, $btn-border-radius-xs, $btn-height-xs);
+  @include button-pills($btn-padding-y-xs, $btn-padding-x-xs, $btn-pills-border-radius-xs);
+}
+
+
+// Block button
+// --------------------------------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: $btn-block-spacing-y;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#brand-header" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ site.baseurl }}/design-system/">
+        <img class="navbar-brand-images"src="{{ site.baseurl }}/assets/images/logo/sprout.svg" alt="">
+        <span class="navbar-brand-text">Design System</span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="brand-header">
+      <ul class="nav navbar-nav navbar-right nav-lg">
+        <li class="{% if page.url == '/design-system/css.html' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/design-system/css.html">CSS</a>
+        </li>
+        <li class="{% if page.url == '/design-system/components.html'/' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/design-system/components.html">Components</a>
+        </li>
+        <li class="{% if page.url == '/design-system/javascript.html'/' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/design-system/javascript.html">Javascript</a>
+        </li>
+        <li class="{% if page.url == '/design-system/pages.html'/' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/design-system/pages.html">Pages</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

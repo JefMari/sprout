@@ -1,0 +1,15 @@
+// Badges
+
+@mixin chip-variant($background, $border: $background, $color: $white) {
+  background-color: $background;
+  border-color: $border;
+  color: $color;
+
+  &[href] {
+    @include hover-focus {
+      background-color: darken($background, 10%);
+      border-color: darken($border, 10%);
+      color: $color;
+    }
+  }
+}

@@ -1,0 +1,82 @@
+// Base class
+//
+// Requires one of the contextual, color modifier classes for `color` and
+// `background-color`.
+
+.badge {
+  display: inline-block;
+  padding: $badge-padding-y $badge-padding-x;
+  font-size: $badge-font-size;
+  font-weight: $badge-font-weight;
+  line-height: $badge-line-height;
+  border: $badge-border-width solid transparent;
+  color: $badge-color;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  @include border-radius();
+
+  // Empty badges collapse automatically
+  &:empty {
+    display: none;
+  }
+}
+
+// Quick fix for badges in buttons
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+// scss-lint:disable QualifyingElement
+// Add hover effects, but only for links
+a.badge {
+  @include hover-focus {
+    color: $badge-link-hover-color;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+// scss-lint:enable QualifyingElement
+
+// Pill badges
+//
+// Make them extra rounded with a modifier to replace v3's badges.
+
+.badge-pills {
+  padding-right: $badge-pills-padding-x;
+  padding-left: $badge-pills-padding-x;
+  @include border-radius($badge-pills-border-radius);
+}
+
+// Colors
+//
+// Contextual variations (linked badges get darker on :hover).
+
+.badge-default {
+  @include badge-variant($default-bg, $default-border, $default-color);
+}
+
+.badge-primary {
+  @include badge-variant($badge-primary);
+}
+
+.badge-success {
+  @include badge-variant($badge-success);
+}
+
+.badge-info {
+  @include badge-variant($badge-info);
+}
+
+.badge-warning {
+  @include badge-variant($badge-warning);
+}
+
+.badge-danger {
+  @include badge-variant($badge-danger);
+}
+
+.badge-inverse {
+  @include badge-variant($badge-inverse);
+}

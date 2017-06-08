@@ -6,159 +6,132 @@ meta-title: Jobs | Sprout Recruit
 heading-title: Jobs
 ---
 
-<div class="row box">
+<div class="row box" id="job-list">
 
-  <ul class="nav nav-sm pull-left" style="margin-bottom: 16px;">
-    <li><a href="#"><span class="fa fa-search fa-lg fa-right"></span>SEARCH</a></li>
-    <li class="active"><a href="#">ALL</a></li>
-    <li><a href="#">OPEN</a></li>
-    <li><a href="#">PENDING</a></li>
-    <!-- <li><a href="#">APPROVED</a></li> -->
-    <li><a href="#">CLOSED</a></li>
-  </ul>
-  <ul class="nav nav-sm pull-right">
-    <li class="dropdown">
-      <a href="#" data-toggle="dropdown">ALL JOBS <span class="fa fa-angle-down fa-lg fa-left fa-left"></span></a>
-      <ul class="dropdown-menu dropdown-menu-right">
-        <li class="active"><a href="#">All Jobs</a></li>
-        <!-- <li><a href="#">Leave</a></li>
-        <li><a href="#">Certificate of Attendance</a></li>
-        <li><a href="#">Schedule Adjustments</a></li>
-        <li><a href="#">Overtime &amp; Undertime</a></li>
-        <li><a href="#">Official Business</a></li> -->
-      </ul>
-    </li>
-    <li class="dropdown">
-      <a href="#" data-toggle="dropdown">MOST RECENT<span class="fa fa-angle-down fa-lg fa-left fa-left"></span></a>
-      <ul class="dropdown-menu dropdown-menu-right" style="min-width: 250px;">
-        <li><a href="#">Most Recent</a></li>
-        <li><a href="#">Alphanumeric</a></li>
-        <li class="divider"></li>
-        <li class="dropdown-header">Custom Date</li>
-        <li style="padding: 8px 24px;">
-          <div class="form-group input-daterange">
-            <input type="text" class="form-control" name="start" placeholder="Start Date">
-            <input type="text" class="form-control" name="end" placeholder="End Date">
+  <ul class="nav nav-sm pull-left" id="job-filter">
+    <li>
+      <a href="#dropdown-filter" data-toggle="collapse"><span class="fa fa-search fa-lg fa-right"></span>SEARCH / FILTER</a>
+      <div class="collapse" id="dropdown-filter">
+        <h6 class="h5">Search</h6>
+        <div class="form-group form-group-lg has-icon left">
+          <input type="search" class="form-control" id="search-job-name" placeholder="Search Job Name">
+          <span class="form-icon"><i class="fa fa-search"></i></span>
+        </div>
+        <h6 class="h5">Filter</h6>
+        <div class="form-group">
+          <label class="form-label" for="">Company</label>
+          <select class="form-control selectpicker" name="" multiple="" data-live-search="true">
+            <option value="">All Company</option>
+            <option value="">Ayala Land Inc.</option>
+            <option value="">AG Holdings Ltd</option>
+            <option value="">Bank of the Philippine Island</option>
+            <option value="">Globe Telecom</option>
+            <option value="">Manila Water Company Inc.</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="">Department</label>
+          <select class="form-control selectpicker" name="">
+            <option value="">All Department</option>
+            <option value="">Sales and Marketing</option>
+            <option value="">Customer Support</option>
+            <option value="">Engineering</option>
+            <option value="">Technology</option>
+          </select>
+          <select class="form-control" name="">
+            <option value="">All Department</option>
+            <option value="">Sales and Marketing</option>
+            <option value="">Customer Support</option>
+            <option value="">Engineering</option>
+            <option value="">Technology</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="daterange">Date Added</label>
+          <div class="input-daterange input-group" id="daterange">
+            <input type="text" class="form-control" name="start">
+            <span class="input-group-addon">to</span>
+            <input type="text" class="form-control" name="end">
           </div>
-          <button class="btn btn-outline-primary btn-sm btn-block">Update</button>
-        </li>
-      </ul>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="daterange">Date Needed</label>
+          <div class="input-daterange input-group" id="daterange">
+            <input type="text" class="form-control" name="start">
+            <span class="input-group-addon">to</span>
+            <input type="text" class="form-control" name="end">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Status</label>
+          <div data-toggle="buttons">
+            <label class="btn btn-outline-primary btn-sm">
+              <input type="checkbox">All Jobs
+            </label>
+            <label class="btn btn-outline-primary btn-sm">
+              <input type="checkbox">Open
+            </label>
+            <label class="btn btn-outline-primary btn-sm">
+              <input type="checkbox">For Approval
+            </label>
+            <label class="btn btn-outline-primary btn-sm">
+              <input type="checkbox">For Branding
+            </label>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary btn-block">Search</a>
+      </div>
     </li>
+  </ul>
+
+  <ul class="nav nav-sm pull-right">
+    <li class="active"><a href="#">ALL JOBS</a></li>
+    <li><a href="#">OPEN</a></li>
+    <li><a href="#">FOR APPROVAL</a></li>
+    <li><a href="#">FOR BRANDING</a></li>
+    <li><a href="#">CLOSED</a></li>
   </ul>
 
   <div class="clearfix"></div>
 
-  <div class="panel panel-default">
+  <div class="panel panel-default" style="box-shadow: none;">
     <div class="table-responsive">
       <table class="table table-hover" id="job-request-table">
         <thead>
           <tr>
-            <!-- <th class="col-sm-2">Status</th> -->
-            <th class="col-sm-5">Position Title</th>
-            <th class="col-sm-1">Created</th>
-            <th class="col-sm-1">On Going</th>
-            <th class="col-sm-1">Job Offer</th>
-            <th class="col-sm-1">Hired</th>
-            <th class="col-sm-2">Days Remaining</th>
-            <th class="col-sm-1"></th>
+            <th class="col-sm-4"><a href="#"><span class="fa fa-sort fa-right"></span>Job Details</a></th>
+            <th class="col-sm-2"><span class="fa fa-sort fa-right"></span>Department</th>
+            <th class="col-sm-1"><a href="#"><span class="fa fa-sort fa-right"></span>Date Added</a></th>
+            <th class="col-sm-1"><a href="#"><span class="fa fa-sort fa-right"></span>Date Needed</a></th>
+            <th class="col-sm-1"><a href="#"><span class="fa fa-sort fa-right"></span>Processing</a></th>
+            <th class="col-sm-1"><a href="#"><span class="fa fa-sort fa-right"></span>Offered</a></th>
+            <th class="col-sm-1"><a href="#"><span class="fa fa-sort fa-right"></span>Hired</a></th>
+            <th class="col-sm-1"><a href="#"><span class="fa fa-sort fa-right"></span>Actions</a></th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <!-- <td>
-              <div class="">Offer Accepted</div>
-              <small class="text-muted"><span class="fa fa-circle fa-right"></span>Closed</small>
-            </td> -->
             <td>
               <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/job-information.html">Business Development Associate</a>
-              <div class="small text-muted">
-                <span class="text-muted">
-                  <span class="fa fa-circle fa-right"></span>
-                  Closed
-                </span>
-                <span>|</span>
-                <span>Offer Accepted</span>
-              </div>
+              <span class="clearfix"></span>
+              <span class="badge badge-warning">For Branding</span>
+              <span class="clearfix"></span>
+              <!-- <ul class="list list-inline text-muted">
+                <li>Ayala Land Inc.</li>
+                <li class="divider"></li>
+                <li>Sales and Marketing</li>
+              </ul> -->
             </td>
-            <td>05/09/2017</td>
-            <td style="font-size: 21px;">0</td>
-            <td style="font-size: 21px;">0</td>
-            <td style="font-size: 21px;">1<small>/1</small></td>
-            <!-- <td>06/15/2017</td> -->
-            <td>ended</td>
-            <td><button class="btn btn-outline-primary btn-sm">Action<span class="fa fa-angle-down fa-lg fa-left"></span></button></td>
-          </tr>
-          <tr class="table-danger">
-            <!-- <td>
-              <div class="">37 Applicants</div>
-              <small class="text-success"><span class="fa fa-circle fa-right"></span>Open</small>
-            </td> -->
             <td>
-              <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/job-information.html">Software Engineer: Ruby on Rails</a>
-              <div class="small text-muted">
-                <span class="text-success">
-                  <span class="fa fa-circle fa-right"></span>
-                  Open
-                </span>
-                <span>|</span>
-                <span>37 Applicants</span>
-              </div>
+              <div>Sales and Marketing</div>
+              <small class="text-muted">Ayala Land Inc.</small>
             </td>
-            <td>05/09/2017</td>
-            <td style="font-size: 21px;">17</td>
-            <td style="font-size: 21px;">1</td>
-            <td style="font-size: 21px;">1<small>/5</small></td>
-            <!-- <td>06/15/2017</td> -->
-            <td>3 Days</td>
-            <td><button class="btn btn-outline-primary btn-sm">Action<span class="fa fa-angle-down fa-lg fa-left"></span></button></td>
-          </tr>
-          <tr>
-            <!-- <td>
-              <div class="">For Branding</div>
-              <small class="text-warning"><span class="fa fa-circle fa-right"></span>Pending</small>
-            </td> -->
-            <td>
-              <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/job-information.html">Customer Service Representative</a>
-              <div class="small text-muted">
-                <span class="text-warning">
-                  <span class="fa fa-circle fa-right"></span>
-                  Pending
-                </span>
-                <span>|</span>
-                <span>For Branding</span>
-              </div>
-            </td>
-            <td>05/09/2017</td>
-            <td style="font-size: 21px;">-</td>
-            <td style="font-size: 21px;">-</td>
-            <td style="font-size: 21px;">-</td>
-            <!-- <td>06/15/2017</td> -->
-            <td>25 Days</td>
-            <td><button class="btn btn-outline-primary btn-sm">Action<span class="fa fa-angle-down fa-lg fa-left"></span></button></td>
-          </tr>
-          <tr>
-            <!-- <td>
-              <div class="">For Approval</div>
-              <small class="text-warning"><span class="fa fa-circle fa-right"></span>Pending</small>
-            </td> -->
-            <td>
-              <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/job-information.html">Senior Process Executive</a>
-              <div class="small text-muted">
-                <span class="text-warning">
-                  <span class="fa fa-circle fa-right"></span>
-                  Pending
-                </span>
-                <span>|</span>
-                <span>For Approval</span>
-              </div>
-            </td>
-            <td>05/09/2017</td>
-            <td style="font-size: 21px;">-</td>
-            <td style="font-size: 21px;">-</td>
-            <td style="font-size: 21px;">-</td>
-            <!-- <td>06/15/2017</td> -->
-            <td>2 Months</td>
-            <td><button class="btn btn-outline-primary btn-sm">Action<span class="fa fa-angle-down fa-lg fa-left"></span></button></td>
+            <td>May 1, 2017</td>
+            <td>May 31,2017</td>
+            <td class="h5">0</td>
+            <td class="h5">0</td>
+            <td class="h5">1<small class="text-muted">/1</small></td>
+            <td><button class="btn btn-outline-primary btn-block btn-sm">Brand</button></td>
           </tr>
         </tbody>
       </table>
@@ -237,11 +210,11 @@ heading-title: Jobs
                 </table>
               </div>
               <div class="panel-footer">
-                <div class="hidden-xs ng-binding" style="margin: 5px 0; float: left;">Records: 1 - 5 / 100</div>
+                <div class="hidden-sm-down ng-binding" style="margin: 5px 0; float: left;">Records: 1 - 5 / 100</div>
                 <div class="form-inline text-center pull-right">
                   <a class="btn btn-link disabled"><i class="fa fa-chevron-left"></i></a>
                   Page
-                  <span class="hidden-sm hidden-md hidden-lg ng-binding">1</span>
+                  <span class="hidden-sm hidden-md hidden-lg">1</span>
                   <form class="form-group hidden-xs">
                       <input class="form-control input-sm" style="text-align: center; width:60px;" type="text" value="1">
                   </form>
