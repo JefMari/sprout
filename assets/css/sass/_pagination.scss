@@ -13,8 +13,8 @@
     > span {
       position: relative;
       float: left; // Collapse white-space
-      padding: $padding-base-y $padding-base-x;
-      line-height: $line-height-base;
+      padding: $pagination-padding-y $pagination-padding-x;
+      line-height: $line-height-computed;
       text-decoration: none;
       color: $pagination-color;
       background-color: $pagination-bg;
@@ -80,10 +80,10 @@
 
 // Large
 .pagination-lg {
-  @include pagination-size($padding-lg-y, $padding-lg-x, $font-size-lg, $border-radius-lg);
+  @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $border-radius-base);
 }
 
 // Small
 .pagination-sm {
-  @include pagination-size($padding-sm-y, $padding-sm-x, $font-size-sm, $border-radius-sm);
+  @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $border-radius-base);
 }

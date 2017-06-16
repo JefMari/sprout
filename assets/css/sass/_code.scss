@@ -12,7 +12,7 @@ code {
   font-size: $code-font-size;
   color: $code-color;
   background-color: $code-bg;
-  @include border-radius($border-radius);
+  @include border-radius($border-radius-base);
 
   // Streamline the style when inside anchors to avoid broken underline and more
   a > & {
@@ -28,7 +28,7 @@ kbd {
   font-size: $code-font-size;
   color: $kbd-color;
   background-color: $kbd-bg;
-  @include border-radius($border-radius-sm);
+  @include border-radius($border-radius-base);
   @include box-shadow($kbd-box-shadow);
 
   kbd {

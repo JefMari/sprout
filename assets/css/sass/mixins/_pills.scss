@@ -1,0 +1,9 @@
+@mixin pills($padding-vertical, $padding-horizontal, $border-radius) {
+  padding: $padding-vertical ($padding-horizontal * 2);
+  border-radius: ($border-radius / 2);
+}
+
+@mixin pills-bordered($padding-vertical, $padding-horizontal, $border-radius, $border-width) {
+  padding: ($padding-vertical - $border-width) ($padding-horizontal * 2);
+  border-radius: ($border-radius / 2);
+}

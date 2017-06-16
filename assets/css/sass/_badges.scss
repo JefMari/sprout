@@ -54,7 +54,7 @@ a.badge {
 // Contextual variations (linked badges get darker on :hover).
 
 .badge-default {
-  @include badge-variant($default-bg, $default-border, $default-color);
+  @include badge-variant($sprout-gray-500);
 }
 
 .badge-primary {

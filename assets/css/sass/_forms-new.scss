@@ -114,39 +114,37 @@ output {
 .form-control {
   display: block;
   width: 100%;
-  // height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  padding: ($padding-base-y - 2) 0 $padding-base-y;
+  // // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+  // height: $input-height;
+  padding: $input-padding-y $input-padding-x;
   font-size: $font-size-base;
-  // line-height: $line-height-base;
   line-height: $line-height-base;
   color: $input-color;
   background-color: $input-bg;
-  background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: solid $input-border-color;
-  // border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
-  border-radius: 0; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
-  border-width: 0 0 2px 0;
-  // @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
-  @include transition(border ease-in-out .15s, box-shadow ease-in-out .15s);
+  // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214.
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid $input-border-color;
 
-  // Customize the `:focus` state to imitate native WebKit styles.
-  @include form-control-focus ();
+  @include border-radius();
 
-  // Placeholder
-  @include placeholder;
-
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  apperance: none;
+  @include box-shadow($input-box-shadow);
+  @include transition($btn-transition);
 
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
-    // border: 0;
-    // background-color: transparent;
-    // -webkit-appearance: none;
-    // -moz-appearance: none;
-    // apperance: none;
-    // display: none;
+    background-color: transparent;
+    border: 0;
+  }
+
+  // Customize the `:focus` state to imitate native WebKit styles.
+  @include form-control-focus();
+
+  // Placeholder
+  &::placeholder {
+    color: $input-placeholder-color;
+    // Override Firefox's unusual default opacity; see https://github.com/twbs/bootstrap/pull/11526.
+    opacity: 1;
   }
 
   &::-ms-clear,
@@ -158,10 +156,6 @@ output {
     display: none;
   }
 
-  &:-webkit-autofill{
-    -webkit-box-shadow: 0 0 0px 1000px white inset !important;
-  }
-
   // Disabled and read-only inputs
   //
   // HTML5 says that controls under a fieldset > legend:first-child won't be
@@ -171,8 +165,8 @@ output {
   &[readonly],
   fieldset[disabled] & {
     background-color: $input-disabled-bg;
-    opacity: 1; // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655
-    border-bottom-style: dotted;
+    // iOS fix for unreadable disabled content; see https://github.com/twbs/bootstrap/issues/11655.
+    opacity: 1;
   }
 
   &[disabled],
@@ -186,14 +180,15 @@ output {
 // Reset height for `textarea`s
 textarea.form-control {
   height: auto;
-  padding: 8px 0 0;
+  padding: 8px 16px;
   resize: vertical;
 }
 
 .form-label {
-  margin-bottom: 0;
+  margin-bottom: $spacer-y;
   // font-size: $font-size-sm;
   line-height: $line-height-base;
+  color: #555;
 }
 
 // Search inputs in iOS
@@ -360,11 +355,11 @@ input[type="checkbox"] {
 // The `.form-group-* form-control` variations are sadly duplicated to avoid the
 // issue documented in https://github.com/twbs/bootstrap/issues/15074.
 
-@include input-size('.input-sm', $input-height-sm, $padding-sm-y, 0);
+@include input-size('.input-sm', $input-height-sm, $input-padding-y-sm, $input-padding-x-sm);
 .form-group-sm {
   .form-control {
     height: $input-height-sm;
-    padding: 0 0 ($padding-sm-y * 2);
+    padding: $input-padding-y-sm $input-padding-x-sm;
     // font-size: $font-size-sm;
     // line-height: $line-height-sm;
     // border-radius: $input-border-radius-sm;
@@ -386,11 +381,11 @@ input[type="checkbox"] {
   }
 }
 
-@include input-size('.input-lg', $input-height-lg, $padding-lg-y, 0);
+@include input-size('.input-lg', $input-height-lg, $input-padding-y-lg, $input-padding-x-lg);
 .form-group-lg {
   .form-control {
     height: $input-height-lg;
-    padding: $padding-lg-y 0;
+    padding: $input-padding-y-lg $input-padding-x-lg;
     // font-size: $font-size-lg;
     // line-height: $line-height-lg;
     // border-radius: $input-border-radius-lg;
@@ -410,6 +405,9 @@ input[type="checkbox"] {
     // font-size: $font-size-lg;
     // line-height: $line-height-lg;
   }
+  // &.has-icon {
+  //   .form-
+  // }
 }
 
 
@@ -424,7 +422,7 @@ input[type="checkbox"] {
 
   // Ensure icons don't overlap text
   .form-control {
-    padding-right: $grid-gutter-width-base + $form-group-margin-bottom;
+    padding-right: $input-height-base;
   }
 }
 
@@ -435,7 +433,7 @@ input[type="checkbox"] {
 
   &.left {
     .form-control {
-      padding-left: $grid-gutter-width-base + $form-group-margin-bottom;
+      padding-left: $input-height-base;
     }
     .form-icon {
       left: 0;
@@ -444,7 +442,7 @@ input[type="checkbox"] {
 
   &.right {
     .form-control {
-      padding-right: $grid-gutter-width-base + $form-group-margin-bottom;
+      padding-right: $input-height-base;
     }
     .form-icon {
       right: 0;
@@ -465,7 +463,7 @@ input[type="checkbox"] {
   right: 0;
   z-index: 2; // Ensure icon is above input groups
   display: block;
-  width: $spacer-x;
+  width: $input-height-base;
   height: $input-height-base;
   line-height: $input-height-base;
   text-align: center;
@@ -492,7 +490,7 @@ input[type="checkbox"] {
 .form-group-lg .form-control ~ .form-feedback,
 .form-group-lg .form-control ~ .form-icon,
 .form-group-lg .form-control ~ .form-reset {
-  // width: $grid-gutter-width-base;
+  // width: $input-height-lg;
   height: $input-height-lg;
   line-height: $input-height-lg;
 }
@@ -535,7 +533,7 @@ input[type="checkbox"] {
   & ~ .form-feedback,
   & ~ .form-icon,
   & ~ .form-reset {
-    top: 20px; // Height of the `label` and its margin
+    top: 28px; // Height of the `label` and its margin
   }
   &.sr-only ~ .form-feedback,
   &.sr-only ~ .form-icon,

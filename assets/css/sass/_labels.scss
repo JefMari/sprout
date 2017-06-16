@@ -7,18 +7,18 @@
   // padding: $label-padding;
   // font-size: $font-size-sm;
   // font-weight: bold;
-  line-height: $line-height-base;
+  line-height: $line-height-computed;
   color: $label-color;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: $border-radius-sm;
+  border-radius: $border-radius-base;
 
   border: 1px solid transparent;
   // [converter] extracted a& to a.label
 
-  @include label-size($padding-base-y - 1, $padding-base-x, $font-size-base, $btn-border-radius-base, $btn-height);
-  @include label-pills($padding-base-y - 1, $padding-base-x*2, $btn-pills-border-radius-base);
+  @include label-size($label-padding-y - 1, $label-padding-x, $font-size-base, $btn-border-radius-base, $btn-height);
+  @include label-pills($label-padding-y - 1, ($label-padding-x * 2), $btn-pills-border-radius-base);
 
 
   // Empty labels collapse automatically (not available in IE8)
@@ -109,12 +109,12 @@ a.label {
 
 .label-lg {
   // line-height: ensure even-numbered height of button next to large input
-  @include label-size($padding-lg-y - 1, $padding-lg-x, $font-size-lg,  $btn-border-radius-lg, $btn-height-lg);
-  @include label-pills($padding-lg-y - 1, $padding-lg-x*2, $btn-pills-border-radius-lg);
+  @include label-size($label-padding-y-lg - 1, $label-padding-x-lg, $font-size-lg,  $btn-border-radius-base, $btn-height-lg);
+  @include label-pills($label-padding-y-lg - 1, $label-padding-x-lg*2, $btn-pills-border-radius-lg);
 }
 
 .label-sm {
   // line-height: ensure proper height of button next to small input
-  @include label-size($padding-sm-y - 1, $padding-sm-x, $font-size-sm, $btn-border-radius-sm, $btn-height-sm);
-  @include label-pills($padding-sm-y - 1, $padding-sm-x*2, $btn-pills-border-radius-sm);
+  @include label-size($label-padding-y-sm - 1, $label-padding-x-sm, $font-size-sm, $btn-border-radius-base, $btn-height-sm);
+  @include label-pills($label-padding-y-sm - 1, $label-padding-y-sm*2, $btn-pills-border-radius-sm);
 }

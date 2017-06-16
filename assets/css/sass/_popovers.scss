@@ -19,7 +19,7 @@
   background-color: $popover-bg;
   background-clip: padding-box;  // border: 1px solid $popover-fallback-border-color;
   border: $popover-border-width solid $popover-border-color;
-  @include border-radius($border-radius-lg);
+  @include border-radius($border-radius-base);
   @include box-shadow($popover-box-shadow);
 
   // Offset the popover to account for the popover arrow
@@ -35,7 +35,7 @@
   font-size: $font-size-base;
   background-color: $popover-title-bg;
   border-bottom: 1px solid darken($popover-title-bg, 5%);
-  border-radius: ($border-radius-lg - 1) ($border-radius-lg - 1) 0 0;
+  border-radius: ($border-radius-base - 1) ($border-radius-base - 1) 0 0;
 }
 
 .popover-content {

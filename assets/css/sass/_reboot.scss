@@ -103,7 +103,7 @@ body {
 // margin for easier control within type scales as it avoids margin collapsing.
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: .5rem;
+  margin-bottom: $spacer-12;
 }
 
 // Reset margins on paragraphs
@@ -112,7 +112,7 @@ h1, h2, h3, h4, h5, h6 {
 // bottom margin to use `rem` units instead of `em`.
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: $spacer-8;
 }
 
 // Abbreviations

@@ -1,443 +1,152 @@
 ---
-layout: recruit
+layout: recruit-box
 
 meta-title: Jobs | Sprout Recruit
 
 heading-title: Jobs
 ---
 
-<div class="row box" id="job-list">
-
-  <ul class="nav nav-sm pull-left" id="job-list-filter">
-    <li>
-      <a href="#job-list-filter-dropdown" data-toggle="collapse"><span class="fa fa-search fa-lg fa-right"></span>SEARCH / FILTER</a>
-      <div class="collapse" id="job-list-filter-dropdown">
-        <h6 class="h5">Search</h6>
-        <div class="form-group form-group-lg has-icon left">
-          <input type="search" class="form-control" id="search-job-name" placeholder="Search Job Name">
-          <span class="form-icon"><i class="fa fa-search"></i></span>
-        </div>
-        <h6 class="h5">Filter</h6>
-        <div class="form-group">
-          <label class="form-label" for="">Company</label>
-          <select class="form-control selectpicker" name="" multiple="" data-live-search="true">
-            <option value="">All Company</option>
-            <option value="">Ayala Land Inc.</option>
-            <option value="">AG Holdings Ltd</option>
-            <option value="">Bank of the Philippine Island</option>
-            <option value="">Globe Telecom</option>
-            <option value="">Manila Water Company Inc.</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="">Department</label>
-          <select class="form-control selectpicker" name="" multiple="" data-live-search="true">
-            <option value="">All Department</option>
-            <option value="">Sales and Marketing</option>
-            <option value="">Customer Support</option>
-            <option value="">Engineering</option>
-            <option value="">Technology</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="daterange">Date Added</label>
-          <div class="input-daterange input-group" id="daterange">
-            <input type="text" class="form-control" name="start">
-            <span class="input-group-addon">to</span>
-            <input type="text" class="form-control" name="end">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="daterange">Date Needed</label>
-          <div class="input-daterange input-group" id="daterange">
-            <input type="text" class="form-control" name="start">
-            <span class="input-group-addon">to</span>
-            <input type="text" class="form-control" name="end">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Status</label>
-          <div data-toggle="buttons">
-            <label class="btn btn-outline-primary btn-sm">
-              <input type="checkbox">All Jobs
-            </label>
-            <label class="btn btn-outline-primary btn-sm">
-              <input type="checkbox">Open
-            </label>
-            <label class="btn btn-outline-primary btn-sm">
-              <input type="checkbox">For Approval
-            </label>
-            <label class="btn btn-outline-primary btn-sm">
-              <input type="checkbox">For Branding
-            </label>
-          </div>
-        </div>
-        <a href="#" class="btn btn-primary btn-block">Search</a>
-      </div>
-    </li>
-  </ul>
-
-  <ul class="nav nav-sm pull-right" id="job-list-sort">
-    <li class="active"><a href="#">ALL JOBS</a></li>
-    <li><a href="#">OPEN</a></li>
-    <li><a href="#">FOR APPROVAL</a></li>
-    <li><a href="#">FOR BRANDING</a></li>
-    <li><a href="#">CLOSED</a></li>
-  </ul>
-
-  <div class="clearfix"></div>
-
-  <div class="panel panel-default" id="job-list-table">
-    <div class="table-responsive">
-      <table class="table table-hover">
-        <thead>
-          <tr>
-            <th class="col-4"><a href="#">Job Details<span class="fa fa-sort fa-left"></span></a></th>
-            <th class="col-2"><a href="#">Date Added<span class="fa fa-sort fa-left"></span></a></th>
-            <th class="col-2"><a href="#">Date Needed<span class="fa fa-sort fa-left"></span></a></th>
-            <th class="col-1"><a href="#">Processing<span class="fa fa-sort fa-left"></span></a></th>
-            <th class="col-1"><a href="#">Offered<span class="fa fa-sort fa-left"></span></a></th>
-            <th class="col-1"><a href="#">Hired<span class="fa fa-sort fa-left"></span></a></th>
-            <th class="col-1"><a href="#">Actions<span class="fa fa-sort fa-left"></span></a></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/job-information.html">Business Development Associate</a>
-              <span class="clearfix"></span>
-              <span class="badge badge-warning">For Branding</span>
-              <span class="clearfix"></span>
-              <ul class="list list-inline small text-muted">
-                <li>Ayala Land Inc.</li>
-                <li class="divider"></li>
-                <li>Sales and Marketing</li>
-              </ul>
-            </td>
-            <td>May 1, 2017</td>
-            <td>May 31,2017</td>
-            <td class="h5">0</td>
-            <td class="h5">0</td>
-            <td class="h5">0<small class="text-muted">/0</small></td>
-            <td><button class="btn btn-outline-primary btn-block btn-sm">Brand</button></td>
-          </tr>
-          <tr>
-            <td>
-              <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/job-information.html">Customer Service Representative</a>
-              <span class="clearfix"></span>
-              <span class="badge badge-warning">For Branding</span>
-              <span class="clearfix"></span>
-              <ul class="list list-inline small text-muted">
-                <li>AG Holding Ltd.</li>
-                <li class="divider"></li>
-                <li>Customer Support</li>
-              </ul>
-            </td>
-            <td>April 27, 2017</td>
-            <td>May 15, 2017</td>
-            <td class="h5">0</td>
-            <td class="h5">0</td>
-            <td class="h5">0<small class="text-muted">/0</small></td>
-            <td><button class="btn btn-outline-primary btn-block btn-sm">Brand</button></td>
-          </tr>
-          <tr>
-            <td>
-              <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/job-information.html">Mid Software Engineer: Ruby On Rails</a>
-              <span class="clearfix"></span>
-              <span class="badge badge-success">Open</span>
-              <span class="clearfix"></span>
-              <ul class="list list-inline small text-muted">
-                <li>Bank of the Philippine Island</li>
-                <li class="divider"></li>
-                <li>Engineering Team</li>
-              </ul>
-            </td>
-            <td>April 25, 2017</td>
-            <td>June 7, 2017</td>
-            <td class="h5">17</td>
-            <td class="h5">2</td>
-            <td class="h5">3<small class="text-muted">/5</small></td>
-            <td><button class="btn btn-outline-primary btn-block btn-sm">Share</button></td>
-          </tr>
-          <tr>
-            <td>
-              <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/job-information.html">Senior Process Executive</a>
-              <span class="clearfix"></span>
-              <span class="badge badge-warning">For Approval</span>
-              <span class="clearfix"></span>
-              <ul class="list list-inline small text-muted">
-                <li>Globe Telecom</li>
-                <li class="divider"></li>
-                <li>Technology Department</li>
-              </ul>
-            </td>
-            <td>April 4, 2017</td>
-            <td>May 4,2017</td>
-            <td class="h5">11</td>
-            <td class="h5">0</td>
-            <td class="h5">3<small class="text-muted">/3</small></td>
-            <td>
-              <button class="btn btn-outline-primary btn-sm" type="button" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Approve this Job Request" style="width: 32px; border-top-right-radius: 0; border-bottom-right-radius: 0;"><span class="fa fa-check"></span></button>
-              <button class="btn btn-outline-primary btn-sm" type="button" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Reject this Job Request"style="width: 32px; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-left: -5px;"><span class="fa fa-times"></span></button>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/job-information.html">Messaging and Collaborative Engineer</a>
-              <span class="clearfix"></span>
-              <span class="badge badge-inverse">Closed</span>
-              <span class="clearfix"></span>
-              <ul class="list list-inline small text-muted">
-                <li>Manila Water Company Inc.</li>
-                <li class="divider"></li>
-                <li>Engineering Department</li>
-              </ul>
-            </td>
-            <td>April 1, 2017</td>
-            <td>May 1,2017</td>
-            <td class="h5">0</td>
-            <td class="h5">0</td>
-            <td class="h5">0<small class="text-muted">/0</small></td>
-            <td><button class="btn btn-outline-primary btn-block btn-sm">Share</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="panel-footer">
-      <div class="hidden-xs ng-binding" style="margin: 8px 0; float: left;">Records: 1 - 5 / 100</div>
-      <div class="form-inline text-center pull-right">
-        <a class="btn btn-link disabled"><i class="fa fa-chevron-left"></i></a>
-        Page
-        <span class="hidden-sm hidden-md hidden-lg ng-binding">1</span>
-        <form class="form-group hidden-xs">
-            <input class="form-control input-sm" style="text-align: center; width:60px;" type="text" value="1">
-        </form>
-        of 50
-        <a class="btn btn-link"><i class="fa fa-chevron-right"></i></a>
-        <span class="hidden-xs">
-          <select class="form-control input-sm">
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-          </select>
-          per page
-        </span>
-      </div>
-    </div>
+<div class="panel panel-default" id="job-list">
+  <div class="table-responsive">
+    <table class="table table-hover table-lg">
+      <thead>
+        <tr>
+          <th class="col-4"><a href="#">Job Details<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-2"><a href="#">Date Added<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-2"><a href="#">Date Needed<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-1"><a href="#">Processing<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-1"><a href="#">Offered<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-1"><a href="#">Hired<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-1"><a href="#">Actions<span class="fa fa-sort fa-left"></span></a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/job-information.html">Business Development Associate</a>
+            <span class="clearfix"></span>
+            <span class="badge badge-warning mar-hor-1">For Branding</span>
+            <span class="clearfix"></span>
+            <ul class="list list-inline small text-muted">
+              <li>Ayala Land Inc.</li>
+              <li class="divider"></li>
+              <li>Sales and Marketing</li>
+            </ul>
+          </td>
+          <td>May 1, 2017</td>
+          <td>May 31,2017</td>
+          <td class="h5">0</td>
+          <td class="h5">0</td>
+          <td class="h5">0<small class="text-muted">/0</small></td>
+          <td><button class="btn btn-outline-primary btn-block btn-sm">Brand</button></td>
+        </tr>
+        <tr>
+          <td>
+            <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/job-information.html">Customer Service Representative</a>
+            <span class="clearfix"></span>
+            <span class="badge badge-warning mar-hor-1">For Branding</span>
+            <span class="clearfix"></span>
+            <ul class="list list-inline small text-muted">
+              <li>AG Holding Ltd.</li>
+              <li class="divider"></li>
+              <li>Customer Support</li>
+            </ul>
+          </td>
+          <td>April 27, 2017</td>
+          <td>May 15, 2017</td>
+          <td class="h5">0</td>
+          <td class="h5">0</td>
+          <td class="h5">0<small class="text-muted">/0</small></td>
+          <td><button class="btn btn-outline-primary btn-block btn-sm">Brand</button></td>
+        </tr>
+        <tr>
+          <td>
+            <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/job-information.html">Mid Software Engineer: Ruby On Rails</a>
+            <span class="clearfix"></span>
+            <span class="badge badge-success mar-hor-1">Open</span>
+            <span class="clearfix"></span>
+            <ul class="list list-inline small text-muted">
+              <li>Bank of the Philippine Island</li>
+              <li class="divider"></li>
+              <li>Engineering Team</li>
+            </ul>
+          </td>
+          <td>April 25, 2017</td>
+          <td>June 7, 2017</td>
+          <td class="h5">17</td>
+          <td class="h5">2</td>
+          <td class="h5">3<small class="text-muted">/5</small></td>
+          <td><button class="btn btn-outline-primary btn-block btn-sm" role="button">Share</button></td>
+        </tr>
+        <tr>
+          <td>
+            <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/job-information.html">Senior Process Executive</a>
+            <span class="clearfix"></span>
+            <span class="badge badge-warning mar-hor-1">For Approval</span>
+            <span class="clearfix"></span>
+            <ul class="list list-inline small text-muted">
+              <li>Globe Telecom</li>
+              <li class="divider"></li>
+              <li>Technology Department</li>
+            </ul>
+          </td>
+          <td>April 4, 2017</td>
+          <td>May 4,2017</td>
+          <td class="h5">11</td>
+          <td class="h5">0</td>
+          <td class="h5">3<small class="text-muted">/3</small></td>
+          <td>
+            <button class="btn btn-outline-primary btn-sm" type="button" role="button" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Approve this Job Request" style="width: 32px; border-top-right-radius: 0; border-bottom-right-radius: 0;"><span class="fa fa-check"></span></button>
+            <button class="btn btn-outline-primary btn-sm" type="button" role="button" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Reject this Job Request"style="width: 32px; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-left: -5px;"><span class="fa fa-times"></span></button>
+          </td>
+        </tr>
+        <tr class="table-disabled">
+          <td>
+            <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/job-information.html">Messaging and Collaborative Engineer</a>
+            <span class="clearfix"></span>
+            <span class="badge badge-default mar-hor-1">Closed</span>
+            <span class="clearfix"></span>
+            <ul class="list list-inline small text-muted">
+              <li>Manila Water Company Inc.</li>
+              <li class="divider"></li>
+              <li>Engineering Department</li>
+            </ul>
+          </td>
+          <td>April 1, 2017</td>
+          <td>May 1,2017</td>
+          <td class="h5">0</td>
+          <td class="h5">0</td>
+          <td class="h5">0<small class="text-muted">/0</small></td>
+          <td><button type="button" class="btn btn-outline-primary btn-block btn-sm" role="button">Share</button></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-</div>
-
-
-<div class="modal fade modal-default" id="modal-template">
-  <div class="modal-dialog modal-lg">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button class="close" type="button">&times;</button>
-        <h6 class="modal-title display-5">Add a Job</h6>
-      </div>
-
-      <ul class="nav nav-tabs">
-        <li class="active"><a href="#tab-template" data-toggle="tab">From a Templates</a></li>
-        <li><a href="#tab-job-profile" data-toggle="tab">From a Job Profile</a></li>
-      </ul>
-
-      <div class="modal-body">
-
-        <div class="tab-content">
-          <div class="tab-pane active" id="tab-template">
-
-            <div class="row">
-
-              <ul class="list list-links">
-                <li class="col-4">
-                  <a href="#" class="media">
-                    <div class="media-left">
-                      <img class="media-object img-circle" src="{{ site.baseurl }}/assets/images/avatar.png" width="50">
-                    </div>
-                    <div class="media-content">
-                      <h6>Blank Template</h6>
-                      <button class="btn btn-outline-primary btn-sm">Use</button>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-
-            </div>
-
-            <p><strong>Software Engineer</strong></p>
-
-            <div class="row">
-
-              <ul class="list list-links">
-                <li class="col-4">
-                  <a href="#" class="media">
-                    <div class="media-content">
-                      <h6>.Net Programmer</h6>
-                      <button class="btn btn-outline-primary btn-sm">View</button>
-                      <button class="btn btn-outline-primary btn-sm">Use</button>
-                    </div>
-                  </a>
-                </li>
-                <li class="col-4">
-                  <a href="#" class="media">
-                    <div class="media-content">
-                    <h6>Ruby On Rails Developer</h6>
-                      <button class="btn btn-outline-primary btn-sm">View</button>
-                      <button class="btn btn-outline-primary btn-sm">Use</button>
-                    </div>
-                  </a>
-                </li>
-                <li class="col-4">
-                  <a href="#" class="media">
-                    <div class="media-content">
-                    <h6>Front-End Developer</h6>
-                      <button class="btn btn-outline-primary btn-sm">View</button>
-                      <button class="btn btn-outline-primary btn-sm">Use</button>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-
-            </div>
-
-            <p><strong>Sales &amp; Marketing</strong></p>
-            <div class="row">
-
-              <ul class="list list-links">
-                <li class="col-4">
-                  <a href="#" class="media">
-                    <div class="media-content">
-                      <h6>Marketing Associate</h6>
-                      <button class="btn btn-outline-primary btn-sm">View</button>
-                      <button class="btn btn-outline-primary btn-sm">Use</button>
-                    </div>
-                  </a>
-                </li>
-                <li class="col-4">
-                  <a href="#" class="media">
-                    <div class="media-content">
-                    <h6>Marketing Analyst</h6>
-                      <button class="btn btn-outline-primary btn-sm">View</button>
-                      <button class="btn btn-outline-primary btn-sm">Use</button>
-                    </div>
-                  </a>
-                </li>
-                <li class="col-4">
-                  <a href="#" class="media">
-                    <div class="media-content">
-                    <h6>Digital Marketing Manager</h6>
-                      <button class="btn btn-outline-primary btn-sm">View</button>
-                      <button class="btn btn-outline-primary btn-sm">Use</button>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-          </div>
-
-          <div class="tab-pane" id="tab-job-profile">
-
-
-            <p><strong>Product Team</strong></p>
-
-            <div class="row">
-
-              <ul class="list list-links">
-                <li class="col-4">
-                  <a href="#" class="media">
-                    <div class="media-content">
-                      <h6>.Net Programmer</h6>
-                      <button class="btn btn-outline-primary btn-sm">View</button>
-                      <button class="btn btn-outline-primary btn-sm">Use</button>
-                    </div>
-                  </a>
-                </li>
-                <li class="col-4">
-                  <a href="#" class="media">
-                    <div class="media-content">
-                    <h6>UX Generalist</h6>
-                      <button class="btn btn-outline-primary btn-sm">View</button>
-                      <button class="btn btn-outline-primary btn-sm">Use</button>
-                    </div>
-                  </a>
-                </li>
-                <li class="col-4">
-                  <a href="#" class="media">
-                    <div class="media-content">
-                    <h6>UI Designer &amp; Developer</h6>
-                      <button class="btn btn-outline-primary btn-sm">View</button>
-                      <button class="btn btn-outline-primary btn-sm">Use</button>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-
-            </div>
-
-            <p><strong>Marketing</strong></p>
-            <div class="row">
-
-              <ul class="list list-links">
-                <li class="col-4">
-                  <a href="#" class="media">
-                    <div class="media-content">
-                      <h6>Marketing Associate</h6>
-                      <button class="btn btn-outline-primary btn-sm">View</button>
-                      <button class="btn btn-outline-primary btn-sm">Use</button>
-                    </div>
-                  </a>
-                </li>
-                <li class="col-4">
-                  <a href="#" class="media">
-                    <div class="media-content">
-                    <h6>Marketing Analyst</h6>
-                      <button class="btn btn-outline-primary btn-sm">View</button>
-                      <button class="btn btn-outline-primary btn-sm">Use</button>
-                    </div>
-                  </a>
-                </li>
-                <li class="col-4">
-                  <a href="#" class="media">
-                    <div class="media-content">
-                    <h6>Digital Marketing Manager</h6>
-                      <button class="btn btn-outline-primary btn-sm">View</button>
-                      <button class="btn btn-outline-primary btn-sm">Use</button>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <p><strong>Customer Success</strong></p>
-
-            <div class="row">
-
-              <ul class="list list-links">
-                <li class="col-4">
-                  <a href="#" class="media">
-                    <div class="media-content">
-                      <h6>Head of Support</h6>
-                      <button class="btn btn-outline-primary btn-sm">View</button>
-                      <button class="btn btn-outline-primary btn-sm">Use</button>
-                    </div>
-                  </a>
-                </li>
-                <li class="col-4">
-                  <a href="#" class="media">
-                    <div class="media-content">
-                    <h6>Customer Advocate</h6>
-                      <button class="btn btn-outline-primary btn-sm">View</button>
-                      <button class="btn btn-outline-primary btn-sm">Use</button>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-          </div>
-        </div>
-      </div>
-
+  <div class="panel-footer">
+    <div class="pagination-settings">
+      Results 1 - 10 of 100
+      <span class="dropup mar-left-2">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">5 entries per page<span class="fa fa-angle-up fa-lg fa-left"></span></a>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li class="dropdown-header">Entries per page:</li>
+          <li class="active"><a href="#">5 items</a></li>
+          <li><a href="#">10 items</a></li>
+          <li><a href="#">25 items</a></li>
+          <li><a href="#">50 items</a></li>
+          <li><a href="#">100 items</a></li>
+        </ul>
+      </span>
     </div>
+    <ul class="pagination mar-hor-auto pull-right">
+      <!-- <li class="disabled"><a href="#"><span class="fa fa-angle-left fa-lg"></span></a></li> -->
+      <!-- <li class="disabled"><a href="#"><span class="fa fa-angle-double-left fa-lg"></span></a></li> -->
+      <li class="active"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#"><span class="fa fa-angle-right fa-lg"></span></a></li>
+      <li><a href="#"><span class="fa fa-angle-double-right fa-lg"></span></a></li>
+    </ul>
   </div>
 </div>

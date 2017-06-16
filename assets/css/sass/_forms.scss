@@ -82,9 +82,9 @@ input[type="checkbox"]:focus {
 // Adjust output element
 output {
   display: block;
-  padding-top: ($padding-base-y + 1);
+  padding-top: ($spacer-8 + 1);
   font-size: $font-size-base;
-  line-height: $line-height-base;
+  line-height: $line-height-computed;
   color: $input-color;
 }
 
@@ -115,17 +115,17 @@ output {
   display: block;
   width: 100%;
   // height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
-  padding: $input-padding-y $input-padding-x;
+  padding: ($input-padding-y - 2) $no-spacer $input-padding-y;
   font-size: $font-size-base;
   // line-height: $line-height-base;
-  line-height: $line-height-base;
+  line-height: $line-height-computed;
   color: $input-color;
   background-color: $input-bg;
   background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
-  border: 1px solid $input-border-color;
+  border: solid $input-border-color;
   // border-radius: $input-border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
-  border-radius: $border-radius; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
-  // border-width: 0 0 2px 0;
+  border-radius: 0; // Note: This has no effect on <select>s in some browsers, due to the limited stylability of <select>s in CSS.
+  border-width: 0 0 2px 0;
   // @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
   @include transition(border ease-in-out .15s, box-shadow ease-in-out .15s);
 
@@ -134,10 +134,6 @@ output {
 
   // Placeholder
   @include placeholder;
-
-  // -webkit-appearance: none;
-  // -moz-appearance: none;
-  // apperance: none;
 
   // Unstyle the caret on `<select>`s in IE10+.
   &::-ms-expand {
@@ -186,15 +182,14 @@ output {
 // Reset height for `textarea`s
 textarea.form-control {
   height: auto;
-  padding: 8px 16px;
+  padding: 8px 0 0;
   resize: vertical;
 }
 
 .form-label {
-  margin-bottom: $spacer-y;
+  margin-bottom: 0;
   // font-size: $font-size-sm;
-  line-height: $line-height-base;
-  color: #555;
+  line-height: $line-height-computed;
 }
 
 // Search inputs in iOS
@@ -339,8 +334,8 @@ input[type="checkbox"] {
 
 .form-control-static {
   // Size it appropriately next to real form controls
-  padding-top: ($padding-base-y + 1);
-  padding-bottom: ($padding-base-y + 1);
+  padding-top: ($input-padding-y + 1);
+  padding-bottom: ($input-padding-y + 1);
   // Remove default margin from `p`
   margin-bottom: 0;
   min-height: (20px + $font-size-base);
@@ -361,11 +356,11 @@ input[type="checkbox"] {
 // The `.form-group-* form-control` variations are sadly duplicated to avoid the
 // issue documented in https://github.com/twbs/bootstrap/issues/15074.
 
-@include input-size('.input-sm', $input-height-sm, $padding-sm-y, 0);
+@include input-size('.input-sm', $input-height-sm, $input-padding-y-sm, $no-spacer);
 .form-group-sm {
   .form-control {
     height: $input-height-sm;
-    padding: $input-padding-y-sm $input-padding-x-sm;
+    padding: $no-spacer $no-spacer $input-padding-y-sm;
     // font-size: $font-size-sm;
     // line-height: $line-height-sm;
     // border-radius: $input-border-radius-sm;
@@ -381,17 +376,17 @@ input[type="checkbox"] {
   .form-control-static {
     height: $input-height-sm;
     // min-height: ($line-height-computed + $font-size-sm);
-    padding: ($padding-sm-y + 1) $padding-base-y;
+    padding: ($spacer-4 + 1) $spacer-8;
     // font-size: $font-size-sm;
     // line-height: $line-height-sm;
   }
 }
 
-@include input-size('.input-lg', $input-height-lg, $padding-lg-y, 0);
+@include input-size('.input-lg', $input-height-lg, $input-padding-y-lg, $no-spacer);
 .form-group-lg {
   .form-control {
     height: $input-height-lg;
-    padding: $input-padding-y-lg $input-padding-x-lg;
+    padding: $input-padding-y-lg $no-spacer;
     // font-size: $font-size-lg;
     // line-height: $line-height-lg;
     // border-radius: $input-border-radius-lg;
@@ -407,7 +402,7 @@ input[type="checkbox"] {
   .form-control-static {
     height: $input-height-lg;
     min-height: (20px + $font-size-lg);
-    padding: ($padding-lg-y + 1) $padding-base-y;
+    padding: ($input-padding-y-lg + 1) $input-padding-y-lg;
     // font-size: $font-size-lg;
     // line-height: $line-height-lg;
   }
@@ -425,7 +420,7 @@ input[type="checkbox"] {
 
   // Ensure icons don't overlap text
   .form-control {
-    padding-right: $input-height-base;
+    padding-right: $grid-gutter-width-base + $form-group-margin-bottom;
   }
 }
 
@@ -436,7 +431,7 @@ input[type="checkbox"] {
 
   &.left {
     .form-control {
-      padding-left: $input-height-base;
+      padding-left: $grid-gutter-width-base + $form-group-margin-bottom;
     }
     .form-icon {
       left: 0;
@@ -445,7 +440,7 @@ input[type="checkbox"] {
 
   &.right {
     .form-control {
-      padding-right: $input-height-base;
+      padding-right: $grid-gutter-width-base + $form-group-margin-bottom;
     }
     .form-icon {
       right: 0;
@@ -466,7 +461,7 @@ input[type="checkbox"] {
   right: 0;
   z-index: 2; // Ensure icon is above input groups
   display: block;
-  width: $input-height-base;
+  width: $spacer-24;
   height: $input-height-base;
   line-height: $input-height-base;
   text-align: center;
@@ -493,7 +488,7 @@ input[type="checkbox"] {
 .form-group-lg .form-control ~ .form-feedback,
 .form-group-lg .form-control ~ .form-icon,
 .form-group-lg .form-control ~ .form-reset {
-  width: $input-height-lg;
+  // width: $grid-gutter-width-base;
   height: $input-height-lg;
   line-height: $input-height-lg;
 }
@@ -509,7 +504,7 @@ input[type="checkbox"] {
 .form-group-sm .form-control ~ .form-feedback,
 .form-group-sm .form-control ~ .form-icon,
 .form-group-sm .form-control ~ .form-reset {
-  width: $input-height-sm;
+  // width: $input-height-sm;
   height: $input-height-sm;
   line-height: $input-height-sm;
 }
@@ -536,7 +531,7 @@ input[type="checkbox"] {
   & ~ .form-feedback,
   & ~ .form-icon,
   & ~ .form-reset {
-    top: 28px; // Height of the `label` and its margin
+    top: 20px; // Height of the `label` and its margin
   }
   &.sr-only ~ .form-feedback,
   &.sr-only ~ .form-icon,
@@ -663,13 +658,13 @@ input[type="checkbox"] {
   .form-checkbox-inline {
     margin-top: 0;
     margin-bottom: 0;
-    padding-top: ($padding-base-y + 1); // Default padding plus a border
+    padding-top: ($spacer-8 + 1); // Default padding plus a border
   }
   // Account for padding we're adding to ensure the alignment and of help text
   // and other content below items
   .form-radio,
   .form-checkbox {
-    min-height: (20px + ($padding-base-y + 1));
+    min-height: (20px + ($spacer-8 + 1));
   }
 
   // Make form groups behave like rows
@@ -683,7 +678,7 @@ input[type="checkbox"] {
     .form-label {
       // text-align: right;
       margin-bottom: 0;
-      padding-top: ($padding-base-y + 1); // Default padding plus a border
+      padding-top: ($spacer-8 + 1); // Default padding plus a border
     }
   }
 
@@ -716,7 +711,7 @@ input[type="checkbox"] {
   .form-group-lg {
     @media (min-width: $screen-sm-min) {
       .form-label {
-        padding-top: $padding-lg-y;
+        padding-top: $input-padding-y-lg;
         // font-size: $font-size-lg;
       }
     }
@@ -724,7 +719,7 @@ input[type="checkbox"] {
   .form-group-sm {
     @media (min-width: $screen-sm-min) {
       .form-label {
-        padding-top: $padding-sm-y;
+        padding-top: $input-padding-y-lg;
         // font-size: $font-size-sm;
       }
     }

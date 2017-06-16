@@ -23,7 +23,9 @@
   }
 
   thead th {
+    padding: $table-header-padding;
     vertical-align: bottom;
+    border-top: 0;
     border-bottom: ($table-border-width * 2) solid $table-border-color;
 
     font-size: $font-size-xs;
@@ -31,6 +33,7 @@
     white-space: nowrap;
     // line-height: $line-height-sm;
     color: $text-muted;
+    font-weight: $font-weight-bold;
 
     a {
       color: inherit;
@@ -124,7 +127,15 @@
 @include table-row-variant('table-warning', $table-warning-bg);
 @include table-row-variant('table-danger', $table-danger-bg);
 
+@include table-row-variant('table-disabled', $table-disabled-bg);
 
+
+.table-disabled {
+  color: $default-disabled-color !important;
+  .btn {
+    @extend .disabled
+  }
+}
 
 // Inverse styles
 //

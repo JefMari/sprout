@@ -38,7 +38,7 @@
   padding: $dropdown-padding;
   margin: 0;
   list-style: none;
-  font-size: $font-size-sm;
+  // font-size: $font-size-sm;
   text-align: left;
   background-color: $dropdown-bg;
   border-radius: $border-radius-base;
@@ -64,7 +64,7 @@
     padding: $dropdown-link-padding;
     clear: both;
     font-weight: normal;
-    line-height: $line-height-base;
+    line-height: $line-height-computed;
     color: $dropdown-link-color;
     white-space: nowrap; // prevent links from randomly breaking onto new lines
   }
@@ -152,10 +152,12 @@
   display: block;
   // padding: 3px 20px;
   padding: 8px 24px;
-  font-size: $font-size-sm;
-  line-height: $line-height-base;
+  font-size: $font-size-xs;
+  line-height: $line-height-computed;
+  font-weight: $font-weight-semi-bold;
   color: $dropdown-header-color;
   white-space: nowrap; // as with > li > a
+  text-transform: uppercase;
 }
 
 // Backdrop to catch body clicks on mobile, etc.

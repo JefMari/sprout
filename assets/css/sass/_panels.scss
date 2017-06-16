@@ -26,12 +26,12 @@
   // @include border-top-radius($panel-border-radius);
   @include clearfix;
 
-  > .dropdown {
-    margin-top: -(($padding-base-y)/2)+1;
-    > .dropdown-toggle {
-      // color: inherit;
-    }
-  }
+  // > .dropdown {
+  //   margin-top: -(($padding-base-y)/2)+1;
+  //   > .dropdown-toggle {
+  //     // color: inherit;
+  //   }
+  // }
 }
 
 // Within heading, strip any `h*` tag of its default margins for spacing.
@@ -239,7 +239,7 @@
     // border-radius: $panel-border-radius;
 
     + .panel {
-      margin-top: 5px;
+      margin-top: $spacer-8;
     }
   }
 
@@ -263,24 +263,23 @@
 
 // Contextual variations
 .panel-default {
-  @include panel-variant($panel-default-border-color, $panel-default-color, $panel-default-heading-bg, $panel-default-border-color);
-  // @include box-shadow(none);
+  @include panel-variant($panel-default-bg, $panel-default-color);
 }
 .panel-primary {
-  @include panel-variant($panel-primary-border-color, $panel-primary-color, $panel-primary-heading-bg, $panel-primary-border-color);
+  @include panel-variant($panel-primary);
 }
 .panel-success {
-  @include panel-variant($panel-success-border-color, $panel-success-color, $panel-success-heading-bg, $panel-success-border-color);
+  @include panel-variant($panel-success);
 }
 .panel-info {
-  @include panel-variant($panel-info-border-color, $panel-info-color, $panel-info-heading-bg, $panel-info-border-color);
+  @include panel-variant($panel-info);
 }
 .panel-warning {
-  @include panel-variant($panel-warning-border-color, $panel-warning-color, $panel-warning-heading-bg, $panel-warning-border-color);
+  @include panel-variant($panel-warning);
 }
 .panel-danger {
-  @include panel-variant($panel-danger-border-color, $panel-danger-color, $panel-danger-heading-bg, $panel-danger-border-color);
+  @include panel-variant($panel-danger);
 }
 .panel-inverse {
-  @include panel-variant($panel-inverse-border-color, $panel-inverse-color, $panel-inverse-heading-bg, $panel-inverse-border-color);
+  @include panel-variant($panel-inverse);
 }

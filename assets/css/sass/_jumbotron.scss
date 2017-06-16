@@ -27,7 +27,7 @@
 
   .container &,
   .container-fluid & {
-    border-radius: $border-radius-lg; // Only round corners at higher resolutions if contained in a container
+    border-radius: $border-radius-base; // Only round corners at higher resolutions if contained in a container
     padding-left:  ($grid-gutter-width-base / 2);
     padding-right: ($grid-gutter-width-base / 2);
   }

@@ -23,8 +23,8 @@
       padding: $nav-link-padding-y $nav-link-padding-x;
 
       // font-size: $font-size-base + 1px;
-      font-weight: 600;
-      line-height: $line-height-base;
+      font-weight: $font-weight-semi-bold;
+      line-height: $line-height-computed;
       color: $nav-link-color;
 
       &:hover,
@@ -149,11 +149,12 @@
     float: none;
 
     // Links rendered as pills
+    border-bottom: 1px solid $nav-pills-link-border-color;
     > a {
-      border-bottom: 1px solid $nav-pills-link-border-color;
       // border-radius: $nav-pills-border-radius;
-      padding-left: 0;
-      padding-right: 0;
+      // padding-left: 0;
+      // padding-right: 0;
+      border-left: 3px solid transparent;
 
       &:hover,
       &:focus {
@@ -175,6 +176,8 @@
       &:focus {
         // color: $nav-pills-link-active-hover-color;
         // background-color: $nav-pills-link-active-hover-bg;
+        border-left: 2px solid $nav-pills-link-active-hover-color;
+
       }
     }
     &:last-child > a {
@@ -189,6 +192,10 @@
         border-color: $nav-pills-link-border-color;
         color: $nav-pills-link-hover-color;
       }
+    }
+
+    &:last-child {
+      border: 0;
     }
   }
 }
@@ -342,9 +349,9 @@
 // --------------------------------------------------
 
 .nav-lg {
-  @include nav-size($padding-lg-y, $padding-lg-x, $font-size-lg);
+  @include nav-size($spacer-12, $spacer-24, $font-size-lg);
 }
 
 .nav-sm {
-  @include nav-size($padding-sm-y, $padding-sm-x, $font-size-xs);
+  @include nav-size($spacer-4, $spacer-8, $font-size-xs);
 }
