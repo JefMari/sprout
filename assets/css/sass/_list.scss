@@ -20,13 +20,13 @@ ol {
   margin-bottom: $spacer-12;
   list-style: none;
   > li {
-    padding: 5px 0;
+    padding: $spacer-4 0;
     > .list {
-      margin-top: 5px;
-      margin-bottom: -5px;
+      margin-top: $spacer-4;
+      margin-bottom: -$spacer-4;
     }
     > .list-condense {
-      margin-top: 10px;
+      margin-top: $spacer-8;
     }
     .list-info {
       font-size: $font-size-sm;
@@ -34,11 +34,11 @@ ol {
     }
     .list-info-left {
       float: left;
-      margin-right: 10px;
+      margin-right: $spacer-8;
     }
     .list-info-right {
       float: right;
-      margin-left: 10px;
+      margin-left: $spacer-8;
     }
     // @include paragraph;
     &.divider {
@@ -66,7 +66,7 @@ ol {
   padding: 0;
   list-style-type: none;
   > li {
-    padding-left: 25px;
+    padding-left: $spacer-24;
     position: relative;
     > .accordion-toggle {
       font-weight: bold;
@@ -90,7 +90,7 @@ ol {
         // font-size: 20px;
         // color: $trend-red-500;
         text-align: center;
-        width: 20px;
+        width: $spacer-24;
         position: absolute;
         left: 0;
         // @include transition(all .35s ease);
@@ -101,14 +101,14 @@ ol {
       > .accordion-content-wrapper {
         margin: 10px 0 50px;
         padding: 10px 0;
-        padding-left: 20px;
+        padding-left: $spacer-24;
         border-left: 5px solid $default-border;
         > .list {
           &:first-child {
-            margin-top: -5px;
+            margin-top: -$spacer-4;
           }
           &:last-child {
-            margin-bottom: -5px;
+            margin-bottom: -$spacer-4;
           }
         }
         > ul,
@@ -125,7 +125,7 @@ ol {
 
 .list-article {
   > li {
-    padding: 10px 5px;
+    padding: $spacer-8 $spacer-4;
     min-height: 60px;
     // > a {
     //   display: block;
@@ -194,14 +194,14 @@ ol {
   margin: 0;
   > dt {
     font-weight: bold;
-    padding-top: 5px;
+    padding-top: $spacer-4;
     &:first-child {
       padding-top: 0;
     }
   }
   > dd {
     margin-left: 0;
-    padding-bottom: 5px;
+    padding-bottom: $spacer-4;
     &:last-child {
       padding-bottom: 0;
     }
@@ -231,14 +231,14 @@ ol {
 .list-icon-green {
   // padding-left: 20px;
   > li {
-    padding-left: 20px;
+    padding-left: $spacer-24;
     position: relative;
     &::before {
       font-family: "FontAwesome";
       position: absolute;
       left: 0px;
       font-size: $font-size-lg;
-      width: 20px;
+      width: $spacer-24;
     }
   }
   // &.list-columns {
@@ -281,13 +281,13 @@ ol {
     padding: 0;
     > a {
       display: block;
-      padding: 12px 24px;
+      padding: $spacer-12 $spacer-24;
       // margin: 12px;
       color: inherit;
       text-decoration: none;
 
       border: 2px solid #ddd;
-      border-radius: 2px;
+      border-radius: 4px;
 
       @include transition($btn-transition);
 
@@ -317,7 +317,7 @@ ol {
 
 .list-media {
   > li {
-    padding: 5px;
+    padding: $spacer-4;
   }
 }
 
@@ -348,11 +348,11 @@ ol {
 }
 
 .list-toggable {
-  margin-left: -5px;
+  margin-left: -$spacer-4;
   margin-bottom: 0;
   > li {
     display: inline;
-    padding: 0 5px;
+    padding: 0 $spacer-4;
     > .list-toggable {
       display: inline;
       margin-left: 0;
@@ -372,18 +372,18 @@ ol {
       }
     }
     &.list-title {
-      margin-right: -10px;
+      margin-right: -$spacer-8;
       font-weight: bold;
     }
   }
   &.list-icon {
     > li:first-child {
-      padding-left: 20px;
+      padding-left: $spacer-24;
     }
   }
   .divider {
-    margin-left: -5px;
-    margin-right: -5px;
+    margin-left: -$spacer-4;
+    margin-right: -$spacer-4;
   }
 }
 
@@ -407,11 +407,11 @@ ol {
   > li {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
-    margin-top: 5px !important;
-    margin-bottom: 5px !important;
+    margin-top: $spacer-4 !important;
+    margin-bottom: $spacer-4 !important;
     > .list {
-      margin-top: 5px !important;
-      margin-bottom: 5px !important;
+      margin-top: $spacer-4 !important;
+      margin-bottom: $spacer-4 !important;
     }
   }
 }
@@ -455,14 +455,14 @@ ol {
 }
 
 .list-inline {
-  margin-left: -5px;
+  margin-left: -$spacer-4;
   margin-bottom: 0;
   > li {
     display: inline-block;
-    padding: 0 5px;
+    padding: 0 $spacer-4;
     > .list-inline {
       display: inline-block;
-      margin-left: 5px;
+      margin-left: $spacer-4;
       > li {
         &:first-child {
           padding-top: 0;
@@ -473,12 +473,12 @@ ol {
       }
     }
     &.list-title {
-      margin-right: 5px;
+      margin-right: $spacer-4;
     }
   }
   .divider {
-    margin-left: -5px;
-    margin-right: -5px;
+    margin-left: -$spacer-4;
+    margin-right: -$spacer-4;
   }
   &.list-icon {
     margin-left: 0;
@@ -518,9 +518,9 @@ ol {
 
 .list-bullet,
 .list-number {
-  padding-left: 20px;
+  padding-left: $spacer-24;
   > li {
-    padding: 5px;
+    padding: $spacer-4;
   }
 }
 
@@ -532,7 +532,7 @@ ol {
 li.icon-angle-right {
   &::before {
     content: "\f105";
-    left: 5px;
+    left: $spacer-4;
   }
 }
 

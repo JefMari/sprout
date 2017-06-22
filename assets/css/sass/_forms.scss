@@ -190,6 +190,10 @@ textarea.form-control {
   margin-bottom: 0;
   // font-size: $font-size-sm;
   line-height: $line-height-computed;
+
+
+  color: $form-label-color;
+  font-weight: $form-label-font-weight;
 }
 
 // Search inputs in iOS
@@ -334,8 +338,8 @@ input[type="checkbox"] {
 
 .form-control-static {
   // Size it appropriately next to real form controls
-  padding-top: ($input-padding-y + 1);
-  padding-bottom: ($input-padding-y + 1);
+  padding-top: ($input-padding-y - 2);
+  padding-bottom: $input-padding-y;
   // Remove default margin from `p`
   margin-bottom: 0;
   min-height: (20px + $font-size-base);

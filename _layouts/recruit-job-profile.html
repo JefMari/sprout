@@ -2,34 +2,56 @@
 layout: recruit
 ---
 
-<div class="row">
-
-  <div class="col-lg-2 col-md-3">
-    {% include recruit/components/nav/side-nav/job-profile.html %}
+<div class="heading">
+  <div class="container">
+    <!-- <span class="pull-right" style="margin-top: 40px;">
+      <a href="" class="btn btn-warning btn-pills"><span class="fa fa-plus" style="margin-right: 5px"></span> New Requests</a>
+    </span> -->
+    <h1 class="heading-title display-3">{{ page.heading-title }}</h1>
+    <!-- <ul class="nav nav-tabs">
+      <li class="active"><a href="#">All Requests</a></li>
+      <li><a href="#">Leave</a></li>
+      <li><a href="#">Certificate of Attendance</a></li>
+      <li><a href="#">Schedule Adjustments</a></li>
+      <li><a href="#">Overtime &amp; Undertime</a></li>
+      <li><a href="#">Official Business</a></li>
+    </ul> -->
   </div>
+</div>
 
-  <div class="col-lg-9 col-md-8 box">
-    {{ content }}
-  </div>
 
-  <div class="col-md-1">
+<main class="container">
 
-    <a href="#" class="btn btn-link btn-block"><span class="fa fa-search"></span></a>
+  <div class="row">
 
-    <a href="#" class="btn btn-link btn-block"><span class="fa fa-angle-up fa-lg"></span></a>
+    <div class="col-lg-2 col-md-3">
+      {% include recruit/components/nav/side-nav/job-profile.html %}
+    </div>
 
-    <a href="#" class="btn btn-link btn-block"><span class="fa fa-angle-down fa-lg"></span></a>
+    <div class="col-lg-9 col-md-8 box">
+      {{ content }}
+    </div>
 
-    <div class="dropdown">
-      <a href="#" class="btn btn-link btn-block dropdown-toggle" data-toggle="dropdown"><span class="fa fa-bars"></span></a>
-      <ul class="dropdown-menu dropdown-menu-right">
-        <li><a href="#">Information</a></li>
-        <li><a href="#">Responsibilities</a></li>
-        <li><a href="#">Requirements</a></li>
-        <li><a href="#">Skills</a></li>
-      </ul>
+    <div class="col-md-1">
+
+      <a href="#" class="btn btn-link btn-block"><span class="fa fa-search"></span></a>
+
+      <a href="#" class="btn btn-link btn-block"><span class="fa fa-angle-up fa-lg"></span></a>
+
+      <a href="#" class="btn btn-link btn-block"><span class="fa fa-angle-down fa-lg"></span></a>
+
+      <div class="dropdown">
+        <a href="#" class="btn btn-link btn-block dropdown-toggle" data-toggle="dropdown"><span class="fa fa-bars"></span></a>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li><a href="#">Information</a></li>
+          <li><a href="#">Responsibilities</a></li>
+          <li><a href="#">Requirements</a></li>
+          <li><a href="#">Skills</a></li>
+        </ul>
+      </div>
+
     </div>
 
   </div>
 
-</div>
+</main>

@@ -429,14 +429,13 @@ $line-height-computed:                      floor(($font-size-base * $line-heigh
 
 
 $border-radius-base:     4px !default;
-$border-radius-2:       2px !default;
-$border-radius-8:       8px !default;
-$border-radius-16:       16px !default;
+$border-radius-sm:       2px !default;
+$border-radius-lg:       8px !default;
 
 $component-active-color: $white !default;
 $component-active-bg:    $brand-primary !default;
 
-$caret-width:            .3em !default;
+$caret-width:            8px !default;
 
 $transition-base:        all .2s ease-in-out !default;
 $transition-fade:        opacity .15s linear !default;
@@ -747,6 +746,8 @@ $input-height-sm:                           28px !default;
 $input-disabled-bg:                         transparent !default;
 
 $form-group-margin-bottom:                  ($spacer-y * 2) !default;
+$form-label-color:                           $sprout-gray-700 !default;
+$form-label-font-weight:                           $font-weight-semi-bold !default;
 $form-text-color:                           $sprout-gray-500 !default;
 $legend-color:                              $default-color !default;
 $legend-border-color:                       $default-border !default;
@@ -1235,6 +1236,33 @@ $panel-danger:   $brand-danger !default;
 $panel-inverse:  $brand-inverse !default;
 
 
+
+
+//== Panels
+//
+
+$section-margin-bottom: $spacer-24 !default;
+$section-bg:                    $white !default;
+$section-heading-padding:       $spacer-12 $no-spacer !default;
+$section-heading-border-bottom-color: $default-border !default;
+$section-body-padding:          $spacer-12 $no-spacer !default;
+// $section-border-radius:         $border-radius-base !default;
+
+//** Border color for elements within sections
+$section-inner-border-color:    $default-border !default;
+$section-footer-bg:             $sprout-gray-200 !default;
+$section-footer-padding:        $section-heading-padding !default;
+
+$section-default-color:         $default-color !default;
+$section-default-bg:    $sprout-gray !default;
+
+$section-primary:  $brand-primary !default;
+$section-success:  $brand-success !default;
+$section-info:     $brand-info !default;
+$section-warning:  $brand-warning !default;
+$section-danger:   $brand-danger !default;
+$section-inverse:  $brand-inverse !default;
+
 //== Thumbnails
 //
 //##
@@ -1342,7 +1370,7 @@ $carousel-caption-color:                      $white !default;
 // Close
 //
 
-$close-font-size:             $font-size-base * 1.5 !default;
+$close-font-size:             $font-size-base * 1.4 !default;
 $close-font-weight:           $font-weight-normal !default;
 $close-color:                 $black !default;
 $close-text-shadow:           0 1px 0 $white !default;

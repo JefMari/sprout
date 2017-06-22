@@ -127,7 +127,7 @@
 @include table-row-variant('table-warning', $table-warning-bg);
 @include table-row-variant('table-danger', $table-danger-bg);
 
-@include table-row-variant('table-disabled', $table-disabled-bg);
+// @include table-row-variant('table-disabled', $table-disabled-bg);
 
 
 .table-disabled {

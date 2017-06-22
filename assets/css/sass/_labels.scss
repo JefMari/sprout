@@ -116,5 +116,5 @@ a.label {
 .label-sm {
   // line-height: ensure proper height of button next to small input
   @include label-size($label-padding-y-sm - 1, $label-padding-x-sm, $font-size-sm, $btn-border-radius-base, $btn-height-sm);
-  @include label-pills($label-padding-y-sm - 1, $label-padding-y-sm*2, $btn-pills-border-radius-sm);
+  @include label-pills($label-padding-y-sm - 1, $label-padding-x-sm*2, $btn-pills-border-radius-sm);
 }

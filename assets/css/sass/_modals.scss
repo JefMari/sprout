@@ -44,21 +44,19 @@
 .modal-dialog {
   position: relative;
   width: auto;
-  margin: 10px;
+  margin: 8% auto;
 }
 
 // Actual modal
 .modal-content {
   position: relative;
   background-color: $modal-content-bg;
-  // border: 1px solid $modal-content-fallback-border; //old browsers fallback (ie8 etc)
-  // border: 1px solid $modal-content-border;
-  // border-radius: $border-radius-lg;
-  border-top: 3px solid $modal-content-border-color;
-  @include box-shadow(0 3px 9px rgba(0,0,0,.5));
+  border-top: 4px solid $modal-content-border-color;
+  @include box-shadow(0 2px 4px rgba(0,0,0,.5));
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
+  max-height: 644px;
 }
 
 // Modal background
@@ -87,12 +85,14 @@
 // Top section of the modal w/ title and dismiss
 .modal-header {
   padding: $modal-header-padding;
-  // border-bottom: 1px solid $modal-header-border;
+  border-bottom: 1px solid $modal-header-border-color;
   @include clearfix;
 }
 // Close icon
-.modal-header .close {
-  margin-top: -2px;
+.modal-header .return {
+  width: 48px;
+  margin-left: -24px;
+  float: left;
 }
 
 // Title text within header
@@ -107,6 +107,11 @@
 .modal-body {
   position: relative;
   padding: $modal-body-padding;
+
+
+  overflow: hidden;
+  overflow-y: auto;
+  max-height: 525px;
 }
 
 // Footer (for actions)
@@ -146,7 +151,7 @@
   // Automatically set modal's width for larger viewports
   .modal-dialog {
     width: $modal-md;
-    margin: 30px auto;
+    // margin: 30px auto;
   }
   .modal-content {
     @include box-shadow(0 8px 24px rgba(0,0,0,.5));

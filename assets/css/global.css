@@ -15,6 +15,7 @@
   background-color: white;
   padding: 24px;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 24px;
 }
 
 .box .heading {
@@ -179,4 +180,50 @@
 
 .pagination-settings .dropdown-toggle {
   font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.small-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #747C83;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.line-height-lg {
+  line-height: 2;
+}
+
+
+
+
+
+
+#new-job-modal .modal-header {
+  border-bottom-width: 2px;
+}
+
+
+
+#new-job-modal .modal-header .nav {
+  margin-bottom: -14px;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+#new-job-modal .modal-header .nav  li a {
+  padding: 12px;
 }

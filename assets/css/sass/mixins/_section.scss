@@ -1,0 +1,28 @@
+// sections
+
+@mixin section-variant($text-color) {
+  // border-color: $border;
+
+  .section-title {
+    color: $text-color;
+  }
+
+  & > .section-heading {
+    // color: $text-color;
+    // background-color: $background;
+    // border-color: $heading-border;
+
+    + .section-collapse > .section-body {
+      // border-top-color: $border;
+    }
+    .badge {
+      color: $text-color;
+      // background-color: $text-color;
+    }
+  }
+  & > .section-footer {
+    + .section-collapse > .section-body {
+      // border-bottom-color: $border;
+    }
+  }
+}
