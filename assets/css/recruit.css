@@ -1,0 +1,88 @@
+
+#hiring-process .media-object {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  text-align: center;
+  line-height: 26px;
+  padding: 5px;
+}
+
+#search-filter,
+#job-list-sort {
+  margin-bottom: 16px;
+}
+
+#search-filter-dropdown {
+  z-index: 1;
+  position: absolute;
+  width: 350px;
+  background-color: #F0F0F0;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+#search-filter-dropdown form {
+  padding: 24px;
+}
+
+
+
+
+
+
+#job-list {
+  margin-bottom: 0;
+  box-shadow: none;
+}
+
+#job-list .table-responsive {
+  min-height: calc(100vh - 370px);
+}
+
+#job-list table td {
+  vertical-align: middle;
+}
+
+#job-list table th:nth-last-child(-n+6),
+#job-list table td:nth-last-child(-n+6) {
+  text-align: center;
+}
+
+
+
+
+
+.pagination-settings {
+  margin: 8px 0;
+  float: left;
+}
+
+.pagination-settings,
+.pagination-settings .dropdown-toggle {
+  color: #747C83;
+}
+
+.pagination-settings .dropdown-toggle {
+  font-weight: 600;
+}
+
+
+
+
+
+#new-job-modal .modal-header {
+  border-bottom-width: 2px;
+}
+
+#new-job-modal .modal-header .nav {
+  margin-bottom: -14px;
+  margin-left: -12px;
+  margin-right: -12px;
+}
+
+#new-job-modal .modal-header .nav  li a {
+  padding: 12px;
+}

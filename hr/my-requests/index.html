@@ -1,174 +1,167 @@
 ---
-layout: hr
+layout: hr_temp-1
 
 heading-title: My Requests
 ---
 
-<div class="row box">
+<ul class="nav nav-sm pull-left" style="margin-bottom: 24px;">
+  <li><a href="#"><span class="fa fa-search"></span></a></li>
+  <li class="active"><a href="#">ALL</a></li>
+  <li><a href="#">PENDING</a></li>
+  <li><a href="#">APPROVED</a></li>
+  <li><a href="#">REJECTED</a></li>
+</ul>
 
-  <ul class="nav nav-sm pull-left" style="margin-bottom: 24px;">
-    <li><a href="#"><span class="fa fa-search"></span></a></li>
-    <li class="active"><a href="#">ALL</a></li>
-    <li><a href="#">PENDING</a></li>
-    <li><a href="#">APPROVED</a></li>
-    <li><a href="#">REJECTED</a></li>
-    <!-- <li><a href="#">CANCELLED</a></li> -->
-    <!-- <li><a href="#">RESUBMITTED</a></li> -->
-  </ul>
+<ul class="nav nav-sm pull-right" style="margin-bottom: 24px;">
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown">ALL REQUESTS <span class="fa fa-angle-down fa-lg"></span></a>
+    <ul class="dropdown-menu dropdown-menu-right">
+      <li class="active"><a href="#">All Requests</a></li>
+      <li><a href="#">Leave</a></li>
+      <li><a href="#">Certificate of Attendance</a></li>
+      <li><a href="#">Schedule Adjustments</a></li>
+      <li><a href="#">Overtime &amp; Undertime</a></li>
+      <li><a href="#">Official Business</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a href="#" data-toggle="dropdown">MOST RECENT <span class="fa fa-angle-down fa-lg"></span></a>
+    <ul class="dropdown-menu dropdown-menu-right" style="min-width: 250px;">
+      <li><a href="#">Most Recent</a></li>
+      <li><a href="#">Alphanumeric</a></li>
+      <li class="divider"></li>
+      <li class="dropdown-header">Custom Date</li>
+      <li style="padding: 8px 24px;">
+        <div class="form-group input-daterange">
+          <input type="text" class="form-control" name="start" placeholder="Start Date">
+          <input type="text" class="form-control" name="end" placeholder="End Date">
+        </div>
+        <button class="btn btn-primary btn-sm btn-block">Update</button>
+      </li>
+    </ul>
+  </li>
+</ul>
 
-  <ul class="nav nav-sm pull-right" style="margin-bottom: 24px;">
-    <li class="dropdown">
-      <a href="#" data-toggle="dropdown">ALL REQUESTS <span class="fa fa-angle-down fa-lg"></span></a>
-      <ul class="dropdown-menu dropdown-menu-right">
-        <li class="active"><a href="#">All Requests</a></li>
-        <li><a href="#">Leave</a></li>
-        <li><a href="#">Certificate of Attendance</a></li>
-        <li><a href="#">Schedule Adjustments</a></li>
-        <li><a href="#">Overtime &amp; Undertime</a></li>
-        <li><a href="#">Official Business</a></li>
-      </ul>
-    </li>
-    <li class="dropdown">
-      <a href="#" data-toggle="dropdown">MOST RECENT <span class="fa fa-angle-down fa-lg"></span></a>
-      <ul class="dropdown-menu dropdown-menu-right" style="min-width: 250px;">
-        <li><a href="#">Most Recent</a></li>
-        <li><a href="#">Alphanumeric</a></li>
-        <li class="divider"></li>
-        <li class="dropdown-header">Custom Date</li>
-        <li style="padding: 8px 24px;">
-          <div class="form-group input-daterange">
-            <input type="text" class="form-control" name="start" placeholder="Start Date">
-            <input type="text" class="form-control" name="end" placeholder="End Date">
+<div class="clearfix"></div>
+
+<div class="section section-default">
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Status</th>
+        <th>Request Type</th>
+        <th>Applicable Dates</th>
+        <th>Date Filed</th>
+        <th>Remarks</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <div class="text-warning">
+            <span class="fa fa-circle" style="margin-right: 5px;"></span>Pending
           </div>
-          <button class="btn btn-primary btn-sm btn-block">Update</button>
-        </li>
-      </ul>
-    </li>
-  </ul>
-
-  <div class="clearfix">
-
-  </div>
-
-  <div class="section section-default">
-
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Status</th>
-          <th>Request Type</th>
-          <th>Applicable Dates</th>
-          <th>Date Filed</th>
-          <th>Remarks</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <div class="text-warning">
-              <span class="fa fa-circle" style="margin-right: 5px;"></span>Pending
-            </div>
-            <small class="text-muted">Resubmitted for Editing</small>
-          </td>
-          <td>
-            <div class="">
-              Sick Leave
-            </div>
-            <small class="text-muted">Leave</small>
-          </td>
-          <td>
-            05/11/2017 - 05/11/2017
-          </td>
-          <td>
-            05/12/2017
-          </td>
-          <td>
-            Had a severe headache
-          </td>
-          <td class="text-center">
-            <a href="#" class="btn btn-link btn-sm"><span class="fa fa-pencil"></span></a>
-            <a href="#" class="btn btn-link btn-sm"><span class="fa fa-trash"></span></a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="text-success">
-              <span class="fa fa-circle" style="margin-right: 5px;"></span>Approved
-            </div>
-            <small class="text-muted">Approved by Alexandria Gentry</small>
-          </td>
-          <td>
-            <div class="">
-              Birthday Leave
-            </div>
-            <small class="text-muted">Leave</small>
-          </td>
-          <td>
-            05/12/2017
-          </td>
-          <td>
-            05/05/2017
-          </td>
-          <td>
+          <small class="text-muted">Resubmitted for Editing</small>
+        </td>
+        <td>
+          <div class="">
+            Sick Leave
+          </div>
+          <small class="text-muted">Leave</small>
+        </td>
+        <td>
+          05/11/2017 - 05/11/2017
+        </td>
+        <td>
+          05/12/2017
+        </td>
+        <td>
+          Had a severe headache
+        </td>
+        <td class="text-center">
+          <a href="#" class="btn btn-link btn-sm"><span class="fa fa-pencil"></span></a>
+          <a href="#" class="btn btn-link btn-sm"><span class="fa fa-trash"></span></a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="text-success">
+            <span class="fa fa-circle" style="margin-right: 5px;"></span>Approved
+          </div>
+          <small class="text-muted">Approved by Alexandria Gentry</small>
+        </td>
+        <td>
+          <div class="">
             Birthday Leave
-          </td>
-          <td class="text-center">
-            <a href="#" class="btn btn-link btn-sm"><span class="fa fa-pencil"></span></a>
-            <a href="#" class="btn btn-link btn-sm"><span class="fa fa-trash"></span></a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <div class="text-muted">
-              <span class="fa fa-circle" style="margin-right: 5px;"></span>Cancelled
-            </div>
-            <!-- <small class="text-muted">Cancelled by Jasper Lepardo</small> -->
-          </td>
-          <td>
-            <div class="">
-              Certificate of Attendance
-            </div>
-            <small class="text-muted">Time Adjustment</small>
-          </td>
-          <td>
-            05/15/2017
-          </td>
-          <td>
-            05/15/2017
-          </td>
-          <td>
-            Biometrics malfunctioned
-          </td>
-          <td class="text-center">
-            <a href="#" class="btn btn-link btn-sm"><span class="fa fa-pencil"></span></a>
-            <a href="#" class="btn btn-link btn-sm"><span class="fa fa-trash"></span></a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+          </div>
+          <small class="text-muted">Leave</small>
+        </td>
+        <td>
+          05/12/2017
+        </td>
+        <td>
+          05/05/2017
+        </td>
+        <td>
+          Birthday Leave
+        </td>
+        <td class="text-center">
+          <a href="#" class="btn btn-link btn-sm"><span class="fa fa-pencil"></span></a>
+          <a href="#" class="btn btn-link btn-sm"><span class="fa fa-trash"></span></a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="text-muted">
+            <span class="fa fa-circle" style="margin-right: 5px;"></span>Cancelled
+          </div>
+          <!-- <small class="text-muted">Cancelled by Jasper Lepardo</small> -->
+        </td>
+        <td>
+          <div class="">
+            Certificate of Attendance
+          </div>
+          <small class="text-muted">Time Adjustment</small>
+        </td>
+        <td>
+          05/15/2017
+        </td>
+        <td>
+          05/15/2017
+        </td>
+        <td>
+          Biometrics malfunctioned
+        </td>
+        <td class="text-center">
+          <a href="#" class="btn btn-link btn-sm"><span class="fa fa-pencil"></span></a>
+          <a href="#" class="btn btn-link btn-sm"><span class="fa fa-trash"></span></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
-    <div class="section-footer">
-      <div class="hidden-xs ng-binding" style="margin: 5px 0; float: left;">Records: 1 - 5 / 100</div>
-      <div class="form-inline text-center pull-sm-right">
-        <a class="btn btn-link disabled"><i class="fa fa-chevron-left"></i></a>
-        Page
-        <span class="hidden-sm hidden-md hidden-lg ng-binding">1</span>
-        <form class="form-group hidden-xs">
-            <input class="form-control input-sm" style="text-align: center; width:60px;" type="text" value="1">
-        </form>
-        of 50
-        <a class="btn btn-link"><i class="fa fa-chevron-right"></i></a>
-        <span class="hidden-xs">
-          <select class="form-control input-sm">
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="20">20</option>
-          </select>
-          per page
-        </span>
-      </div>
+  <div class="section-footer">
+    <div class="hidden-xs ng-binding" style="margin: 5px 0; float: left;">Records: 1 - 5 / 100</div>
+    <div class="form-inline text-center pull-sm-right">
+      <a class="btn btn-link disabled"><i class="fa fa-chevron-left"></i></a>
+      Page
+      <span class="hidden-sm hidden-md hidden-lg ng-binding">1</span>
+      <form class="form-group hidden-xs">
+          <input class="form-control input-sm" style="text-align: center; width:60px;" type="text" value="1">
+      </form>
+      of 50
+      <a class="btn btn-link"><i class="fa fa-chevron-right"></i></a>
+      <span class="hidden-xs">
+        <select class="form-control input-sm">
+          <option value="5">5</option>
+          <option value="10">10</option>
+          <option value="20">20</option>
+        </select>
+        per page
+      </span>
     </div>
-
   </div>
+
 </div>

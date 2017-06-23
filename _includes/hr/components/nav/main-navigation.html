@@ -12,69 +12,141 @@
         <span class="navbar-brand-text">HR</span>
       </a>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="hr-header">
       <ul class="nav navbar-nav navbar-right nav-lg">
-        <li class="dropdown"><a href="#">My Requests</a></li>
-        <!-- <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Requests<span class="fa fa-angle-down fa-lg fa-left"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">My Leaves</a></li>
-            <li><a href="#">My Certificate of Attendance</a></li>
-            <li><a href="#">My Schedule Adjustments</a></li>
-            <li><a href="#">My Overtime</a></li>
-            <li><a href="#">My Undertime</a></li>
-            <li><a href="#">My Official Business</a></li>
-          </ul>
-        </li> -->
-        <li class="dropdown">
+        <li class="{% if page.url == '/hr/my-requests/' %} active {% endif %}">
+          <a href="{{ site.baseurl }}/hr/my-requests/">My Requests</a>
+        </li>
+        <li class="dropdown {% if
+          page.url contains '/hr/my-team/' or
+          page.url contains '/hr/my-team/resolution-center.html' or
+          page.url contains '/hr/my-team/approval-center.html'
+          %} active {% endif %}">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Team<span class="fa fa-angle-down fa-lg fa-left"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">My Team</a></li>
-            <li><a href="#">Resolution Center</a></li>
-            <li><a href="#">Approval Center</a></li>
+            <li class="{% if page.url == '/hr/my-team/' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/my-team/">My Team</a>
+            </li>
+            <li class="{% if page.url == '/hr/my-team/resolution-center.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/my-team/resolution-center.html">Resolution Center</a>
+            </li>
+            <li class="{% if page.url == '/hr/my-team/approval-center.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/my-team/approval-center.html">Approval Center</a>
+            </li>
           </ul>
         </li>
-        <li class="dropdown">
+        <li class="dropdown {% if
+          page.url contains '/hr/my-company/calendar.html' or
+          page.url contains '/hr/my-company/employee-directory.html' or
+          page.url contains '/hr/my-company/hr-analytics.html' or
+          page.url contains '/hr/my-company/payroll-analytics.html'
+          %} active {% endif %}">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Company<span class="fa fa-angle-down fa-lg fa-left"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Calendar</a></li>
-            <li><a href="#">Employee Directory</a></li>
-            <li><a href="#">HR Analytics</a></li>
-            <li><a href="#">Payroll Analytics</a></li>
+            <li class="{% if page.url == '/hr/my-company/calendar.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/my-company/calendar.html">Calendar</a>
+            </li>
+            <li class="{% if page.url == '/hr/my-company/employee-directory.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/my-company/employee-directory.html">Employee Directory</a>
+            </li>
+            <li class="{% if page.url == '/hr/my-company/hr-analytics.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/my-company/hr-analytics.html">HR Analytics</a>
+            </li>
+            <li class="{% if page.url == '/hr/my-company/payroll-analytics.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/my-company/payroll-analytics.html">Payroll Analytics</a>
+            </li>
           </ul>
         </li>
-        <li class="dropdown">
+        <li class="dropdown {% if
+          page.url contains '/hr/administration-tools/add-employee.html' or
+          page.url contains '/hr/administration-tools/leave-report.html' or
+          page.url contains '/hr/administration-tools/overtime-report.html' or
+          page.url contains '/hr/administration-tools/bulk-upload.html' or
+          page.url contains '/hr/administration-tools/memo-search.html' or
+          page.url contains '/hr/administration-tools/employee-list-report.html' or
+          page.url contains '/hr/administration-tools/form-generator.html' or
+          page.url contains '/hr/administration-tools/attendance-management.html' or
+          page.url contains '/hr/administration-tools/attendance-report' or
+          page.url contains '/hr/administration-tools/email-blast.html' or
+          page.url contains '/hr/administration-tools/audit-trail.html'
+          %} active {% endif %}">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Administration Tools<span class="fa fa-angle-down fa-lg fa-left"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Add Employee</a></li>
-            <li><a href="#">Leave Report</a></li>
-            <li><a href="#">Overtime Search</a></li>
-            <li><a href="#">Undertime Search</a></li>
-            <li><a href="#">Official Business Search</a></li>
-            <li><a href="#">Certificate of Attendance Search</a></li>
-            <li><a href="#">Memo Search</a></li>
-            <li><a href="#">Employee List Report</a></li>
-            <li><a href="#">Form Generator</a></li>
-            <li><a href="#">Attendance Management</a></li>
-            <li><a href="#">Attendance Report</a></li>
-            <li><a href="#">Email Blast</a></li>
-            <li><a href="#">Audit Trail</a></li>
+            <li class="{% if page.url == '/hr/administration-tools/add-employee.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/administration-tools/add-employee.html">Add Employee</a>
+            </li>
+            <li class="{% if page.url == '/hr/administration-tools/leave-report.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/administration-tools/leave-report.html">Leave Report</a>
+            </li>
+            <li class="{% if page.url == '/hr/administration-tools/overtime-report.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/administration-tools/overtime-report.html">Overtime Report</a>
+            </li>
+            <li class="{% if page.url == '/hr/administration-tools/bulk-upload.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/administration-tools/bulk-upload.html">Bulk Upload</a>
+            </li>
+            <li class="{% if page.url == '/hr/administration-tools/memo-search.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/administration-tools/memo-search.html">Memo Search</a>
+            </li>
+            <li class="{% if page.url == '/hr/administration-tools/employee-list-report.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/administration-tools/employee-list-report.html">Employee List Report</a>
+            </li>
+            <li class="{% if page.url == '/hr/administration-tools/form-generator.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/administration-tools/form-generator.html">Form Generator</a>
+            </li>
+            <li class="{% if page.url == '/hr/administration-tools/attendance-management.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/administration-tools/attendance-management.html">Attendance Management</a>
+            </li>
+            <li class="{% if page.url == '/hr/administration-tools/attendance-report.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/administration-tools/attendance-report.html">Attendance Report</a>
+            </li>
+            <li class="{% if page.url == '/hr/administration-tools/email-blast.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/administration-tools/email-blast.html">Email Blast</a>
+            </li>
+            <li class="{% if page.url == '/hr/administration-tools/audit-trail.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/administration-tools/audit-trail.html">Audit Trail</a>
+            </li>
           </ul>
         </li>
-        <li class="dropdown">
+        <li class="dropdown {% if
+          page.url contains '/hr/maintainance/company.html' or
+          page.url contains '/hr/maintainance/work-place.html' or
+          page.url contains '/hr/maintainance/assets.html' or
+          page.url contains '/hr/maintainance/visa.html' or
+          page.url contains '/hr/maintainance/benefits-type.html' or
+          page.url contains '/hr/maintainance/biometrics.html' or
+          page.url contains '/hr/maintainance/access-levels.html' or
+          page.url contains '/hr/maintainance/email-templates.html' or
+          page.url contains '/hr/maintainance/form-templates.html'
+          %} active {% endif %}">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Maintenance<span class="fa fa-angle-down fa-lg fa-left"></span></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Company</a></li>
-            <li><a href="#">Work Place</a></li>
-            <li><a href="#">Assets</a></li>
-            <li><a href="#">Visa</a></li>
-            <li><a href="#">Benefits Type</a></li>
-            <li><a href="#">Biometrics</a></li>
-            <li><a href="#">Access Levels</a></li>
-            <li><a href="#">Email Templates</a></li>
-            <li><a href="#">Form Templates</a></li>
+            <li class="{% if page.url == '/hr/maintainance/company.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/maintainance/company.html">Company</a>
+            </li>
+            <li class="{% if page.url == '/hr/maintainance/work-place.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/maintainance/work-place.html">Work Place</a>
+            </li>
+            <li class="{% if page.url == '/hr/maintainance/assets.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/maintainance/assets.html">Assets</a>
+            </li>
+            <li class="{% if page.url == '/hr/maintainance/visa.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/maintainance/visa.html">Visa</a>
+            </li>
+            <li class="{% if page.url == '/hr/maintainance/benefits-type.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/maintainance/benefits-type.html">Benefits Type</a>
+            </li>
+            <li class="{% if page.url == '/hr/maintainance/biometrics.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/maintainance/biometrics.html">Biometrics</a>
+            </li>
+            <li class="{% if page.url == '/hr/maintainance/access-levels.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/maintainance/access-levels.html">Access Levels</a>
+            </li>
+            <li class="{% if page.url == '/hr/maintainance/email-templates.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/maintainance/email-templates.html">Email Templates</a>
+            </li>
+            <li class="{% if page.url == '/hr/maintainance/form-templates.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/maintainance/form-templates.html">Form Templates</a>
+            </li>
           </ul>
         </li>
         <li><a class="btn btn-link"><span class="fa fa-search"></span></a></li>
