@@ -1,0 +1,28 @@
+// cards
+
+@mixin card-variant($text-color) {
+  // border-color: $border;
+
+  .card-title {
+    color: $text-color;
+  }
+
+  & > .card-heading {
+    // color: $text-color;
+    // background-color: $background;
+    // border-color: $heading-border;
+
+    + .card-collapse > .card-body {
+      // border-top-color: $border;
+    }
+    .badge {
+      color: $text-color;
+      // background-color: $text-color;
+    }
+  }
+  & > .card-footer {
+    + .card-collapse > .card-body {
+      // border-bottom-color: $border;
+    }
+  }
+}

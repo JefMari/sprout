@@ -8,21 +8,21 @@ heading-title: New Job Request
 
 <div class="section section-success">
   <div class="section-heading">
-    <h6 class="section-title">Job Role</h6>
+    <h6 class="section-title display-4">Job Title</h6>
     <p class="section-subtitle">Put here the title of the position you want to request</p>
   </div>
   <div class="section-body">
     <div class="row">
       <div class="col-md-8">
         <div class="form-group">
-          <label for="" class="form-label">Role Name</label>
-          <input type="text" name="" value="" class="form-control" placeholder="Enter Role Name">
+          <label for="" class="form-label">Job Title</label>
+          <input type="text" name="" value="" class="form-control" placeholder="Enter Job Title">
         </div>
       </div>
       <div class="col-md-4">
         <div class="form-group">
           <label for="" class="form-label">Date Needed</label>
-          <input type="text" name="" value="" class="form-control" placeholder="Date Needed">
+          <input type="text" name="" value="" class="form-control" placeholder="Enter Date Needed">
         </div>
       </div>
     </div>
@@ -31,14 +31,7 @@ heading-title: New Job Request
 
 <div class="section section-success">
   <div class="section-heading">
-    <h6 class="section-title">Working Condition</h6>
-    <p class="section-subtitle">Required field</p>
-  </div>
-</div>
-
-<div class="section section-success">
-  <div class="section-heading">
-    <h6 class="section-title">Information</h6>
+    <h6 class="section-title display-4">Information</h6>
     <p class="section-subtitle">These are the job details. All fields are required.</p>
   </div>
   <div class="section-body">
@@ -94,13 +87,17 @@ heading-title: New Job Request
       <div class="col-md-4">
         <div class="form-group">
           <label for="" class="form-label">Salary Range</label>
-          <input type="text" name="" value="" class="form-control" placeholder="Date Needed">
+          <div class="input-group">
+            <input type="text" class="form-control" name="" placeholder="0.00">
+            <span class="input-group-addon">to</span>
+            <input type="text" class="form-control" name="" placeholder="0.00">
+          </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="form-group">
           <label for="" class="form-label">Hires Needed</label>
-          <input type="text" name="" value="" class="form-control" placeholder="Input number of hires here">
+          <input type="text" name="" value="" class="form-control" placeholder="Enter Hires Needed">
         </div>
       </div>
       <div class="col-md-4">
@@ -126,7 +123,40 @@ heading-title: New Job Request
 
 <div class="section section-success">
   <div class="section-heading">
-    <h6 class="section-title">Description</h6>
+    <h6 class="section-title display-4">Working Condition</h6>
+    <p class="section-subtitle">Required field</p>
+  </div>
+  <div class="section-body">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="" class="form-label">Shift Type</label>
+          <select class="form-control" name="">
+            <option value="" selected disabled>Select Shift Type</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="" class="form-label">No. Of Hours In A Day</label>
+          <select class="form-control" name="">
+            <option value="" selected disabled>Select No. Of Hours In A Day</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="" class="form-label">Condition &amp; Environment</label>
+          <textarea name="name" rows="8" cols="80" class="form-control" placeholder="Enter Condition &amp; Environment"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-success">
+  <div class="section-heading">
+    <h6 class="section-title display-4">Description</h6>
     <p class="section-subtitle">Required field</p>
   </div>
   <div class="section-body">
@@ -139,53 +169,75 @@ heading-title: New Job Request
 
 <div class="section section-success">
   <div class="section-heading">
-    <h6 class="section-title">Responsibilities</h6>
+    <h6 class="section-title display-4">Responsibilities</h6>
     <p class="section-subtitle">Required field</p>
   </div>
   <div class="section-body">
-    <div class="form-group">
-      <label for="" class="form-label">Job Responsibilities</label>
-      <input type="text" name="" value="" class="form-control" placeholder="Input you responsibility here">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="form-group">
+          <label for="" class="form-label">Job Responsibilities</label>
+          <div class="input-group">
+            <input type="text" name="" value="" class="form-control" placeholder="Enter Job Responsibilities">
+            <span class="input-group-btn">
+              <a href="#" class="btn btn-link">
+                <span class="fa fa-times"></span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
-    <a href="#" class="btn btn-link"><span class="fa fa-plus fa-right"></span>Add responsibility</a>
+    <a href="#"><span class="fa fa-plus fa-right"></span>Add responsibility</a>
   </div>
 </div>
 
 <div class="section section-success">
   <div class="section-heading">
-    <h6 class="section-title">Requirements</h6>
+    <h6 class="section-title display-4">Requirements</h6>
     <p class="section-subtitle">Required field. These are the requirements and qualitfications you need in an employee.</p>
   </div>
   <div class="section-body">
-    <div class="form-group">
-      <label for="" class="form-label">Job Requirements</label>
-      <input type="text" name="" value="" class="form-control" placeholder="Input your requirements here">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="form-group">
+          <label for="" class="form-label">Job Requirements</label>
+          <div class="input-group">
+            <input type="text" name="" value="" class="form-control" placeholder="Enter Job Requirements">
+            <span class="input-group-btn">
+              <a href="#" class="btn btn-link">
+                <span class="fa fa-times"></span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
-    <a href="#" class="btn btn-link"><span class="fa fa-plus fa-right"></span>Add a requirement</a>
+    <a href="#"><span class="fa fa-plus fa-right"></span>Add requirement</a>
   </div>
 </div>
 
 <div class="section section-success">
   <div class="section-heading">
-    <h6 class="section-title">Skills</h6>
+    <h6 class="section-title display-4">Skills</h6>
     <p class="section-subtitle">Required fields.</p>
   </div>
   <div class="section-body">
     <div class="form-group">
       <label for="" class="form-label">Leadership &amp; Management Skills</label>
-      <input type="text" name="" value="" class="form-control" placeholder="Enter a Leadership &amp; Management Skills">
+      <input type="text" name="" value="" class="form-control" placeholder="Enter Leadership &amp; Management Skills">
     </div>
     <div class="form-group">
       <label for="" class="form-label">Creativity &amp; Communication Skills</label>
-      <input type="text" name="" value="" class="form-control" placeholder="Enter a Creativity &amp; Communication Skills">
+      <input type="text" name="" value="" class="form-control" placeholder="Enter Creativity &amp; Communication Skills">
     </div>
     <div class="form-group">
       <label for="" class="form-label">Analysis &amp; Research</label>
-      <input type="text" name="" value="" class="form-control" placeholder="Enter a Analysis &amp; Research">
+      <input type="text" name="" value="" class="form-control" placeholder="Enter Analysis &amp; Research">
     </div>
     <div class="form-group">
       <label for="" class="form-label">Technical &amp; Information Skills</label>
-      <input type="text" name="" value="" class="form-control" placeholder="Enter a Technical &amp; Information Skills">
+      <input type="text" name="" value="" class="form-control" placeholder="Enter Technical &amp; Information Skills">
     </div>
   </div>
 </div>
@@ -193,5 +245,6 @@ heading-title: New Job Request
 <hr class="dashed" />
 
 <span class="pull-right">
-  <a href="#" class="btn btn-primary btn-lg">Save &amp; Continue<span class="fa fa-angle-right fa-lg fa-left"></span></a>
+  <a href="#" class="btn btn-default btn-lg"><span class="fa fa-angle-left fa-lg fa-right"></span>Go Back</a>
+  <a href="#" class="btn btn-primary btn-lg">Continue<span class="fa fa-angle-right fa-lg fa-left"></span></a>
 </span>

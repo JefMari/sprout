@@ -1,0 +1,301 @@
+//
+// cards
+// --------------------------------------------------
+
+
+// Base class
+.card {
+  margin-bottom: $card-margin-bottom;
+  // background-color: $card-bg;
+  border: 2px solid $card-inner-border-color;
+  // border-width: 3px 0 0;
+  border-radius: $card-border-radius;
+  // @include box-shadow(0 4px 8px rgba(0,0,0,.25));
+}
+
+a.card {
+  display: block;
+  @include hover {
+    @include box-shadow(0 2px 4px rgba(0,0,0,.25));
+    border-color: $brand-success;
+    text-decoration: none;
+  }
+  @include transition($btn-transition);
+}
+
+// card contents
+.card-body {
+  padding: $card-body-padding;
+  @include clearfix;
+}
+
+// Optional heading
+.card-heading {
+  padding: $card-heading-padding;
+  // border-bottom: 1px solid $default-border-color;
+  // @include border-top-radius($card-border-radius);
+  @include clearfix;
+
+  // > .dropdown {
+  //   margin-top: -(($padding-base-y)/2)+1;
+  //   > .dropdown-toggle {
+  //     // color: inherit;
+  //   }
+  // }
+}
+
+// Within heading, strip any `h*` tag of its default margins for spacing.
+.card-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  // font-size: ceil(($font-size-base * 1.125));
+  font-size: 20px;
+  // line-height: $line-height-lg;
+  font-weight: $font-weight-base;
+  color: inherit;
+  // text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+
+  > a,
+  > small,
+  > .small,
+  > small > a,
+  > .small > a {
+    color: inherit;
+  }
+}
+
+.card-subtitle {
+  color: $text-muted;
+  margin-bottom: 0;
+  margin-top: 4px;
+}
+
+// Optional footer (stays gray in every modifier class)
+.card-footer {
+  padding: $card-footer-padding;
+  // background-color: $card-footer-bg;
+  // border-top: 1px solid $card-inner-border-color;
+  // @include border-bottom-radius(($card-border-radius - 1));
+  @include clearfix;
+}
+
+
+// List groups in cards
+//
+// By default, space out list group content from card headings to account for
+// any kind of custom content between the two.
+
+.card {
+  > .list-group,
+  > .card-collapse > .list-group {
+    margin-bottom: 0;
+
+    .list-group-item {
+      border-width: 1px 0;
+      border-radius: 0;
+      padding: 12px 24px;
+    }
+
+    // Add border top radius for first one
+    &:first-child {
+      .list-group-item:first-child {
+        border-top: 0;
+        // @include border-top-radius(($card-border-radius - 1));
+      }
+    }
+
+    // Add border bottom radius for last one
+    &:last-child {
+      .list-group-item:last-child {
+        border-bottom: 0;
+        // @include border-bottom-radius(($card-border-radius - 1));
+      }
+    }
+  }
+  > .card-heading + .card-collapse > .list-group {
+    .list-group-item:first-child {
+      @include border-top-radius(0);
+    }
+  }
+}
+// Collapse space between when there's no additional content.
+.card-heading + .list-group {
+  .list-group-item:first-child {
+    border-top-width: 0;
+  }
+}
+.list-group + .card-footer {
+  border-top-width: 0;
+}
+
+// Tables in cards
+//
+// Place a non-bordered `.table` within a card (not within a `.card-body`) and
+// watch it go full width.
+
+.card {
+  > .table,
+  > .table-responsive > .table,
+  > .card-collapse > .table {
+    margin-bottom: 0;
+
+    caption {
+      padding-left: $card-body-padding;
+      padding-right: $card-body-padding;
+    }
+  }
+  // Add border top radius for first one
+  > .table:first-child,
+  > .table-responsive:first-child > .table:first-child {
+    // @include border-top-radius(($card-border-radius - 1));
+
+    > thead:first-child,
+    > tbody:first-child {
+      > tr:first-child {
+        // border-top-left-radius: ($card-border-radius - 1);
+        // border-top-right-radius: ($card-border-radius - 1);
+
+        td:first-child,
+        th:first-child {
+          // border-top-left-radius: ($card-border-radius - 1);
+        }
+        td:last-child,
+        th:last-child {
+          // border-top-right-radius: ($card-border-radius - 1);
+        }
+      }
+    }
+  }
+  // Add border bottom radius for last one
+  > .table:last-child,
+  > .table-responsive:last-child > .table:last-child {
+    // @include border-bottom-radius(($card-border-radius - 1));
+
+    > tbody:last-child,
+    > tfoot:last-child {
+      > tr:last-child {
+        // border-bottom-left-radius: ($card-border-radius - 1);
+        // border-bottom-right-radius: ($card-border-radius - 1);
+
+        td:first-child,
+        th:first-child {
+          // border-bottom-left-radius: ($card-border-radius - 1);
+        }
+        td:last-child,
+        th:last-child {
+          // border-bottom-right-radius: ($card-border-radius - 1);
+        }
+      }
+    }
+  }
+  > .card-body + .table,
+  > .card-body + .table-responsive,
+  > .table + .card-body,
+  > .table-responsive + .card-body {
+    border-top: 1px solid $table-border-color;
+  }
+  > .table > tbody:first-child > tr:first-child th,
+  > .table > tbody:first-child > tr:first-child td {
+    border-top: 0;
+  }
+  > .table-bordered,
+  > .table-responsive > .table-bordered {
+    border: 0;
+    > thead,
+    > tbody,
+    > tfoot {
+      > tr {
+        > th:first-child,
+        > td:first-child {
+          border-left: 0;
+        }
+        > th:last-child,
+        > td:last-child {
+          border-right: 0;
+        }
+      }
+    }
+    > thead,
+    > tbody {
+      > tr:first-child {
+        > td,
+        > th {
+          border-bottom: 0;
+        }
+      }
+    }
+    > tbody,
+    > tfoot {
+      > tr:last-child {
+        > td,
+        > th {
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+  > .table-responsive {
+    border: 0;
+    margin-bottom: 0;
+  }
+}
+
+
+// Collapsible cards (aka, accordion)
+//
+// Wrap a series of cards in `.card-group` to turn them into an accordion with
+// the help of our collapse JavaScript plugin.
+
+.card-group {
+  margin-bottom: $card-margin-bottom;
+
+  // Tighten up margin so it's only between cards
+  .card {
+    margin-bottom: 0;
+    // border-radius: $card-border-radius;
+
+    + .card {
+      margin-top: $spacer-8;
+    }
+  }
+
+  .card-heading {
+    border-bottom: 0;
+
+    + .card-collapse > .card-body,
+    + .card-collapse > .list-group {
+      border-top: 1px solid $card-inner-border-color;
+    }
+  }
+
+  .card-footer {
+    border-top: 0;
+    + .card-collapse .card-body {
+      border-bottom: 1px solid $card-inner-border-color;
+    }
+  }
+}
+
+
+// Contextual variations
+// .card-default {
+//   @include card-variant($card-default-bg, $card-default-color);
+// }
+.card-primary {
+  @include card-variant($card-primary);
+}
+.card-success {
+  @include card-variant($card-success);
+}
+.card-info {
+  @include card-variant($card-info);
+}
+.card-warning {
+  @include card-variant($card-warning);
+}
+.card-danger {
+  @include card-variant($card-danger);
+}
+.card-inverse {
+  @include card-variant($card-inverse);
+}

@@ -93,27 +93,33 @@ $bootstrap-sass-asset-helper: false !default;
 // Grayscale and brand colors for use across Bootstrap.
 
 // Start with assigning color names to specific hex values.
-$white:  #FFFFFF !default;
-$black:  #000000 !default;
-// $red:    #d9534f !default;
-// $orange: #f0ad4e !default;
-// $yellow: #ffd500 !default;
-// $green:  #5cb85c !default;
-// $blue:   #0275d8 !default;
-// $teal:   #5bc0de !default;
-// $pink:   #ff5b77 !default;
-// $purple: #613d7c !default;
+$white:                                     #FFFFFF !default;
+$black:                                     #000000 !default;
+
+$stong-red:                                 #C0392B !default;
+$bright-red:                                #E74C3C !default;
+$strong-cyan:                               #2ECC71 !default;
+$dark-cyan:                                 #27AE60 !default;
+$moderate-cyan:                             #59B3A4 !default;
+$desaturated-cyan:                          #75CABE !default;
+$vivid-yellow:                              #F1C40F !default;
+$vivid-orange:                              #F39C12 !default;
+$dark-magenta:                              #7F4E76 !default;
+$desaturated-magenta:                       #573755 !default;
+$strong-blue:                               #2980B9 !default;
+$bright-blue:                               #3498DB !default;
 
 // Create grayscale
 $sprout-gray:                               #EEEEEE !default;
 
 $sprout-gray-100:                           #F8F8F8 !default;
 $sprout-gray-200:                           #F0F0F0 !default; // For body backgroud color
-$sprout-gray-300:                           #DDDDDD !default; // For befault border color
+$sprout-gray-300:                           #D9D9D9 !default; // For befault border color
 $sprout-gray-400:                           #BBBBBB !default; // For dropdown and input border
 $sprout-gray-500:                           #747C83 !default; // For text muted
+$sprout-gray-600:                           #888888 !default; // For text muted
 $sprout-gray-700:                           #555555 !default; // Used for links
-$sprout-gray-800:                           #454546 !default; // For base text color
+$sprout-gray-800:                           #454545 !default; // For base text color
 $sprout-gray-900:                           #222222 !default; // For heading text color
 
 
@@ -1262,6 +1268,32 @@ $section-info:     $brand-info !default;
 $section-warning:  $brand-warning !default;
 $section-danger:   $brand-danger !default;
 $section-inverse:  $brand-inverse !default;
+
+//== Panels
+//
+
+$card-margin-bottom: $spacer-24 !default;
+$card-bg:                    $white !default;
+$card-heading-padding:       $spacer-12 !default;
+$card-heading-border-bottom-color: $default-border !default;
+$card-body-padding:          $spacer-12 !default;
+$card-border-radius:         $border-radius-lg !default;
+
+//** Border color for elements within sections
+$card-inner-border-color:    $default-border !default;
+$card-footer-bg:             $sprout-gray-200 !default;
+$card-footer-padding:        $card-heading-padding !default;
+
+$card-default-color:         $default-color !default;
+$card-default-bg:    $sprout-gray !default;
+
+$card-primary:  $brand-primary !default;
+$card-success:  $brand-success !default;
+$card-info:     $brand-info !default;
+$card-warning:  $brand-warning !default;
+$card-danger:   $brand-danger !default;
+$card-inverse:  $brand-inverse !default;
+
 
 //== Thumbnails
 //
