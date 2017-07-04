@@ -9,7 +9,7 @@
 
 .list-group {
   // No need to set list-style: none; since .list-group-item is block level
-  margin-bottom: ($grid-gutter-width-base/3)*2;
+  margin-bottom: ($grid-gutter-width/3)*2;
   padding-left: 0; // reset padding because ul and ol
 }
 

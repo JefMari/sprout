@@ -1,7 +1,11 @@
+body {
+  margin-top: 115px;
+}
+
 .heading {
   background-color: #F8F8F8;
   border-bottom: 2px solid #DDDDDD;
-  margin-top: -24px;
+  margin-top: -40px;
   margin-bottom: 24px;
   padding: 40px 0 24px;
 }
@@ -49,4 +53,34 @@
 
 .line-height-lg {
   line-height: 2;
+}
+
+
+.table-loading {
+  position: relative;
+}
+
+.table-loading::after {
+  position: absolute;
+  top: 43px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  background-image: url(../images/loading.gif);
+  background-position: center 40px;
+  background-repeat: no-repeat;
+  background-size: 50px 50px;
+  content: "";
+}
+
+
+
+
+
+.edit-mode,
+.edit-photo-btn,
+.close-btn,
+.section-editable .section-footer {
+  display: none;
 }

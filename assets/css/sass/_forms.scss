@@ -257,12 +257,12 @@ input[type="search"] {
 .form-checkbox {
   position: relative;
   display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  // margin-top: 8px;
+  margin-bottom: 8px;
 
   label {
     min-height: 20px; // Ensure the input doesn't jump when there is no text
-    padding-left: 20px;
+    padding-left: 24px;
     margin-bottom: 0;
     font-weight: normal;
     cursor: pointer;
@@ -273,13 +273,13 @@ input[type="search"] {
 .form-checkbox input[type="checkbox"],
 .form-checkbox-inline input[type="checkbox"] {
   position: absolute;
-  margin-left: -20px;
+  margin-left: -24px;
   margin-top: 4px \9;
 }
 
 .form-radio + .form-radio,
 .form-checkbox + .form-checkbox {
-  margin-top: -5px; // Move up sibling radios or checkboxes for tighter spacing
+  // margin-top: -8px; // Move up sibling radios or checkboxes for tighter spacing
 }
 
 // Radios and checkboxes on same line
@@ -287,7 +287,7 @@ input[type="search"] {
 .form-checkbox-inline {
   position: relative;
   display: inline-block;
-  padding-left: 20px;
+  padding-left: 24px;
   margin-bottom: 0;
   vertical-align: middle;
   font-weight: normal;
@@ -424,7 +424,7 @@ input[type="checkbox"] {
 
   // Ensure icons don't overlap text
   .form-control {
-    padding-right: $grid-gutter-width-base + $form-group-margin-bottom;
+    padding-right: $grid-gutter-width + $form-group-margin-bottom;
   }
 }
 
@@ -435,7 +435,7 @@ input[type="checkbox"] {
 
   &.left {
     .form-control {
-      padding-left: $grid-gutter-width-base + $form-group-margin-bottom;
+      padding-left: $grid-gutter-width + $form-group-margin-bottom;
     }
     .form-icon {
       left: 0;
@@ -444,7 +444,7 @@ input[type="checkbox"] {
 
   &.right {
     .form-control {
-      padding-right: $grid-gutter-width-base + $form-group-margin-bottom;
+      padding-right: $grid-gutter-width + $form-group-margin-bottom;
     }
     .form-icon {
       right: 0;
@@ -492,7 +492,7 @@ input[type="checkbox"] {
 .form-group-lg .form-control ~ .form-feedback,
 .form-group-lg .form-control ~ .form-icon,
 .form-group-lg .form-control ~ .form-reset {
-  // width: $grid-gutter-width-base;
+  // width: $grid-gutter-width;
   height: $input-height-lg;
   line-height: $input-height-lg;
 }
@@ -692,18 +692,18 @@ input[type="checkbox"] {
   // `position: relative;` on them. Also accounts for the grid gutter padding.
   .has-feedback .form-feedback,
   .has-reset .form-reset {
-    right: floor(($grid-gutter-width-base / 2));
+    right: floor(($grid-gutter-width / 2));
   }
 
   .has-icon {
     &.left {
       .form-icon {
-        left: floor(($grid-gutter-width-base / 2));
+        left: floor(($grid-gutter-width / 2));
       }
     }
     &.right {
       .form-icon {
-        right: floor(($grid-gutter-width-base / 2));
+        right: floor(($grid-gutter-width / 2));
       }
     }
   }

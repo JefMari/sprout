@@ -21,29 +21,20 @@
 
 // Optional heading
 .section-heading {
-  padding: $section-heading-padding;
+  padding-bottom: $spacer-12;
   border-bottom: 1px solid $default-border-color;
   // @include border-top-radius($section-border-radius);
   @include clearfix;
 
-  // > .dropdown {
-  //   margin-top: -(($padding-base-y)/2)+1;
-  //   > .dropdown-toggle {
-  //     // color: inherit;
-  //   }
-  // }
 }
 
 // Within heading, strip any `h*` tag of its default margins for spacing.
 .section-title {
   margin-top: 0;
   margin-bottom: 0;
-  // font-size: ceil(($font-size-base * 1.125));
   font-size: 20px;
-  // line-height: $line-height-lg;
   font-weight: $font-weight-base;
   color: inherit;
-  // text-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 
   > a,
   > small,
@@ -62,7 +53,7 @@
 
 // Optional footer (stays gray in every modifier class)
 .section-footer {
-  padding: $section-footer-padding;
+  padding-top: $spacer-12;
   // background-color: $section-footer-bg;
   border-top: 1px solid $section-inner-border-color;
   // @include border-bottom-radius(($section-border-radius - 1));
@@ -263,6 +254,37 @@
     + .section-collapse .section-body {
       border-bottom: 1px solid $section-inner-border-color;
     }
+  }
+}
+
+
+.section-editable {
+  padding: 16px;
+  margin: -16px;
+  margin-bottom: 24px;
+  border: 1px solid transparent;
+  @include hover-focus {
+    background-color: $default-bg;
+    border-color: $default-hover-border;
+  }
+
+  .section-action {
+    display: none;
+    float: right;
+  }
+
+  @include hover-focus {
+    .section-action {
+      display: block;
+      @include transition($btn-transition);
+    }
+  }
+
+
+  @include transition($btn-transition);
+
+  .section-footer {
+    text-align: right;
   }
 }
 

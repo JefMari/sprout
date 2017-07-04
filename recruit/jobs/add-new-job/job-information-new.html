@@ -1,28 +1,28 @@
 ---
 layout: recruit-add-new-job-profile
 
-meta-title: New Job Request
+meta-title: New Job Request (Manager)
 
-heading-title: New Job Request
+heading-title: New Job Request (Manager)
 ---
 
 <div class="section section-success">
   <div class="section-heading">
-    <h6 class="section-title display-4">Job Role</h6>
-    <p class="section-subtitle">Put here the title of the position you want to request</p>
+    <h6 class="section-title display-4">Job Title</h6>
+    <p class="section-subtitle"></p>
   </div>
   <div class="section-body">
     <div class="row">
       <div class="col-md-8">
         <div class="form-group">
-          <label for="" class="form-label">Role Name</label>
-          <input type="text" name="" value="" class="form-control" placeholder="Enter Role Name">
+          <label for="" class="form-label">Job Title</label>
+          <input type="text" name="" value="" class="form-control" placeholder="Enter Job Title">
         </div>
       </div>
       <div class="col-md-4">
         <div class="form-group">
           <label for="" class="form-label">Date Needed</label>
-          <input type="text" name="" value="" class="form-control" placeholder="Date Needed">
+          <input type="text" name="" value="" class="form-control" placeholder="Enter Date Needed">
         </div>
       </div>
     </div>
@@ -32,7 +32,7 @@ heading-title: New Job Request
 <div class="section section-success">
   <div class="section-heading">
     <h6 class="section-title display-4">Information</h6>
-    <p class="section-subtitle">These are the job details. All fields are required.</p>
+    <p class="section-subtitle">Basic information about the job. All fields required.</p>
   </div>
   <div class="section-body">
     <div class="row">
@@ -87,23 +87,30 @@ heading-title: New Job Request
       <div class="col-md-4">
         <div class="form-group">
           <label for="" class="form-label">Salary Range</label>
-          <input type="text" name="" value="" class="form-control" placeholder="Date Needed">
+          <div class="input-group">
+            <input type="text" class="form-control" name="" placeholder="0.00">
+            <span class="input-group-addon">to</span>
+            <input type="text" class="form-control" name="" placeholder="0.00">
+          </div>
         </div>
       </div>
       <div class="col-md-4">
         <div class="form-group">
           <label for="" class="form-label">Hires Needed</label>
-          <input type="text" name="" value="" class="form-control" placeholder="Input number of hires here">
+          <input type="number" name="" value="" class="form-control" placeholder="Enter Hires Needed">
         </div>
       </div>
       <div class="col-md-4">
         <div class="form-group">
-          <label for="" class="form-label">Closes</label>
+          <label for="" class="form-label">Open Until</label>
           <div class="form-radio">
-            <label><input type="radio" name="Job Closes" value="">Until all positions are filled</label>
+            <label><input type="radio" name="Job Closes" value="">open until positions are filled</label>
           </div>
           <div class="form-radio">
-            <label><input type="radio" name="Job Closes" value="">On</label>
+            <label><input type="radio" name="Job Closes" value="">
+              On
+              <input type="text" name="" value="" class="form-control" placeholder="Input number of hires here">
+            </label>
           </div>
           <div class="form-radio">
             <label><input type="radio" name="Job Closes" value="">After</label>
@@ -116,8 +123,41 @@ heading-title: New Job Request
 
 <div class="section section-success">
   <div class="section-heading">
+    <h6 class="section-title display-4">Working Condition</h6>
+    <p class="section-subtitle">Conditions at work, such as work schedule, shift type, environment, and cultural demands. Optional.</p>
+  </div>
+  <div class="section-body">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="" class="form-label">Shift Type</label>
+          <select class="form-control" name="">
+            <option value="" selected disabled>Select Shift Type</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="" class="form-label">No. Of Hours In A Day</label>
+          <select class="form-control" name="">
+            <option value="" selected disabled>Select No. Of Hours In A Day</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="form-group">
+          <label for="" class="form-label">Condition &amp; Environment</label>
+          <textarea name="name" rows="8" cols="80" class="form-control" placeholder="Enter Condition &amp; Environment"></textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section section-success">
+  <div class="section-heading">
     <h6 class="section-title display-4">Description</h6>
-    <p class="section-subtitle">Enter the job description here; include key areas of responsibilities and what the candidate might do on a typical day.</p>
+    <p class="section-subtitle">An overview or summary of what the job is. Required.</p>
   </div>
   <div class="section-body">
     <div class="form-group">
@@ -130,51 +170,81 @@ heading-title: New Job Request
 <div class="section section-success">
   <div class="section-heading">
     <h6 class="section-title display-4">Responsibilities</h6>
-    <p class="section-subtitle">Enter the job requirements here; from soft skills to the specific qualifications needed to perform the role.</p>
+    <p class="section-subtitle">A list of tasks that an applicant is expected to do once hired for the job. Required.</p>
   </div>
   <div class="section-body">
-    <div class="form-group">
-      <label for="" class="form-label">Job Responsibilities</label>
-      <input type="text" name="" value="" class="form-control" placeholder="Input you responsibility here">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="form-group">
+          <label for="" class="form-label">Job Responsibilities</label>
+          <div class="input-group">
+            <input type="text" name="" value="" class="form-control" placeholder="Enter Job Responsibilities">
+            <span class="input-group-btn">
+              <a href="#" class="btn btn-link">
+                <span class="fa fa-times"></span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
     </div>
+    <a href="#"><span class="fa fa-plus fa-right"></span>Add responsibility</a>
+  </div>
+</div>
+
+<div class="section section-success">
+  <div class="section-heading">
+    <h6 class="section-title display-4">Qualifications</h6>
+    <p class="section-subtitle">A list of things that an applicant must have in order to be qualify for the job. Required.</p>
+  </div>
+  <div class="section-body">
+    <div class="row">
+      <div class="col-md-10">
+        <div class="form-group">
+          <label for="" class="form-label">Job Qualifications</label>
+          <div class="input-group">
+            <input type="text" name="" value="" class="form-control" placeholder="Enter Job Qualifications">
+            <span class="input-group-btn">
+              <a href="#" class="btn btn-link">
+                <span class="fa fa-times"></span>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <a href="#"><span class="fa fa-plus fa-right"></span>Add qualifications</a>
   </div>
 </div>
 
 <div class="section section-success">
   <div class="section-heading">
     <h6 class="section-title display-4">Skills</h6>
-    <p class="section-subtitle">Required fields.</p>
+    <p class="section-subtitle">Strengths and expertise that would be nice for an applicant to have. Optional.</p>
   </div>
   <div class="section-body">
     <div class="form-group">
       <label for="" class="form-label">Leadership &amp; Management Skills</label>
-      <input type="text" name="" value="" class="form-control" placeholder="Enter a Leadership &amp; Management Skills">
+      <input type="text" name="" value="" class="form-control" placeholder="Enter Leadership &amp; Management Skills">
     </div>
     <div class="form-group">
       <label for="" class="form-label">Creativity &amp; Communication Skills</label>
-      <input type="text" name="" value="" class="form-control" placeholder="Enter a Creativity &amp; Communication Skills">
+      <input type="text" name="" value="" class="form-control" placeholder="Enter Creativity &amp; Communication Skills">
     </div>
     <div class="form-group">
       <label for="" class="form-label">Analysis &amp; Research</label>
-      <input type="text" name="" value="" class="form-control" placeholder="Enter a Analysis &amp; Research">
+      <input type="text" name="" value="" class="form-control" placeholder="Enter Analysis &amp; Research">
     </div>
     <div class="form-group">
       <label for="" class="form-label">Technical &amp; Information Skills</label>
-      <input type="text" name="" value="" class="form-control" placeholder="Enter a Technical &amp; Information Skills">
+      <input type="text" name="" value="" class="form-control" placeholder="Enter Technical &amp; Information Skills">
     </div>
   </div>
 </div>
 
-<div class="section section-success">
-  <div class="section-heading">
-    <h6 class="section-title display-4"></h6>
-    <p class="section-subtitle"></p>
-  </div>
-</div>
+<hr class="dashed" />
 
-<div class="section section-success">
-  <div class="section-heading">
-    <h6 class="section-title display-4"></h6>
-    <p class="section-subtitle"></p>
-  </div>
-</div>
+<span class="pull-right">
+  <a href="{{ site.baseurl }}/recruit/jobs/" class="btn btn-default btn-lg"><span class="fa fa-angle-left fa-lg fa-right"></span>Go Back</a>
+  <a href="{{ site.baseurl }}/recruit/jobs/add-new-job/benefits-and-perks.html" class="btn btn-primary btn-lg">Continue<span class="fa fa-angle-right fa-lg fa-left"></span></a>
+</span>

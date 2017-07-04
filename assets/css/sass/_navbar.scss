@@ -12,7 +12,7 @@
   position: relative;
   min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
   margin-bottom: $navbar-margin-bottom;
-  border-top: 2px solid transparent;
+  border-top: 3px solid transparent;
 
   // Prevent floats from breaking the navbar
   @include clearfix;
@@ -166,8 +166,8 @@
   // font-size: $font-size-lg;
   // line-height: $line-height-computed;
   // height: $navbar-height;
-  line-height: 44px;
-  font-size: 28px;
+  line-height: 48px;
+  font-size: 36px;
   font-weight: 100;
 
   &:hover,
@@ -177,14 +177,16 @@
 
   > img {
     display: block;
-    height: 44px;
+    height: 48px;
     float: left;
   }
 
   > .navbar-brand-text {
-    padding-left: 8px;
+    padding-left: 12px;
     // line-height: 44px;
     // font-size: 28px;
+    border-left: 1px solid transparent;
+    margin-left: 12px;
 
     display: inline-block;
   }
@@ -419,8 +421,9 @@
   background-color: $navbar-default-bg;
   border-color: $navbar-default-border-color;
 
-  .navbar-brand {
+  .navbar-brand-text {
     color: $navbar-default-brand-color;
+    border-color: $navbar-default-brand-color;
     &:hover,
     &:focus {
       color: $navbar-default-brand-hover-color;
@@ -553,8 +556,9 @@
   background-color: $navbar-inverse-bg;
   border-color: $navbar-inverse-border-color;
 
-  .navbar-brand {
+  .navbar-brand-text {
     color: $navbar-inverse-brand-color;
+    border-color: $navbar-inverse-brand-color;
     &:hover,
     &:focus {
       color: $navbar-inverse-brand-hover-color;
