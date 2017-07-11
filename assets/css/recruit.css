@@ -39,7 +39,7 @@
 }
 
 #job-list .table-responsive {
-  min-height: calc(100vh - 370px);
+  min-height: calc(100vh - 375px);
 }
 
 #job-list table td {

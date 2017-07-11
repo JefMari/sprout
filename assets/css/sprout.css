@@ -3098,6 +3098,12 @@ tbody.collapse.in {
   width: 1%;
   white-space: nowrap;
   vertical-align: middle; }
+  .input-group-addon.form-radio:first-child,
+  .input-group-btn.form-radio:first-child {
+    padding-left: 0; }
+  .input-group-addon.form-radio:last-child,
+  .input-group-btn.form-radio:last-child {
+    padding-right: 0; }
 
 .input-group-addon {
   padding: 8px 16px;
@@ -3116,9 +3122,6 @@ tbody.collapse.in {
   .input-group-lg > .input-group-btn > .input-group-addon.btn {
     padding: 12px 24px;
     border-radius: 4px; }
-  .input-group-addon input[type="radio"],
-  .input-group-addon input[type="checkbox"] {
-    margin-top: 0; }
 
 .input-group-btn {
   position: relative;
@@ -4925,9 +4928,9 @@ button.list-group-item-danger {
       border-bottom: 1px solid #D9D9D9; }
 
 .section-editable {
-  padding: 16px;
-  margin: -16px;
-  margin-bottom: 24px;
+  padding: 24px;
+  margin: -24px;
+  margin-bottom: 36px;
   border: 1px solid transparent;
   -webkit-transition: all 0.2s ease-in-out;
   -o-transition: all 0.2s ease-in-out;

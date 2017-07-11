@@ -70,6 +70,16 @@
   width: 1%;
   white-space: nowrap;
   vertical-align: middle; // Match the inputs
+
+  &.form-radio {
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+
 }
 
 // Text input groups
@@ -102,7 +112,7 @@
   // Nuke default margins from checkboxes and radios to vertically center within.
   input[type="radio"],
   input[type="checkbox"] {
-    margin-top: 0;
+    // margin-top: 0;
   }
 }
 

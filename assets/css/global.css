@@ -1,5 +1,5 @@
 body {
-  margin-top: 115px;
+  margin-top: 100px;
 }
 
 .heading {
@@ -15,9 +15,15 @@ body {
   color: #6C9B41;
 }
 
+.heading-subtitle {
+  margin: 0;
+  margin-top: 4px;
+  color: #888;
+}
+
 .box {
   background-color: white;
-  padding: 24px;
+  padding: 36px;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.1);
   margin-bottom: 24px;
 }

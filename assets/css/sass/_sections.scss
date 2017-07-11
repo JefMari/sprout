@@ -259,9 +259,9 @@
 
 
 .section-editable {
-  padding: 16px;
-  margin: -16px;
-  margin-bottom: 24px;
+  padding: 24px;
+  margin: -24px;
+  margin-bottom: 36px;
   border: 1px solid transparent;
   @include hover-focus {
     background-color: $default-bg;
