@@ -36,6 +36,7 @@
           </ul>
         </li>
         <li class="dropdown {% if
+          page.url contains '/hr/my-company/organization-chart.html' or
           page.url contains '/hr/my-company/calendar.html' or
           page.url contains '/hr/my-company/employee-directory.html' or
           page.url contains '/hr/my-company/hr-analytics.html' or
@@ -43,6 +44,9 @@
           %} active {% endif %}">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Company<span class="fa fa-angle-down fa-lg fa-left"></span></a>
           <ul class="dropdown-menu">
+            <li class="{% if page.url == '/hr/my-company/organization-chart.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/hr/my-company/organization-chart.html">Organization Chart</a>
+            </li>
             <li class="{% if page.url == '/hr/my-company/calendar.html' %} active {% endif %}">
               <a href="{{ site.baseurl }}/hr/my-company/calendar.html">Calendar</a>
             </li>

@@ -1,11 +1,11 @@
 body {
-  margin-top: 100px;
+  margin-top: 99px;
 }
 
 .heading {
   background-color: #F8F8F8;
   border-bottom: 2px solid #DDDDDD;
-  margin-top: -40px;
+  margin-top: -24px;
   margin-bottom: 24px;
   padding: 40px 0 24px;
 }
@@ -84,9 +84,7 @@ body {
 
 
 
-.edit-mode,
-.edit-photo-btn,
-.close-btn,
+.section-editable .edit-mode,
 .section-editable .section-footer {
   display: none;
 }
