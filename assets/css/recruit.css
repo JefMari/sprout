@@ -205,7 +205,7 @@
 }
 
 .nav-wizard li.disabled a {
-    pointer-events: none;
+     pointer-events: none; 
 }
 
 .nav-wizard li.completed .indicator {
@@ -217,8 +217,9 @@
     position: absolute;
     left: 0px;
     width: 24px;
+    height: 24px;
     line-height: 24px;
-    font-size: 14px;
+    font-size: 12px;
     text-align: center;
     content: "\f00c ";
 }
