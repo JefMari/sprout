@@ -1,13 +1,15 @@
+
 {
     "remove-empty-rulesets": true,
     "always-semicolon": true,
     "color-case": "lower",
-    "block-indent": "\t",
+    "block-indent": "  ",
     "color-shorthand": true,
     "element-case": "lower",
     "eof-newline": true,
     "leading-zero": false,
     "quotes": "single",
+    "sort-order-fallback": "abc",
     "space-before-colon": "",
     "space-after-colon": " ",
     "space-before-combinator": " ",

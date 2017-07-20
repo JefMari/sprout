@@ -86,3 +86,20 @@ $(document).ready(function(){
     }
 	});
 });
+
+
+
+
+
+
+
+
+
+
+
+
+$('.bootstrapWizard li::after ').css(
+  {
+    'width': '60%'
+  }
+);

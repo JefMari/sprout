@@ -16,14 +16,18 @@
       <ul class="nav navbar-nav navbar-right nav-lg">
         <li class="{% if
           page.url contains '/recruit/jobs/' or
-          page.url contains '/recruit/jobs/profile/job-information.html' or
-          page.url contains '/recruit/jobs/profile/forms-and-letters.html' or
-          page.url contains '/recruit/jobs/profile/process-and-team.html' or
-          page.url contains '/recruit/jobs/profile/applicants.html'
+          page.url contains '/recruit/jobs/profile/' or
+          page.url contains '/recruit/jobs/add-new-job/'
           %} active {% endif %}">
           <a href="{{ site.baseurl }}/recruit/jobs/">Jobs</a>
         </li>
-        <li><a href="#">Applicants</a></li>
+        <li class="{% if
+          page.url contains '/recruit/applicants/' or
+          page.url contains '/recruit/applicants/profile/' or
+          page.url contains '/recruit/applicants/add-new-applicants/'
+          %} active {% endif %}">
+          <a href="{{ site.baseurl }}/recruit/applicants/">Applicants</a>
+        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Setup<span class="fa fa-angle-down fa-lg fa-left"></span></a>
           <ul class="dropdown-menu">

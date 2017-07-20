@@ -1,0 +1,75 @@
+---
+layout: recruit-box
+
+meta-title: Jobs | Sprout Recruit
+
+heading-title: Jobs
+---
+
+<div class="section section-default" id="job-list">
+  <div class="table-responsive">
+    <table class="table table-hover table-lg">
+      <thead>
+        <tr>
+          <th class="col-4"><a href="#">Job Details<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-2"><a href="#">Date Added<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-2"><a href="#">Date Needed<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-1"><a href="#">Processing<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-1"><a href="#">Offered<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-1"><a href="#">Hired<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-1"><a href="#">Actions<span class="fa fa-sort fa-left"></span></a></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for post in site.posts %}
+          <tr>
+            <td>
+              <a class="lead" href="{{ site.baseurl }}{{ post.url }}">{{ post.job-title }}</a>
+              <span class="clearfix"></span>
+              <span class="badge badge-warning mar-hor-1">{{ post.job-status }}</span>
+              <span class="clearfix"></span>
+              <ul class="list list-inline small text-muted">
+                <li>{{ post.job-company }}</li>
+                <li class="divider"></li>
+                <li>{{ post.job-department }}</li>
+              </ul>
+            </td>
+            <td>{{ post.job-date-added }}</td>
+            <td>{{ post.job-date-needed }}</td>
+            <td class="h5">{{ post.job-processing }}</td>
+            <td class="h5">{{ post.job-offered }}</td>
+            <td class="h5">{{ post.job-hired }}<small class="text-muted">/0</small></td>
+            <td><button class="btn btn-outline-primary btn-block btn-sm">Brand</button></td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  <div class="section-footer">
+    <div class="pagination-settings">
+      Results 1 - 10 of 100
+      <span class="dropup mar-left-2">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">5 entries per page<span class="fa fa-angle-up fa-lg fa-left"></span></a>
+        <ul class="dropdown-menu dropdown-menu-right">
+          <li class="dropdown-header">Entries per page:</li>
+          <li class="active"><a href="#">5 items</a></li>
+          <li><a href="#">10 items</a></li>
+          <li><a href="#">25 items</a></li>
+          <li><a href="#">50 items</a></li>
+          <li><a href="#">100 items</a></li>
+        </ul>
+      </span>
+    </div>
+    <ul class="pagination mar-hor-auto pull-right">
+      <!-- <li class="disabled"><a href="#"><span class="fa fa-angle-left fa-lg"></span></a></li> -->
+      <!-- <li class="disabled"><a href="#"><span class="fa fa-angle-double-left fa-lg"></span></a></li> -->
+      <li class="active"><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#"><span class="fa fa-angle-right fa-lg"></span></a></li>
+      <li><a href="#"><span class="fa fa-angle-double-right fa-lg"></span></a></li>
+    </ul>
+  </div>
+</div>
