@@ -52,68 +52,761 @@
 <script src="//code.jquery.com/jquery-1.12.4.js"></script>
 <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-
 <script type="text/javascript">
-  $("#dialog").dialog({
-    modal: true,
-    autoOpen: false,            
-    show: {
-      effect: "explode",
-      duration: 200
-    },
-    hide: {
-      effect: "explode",
-      duration: 200
-    }
-  });
-  
-  var btnAdd = '<g data-action="add" class="btn" transform="matrix(0.14,0,0,0.14,0,0)"><rect style="opacity:0" x="0" y="0" height="300" width="300" /><path  fill="#686868" d="M149.996,0C67.157,0,0.001,67.158,0.001,149.997c0,82.837,67.156,150,149.995,150s150-67.163,150-150 C299.996,67.156,232.835,0,149.996,0z M149.996,59.147c25.031,0,45.326,20.292,45.326,45.325 c0,25.036-20.292,45.328-45.326,45.328s-45.325-20.292-45.325-45.328C104.671,79.439,124.965,59.147,149.996,59.147z M168.692,212.557h-0.001v16.41v2.028h-18.264h-0.864H83.86c0-44.674,24.302-60.571,40.245-74.843 c7.724,4.15,16.532,6.531,25.892,6.601c9.358-0.07,18.168-2.451,25.887-6.601c7.143,6.393,15.953,13.121,23.511,22.606h-7.275 v10.374v13.051h-13.054h-10.374V212.557z M218.902,228.967v23.425h-16.41v-23.425h-23.428v-16.41h23.428v-23.425H218.9v23.425 h23.423v16.41H218.902z"/></g>';
-  var btnEdit = '<g data-action="edit" class="btn" transform="matrix(0.14,0,0,0.14,50,0)"><rect style="opacity:0" x="0" y="0" height="300" width="300" /><path fill="#686868" d="M149.996,0C67.157,0,0.001,67.161,0.001,149.997S67.157,300,149.996,300s150.003-67.163,150.003-150.003 S232.835,0,149.996,0z M221.302,107.945l-14.247,14.247l-29.001-28.999l-11.002,11.002l29.001,29.001l-71.132,71.126 l-28.999-28.996L84.92,186.328l28.999,28.999l-7.088,7.088l-0.135-0.135c-0.786,1.294-2.064,2.238-3.582,2.575l-27.043,6.03 c-0.405,0.091-0.817,0.135-1.224,0.135c-1.476,0-2.91-0.581-3.973-1.647c-1.364-1.359-1.932-3.322-1.512-5.203l6.027-27.035 c0.34-1.517,1.286-2.798,2.578-3.582l-0.137-0.137L192.3,78.941c1.678-1.675,4.404-1.675,6.082,0.005l22.922,22.917 C222.982,103.541,222.982,106.267,221.302,107.945z"/></g>';
-  var btnDel = '<g data-action="delete" class="btn" transform="matrix(0.14,0,0,0.14,100,0)"><rect style="opacity:0" x="0" y="0" height="300" width="300" /><path fill="#686868" d="M112.782,205.804c10.644,7.166,23.449,11.355,37.218,11.355c36.837,0,66.808-29.971,66.808-66.808 c0-13.769-4.189-26.574-11.355-37.218L112.782,205.804z"/> <path stroke="#686868" fill="#686868" d="M150,83.542c-36.839,0-66.808,29.969-66.808,66.808c0,15.595,5.384,29.946,14.374,41.326l93.758-93.758 C179.946,88.926,165.595,83.542,150,83.542z"/><path stroke="#686868" fill="#686868" d="M149.997,0C67.158,0,0.003,67.161,0.003,149.997S67.158,300,149.997,300s150-67.163,150-150.003S232.837,0,149.997,0z M150,237.907c-48.28,0-87.557-39.28-87.557-87.557c0-48.28,39.277-87.557,87.557-87.557c48.277,0,87.557,39.277,87.557,87.557 C237.557,198.627,198.277,237.907,150,237.907z"/></g>';
-
-  getOrgChart.themes.monica.box += '<g transform="matrix(1,0,0,1,350,10)">' + btnAdd + btnEdit + btnDel + '</g>';
+  getOrgChart.themes.myTheme =
+  {
+    size: [330, 260],
+    toolbarHeight: 46,
+    textPoints: [
+      { x: 20, y: 45, width: 300 },
+      { x: 120, y: 100, width: 200 },
+      { x: 120, y: 125, width: 200 }
+    ],
+    //textPointsNoImage: [] NOT IMPLEMENTED,
+    box: '<rect x="0" y="0" height="260" width="330" rx="10" ry="10" class="get-box"></rect>'
+        + '<g transform="matrix(1,0,0,1,120,140)"><rect x="0" y="0" height="20" width="50" rx="3" ry="3" class="more-info"></rect><text width="40" class="get-text get-text-3" x="23" y="17">##</text></g>'
+        + '<g transform="matrix(0.25,0,0,0.25,123,142)"><path d="M48.014,42.889l-9.553-4.776C37.56,37.662,37,36.756,37,35.748v-3.381c0.229-0.28,0.47-0.599,0.719-0.951  c1.239-1.75,2.232-3.698,2.954-5.799C42.084,24.97,43,23.575,43,22v-4c0-0.963-0.36-1.896-1-2.625v-5.319  c0.056-0.55,0.276-3.824-2.092-6.525C37.854,1.188,34.521,0,30,0s-7.854,1.188-9.908,3.53C17.724,6.231,17.944,9.506,18,10.056  v5.319c-0.64,0.729-1,1.662-1,2.625v4c0,1.217,0.553,2.352,1.497,3.109c0.916,3.627,2.833,6.36,3.503,7.237v3.309  c0,0.968-0.528,1.856-1.377,2.32l-8.921,4.866C8.801,44.424,7,47.458,7,50.762V54c0,4.746,15.045,6,23,6s23-1.254,23-6v-3.043  C53,47.519,51.089,44.427,48.014,42.889z M51,54c0,1.357-7.412,4-21,4S9,55.357,9,54v-3.238c0-2.571,1.402-4.934,3.659-6.164  l8.921-4.866C23.073,38.917,24,37.354,24,35.655v-4.019l-0.233-0.278c-0.024-0.029-2.475-2.994-3.41-7.065l-0.091-0.396l-0.341-0.22  C19.346,23.303,19,22.676,19,22v-4c0-0.561,0.238-1.084,0.67-1.475L20,16.228V10l-0.009-0.131c-0.003-0.027-0.343-2.799,1.605-5.021  C23.253,2.958,26.081,2,30,2c3.905,0,6.727,0.951,8.386,2.828c1.947,2.201,1.625,5.017,1.623,5.041L40,16.228l0.33,0.298  C40.762,16.916,41,17.439,41,18v4c0,0.873-0.572,1.637-1.422,1.899l-0.498,0.153l-0.16,0.495c-0.669,2.081-1.622,4.003-2.834,5.713  c-0.297,0.421-0.586,0.794-0.837,1.079L35,31.623v4.125c0,1.77,0.983,3.361,2.566,4.153l9.553,4.776  C49.513,45.874,51,48.28,51,50.957V54z" fill="#FFFFFF"/></g>'
+        + '<g transform="matrix(1,0,0,1,20,190)" class="btn" data-action="edit"><path d="M5 0 L97 0 Q97 0 97 0 L97 45 Q97 45 97 45 L5 45 Q0 45 0 40 L0 5 Q0 0 5 0 Z"></path><text x="35" y="27" width="60">Edit</text></g>'
+        + '<g transform="matrix(1,0,0,1,117,190)" class="btn" data-action="add"><path d="M0 0 L97 0 Q97 0 97 0 L97 45 Q97 45 97 45 L0 45 Q0 45 0 45 L0 0 Q0 0 0 0 Z"></path><circle cx="49" cy="23" r="10"></circle><line x1="42" y1="23" x2="56" y2="23"></line><line x1="49" y1="16" x2="49" y2="30"></line></g>'
+        + '<g transform="matrix(1,0,0,1,214,190)" class="btn" data-action="preview"><path d="M0 0 L92 0 Q97 0 97 5 L97 40 Q97 45 92 45 L0 45 Q0 45 0 45 L0 0 Q0 0 0 0 Z"></path><text x="25" y="27" width="60">Profile</text></g>',
+    text: '<text width="[width]" class="get-text get-text-[index]" x="[x]" y="[y]">[text]</text>',
+    image: '<clipPath id="clip"><circle cx="60" cy="120" r="40" /></clipPath><image preserveAspectRatio="xMidYMid slice" clip-path="url(#clip)" xlink:href="[href]" x="20" y="80" height="80" width="80"/>',
+    expandCollapseBtnRadius: 20
+  };
 
   var orgChart = new getOrgChart(document.getElementById("people"), {
-    primaryFields: ["name", "title", "mail"],
-    theme: "monica",
-    enableEdit: true,
-    enableDetailsView: true,
+    theme: "myTheme",
+    enableEdit: false,
+    enableZoom: true,
+    enableSearch: false,
+    enableMove: true,
+    enableGridView: false,
+    enableDetailsView: false,
     enablePrint: true,
+    primaryFields: ["Title", "Name", "Email", "Image"],
     updatedEvent: function () {
-        init();
+      init();
     },
     expandToLevel: 100,
     layout: getOrgChart.MIXED_HIERARCHY_RIGHT_LINKS,
     dataSource: [
-      { id: 1, parentId: null, title: "CEO", name: "Amber McKenzie", phone: "678-772-470", mail: "lemmons@jourrapide.com", adress: "Atlanta, GA 30303", image: "images/f-1.jpg" },
-      { id: 2, parentId: 1, name: "Ava Field", title: "Paper goods machine setter", phone: "937-912-4971", mail: "anderson@jourrapide.com", image: "images/f-2.jpg" },
-      { id: 3, parentId: 1, name: "Evie Johnson", title: "Employer relations representative", phone: "314-722-6164", mail: "thornton@armyspy.com", image: "images/f-3.jpg" },
-      { id: 4, parentId: 2, name: "Paul Shetler", title: "Teaching assistant", phone: "330-263-6439", mail: "shetler@rhyta.com", image: "images/f-4.jpg" },
-      { id: 5, parentId: 2, name: "Rebecca Francis", title: "Welding machine setter", phone: "408-460-0589", image: "images/f-5.jpg" },
-      { id: 6, parentId: 2, name: "Rebecca Randall", title: "Optometrist", phone: "801-920-9842", mail: "JasonWGoodman@armyspy.com", image: "images/f-6.jpg" },
-      { id: 7, parentId: 2, name: "Riley Bray", title: "Structural metal fabricator", phone: "479-359-2159", image: "images/f-12.jpg" },
-      { id: 8, parentId: 3, name: "Spencer May", title: "System operator", phone: "Conservation scientist", mail: "hodges@teleworm.us", image: "images/f-7.jpg" },
-      { id: 9, parentId: 3, name: "Max Ford", title: "Budget manager", phone: "989-474-8325", mail: "hunter@teleworm.us", image: "images/f-8.jpg" },
-      { id: 10, parentId: 3, name: "Riley Bray", title: "Structural metal fabricator", phone: "479-359-2159", image: "images/f-15.jpg" },
-      { id: 11, parentId: 4, name: "Callum Whitehouse", title: "Radar controller", phone: "847-474-8775", image: "images/f-10.jpg" },
-      { id: 12, parentId: 4, name: "Max Ford", title: "Budget manager", phone: "989-474-8325", mail: "hunter@teleworm.us", image: "images/f-11.jpg" },
-      { id: 13, parentId: 4, name: "Riley Bray", title: "Structural metal fabricator", phone: "479-359-2159", image: "images/f-12.jpg" },
-      { id: 14, parentId: 5, name: "Callum Whitehouse", title: "Radar controller", phone: "847-474-8775", image: "images/f-13.jpg" },
-      { id: 15, parentId: 5, name: "Max Ford", title: "Budget manager", phone: "989-474-8325", mail: "hunter@teleworm.us", image: "images/f-14.jpg" },
-      { id: 16, parentId: 5, name: "Riley Bray", title: "Structural metal fabricator", phone: "479-359-2159", image: "images/f-15.jpg" },
-      { id: 17, parentId: 6, name: "Callum Whitehouse", title: "Radar controller", phone: "847-474-8775", image: "images/f-16.jpg" },
-      { id: 18, parentId: 6, name: "Max Ford", title: "Budget manager", phone: "989-474-8325", mail: "hunter@teleworm.us", image: "images/f-17.jpg" },
-      { id: 19, parentId: 7, name: "Spencer May", title: "System operator", phone: "Conservation scientist", mail: "hodges@teleworm.us", image: "images/f-7.jpg" },
-      { id: 20, parentId: 7, name: "Max Ford", title: "Budget manager", phone: "989-474-8325", mail: "hunter@teleworm.us", image: "images/f-8.jpg" },
-      { id: 21, parentId: 7, name: "Riley Bray", title: "Structural metal fabricator", phone: "479-359-2159", image: "images/f-9.jpg" },
-      { id: 22, parentId: 8, name: "Ava Field", title: "Paper goods machine setter", phone: "937-912-4971", mail: "anderson@jourrapide.com", image: "images/f-2.jpg" },
-      { id: 23, parentId: 8, name: "Evie Johnson", title: "Employer relations representative", phone: "314-722-6164", mail: "thornton@armyspy.com", image: "images/f-3.jpg" }, 
-      { id: 24, parentId: 9, name: "Callum Whitehouse", title: "Radar controller", phone: "847-474-8775", image: "images/f-13.jpg" },
-      { id: 25, parentId: 9, name: "Max Ford", title: "Budget manager", phone: "989-474-8325", mail: "hunter@teleworm.us", image: "images/f-14.jpg" },
-      { id: 26, parentId: 9, name: "Riley Bray", title: "Structural metal fabricator", phone: "479-359-2159", image: "images/f-15.jpg" },
-      { id: 27, parentId: 10, name: "Callum Whitehouse", title: "Radar controller", phone: "847-474-8775", image: "images/f-13.jpg" },
-      { id: 28, parentId: 10, name: "Max Ford", title: "Budget manager", phone: "989-474-8325", mail: "hunter@teleworm.us", image: "images/f-14.jpg" },
-      { id: 29, parentId: 10, name: "Riley Bray", title: "Structural metal fabricator", phone: "479-359-2159", image: "images/f-15.jpg" }
+      {
+          "Id": 1,
+          "parentId": 10,
+          "Name": "Abegail Salo",
+          "Title": "HR Technology Consultant",
+          "Email": "abegail@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 2,
+          "parentId": 54,
+          "Name": "Alyssa Joan Dela Cruz",
+          "Title": "Multimedia Services Specialist",
+          "Email": "alyssa@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 3,
+          "parentId": 65,
+          "Name": "Angela Grace Garong",
+          "Title": "UX Lead",
+          "Email": "angela@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 4,
+          "parentId": 54,
+          "Name": "Angela Mae Elejido",
+          "Title": "Marketing Officer",
+          "Email": "angela@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 5,
+          "parentId": 24,
+          "Name": "Antonio V Manalo",
+          "Title": "Senior Sales Manager",
+          "Email": "antonio@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 6,
+          "parentId": 11,
+          "Name": "Argie Cañizares",
+          "Title": "Junior Software Engineer Level 2",
+          "Email": "argie@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 7,
+          "parentId": 75,
+          "Name": "Arianne Angeles",
+          "Title": "OJT-HR",
+          "Email": "arianne@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 8,
+          "parentId": 39,
+          "Name": "Bernadeth Asinas",
+          "Title": "Payroll Master",
+          "Email": "bernadeth@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 9,
+          "parentId": 80,
+          "Name": "Bernice Locsin",
+          "Title": "Head of Customer Success",
+          "Email": "bernice@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 10,
+          "parentId": 80,
+          "Name": "Butch Manalo",
+          "Email": "butch@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 11,
+          "parentId": 34,
+          "Name": "Carlo James Lim",
+          "Title": "Web Developer",
+          "Email": "carlo@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 12,
+          "parentId": 65,
+          "Name": "Charles Kenrick Chua",
+          "Title": "Agile Business Analyst",
+          "Email": "charles@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 13,
+          "parentId": 26,
+          "Name": "Charlotte Jimenea",
+          "Email": "charlotte@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 14,
+          "parentId": 80,
+          "Name": "Charmine Pelobello",
+          "Title": "Professional Services - Account Manager",
+          "Email": "charmine@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 15,
+          "parentId": 34,
+          "Name": "Christian Angelo Borja",
+          "Title": "Senior Software Developer",
+
+          "Email": "christian@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 16,
+          "parentId": 9,
+          "Name": "Christopher Torres",
+          "Title": "Professional Services Officer",
+          "Email": "christopher@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 17,
+          "parentId": 40,
+          "Name": "Cristopher Aquino",
+          "Title": "IT Webdev Intern",
+          "Email": "cristopher@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 18,
+          "parentId": 10,
+          "Name": "Danica Joy Alagon",
+          "Title": "Field Sales Associate",
+          "Email": "danica@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 19,
+          "parentId": 10,
+          "Name": "Daniel Andre Martin",
+          "Title": "Senior Consultant-HR Technology",
+          "Email": "daniel@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 20,
+          "parentId": 10,
+          "Name": "Daniel Luke Amper",
+          "Title": "Field Sales Associate",
+          "Email": "daniel@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 21,
+          "parentId": 10,
+          "Name": "Daryl Solis",
+          "Title": "Sales Management Trainee",
+          "Email": "daryl@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 22,
+          "parentId": 91,
+          "Name": "Dave Cheever",
+          "Title": "Support Engineer",
+          "Email": "dave@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 23,
+          "parentId": 10,
+          "Name": "Dennis Roy Zabal",
+          "Title": "Sales Operations Supervisor",
+          "Email": "dennis@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 24,
+          "parentId": 80,
+          "Name": "Diana Realiza Gonzalez",
+          "Title": "Sales Director",
+          "Email": "diana@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 25,
+          "parentId": 34,
+          "Name": "Diane Jane Litan",
+          "Title": "Web Developer",
+          "Email": "diane@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 26,
+          "parentId": 80,
+          "Name": "Dominico Roi De Castro",
+          "Title": "Software Implementation Manager",
+          "Email": "dominico@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 27,
+          "parentId": 24,
+          "Name": "Earl Warren Almonte",
+          "Title": "Senior Consultant-HR Technology",
+          "Email": "earl@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 28,
+          "parentId": 80,
+          "Name": "Erny Nazario",
+          "Title": "Management Associate",
+          "Email": "erny@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 29,
+          "parentId": 12,
+          "Name": "Franchesca Gail Lopez",
+          "Title": "Professional Services Supervisor",
+          "Email": "franchesca@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 30,
+          "parentId": 10,
+          "Name": "Geraldine Aligno",
+          "Title": "Corporate Sales Associate",
+          "Email": "geraldine@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 31,
+          "parentId": 86,
+          "Name": "Gladys Garcia",
+          "Title": "Customer Advocate",
+          "Email": "gladys@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 32,
+          "parentId": 54,
+          "Name": "Ima Ocon",
+          "Title": "Copywriter",
+          "Email": "ima@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 33,
+          "parentId": 86,
+          "Name": "Ivy Mariel de Ramos",
+          "Title": "Customer Advocate",
+          "Email": "ivy@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 34,
+          "parentId": 80,
+          "Name": "Jacinto Limjap Jr.",
+          "Title": "Senior Software Architect",
+          "Email": "jacinto@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 35,
+          "parentId": 54,
+          "Name": "Jane Catherine Villanueva",
+          "Title": "Marketing Officer",
+          "Email": "jane@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 36,
+          "parentId": 34,
+          "Name": "Jasper John Lepardo",
+          "Title": "UI Designer and Front End Developer",
+          "Email": "jasper@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 37,
+          "parentId": 26,
+          "Name": "Jayson De Leon",
+          "Title": "Software Implementation Officer",
+          "Email": "jayson@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 38,
+          "parentId": 75,
+          "Name": "Jed Patrick Go",
+          "Title": "OJT-HR",
+          "Email": "jed@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 39,
+          "parentId": 80,
+          "Name": "Jeffry Sumalde",
+          "Title": "Account Manager/ Payroll Expert",
+          "Email": "jeffry@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 40,
+          "parentId": 34,
+          "Name": "Jeinz Hernandez",
+          "Title": "ASP.NET C# Developer",
+          "Email": "jeinz@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 41,
+          "parentId": 3,
+          "Name": "Jena Marie Buenviaje",
+          "Title": "Junior UX Generalist",
+          "Email": "jena@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 42,
+          "parentId": 80,
+          "Name": "Jitka Contado",
+          "Title": "Accountant",
+          "Email": "jitka@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 43,
+          "parentId": 40,
+          "Name": "John Briggs Lonzame",
+          "Title": "IT",
+          "Email": "briggs@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 44,
+          "parentId": 91,
+          "Name": "John Kevin Tabaño",
+          "Title": "Software Quality Assurance Tester",
+          "Email": "kevin@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 45,
+          "parentId": 86,
+          "Name": "Jonalyn De Leon",
+          "Title": "Customer Advocate",
+          "Email": "jonalyn@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 46,
+          "parentId": 14,
+          "Name": "Joseph Thomas Aaron",
+          "Title": "Account Manager / Payroll Expert",
+          "Email": "joseph@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 47,
+          "parentId": 10,
+          "Name": "Joven Delos Santos",
+          "Title": "Corporate Sales Representative",
+          "Email": "joven@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 48,
+          "parentId": 91,
+          "Name": "Juan Pablo Sapitan",
+          "Title": "Software QA Engineer",
+          "Email": "jp@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 49,
+          "parentId": 91,
+          "Name": "Karen Cometa",
+          "Title": "Junior Quality Assurance Tester",
+          "Email": "karen@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 50,
+          "parentId": 54,
+          "Name": "Karys Danielle Co",
+          "Title": "Inbound Marketing Specialist",
+          "Email": "karys@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 51,
+          "parentId": 23,
+          "Name": "Katrina Serio",
+          "Title": "Corporate Sales Representative",
+          "Email": "katrina@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 52,
+          "parentId": 86,
+          "Name": "Kelvin Araujo",
+          "Title": "Customer Success Advocate",
+          "Email": "kelvin@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 53,
+          "parentId": 11,
+          "Name": "Kenneth Razo",
+          "Title": "Junior Software Engineer",
+          "Email": "kenneth@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 54,
+          "parentId": 80,
+          "Name": "Kevin Nico Eniego",
+          "Title": "Head of Marketing",
+          "Email": "nix@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 55,
+          "parentId": 42,
+          "Name": "Kristin Jane Andes",
+          "Title": "Accounting Staff",
+          "Email": "kristin@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 56,
+          "parentId": 9,
+          "Name": "Kristina Virata",
+          "Title": "Senior Customer Success Manager",
+          "Email": "kristina@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 57,
+          "parentId": 80,
+          "Name": "Lai-den Padong",
+          "Title": "HR Manager",
+          "Email": "lai@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 58,
+          "parentId": 91,
+          "Name": "Lezyl Ladia",
+          "Title": "Junior Software QA Tester",
+          "Email": "lezyl@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 59,
+          "parentId": 10,
+          "Name": "Liezl Marantal",
+          "Title": "HR Technology Advisor",
+          "Email": "liezl@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 60,
+          "parentId": 10,
+          "Name": "Lisanne Marie Chantal Tumang",
+          "Title": "HR Technology Consultant",
+          "Email": "lisanne@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 61,
+          "parentId": 10,
+          "Name": "Lisle Owen Diamante",
+          "Title": "Technical Sales Associate",
+          "Email": "owen@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 62,
+          "parentId": 91,
+          "Name": "Louie Jay Lansangan",
+          "Title": "Jr. Support Engineer",
+          "Email": "louie@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 63,
+          "parentId": 10,
+          "Name": "Ma Alessandra Arce",
+          "Title": "HR Technology Consultant",
+          "Email": "alessandra@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 64,
+          "parentId": 75,
+          "Name": "Ma. Ellaine Cruz",
+          "Title": "HR Admin Associate",
+          "Email": "ellaine@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 65,
+          "parentId": 80,
+          "Name": "Mae Alexandria Gentry",
+          "Title": "Co-Founder and Head of Product",
+          "Email": "alexandria@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 66,
+          "parentId": 75,
+          "Name": "Maria Beatriz Ang",
+          "Title": "HR Associate",
+          "Email": "beatriz@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 67,
+          "parentId": 9,
+          "Name": "Maria Geraldine De Guzman",
+          "Title": "Account Manager",
+          "Email": "geraldine@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 68,
+          "parentId": 10,
+          "Name": "Maria Sonia Lu",
+          "Title": "Corporate Sales Representative",
+          "Email": "sonia@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 69,
+          "parentId": 40,
+          "Name": "Maricor Palangao",
+          "Title": "Junior Software Engineer",
+          "Email": "maricor@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 70,
+          "parentId": 11,
+          "Name": "Mark Angelo Monteras",
+          "Title": "Junior Software Engineer",
+          "Email": "mark@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 71,
+          "parentId": 25,
+          "Name": "Mark Lester Rayray",
+          "Title": "Junior Software Engineer Level 3",
+          "Email": "lester@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 72,
+          "parentId": 91,
+          "Name": "Marlon Montecerin",
+          "Title": "Development Support",
+          "Email": "marlon@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 73,
+          "parentId": 26,
+          "Name": "Mary Ann Bartolome",
+          "Title": "Implementation Officer",
+          "Email": "ann@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 74,
+          "parentId": 39,
+          "Name": "Mary Jane Abuid",
+          "Title": "Account Manager/ Payroll Expert",
+          "Email": "jane@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 75,
+          "parentId": 9,
+          "Name": "Melissa Gatmaitan",
+          "Title": "Account Manager/Payroll Expert",
+          "Email": "melissa@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 76,
+          "parentId": 24,
+          "Name": "Mon Christopher Santos",
+          "Title": "Corporate Sales Executive",
+          "Email": "christopher@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 77,
+          "parentId": 10,
+          "Name": "Nastassja Marie Natividad",
+          "Title": "HR Technology Consultant",
+          "Email": "nastassja@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 78,
+          "parentId": 9,
+          "Name": "Nelsa Soliven",
+          "Title": "Senior Customer Success Manager",
+          "Email": "nelsa@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 79,
+          "parentId": 34,
+          "Name": "Pappu Sabnani",
+          "Title": "Senior UI Designer and Front End Developer",
+          "Email": "pappu@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 80,
+          "Name": "Patrick Gentry",
+          "Title": "VP of Information Management",
+          "Email": "patrick@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 81,
+          "parentId": 54,
+          "Name": "Rachel Ching",
+          "Title": "PR and Events Supervisor",
+          "Email": "rachel@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 83,
+          "parentId": 11,
+          "Name": "Richard Losande",
+          "Title": "Junior Software Engineer",
+          "Email": "richard@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 84,
+          "parentId": 9,
+          "Name": "Ronald Jeoffrey Andulan",
+          "Title": "Senior Professional Services Account Manager",
+          "Email": "jeoffrey@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 85,
+          "parentId": 80,
+          "Name": "Rossanna Montecillo",
+          "Title": "Senior Customer Support",
+          "Email": "rossanna@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 86,
+          "parentId": 80,
+          "Name": "Sanz Fojas",
+          "Email": "sanz@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 87,
+          "parentId": 86,
+          "Name": "Shiela Trinidad",
+          "Title": "Professional Services Account Manager",
+          "Email": "shiela@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 88,
+          "parentId": 10,
+          "Name": "Solena Niccolette Alumno",
+          "Title": "HR Technology Consultant",
+          "Email": "solena@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 89,
+          "parentId": 25,
+          "Name": "Stephane Matthew Sinagub",
+          "Title": "Junior Software Engineer",
+          "Email": "stephane@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 90,
+          "parentId": 80,
+          "Name": "Tiffany Nicole Mallillin",
+          "Title": "Key Account Manager",
+          "Email": "tiffany@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      },
+      {
+          "Id": 91,
+          "parentId": 65,
+          "Name": "Vincent Allen Villa",
+          "Title": "Jr. Engineering Manager",
+          "Email": "vincent@spout.ph",
+          "Image": "http://www.getorgchart.com/GetOrgChart/getorgchart-demos/images/f-14.jpg"
+      }
     ]
   });
 
@@ -129,7 +822,7 @@
   var init = function () {
     var btns = document.getElementsByClassName("btn");
     for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function () {                  
+      btns[i].addEventListener("click", function () {
         var nodeElement = getNodeByClickedBtn(this);
         var action = this.getAttribute("data-action");
         var id = nodeElement.getAttribute("data-node-id");
@@ -140,32 +833,14 @@
             orgChart.insertNode(id);
             break;
           case "edit":
-            document.getElementById("hdnId").value = node.id;
-            document.getElementById("txtName").value = node.data.name ? node.data.name : "";
-            document.getElementById("txtTitle").value = node.data.title ? node.data.title : "";
-            document.getElementById("txtMail").value = node.data.mail ? node.data.mail : "";
-            document.getElementById("txtCar").value = node.data.car ? node.data.car : "";
-            document.getElementById("txtHasDriverLicense").value = node.data.hasDriverLicense ? node.data.hasDriverLicense : "";
-            $("#dialog").dialog("open");
+            orgChart.showEditView(id);
             break;
-          case "delete":
-            orgChart.removeNode(id);
+          case "preview":
+            orgChart.showDetailsView(id);
             break;
         }
       });
     }
   }
   init();
-
-  document.getElementById("btnSave").addEventListener("click", function () {
-    var node = orgChart.nodes[document.getElementById("hdnId").value];
-    node.data.name = document.getElementById("txtName").value;
-    node.data.title = document.getElementById("txtTitle").value;
-    node.data.mail = document.getElementById("txtMail").value;
-    node.data.car = document.getElementById("txtCar").value;
-    node.data.hasDriverLicense = document.getElementById("txtHasDriverLicense").value;
-    orgChart.updateNode(node.id, node.pid, node.data);
-    $("#dialog").dialog("close");
-  });
-
 </script>
