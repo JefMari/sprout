@@ -4,7 +4,95 @@ layout: recruit-box
 meta-title: Jobs | Sprout Recruit
 
 heading-title: Jobs
+
+heading-button: <button class="btn btn-primary" role="button" data-toggle="modal" data-target="#new-job-modal"><span class="fa fa-plus fa-right"></span>Add Job</button>
 ---
+
+<ul class="nav nav-sm pull-left" id="search-filter">
+  <li>
+    <a href="#search-filter-dropdown" data-toggle="collapse"><span class="fa fa-search fa-lg fa-right"></span>SEARCH / FILTER</a>
+    <div class="collapse" id="search-filter-dropdown">
+      <form class="" action="" method="">
+        <h6 class="h5">Search</h6>
+        <div class="form-group form-group-lg has-icon left">
+          <input type="search" class="form-control" id="search-job-name" placeholder="Search Job Name">
+          <span class="form-icon"><i class="fa fa-search"></i></span>
+        </div>
+        <h6 class="h5">Filter</h6>
+        <div class="form-group">
+          <label class="form-label">Status</label>
+          <div data-toggle="buttons">
+            <label class="btn btn-outline-primary btn-sm active">
+              <input type="checkbox">All Jobs
+            </label>
+            <label class="btn btn-outline-primary btn-sm">
+              <input type="checkbox">Open
+            </label>
+            <label class="btn btn-outline-primary btn-sm">
+              <input type="checkbox">For Approval
+            </label>
+            <label class="btn btn-outline-primary btn-sm">
+              <input type="checkbox">For Branding
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="">Company</label>
+          <select class="form-control">
+            <option value="">All Company</option>
+            <option value="">Ayala Land Inc.</option>
+            <option value="">AG Holdings Ltd</option>
+            <option value="">Bank of the Philippine Island</option>
+            <option value="">Globe Telecom</option>
+            <option value="">Manila Water Company Inc.</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="">Department</label>
+          <select class="form-control">
+            <option value="">All Department</option>
+            <option value="">Sales and Marketing</option>
+            <option value="">Customer Support</option>
+            <option value="">Engineering</option>
+            <option value="">Technology</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="daterange">Date Added</label>
+          <div class="input-daterange input-group" id="daterange">
+            <input type="text" class="form-control" name="start" placeholder="Start Date">
+            <span class="input-group-addon">to</span>
+            <input type="text" class="form-control" name="end" placeholder="End Date">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="daterange">Date Needed</label>
+          <div class="input-daterange input-group" id="daterange">
+            <input type="text" class="form-control" name="start" placeholder="Start Date">
+            <span class="input-group-addon">to</span>
+            <input type="text" class="form-control" name="end" placeholder="End Date">
+          </div>
+        </div>
+        <hr class="dashed" />
+        <a href="#" class="btn btn-link">Cancel</a>
+        <a href="#" class="btn btn-primary">Search</a>
+      </form>
+    </div>
+  </li>
+  <li>
+    <div class="btn-group dropup">
+      <button type="button" class="btn btn-primary btn-sm">Filtering is on</button>
+      <button type="button" class="btn btn-primary btn-sm dropdown-toggle"><span class="fa fa-times"></span></button>
+    </div>
+  </li>
+</ul>
+<ul class="nav nav-sm pull-right">
+  <li class="active"><a href="#">ALL JOBS</a></li>
+  <li><a href="#">OPEN</a></li>
+  <li><a href="#">FOR APPROVAL</a></li>
+  <li><a href="#">FOR BRANDING</a></li>
+  <li><a href="#">CLOSED</a></li>
+</ul>
 
 <div class="section section-default" id="job-list">
   <div class="table-responsive">
@@ -23,7 +111,7 @@ heading-title: Jobs
       <tbody>
         <tr>
           <td>
-            <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/">Business Development Associate</a>
+            <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile.html">Business Development Associate</a>
             <span class="clearfix"></span>
             <span class="badge badge-warning mar-hor-1">For Branding</span>
             <span class="clearfix"></span>
@@ -42,7 +130,7 @@ heading-title: Jobs
         </tr>
         <tr>
           <td>
-            <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/">Customer Service Representative</a>
+            <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile.html">Customer Service Representative</a>
             <span class="clearfix"></span>
             <span class="badge badge-warning mar-hor-1">For Branding</span>
             <span class="clearfix"></span>
@@ -61,7 +149,7 @@ heading-title: Jobs
         </tr>
         <tr>
           <td>
-            <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/">Mid Software Engineer: Ruby On Rails</a>
+            <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile.html">Mid Software Engineer: Ruby On Rails</a>
             <span class="clearfix"></span>
             <span class="badge badge-success mar-hor-1">Open</span>
             <span class="clearfix"></span>
@@ -80,7 +168,7 @@ heading-title: Jobs
         </tr>
         <tr>
           <td>
-            <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/">Senior Process Executive</a>
+            <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile.html">Senior Process Executive</a>
             <span class="clearfix"></span>
             <span class="badge badge-warning mar-hor-1">For Approval</span>
             <span class="clearfix"></span>
@@ -102,7 +190,7 @@ heading-title: Jobs
         </tr>
         <tr class="table-disabled">
           <td>
-            <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile/">Messaging and Collaborative Engineer</a>
+            <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile.html">Messaging and Collaborative Engineer</a>
             <span class="clearfix"></span>
             <span class="badge badge-default mar-hor-1">Closed</span>
             <span class="clearfix"></span>

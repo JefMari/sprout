@@ -1,0 +1,35 @@
+---
+layout: recruit
+---
+
+<div class="heading">
+  <div class="container text-center">
+     <!-- <h1 class="heading-title display-3">{{ page.heading-title }}</h1>  -->
+    <ul class="nav nav-wizard nav-lg">
+      {% for link in page.navigation %}
+        <li class="{% if page.url == link.url %} active {% endif %}">
+          <div class="indicator"></div>
+          <a href="#{{ link.url }}" data-toggle="tab">{{link.text}}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<main class="container">
+
+  <div class="row">
+
+    <div class="col-xs-12 col-md-10 col-md-push-1">
+      
+      <div class="box">
+ 
+        {{ content }}
+
+      </div>
+
+    </div>
+
+  </div>
+
+</main>

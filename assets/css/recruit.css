@@ -33,16 +33,19 @@
 
 
 
-#job-list {
+#job-list,
+#applicant-list {
   margin-bottom: 0;
   box-shadow: none;
 }
 
-#job-list .table-responsive {
+#job-list .table-responsive,
+#applicant-list .table-responsive {
   min-height: calc(100vh - 375px);
 }
 
-#job-list table td {
+#job-list table td,
+#applicant-list table td {
   vertical-align: middle;
 }
 
@@ -62,7 +65,7 @@
 
 .pagination-settings,
 .pagination-settings .dropdown-toggle {
-  color: #747C83;
+  color: #555;
 }
 
 .pagination-settings .dropdown-toggle {
@@ -141,7 +144,7 @@
     width: 100%;
     height: 4px;
     left: 50%;
-    z-index: -1;
+    /* z-index: -1; */
 }
 
 .nav-wizard li::before {
@@ -150,7 +153,7 @@
 }
 
 .nav-wizard li::after {
-    bottom: 72px;
+    bottom: 48px;
 }
 
 .nav-wizard li.active::after {
@@ -159,7 +162,8 @@
 }
 
 .nav-wizard li a {
-    padding: 24px;
+    padding: 0;
+    padding-top: 24px;
 }
 
 .nav-wizard li .indicator {
