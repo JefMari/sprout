@@ -31,6 +31,7 @@ body {
 .box .heading {
   background-color: transparent;
   border-bottom: 1px solid #ddd;
+  margin-top: -36px;
 }
 
 .page-header {

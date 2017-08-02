@@ -10,12 +10,12 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
 
 <ul class="nav nav-sm pull-left" id="search-filter">
   <li>
-    <a href="#search-filter-dropdown" data-toggle="collapse"><span class="fa fa-search fa-lg fa-right"></span>SEARCH / FILTER</a>
+    <a data-toggle="collapse" href="#search-filter-dropdown"><span class="fa fa-search fa-lg fa-right"></span>SEARCH / FILTER</a>
     <div class="collapse" id="search-filter-dropdown">
       <form class="" action="" method="">
         <h6 class="h5">Search</h6>
         <div class="form-group form-group-lg has-icon left">
-          <input type="search" class="form-control" id="search-job-name" placeholder="Search Job Name">
+          <input class="form-control" id="search-job-name" type="search" placeholder="Search Job Name">
           <span class="form-icon"><i class="fa fa-search"></i></span>
         </div>
         <h6 class="h5">Filter</h6>
@@ -49,34 +49,34 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
         </div>
         <div class="form-group">
           <label class="form-label" for="">Job Application</label>
-          <input type="search" class="form-control" id="search-job-name" placeholder="Search Job Application">
+          <input class="form-control" id="search-job-name" type="search" placeholder="Search Job Application">
         </div>
         <div class="form-group">
           <label class="form-label" for="daterange">Date Applied</label>
           <div class="input-daterange input-group" id="daterange">
-            <input type="text" class="form-control" name="start" placeholder="Start Date">
+            <input class="form-control" name="start" type="text" placeholder="Start Date">
             <span class="input-group-addon">to</span>
-            <input type="text" class="form-control" name="end" placeholder="End Date">
+            <input class="form-control" name="end" type="text" placeholder="End Date">
           </div>
         </div>
         <hr class="dashed" />
-        <a href="#" class="btn btn-link">Cancel</a>
-        <a href="#" class="btn btn-primary">Search</a>
+        <a class="btn btn-link" href="">Cancel</a>
+        <a class="btn btn-primary" href="">Search</a>
       </form>
     </div>
   </li>
   <li>
     <div class="btn-group dropup">
-      <button type="button" class="btn btn-primary btn-sm">Filtering is on</button>
-      <button type="button" class="btn btn-primary btn-sm dropdown-toggle"><span class="fa fa-times"></span></button>
+      <button class="btn btn-primary btn-sm" type="button" >Filtering is on</button>
+      <button class="btn btn-primary btn-sm dropdown-toggle" type="button"><span class="fa fa-times"></span></button>
     </div>
   </li>
 </ul>
 <ul class="nav nav-sm pull-right">
-  <li class="active"><a href="#">ALL APPLICANTS</a></li>
-  <li><a href="#">PROCESSING</a></li>
-  <li><a href="#">OFFERED</a></li>
-  <li><a href="#">HIRED</a></li>
+  <li class="active"><a href="">ALL APPLICANTS</a></li>
+  <li><a href="">PROCESSING</a></li>
+  <li><a href="">OFFERED</a></li>
+  <li><a href="">HIRED</a></li>
 </ul>
 
 <div class="section section-default" id="applicant-list">
@@ -84,12 +84,12 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
     <table class="table table-hover table-lg">
       <thead>
         <tr>
-          <th class="col-xs-4"><a href="#">Applicant Details<span class="fa fa-sort fa-left"></span></a></th>
-          <th class="col-xs-1"><a href="#">Overall Ratings<span class="fa fa-sort fa-left"></span></a></th>
-          <th class="col-xs-3"><a href="#">Application<span class="fa fa-sort fa-left"></span></a></th>
-          <th class="col-xs-1"><a href="#">Date Applied<span class="fa fa-sort fa-left"></span></a></th>
-          <th class="col-xs-2"><a href="#">Status<span class="fa fa-sort fa-left"></span></a></th>
-          <th class="col-xs-1"><a href="#">Actions<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-xs-4"><a href="">Applicant Details<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-xs-1"><a href="">Overall Ratings<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-xs-3"><a href="">Application<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-xs-1"><a href="">Date Applied<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-xs-2"><a href="">Status<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-xs-1"><a href="">Actions<span class="fa fa-sort fa-left"></span></a></th>
         </tr>
       </thead>
       <tbody>
@@ -127,7 +127,7 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
               Tommorow
             </div>
           </td>
-          <td><button class="btn btn-outline-primary btn-block btn-sm">View Timetable</button></td>
+          <td><button class="btn btn-outline-primary btn-block btn-sm" type="button">View Timetable</button></td>
         </tr>
         <tr>
           <td>
@@ -165,7 +165,7 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
           </td>
           <td>
             <div class="dropdown">
-              <button class="btn btn-outline-primary btn-block btn-sm" data-toggle="dropdown">Resolve<span class="fa fa-angle-down fa-lg fa-left"></span></button>
+              <button class="btn btn-outline-primary btn-block btn-sm" data-toggle="dropdown" type="button">Resolve<span class="fa fa-angle-down fa-lg fa-left"></span></button>
               <ul class="dropdown-menu dropdown-menu-right">
                 <li><a href="">Continue with the application</a></li>
                 <li><a href="">Withdraw application</a></li>
@@ -207,7 +207,7 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
               No Schedule Yet
             </div>
           </td>
-          <td><button class="btn btn-outline-primary btn-block btn-sm">Set Schedule</button></td>
+          <td><button class="btn btn-outline-primary btn-block btn-sm" type="button">Set Schedule</button></td>
         </tr>
         <tr>
           <td>
@@ -243,7 +243,7 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
               On Jul 17, 2017
             </div>
           </td>
-          <td><button class="btn btn-outline-primary btn-block btn-sm">View Contract</button></td>
+          <td><button class="btn btn-outline-primary btn-block btn-sm" type="button">View Contract</button></td>
         </tr>
         <tr>
           <td>
@@ -278,27 +278,27 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
     <div class="pagination-settings">
       Results 1 - 10 of 100
       <span class="dropup mar-left-2">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">5 entries per page<span class="fa fa-angle-up fa-lg fa-left"></span></a>
+        <a class="dropdown-toggle" data-toggle="dropdown" href="">5 entries per page<span class="fa fa-angle-up fa-lg fa-left"></span></a>
         <ul class="dropdown-menu dropdown-menu-right">
           <li class="dropdown-header">Entries per page:</li>
-          <li class="active"><a href="#">5 items</a></li>
-          <li><a href="#">10 items</a></li>
-          <li><a href="#">25 items</a></li>
-          <li><a href="#">50 items</a></li>
-          <li><a href="#">100 items</a></li>
+          <li class="active"><a href="">5 items</a></li>
+          <li><a href="">10 items</a></li>
+          <li><a href="">25 items</a></li>
+          <li><a href="">50 items</a></li>
+          <li><a href="">100 items</a></li>
         </ul>
       </span>
     </div>
     <ul class="pagination mar-hor-auto pull-right">
-      <!-- <li class="disabled"><a href="#"><span class="fa fa-angle-left fa-lg"></span></a></li> -->
-      <!-- <li class="disabled"><a href="#"><span class="fa fa-angle-double-left fa-lg"></span></a></li> -->
-      <li class="active"><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#"><span class="fa fa-angle-right fa-lg"></span></a></li>
-      <li><a href="#"><span class="fa fa-angle-double-right fa-lg"></span></a></li>
+      <!-- <li class="disabled"><a href=""><span class="fa fa-angle-left fa-lg"></span></a></li> -->
+      <!-- <li class="disabled"><a href=""><span class="fa fa-angle-double-left fa-lg"></span></a></li> -->
+      <li class="active"><a href="">1</a></li>
+      <li><a href="">2</a></li>
+      <li><a href="">3</a></li>
+      <li><a href="">4</a></li>
+      <li><a href="">5</a></li>
+      <li><a href=""><span class="fa fa-angle-right fa-lg"></span></a></li>
+      <li><a href=""><span class="fa fa-angle-double-right fa-lg"></span></a></li>
     </ul>
   </div>
 </div>

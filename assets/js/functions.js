@@ -17,7 +17,7 @@ $(document).ready(function() {
 
 
 
-
+$('[data-toggle="tooltip"]').tooltip()
 
 
 //
@@ -103,3 +103,8 @@ $('.bootstrapWizard li::after ').css(
     'width': '60%'
   }
 );
+
+
+
+
+// $('input.form-control').after('<div class="form-indicator"></div>');

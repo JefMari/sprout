@@ -41,7 +41,7 @@
 
 #job-list .table-responsive,
 #applicant-list .table-responsive {
-  min-height: calc(100vh - 375px);
+  min-height: calc(100vh - 379px);
 }
 
 #job-list table td,
@@ -116,13 +116,13 @@
 
 /*Start Wizard*/
 
-.nav-wizard {
+/* .nav-wizard { */
     /* display: block; */
     /* list-style: none; */
     /* padding: 0; */
     /* position: relative; */
     /* width: 100% */
-}
+/* } */
 
 .nav-wizard li {
     /* display: block; */
@@ -228,10 +228,10 @@
     content: "\f00c ";
 }
 
-.nav-wizard li:first-child:before {
+/* .nav-wizard li:first-child:before { */
     /* left: 50%; */
     /* max-width: 50% */
-}
+/* } */
 
 .nav-wizard li:last-child::before,
 .nav-wizard li:last-child::after {
@@ -320,3 +320,44 @@
 }
 
 /*End Wizard*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    table.tableSection {
+        display: table;
+        width: 100%;
+    }
+    table.tableSection thead, table.tableSection tbody {
+        float: left;
+        width: 100%;
+    }
+    table.tableSection tbody {
+        overflow: auto;
+        height: 150px;
+    }
+    table.tableSection tr {
+        width: 100%;
+        display: table;
+        text-align: left;
+    }
+    table.tableSection th, table.tableSection td {
+        width: 33%;
+    }

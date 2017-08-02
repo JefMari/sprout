@@ -45,7 +45,7 @@ navigation:
           <h6 class="section-title display-4">Skills and Tools Used</h6>
           <p class="section-subtitle">Strength, expertise, and tools that the applicant has. Optional.</p>
         </div>
-        {% include recruit/components/snippets/applicants/edit-mode/applicant-skills.html %}
+        {% include recruit/components/snippets/applicants/edit-mode/applicant-skills-and-tools.html %}
       </div>
 
       <div class="section section-success" id="applicant-government-information">
@@ -60,11 +60,11 @@ navigation:
 
       <div class="row">
         <div class="col-md-6">
-          <a href="" class="btn btn-link text-danger">Discard this Job Post</a>
+          <a class="btn btn-link text-danger" href="">Discard this Job Post</a>
         </div>
         <div class="col-md-6 text-right">
-          <a href="" class="btn btn-link">Cancel</a>
-          <a href="" class="btn btn-primary">Save &amp; Continue</a>
+          <a class="btn btn-link" href="">Cancel</a>
+          <a class="btn btn-primary" href="">Save &amp; Continue</a>
         </div>
       </div>
 
@@ -72,23 +72,39 @@ navigation:
 
     <div class="tab-pane fade" id="applicant-career-development-tab">
 
-      <div class="section section-success" id="applicant-information">
+      <div class="section section-success" id="applicant-education">
         <div class="section-heading">
           <h6 class="section-title display-4">Education</h6>
           <p class="section-subtitle">Highest Educational Attainment. All fields are required.</p>
         </div>
         {% include recruit/components/snippets/applicants/edit-mode/applicant-education.html %}
       </div>
+
+      <div class="section section-success" id="applicant-work-experience">
+        <div class="section-heading">
+          <h6 class="section-title display-4">Work Experience</h6>
+          <p class="section-subtitle">Lates work of the applicant. All fields are required.</p>
+        </div>
+        {% include recruit/components/snippets/applicants/edit-mode/applicant-work-experience.html %}
+      </div>
+
+      <div class="section section-success" id="applicant-trainings-and-seminars">
+        <div class="section-heading">
+          <h6 class="section-title display-4">Trainings and Seminars</h6>
+          <p class="section-subtitle">Rainings and Seminars attended by the applicant. Optional.</p>
+        </div>
+        {% include recruit/components/snippets/applicants/edit-mode/applicant-trainings-and-seminars.html %}
+      </div>
       
       <hr class="dashed" />
 
       <div class="row">
         <div class="col-md-6">
-          <a href="" class="btn btn-link text-danger">Discard this Job Post</a>
+          <a class="btn btn-link text-danger" href="">Discard this Job Post</a>
         </div>
         <div class="col-md-6 text-right">
-          <a href="" class="btn btn-link">Cancel</a>
-          <a href="" class="btn btn-primary">Save &amp; Continue</a>
+          <a class="btn btn-link" href="">Cancel</a>
+          <a class="btn btn-primary" href="">Save &amp; Continue</a>
         </div>
       </div>
 
@@ -96,15 +112,24 @@ navigation:
 
     <div class="tab-pane fade" id="applicant-references-tab">
 
+      <div class="section section-success" id="applicant-character-references">
+        <div class="section-heading">
+          <h6 class="section-title display-4">Character References</h6>
+          <p class="section-subtitle">Recommendation provided by someone by the applicant’s works. Optional.</p>
+        </div>
+        {% include recruit/components/snippets/applicants/edit-mode/applicant-character-reference.html %}
+      </div>
+
+      
       <hr class="dashed" />
 
       <div class="row">
         <div class="col-md-6">
-          <a href="" class="btn btn-link text-danger">Discard this Job Post</a>
+          <a class="btn btn-link text-danger" href="">Discard this Job Post</a>
         </div>
         <div class="col-md-6 text-right">
-          <a href="" class="btn btn-link">Cancel</a>
-          <a href="" class="btn btn-primary">Save &amp; Continue</a>
+          <a class="btn btn-link" href="">Cancel</a>
+          <a class="btn btn-primary" href="">Save &amp; Continue</a>
         </div>
       </div>
 
@@ -119,8 +144,8 @@ navigation:
           <a href="" class="btn btn-link text-danger">Discard this Job Post</a>
         </div>
         <div class="col-md-6 text-right">
-          <a href="" class="btn btn-link">Cancel</a>
-          <a href="" class="btn btn-primary">Save &amp; Continue</a>
+          <a class="btn btn-link" href="">Cancel</a>
+          <a class="btn btn-primary" href="">Save &amp; Continue</a>
         </div>
       </div>
 
@@ -132,10 +157,10 @@ navigation:
         <h2 class="display-4 text-success mar-bottom-3">Job Request Successfully Submmitted!</h2>
         <p style="font-size: 15px;">Your Job Request for <strong>[ Job Title ]</strong> has been successfully submmitted<br /> and is now subject for approval.</p>
         <hr class="dashed" />
-        <a href="" class="btn btn-default">Go back to Job List</a>
-        <a href="" class="btn btn-primary">View Job Request</a>
+        <a class="btn btn-default" href="">Go back to Job List</a>
+        <a class="btn btn-primary" href="">View Job Request</a>
         <span class="clearfix"></span>
-        <a href="" class="btn btn-link">Request New Job</a>
+        <a class="btn btn-link" href="">Request New Job</a>
       </div>
 
     </div>

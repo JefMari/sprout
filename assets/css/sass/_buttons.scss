@@ -85,8 +85,25 @@ fieldset[disabled] a.btn {
 
 .btn-dropdown {
   @include button-variant($btn-dropdown-bg, $btn-dropdown-border-color, $btn-dropdown-color);
+  color: #555555;
+  background-color: #FFFFFF;
+  border-color: #BBBBBB;
+  border-width: 0 0 1px 0;
+  border-radius: 0;
+  padding-left: 0;
+  &:hover {
+    background-color: transparent;
+  }
+  // &:focus {
+  //   border-bottom-color: #6C9B41;
+  // }
 }
 
+.open{
+  .btn-dropdown {
+    border-bottom-color: #6C9B41;
+  }
+}
 
 
 
