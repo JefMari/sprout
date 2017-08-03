@@ -460,7 +460,7 @@ h5, .h5 {
   font-size: 20px; }
 
 h6, .h6 {
-  font-size: 15px; }
+  font-size: 16px; }
 
 .display-1 {
   font-size: 56px !important; }
@@ -478,10 +478,10 @@ h6, .h6 {
   font-size: 20px !important; }
 
 .display-6 {
-  font-size: 15px !important; }
+  font-size: 16px !important; }
 
 .lead {
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600; }
 
 hr {
@@ -600,7 +600,7 @@ ol {
     .list-accordion > li > .accordion-toggle {
       font-weight: bold;
       color: inherit;
-      font-size: 15px; }
+      font-size: 16px; }
       .list-accordion > li > .accordion-toggle.collapsed {
         font-weight: normal;
         color: inherit; }
@@ -712,7 +712,7 @@ ol {
     font-family: "FontAwesome";
     position: absolute;
     left: 0px;
-    font-size: 15px;
+    font-size: 16px;
     width: 24px; }
 
 .list-icon-red > li::before {
@@ -2139,7 +2139,7 @@ select[multiple].input-lg,
   height: auto; }
 .form-group-lg .form-control-static {
   height: 44px;
-  min-height: 35px;
+  min-height: 36px;
   padding: 13px 12px; }
 
 .has-reset,
@@ -2727,7 +2727,7 @@ fieldset[disabled] a.btn {
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 12px 36px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.2;
   border-radius: 4px;
   height: 44px; }
@@ -3289,7 +3289,7 @@ tbody.collapse.in {
 
 .nav-lg > li > a {
   padding: 12px 24px;
-  font-size: 15px; }
+  font-size: 16px; }
 
 .nav-sm > li > a {
   padding: 4px 8px;
@@ -3709,7 +3709,7 @@ tbody.collapse.in {
 .pagination-lg > li > a,
 .pagination-lg > li > span {
   padding: 12px 24px;
-  font-size: 15px; }
+  font-size: 16px; }
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
   border-bottom-left-radius: 4px;
@@ -3895,7 +3895,7 @@ a.label:hover, a.label:focus {
 
 .label-lg {
   padding: 11px 24px;
-  font-size: 15px;
+  font-size: 16px;
   border-radius: 4px;
   height: 44px; }
   .label-lg.label-pills {
@@ -4215,7 +4215,7 @@ a.chip:focus, a.chip:hover {
 
 .alert-lg {
   padding: 12px 24px;
-  font-size: 15px;
+  font-size: 16px;
   line-height: 1.33333;
   border-radius: 4px; }
 
