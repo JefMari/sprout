@@ -351,7 +351,7 @@ input[type="checkbox"] {
 
 .form-control-static {
   // Size it appropriately next to real form controls
-  padding-top: ($input-padding-y - 1);
+  padding-top: ($input-padding-y + 1);
   padding-bottom: $input-padding-y;
   // Remove default margin from `p`
   margin-bottom: 0;
@@ -364,6 +364,9 @@ input[type="checkbox"] {
   }
 }
 
+select.form-control {
+  padding-top: ($input-padding-y + 1);
+}
 
 // Form control sizing
 //
