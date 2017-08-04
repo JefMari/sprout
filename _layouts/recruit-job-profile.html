@@ -4,14 +4,25 @@ layout: recruit
 
 <div class="heading">
   <div class="container">
-    <h1 class="heading-title display-3">{{ page.heading-title }}</h1>
+    <h1 class="heading-title display-3 mar-bottom-2">{{ page.heading-title }}</h1>
     <div class="row">
       <div class="col-md-9">
-        <span class="badge badge-warning mar-top-2">For Branding</span>
+        <span class="badge badge-warning">For Branding</span>
         <p class="heading-subtitle">Added on April 25, 2017</p>           
       </div>
       <div class="col-md-3 text-right">
-        <a href="" class="btn btn-primary"><span class="fa fa-share fa-right"></span>Publish Job Post</a>
+
+        <div class="btn-group dropdown">
+          <button class="btn btn-primary" type="button">Publish</button>
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
+            <span class="fa fa-angle-down fa-lg"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <!-- <li class="dropdown-header">Dropdown header</li> -->
+            <li><a href="#"><span class="fa fa-clone fa-right"></span>Make a Copy</a></li>
+            <li><a href="#"><span class="fa fa-trash-o fa-right"></span>Close this Job</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -26,13 +37,13 @@ layout: recruit
       {% include recruit/components/nav/side-nav/job-profile.html %}
     </div>
 
-    <div class="col-lg-9 col-md-8">
+    <div class="col-lg-10 col-md-9">
       <div class="box">
         {{ content }}
       </div>
     </div>
 
-    <div class="col-md-1">
+    <div class="col-md-1 hidden">
 
       <a href="#" class="btn btn-link btn-block"><span class="fa fa-search"></span></a>
 
