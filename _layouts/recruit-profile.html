@@ -1,0 +1,58 @@
+---
+layout: recruit
+---
+
+<div class="heading">
+  <div class="container">
+    <h1 class="heading-title display-3">{{ page.heading-title }}</h1>
+    <div class="row">
+      <div class="col-md-9">
+        <!-- <p class="heading-subtitle">{{ page.heading-subtitle }}</p> -->
+        <ul class="heading-subtitle list list-inline" style="margin-left: -4px;">
+          <li>{{ page.profile-job-code }}</li>
+          <li class="divider"></li>
+          <li>{{ page.profile-department }} at {{ page.profile-company }}</li>
+        </ul>
+        <span class="badge badge-{{ page.heading-badge-type }} mar-top-2">{{ page.heading-badge-text }}</span>
+      </div>
+      <div class="col-md-3 text-right">
+        <div class="btn-group dropdown" style="margin-top: 12px;">
+          <button class="btn btn-primary" type="button">Publish</button>
+          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
+            <span class="fa fa-angle-down fa-lg"></span>
+          </button>
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="#"><span class="fa fa-clone fa-right"></span>Make a Copy</a></li>
+            <li><a href="#"><span class="fa fa-trash-o fa-right"></span>Close this Job</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<main class="container">
+
+  <div class="row">
+
+    <div class="col-lg-2 col-md-3">
+      <ul class="nav nav-pills">
+        {% for link in page.navigation %}
+          <li class="{% if page.url == link.url %} active {% endif %}">
+            <div class="indicator"></div>
+            <a href="#{{ link.url }}" data-toggle="tab">{{link.text}}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="col-lg-10 col-md-9">
+      <div class="box">
+        {{ content }}
+      </div>
+    </div>
+
+  </div>
+
+</main>

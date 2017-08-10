@@ -55,6 +55,10 @@
 }
 
 
+#applicant-list .list li a {
+    color: inherit;
+}
+
 
 
 
@@ -178,6 +182,7 @@
     line-height: 24px;
     color: white;
     text-align: center;
+    z-index: 1;
 }
 
 .nav-wizard .active .indicator {

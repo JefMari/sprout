@@ -19,6 +19,7 @@ ol {
   padding-left: 0;
   margin-bottom: $spacer-12;
   list-style: none;
+  line-height: 20px;
   @include clearfix;
   > li {
     padding: $spacer-4 0;
@@ -238,7 +239,7 @@ ol {
       font-family: "FontAwesome";
       position: absolute;
       left: 0px;
-      font-size: $font-size-lg;
+      // font-size: $font-size-lg;
       width: $spacer-24;
     }
   }
@@ -267,11 +268,11 @@ ol {
 
 .list-icon-center {
   > li {
-    padding-left: 30px;
+    padding-left: 24px;
     &::before {
       text-align: center;
       left: 0;
-      width: 30px;
+      width: 24px;
     }
   }
 }

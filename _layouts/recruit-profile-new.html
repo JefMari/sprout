@@ -1,0 +1,39 @@
+---
+layout: recruit
+---
+
+<div class="heading">
+  <div class="container">
+    <div class="media">
+      <div class="media-left">
+        <img class="media-objects" src="{{ site.baseurl }}/assets/images/avatar.png" alt="" width="100">
+      </div>
+      <div class="media-content media-content-middle">
+        <div class="media-heading">
+          <h1 class="heading-title display-3">{{ page.heading-title }}</h1>
+          <p class="heading-subtitle">{{ page.heading-subtitle }}</p>           
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<main class="container">
+
+  <ul class="nav nav-tabs mar-bottom-3">
+    {% for link in page.navigation %}
+      <li class="{% if page.url == link.url %} active {% endif %}">
+        <div class="indicator"></div>
+        <a href="#{{ link.url }}" data-toggle="tab">{{link.text}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <div class="row">
+
+    {{ content }}
+
+  </div>
+
+</main>

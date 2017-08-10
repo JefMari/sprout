@@ -557,7 +557,8 @@ ol {
 .list {
   padding-left: 0;
   margin-bottom: 12px;
-  list-style: none; }
+  list-style: none;
+  line-height: 20px; }
   .list::after {
     display: block;
     content: "";
@@ -712,7 +713,6 @@ ol {
     font-family: "FontAwesome";
     position: absolute;
     left: 0px;
-    font-size: 16px;
     width: 24px; }
 
 .list-icon-red > li::before {
@@ -722,11 +722,11 @@ ol {
   color: #6E9B42; }
 
 .list-icon-center > li {
-  padding-left: 30px; }
+  padding-left: 24px; }
   .list-icon-center > li::before {
     text-align: center;
     left: 0;
-    width: 30px; }
+    width: 24px; }
 
 .list-links {
   display: inline-block; }
@@ -3231,7 +3231,7 @@ tbody.collapse.in {
   float: none;
   border-bottom: 1px solid #D9D9D9; }
   .nav-pills > li > a {
-    border-left: 3px solid transparent; }
+    border-left: 2px solid transparent; }
     .nav-pills > li > a:hover, .nav-pills > li > a:focus {
       background-color: transparent;
       color: #2FC7E2; }
@@ -3302,7 +3302,7 @@ tbody.collapse.in {
   position: relative;
   min-height: 50px;
   margin-bottom: 24px;
-  border-top: 3px solid transparent; }
+  border-bottom: 3px solid transparent; }
   .navbar::after {
     display: block;
     content: "";
