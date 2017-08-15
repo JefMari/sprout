@@ -441,8 +441,7 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: inherit;
   font-weight: 400;
-  line-height: 1.1;
-  color: #262626; }
+  line-height: 1.1; }
 
 h1, .h1 {
   font-size: 56px; }
@@ -4366,7 +4365,7 @@ button.list-group-item {
   color: #555; }
   a.list-group-item .list-group-item-heading,
   button.list-group-item .list-group-item-heading {
-    color: #262626; }
+    color: #454545; }
   a.list-group-item:hover, a.list-group-item:focus,
   button.list-group-item:hover,
   button.list-group-item:focus {
@@ -4963,6 +4962,9 @@ button.list-group-item-danger {
   .section-editable:focus, .section-editable:hover {
     background-color: #F8F8F8;
     border-color: #D9D9D9; }
+  .section-editable.active {
+    background-color: #F8F8F8;
+    border-color: #D9D9D9; }
   .section-editable .section-action {
     display: none;
     float: right; }
@@ -5006,6 +5008,7 @@ button.list-group-item-danger {
 
 .card {
   margin-bottom: 16px;
+  background-color: #FFFFFF;
   border: 2px solid #D9D9D9;
   border-radius: 8px; }
 

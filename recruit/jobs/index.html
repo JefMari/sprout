@@ -32,7 +32,7 @@ heading-button: <button class="btn btn-primary" role="button" data-toggle="modal
               <input type="checkbox">For Approval
             </label>
             <label class="btn btn-outline-primary btn-sm">
-              <input type="checkbox">For Branding
+              <input type="checkbox">For Checking
             </label>
           </div>
         </div>
@@ -48,9 +48,9 @@ heading-button: <button class="btn btn-primary" role="button" data-toggle="modal
           </select>
         </div>
         <div class="form-group">
-          <label class="form-label" for="">Department</label>
+          <label class="form-label" for="">Department/Division</label>
           <select class="form-control">
-            <option value="">All Department</option>
+            <option value="">All Department/Division</option>
             <option value="">Sales and Marketing</option>
             <option value="">Customer Support</option>
             <option value="">Engineering</option>
@@ -92,7 +92,7 @@ heading-button: <button class="btn btn-primary" role="button" data-toggle="modal
   <li class="active"><a href="#">ALL JOBS</a></li>
   <li><a href="#">OPEN</a></li>
   <li><a href="#">FOR APPROVAL</a></li>
-  <li><a href="#">FOR BRANDING</a></li>
+  <li><a href="#">FOR CHECKING</a></li>
   <li><a href="#">CLOSED</a></li>
 </ul>
 
@@ -101,13 +101,12 @@ heading-button: <button class="btn btn-primary" role="button" data-toggle="modal
     <table class="table table-hover table-lg">
       <thead>
         <tr>
-          <th class="col-4"><a href="#">Job Details<span class="fa fa-sort fa-left"></span></a></th>
-          <th class="col-2"><a href="#">Date Added<span class="fa fa-sort fa-left"></span></a></th>
-          <th class="col-2"><a href="#">Date Needed<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-6"><a href="#">Job Details<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-1"><a href="#">Date Added<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-1"><a href="#">Date Needed<span class="fa fa-sort fa-left"></span></a></th>
           <th class="col-1"><a href="#">Processing<span class="fa fa-sort fa-left"></span></a></th>
           <th class="col-1"><a href="#">Offered<span class="fa fa-sort fa-left"></span></a></th>
           <th class="col-1"><a href="#">Hired<span class="fa fa-sort fa-left"></span></a></th>
-          <th class="col-1"><a href="#">Actions<span class="fa fa-sort fa-left"></span></a></th>
         </tr>
       </thead>
       <tbody>
@@ -115,27 +114,25 @@ heading-button: <button class="btn btn-primary" role="button" data-toggle="modal
           <td>
             <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile.html">Business Development Associate</a>
             <p class="text-muted">Sales and Marketing at Ayala Land Inc.</p>
-            <span class="badge badge-warning">For Branding</span>
+            <span class="badge badge-warning">For Checking</span>
           </td>
           <td>May 1, 2017</td>
           <td>May 31,2017</td>
           <td class="h5">0</td>
           <td class="h5">0</td>
           <td class="h5">0<small class="text-muted">/0</small></td>
-          <td><button class="btn btn-outline-primary btn-block btn-sm">Brand</button></td>
         </tr>
         <tr>
           <td>
             <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile.html">Customer Service Representative</a>
             <p class="text-muted">Customer Support at AG Holding Ltd.</p>
-            <span class="badge badge-warning">For Branding</span>
+            <span class="badge badge-warning">For Checking</span>
           </td>
           <td>April 27, 2017</td>
           <td>May 15, 2017</td>
           <td class="h5">0</td>
           <td class="h5">0</td>
           <td class="h5">0<small class="text-muted">/0</small></td>
-          <td><button class="btn btn-outline-primary btn-block btn-sm">Brand</button></td>
         </tr>
         <tr>
           <td>
@@ -148,23 +145,25 @@ heading-button: <button class="btn btn-primary" role="button" data-toggle="modal
           <td class="h5">17</td>
           <td class="h5">2</td>
           <td class="h5">3<small class="text-muted">/5</small></td>
-          <td><button class="btn btn-outline-primary btn-block btn-sm" role="button">Share</button></td>
         </tr>
         <tr>
           <td>
             <a class="lead" href="{{ site.baseurl }}/recruit/jobs/profile.html">Senior Process Executive</a>
             <p class="text-muted">Technology Department at Globe Telecom</p>
-            <span class="badge badge-warning">For Approval</span>
+            <ul class="list list-inline">
+              <li><span class="badge badge-warning">For Approval</span></li>
+              <li class="divider"></li>
+              <li><a href="">Approve</a></li>
+              <li class="divider"></li>
+              <li><a href="">Reject</a></li>
+            </ul>
+            
           </td>
           <td>April 4, 2017</td>
           <td>May 4,2017</td>
           <td class="h5">11</td>
           <td class="h5">0</td>
           <td class="h5">3<small class="text-muted">/3</small></td>
-          <td>
-            <button class="btn btn-outline-primary btn-sm" type="button" role="button" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Approve this Job Request" style="width: 32px; border-top-right-radius: 0; border-bottom-right-radius: 0;"><span class="fa fa-check"></span></button>
-            <button class="btn btn-outline-primary btn-sm" type="button" role="button" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Reject this Job Request"style="width: 32px; border-top-right-radius: 0; border-bottom-right-radius: 0; margin-left: -5px;"><span class="fa fa-times"></span></button>
-          </td>
         </tr>
         <tr class="table-disabled">
           <td>
@@ -177,7 +176,6 @@ heading-button: <button class="btn btn-primary" role="button" data-toggle="modal
           <td class="h5">0</td>
           <td class="h5">0</td>
           <td class="h5">0<small class="text-muted">/0</small></td>
-          <td><button type="button" class="btn btn-outline-primary btn-block btn-sm" role="button">Share</button></td>
         </tr>
       </tbody>
     </table>
@@ -198,8 +196,6 @@ heading-button: <button class="btn btn-primary" role="button" data-toggle="modal
       </span>
     </div>
     <ul class="pagination mar-hor-auto pull-right">
-      <!-- <li class="disabled"><a href="#"><span class="fa fa-angle-left fa-lg"></span></a></li> -->
-      <!-- <li class="disabled"><a href="#"><span class="fa fa-angle-double-left fa-lg"></span></a></li> -->
       <li class="active"><a href="#">1</a></li>
       <li><a href="#">2</a></li>
       <li><a href="#">3</a></li>

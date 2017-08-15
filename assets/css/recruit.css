@@ -49,14 +49,14 @@
   vertical-align: middle;
 }
 
-#job-list table th:nth-last-child(-n+6),
-#job-list table td:nth-last-child(-n+6) {
+#job-list table th:nth-last-child(-n+4),
+#job-list table td:nth-last-child(-n+4) {
   text-align: center;
 }
 
 
 #applicant-list .list li a {
-    color: inherit;
+    /* color: inherit; */
 }
 
 
@@ -366,3 +366,11 @@
     table.tableSection th, table.tableSection td {
         width: 33%;
     }
+
+
+
+
+
+.nav-custom li a {
+    padding: 12px;
+}

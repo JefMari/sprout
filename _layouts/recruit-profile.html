@@ -6,24 +6,30 @@ layout: recruit
   <div class="container">
     <h1 class="heading-title display-3">{{ page.heading-title }}</h1>
     <div class="row">
-      <div class="col-md-9">
+      <div class="col-md-8">
         <!-- <p class="heading-subtitle">{{ page.heading-subtitle }}</p> -->
         <ul class="heading-subtitle list list-inline" style="margin-left: -4px;">
           <li>{{ page.profile-job-code }}</li>
           <li class="divider"></li>
           <li>{{ page.profile-department }} at {{ page.profile-company }}</li>
+          <li class="divider"></li>
+          <li>added on {{ page.profile-date-added }}</li>
         </ul>
         <span class="badge badge-{{ page.heading-badge-type }} mar-top-2">{{ page.heading-badge-text }}</span>
       </div>
-      <div class="col-md-3 text-right">
-        <div class="btn-group dropdown" style="margin-top: 12px;">
-          <button class="btn btn-primary" type="button">Publish</button>
-          <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" type="button">
-            <span class="fa fa-angle-down fa-lg"></span>
+      <div class="col-md-4 text-right" style="padding-top: 12px;">
+        <a class="btn btn-primary" href="">Publish</a>
+        <div class="dropdown" style="display: inline-block;">
+          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+            More<span class="fa fa-angle-down fa-lg fa-left"></span>
           </button>
           <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="#">Add Applicant</a></li>
+            <!-- <li class="divider"></li> -->
             <li><a href="#"><span class="fa fa-clone fa-right"></span>Make a Copy</a></li>
-            <li><a href="#"><span class="fa fa-trash-o fa-right"></span>Close this Job</a></li>
+            <!-- <li class="divider"></li> -->
+            <li><a href="#"><span class="fa fa-trash-o fa-right"></span>Unpublish Job</a></li>
+            <li><a href="#"><span class="fa fa-trash-o fa-right"></span>Cancel Job</a></li>
           </ul>
         </div>
       </div>
@@ -37,7 +43,7 @@ layout: recruit
   <div class="row">
 
     <div class="col-lg-2 col-md-3">
-      <ul class="nav nav-pills">
+      <ul class="nav nav-pills nav-custom">
         {% for link in page.navigation %}
           <li class="{% if page.url == link.url %} active {% endif %}">
             <div class="indicator"></div>

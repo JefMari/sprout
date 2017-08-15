@@ -37,6 +37,10 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
           </div>
         </div>
         <div class="form-group">
+          <label class="form-label" for="">Job Application</label>
+          <input class="form-control" id="search-job-name" type="search" placeholder="Search Job Application">
+        </div>
+        <div class="form-group">
           <label class="form-label" for="">Company</label>
           <select class="form-control">
             <option value="">All Company</option>
@@ -48,6 +52,11 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
           </select>
         </div>
         <div class="form-group">
+          <label class="form-label" for="">Department/Division</label>
+          <select class="form-control">
+            <option value="">All Department/Division</option>
+          </select>
+        </div>        <div class="form-group">
           <label class="form-label" for="">Job Application</label>
           <input class="form-control" id="search-job-name" type="search" placeholder="Search Job Application">
         </div>
@@ -69,7 +78,7 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
   </li>
   <li>
     <div class="btn-group dropup">
-      <button class="btn btn-primary btn-sm" type="button" >Filtering is on</button>
+      <button class="btn btn-primary btn-sm" type="button">Filtering is on</button>
       <button class="btn btn-primary btn-sm dropdown-toggle" type="button"><span class="fa fa-times"></span></button>
     </div>
   </li>
@@ -86,17 +95,16 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
     <table class="table table-hover table-lg">
       <thead>
         <tr>
-          <th class="col-xs-4"><a href="">Applicant Details<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-xs=4"><a href="">Applicant Details<span class="fa fa-sort fa-left"></span></a></th>
           <th class="col-xs-3"><a href="">Application<span class="fa fa-sort fa-left"></span></a></th>
           <th class="col-xs-2"><a href="">Date Applied<span class="fa fa-sort fa-left"></span></a></th>
-          <th class="col-xs-2"><a href="">Status<span class="fa fa-sort fa-left"></span></a></th>
-          <th class="col-xs-1"><a href="">Actions<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-xs-3"><a href="">Hiring Stage<span class="fa fa-sort fa-left"></span></a></th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>
-            <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile/">Alvin Quinones</a>
+            <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile.html">Alvin Quinones</a>
             <p class="text-muted">
               Senior Programmer at BlastAsia, Inc.
             </p>
@@ -115,16 +123,15 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
             July 6, 2017
           </td>
           <td>
-            First Interview
-            <div class="text-muted">
-              Tommorow
-            </div>
+            <a href="">First Interview</a>
+            <ul class="list list-inline text-muted">
+              <li>Tommorow</li>
+            </ul>
           </td>
-          <td><button class="btn btn-outline-primary btn-block btn-sm" type="button">View Timetable</button></td>
         </tr>
         <tr>
           <td>
-            <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile/">Riza Emilia Mendoza</a>
+            <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile.html">Riza Emilia Mendoza</a>
             <p class="text-muted">
               HR Manager at Security Bank Corporation
             </p>
@@ -143,24 +150,23 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
             July 4, 2017
           </td>
           <td>
-            Second Interview
-            <div class="text-muted">
-              Failed
-            </div>
-          </td>
-          <td>
-            <div class="dropdown">
-              <button class="btn btn-outline-primary btn-block btn-sm" data-toggle="dropdown" type="button">Resolve<span class="fa fa-angle-down fa-lg fa-left"></span></button>
-              <ul class="dropdown-menu dropdown-menu-right">
-                <li><a href="">Continue with the application</a></li>
-                <li><a href="">Withdraw application</a></li>
-              </ul>
-            </div>
+            <a href="">Second Interview</a>
+            <ul class="list list-inline text-muted">
+              <li>Failed</li>
+              <li class="divider"></li>
+              <li class="dropdown">
+                <a href="" data-toggle="dropdown">Resolve<span class="fa fa-angle-down fa-lg fa-left"></span></a>
+                <ul class="dropdown-menu dropdown-menu-right">
+                  <li><a href="">Continue with the application</a></li>
+                  <li><a href="">Withdraw application</a></li>
+                </ul>
+              </li>
+            </ul>
           </td>
         </tr>
         <tr>
           <td>
-            <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile/">Lana Karen Carraso</a>
+            <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile.html">Lana Karen Carraso</a>
             <p class="text-muted">
               Accounting Staff at The Worlwide Lifestyle, Inc.
             </p>
@@ -179,16 +185,19 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
             June 29, 2017
           </td>
           <td>
-            Third Interview
-            <div class="text-muted">
-              No Schedule Yet
-            </div>
+            <a href="">Third Interview</a>
+            <ul class="list list-inline text-muted">
+              <li>No Schedule Yet</li>
+              <li class="divider"></li>
+              <li class="dropdown">
+                <a href="">Set Schedule</a>
+              </li>
+            </ul>
           </td>
-          <td><button class="btn btn-outline-primary btn-block btn-sm" type="button">Set Schedule</button></td>
         </tr>
         <tr>
           <td>
-            <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile/">Shania Leya Abella</a>
+            <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile.html">Shania Leya Abella</a>
             <p class="text-muted">
               Software Application Developer at Remote Phils.
             </p>
@@ -207,16 +216,42 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
             June 28, 2017
           </td>
           <td>
-            Hired
-            <div class="text-muted">
-              On Jul 17, 2017
-            </div>
+            <a href="">Hired</a>
+            <ul class="list list-inline text-muted">
+              <li>On Jul 17, 2017</li>
+            </ul>
           </td>
-          <td><button class="btn btn-outline-primary btn-block btn-sm" type="button">View Contract</button></td>
         </tr>
         <tr>
           <td>
-            <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile/">Justin Videl Sarmiento</a>
+            <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile.html">Shania Leya Abella</a>
+            <p class="text-muted">
+              Software Application Developer at Remote Phils.
+            </p>
+            <ul class="list list-icon list-icon-center list-nospace" style="margin-bottom: 0;">
+              <li class="icon-mobile"><a href="">0912 345 6789</a></li>
+              <li class="icon-envelop-o"><a href="">name@company.com</a></li>
+            </ul>
+          </td>
+          <td>
+            Mid Application Developer
+            <div class="text-muted">
+              Bank of the Philippine Islands
+            </div>
+          </td>
+          <td>
+            June 28, 2017
+          </td>
+          <td>
+            <a href="">Assessment Test</a>
+            <ul class="list list-inline text-muted">
+              <li>No feedback yet</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile.html">Justin Videl Sarmiento</a>
             <p class="text-muted">
               Shift Engineer at Robinsons Land Corp.
             </p>
@@ -228,7 +263,6 @@ heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class
           <td>
             <a href="">3 Applications</a>
           </td>
-          <td>-</td>
           <td>-</td>
           <td>-</td>
         </tr>
