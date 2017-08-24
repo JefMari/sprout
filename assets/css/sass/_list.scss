@@ -552,6 +552,12 @@ li.icon-building-o  {
   }
 }
 
+.icon-calendar-o > li,
+li.icon-calendar-o {
+  &::before {
+    content: "\f133";
+  }
+}
 .icon-check > li,
 li.icon-check {
   &::before {

@@ -1,0 +1,25 @@
+<h1 class="heading-title display-3">{{ page.heading-title }}</h1>
+<div class="row">
+  <div class="col-md-8">
+    <ul class="heading-subtitle list list-inline" style="margin-left: -4px;">
+      <li>{{ page.profile-job-code }}</li>
+      <li class="divider"></li>
+      <li>{{ page.profile-department }} at {{ page.profile-company }}</li>
+      <li class="divider"></li>
+      <li>added on {{ page.profile-date-added }}</li>
+    </ul>
+    <span class="badge badge-{{ page.heading-badge-type }} mar-top-2">{{ page.heading-badge-text }}</span>
+  </div>
+  <div class="col-md-4 text-right" style="padding-top: 12px;">
+    <a class="btn btn-primary" href="">Publish</a>
+    <div class="dropdown" style="display: inline-block;">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+        More<span class="fa fa-angle-down fa-lg fa-left"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-right">
+        <li><a href="#"><span class="fa fa-clone fa-right"></span>Make a Copy</a></li>
+        <li><a href="#"><span class="fa fa-trash-o fa-right"></span>Unpublish Job</a></li>
+      </ul>
+    </div>
+  </div>
+</div>

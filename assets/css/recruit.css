@@ -280,7 +280,8 @@
     transition: all .1s linear 0s
 }
 
-.nav-wizard li.active .step,.nav-wizard li.active.complete .step {
+.nav-wizard li.active .step,
+.nav-wizard li.active.complete .step {
     background: #0091d9;
     color: #fff;
     font-weight: 700;
@@ -290,7 +291,8 @@
     border: 3px solid #55606E
 }
 
-.nav-wizard li.complete .title,.nav-wizard li.active .title {
+.nav-wizard li.complete .title,
+.nav-wizard li.active .title {
     color: #2B3D53
 }
 
@@ -373,4 +375,93 @@
 
 .nav-custom li a {
     padding: 12px;
+}
+
+
+
+
+
+
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.timeline {
+    padding-left: 0;
+}
+
+.timeline-item {
+    list-style-type: none;
+    position: relative;
+    /* width: 4px; */
+    padding-left: 40px;
+    /* margin: 0 auto; */
+    padding-bottom: 24px;
+  }
+  
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    width: 4px;
+    left: 10px;
+    height: 100%;
+    background: inherit;
+    background: #d9d9d9;
+}
+
+.timeline-indicator {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 4px solid #d9d9d9;
+    background: #fff;
+  }
+
+.passed .timeline-indicator::after,
+.skipped .timeline-indicator::after,
+.failed .timeline-indicator::after {
+    font-family: "FontAwesome";
+    position: absolute;
+    color: #fff;
+    left: 0px;
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    text-align: center;
+}
+
+.passed .timeline-indicator,
+.skipped .timeline-indicator,
+.failed .timeline-indicator {
+    border: 0;
+}
+
+.passed .timeline-indicator,
+.timeline-item.passed::before {
+    background-color: #6E9B42;
+}
+
+.skipped .timeline-indicator,
+.timeline-item.skipped::before {
+    background-color: #18879B;
+}
+
+.failed .timeline-indicator,
+.timeline-item.failed::before {
+    background-color: #D95347;
+}
+
+
+.passed .timeline-indicator::after {
+    content: "\f00c ";    
+}
+.skipped .timeline-indicator::after {
+    content: "\f0e7 ";    
+}
+.failed .timeline-indicator::after {
+    content: "\f00d ";    
 }
