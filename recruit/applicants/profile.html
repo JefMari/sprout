@@ -1,5 +1,5 @@
 ---
-layout: recruit-profile-new
+layout: recruit-profile
 
 meta-title: Jasper John Lim Lepardo
 
@@ -7,92 +7,187 @@ heading-title: Jasper John Lim Lepardo
 heading-subtitle: UI Designer &amp; Front-End Developer at Sprout Solutions Phils., Inc.
 
 navigation:
-- text: OVERVIEW
+- text: Applicant Information
   url: applicant-information-tab
-- text: BACKGROUND
+- text: Career Development
   url: career-development-tab
-- text: APPLICATIONS
-  url: job-applications-tab
+- text: References
+  url: references-tab
+- text: Job Application
+  url: job-application-tab
 
 ---
 
-<div class="col-md-9">
-  <div class="tab-content box">
-    <div class="tab-pane in active" id="applicant-information-tab">
+<div class="tab-content">
+  <div class="tab-pane" id="applicant-information-tab">
 
-      <div class="section section-success section-editable" id="applicant-information">
-        <div class="section-heading">
-          <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
-          <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
-          <h6 class="section-title display-4">Information</h6>
-          <p class="section-subtitle">Basic infromation about the applicant. All fields are required unless stated as optional.</p>
-        </div>
-        {% include recruit/components/snippets/applicants/view-mode/applicant-information.html %}
-        {% include recruit/components/snippets/applicants/edit-mode/applicant-information.html %}
-        <div class="section-footer">
-          <a href="#" class="btn btn-link">Cancel</a>
-          <a href="#" class="btn btn-primary">Save Changes</a>
-        </div>
+    <div class="section section-success section-editable" id="applicant-information">
+      <div class="section-heading">
+        <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
+        <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
+        <h6 class="section-title display-4">Information</h6>
+        <p class="section-subtitle">Basic infromation about the applicant. All fields are required unless stated as optional.</p>
       </div>
-
+      {% include recruit/components/snippets/applicants/view-mode/applicant-information.html %}
+      {% include recruit/components/snippets/applicants/edit-mode/applicant-information.html %}
+      <div class="section-footer">
+        <a href="#" class="btn btn-link">Cancel</a>
+        <a href="#" class="btn btn-primary">Save Changes</a>
+      </div>
     </div>
 
-    <div class="tab-pane" id="career-development-tab">
-
-      <div class="section section-success section-editable" id="applicant-work-experience">
-        <div class="section-heading">
-          <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
-          <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
-          <h6 class="section-title display-4">Work Experience</h6>
-          <p class="section-subtitle">Lates work of the applicant. All fields are required.</p>
-        </div>
-        {% include recruit/components/snippets/applicants/view-mode/applicant-work-experience.html %}
-        {% include recruit/components/snippets/applicants/edit-mode/applicant-work-experience.html %}
-        <div class="section-footer">
-          <a href="#" class="btn btn-link">Cancel</a>
-          <a href="#" class="btn btn-primary">Save Changes</a>
-        </div>
+    <div class="section section-success section-editable" id="applicant-contact-details">
+      <div class="section-heading">
+        <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
+        <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
+        <h6 class="section-title display-4">Contact Details</h6>
+        <p class="section-subtitle">Contact information of the applicant. All fields are required.</p>
       </div>
-
-      <div class="section section-success section-editable" id="applicant-education">
-        <div class="section-heading">
-          <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
-          <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
-          <h6 class="section-title display-4">Education</h6>
-          <p class="section-subtitle">Highest Educational Attainment. All fields are required.</p>
-        </div>
-        {% include recruit/components/snippets/applicants/view-mode/applicant-education.html %}
-        {% include recruit/components/snippets/applicants/edit-mode/applicant-education.html %}
-        <div class="section-footer">
-          <a href="#" class="btn btn-link">Cancel</a>
-          <a href="#" class="btn btn-primary">Save Changes</a>
-        </div>
+      {% include recruit/components/snippets/applicants/view-mode/applicant-contact-details.html %}
+      {% include recruit/components/snippets/applicants/edit-mode/applicant-contact-details.html %}
+      <div class="section-footer">
+        <a href="#" class="btn btn-link">Cancel</a>
+        <a href="#" class="btn btn-primary">Save Changes</a>
       </div>
+    </div>
 
-      <div class="section section-success section-editable" id="applicant-trainings-and-seminars">
-        <div class="section-heading">
-          <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
-          <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
-          <h6 class="section-title display-4">Education</h6>
-          <p class="section-subtitle">Highest Educational Attainment. All fields are required.</p>
-        </div>
-        {% include recruit/components/snippets/applicants/view-mode/applicant-trainings-and-seminars.html %}
-        {% include recruit/components/snippets/applicants/edit-mode/applicant-trainings-and-seminars.html %}
-        <div class="section-footer">
-          <a href="#" class="btn btn-link">Cancel</a>
-          <a href="#" class="btn btn-primary">Save Changes</a>
-        </div>
+    <div class="section section-success section-editable" id="applicant-skills-and-tools">
+      <div class="section-heading">
+        <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
+        <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
+        <h6 class="section-title display-4">Skills and Tools Used</h6>
+        <p class="section-subtitle">Strength, expertise, and tools that the applicant has. Optional.</p>
       </div>
-      
+      {% include recruit/components/snippets/applicants/view-mode/applicant-skills-and-tools.html %}
+      {% include recruit/components/snippets/applicants/edit-mode/applicant-skills-and-tools.html %}
     </div>
     
   </div>
-</div>
-<div class="col-md-3">
-  <p class="lead text-success">Contact Details</p>
-  <ul class="list list-icon list-icon-center">
-    <li class="icon-map-marker icon-work">060 M. Dimapilis St. Anuling Cerca I, Mendez, Cavite, Philippines</li>
-    <li class="icon-mobile">0917 706 9809</li>
-    <li class="icon-envelop-o">jasperlepardo@gmail.com</li>
-  </ul>
+
+  <div class="tab-pane" id="career-development-tab">
+
+    <div class="section section-success section-editable" id="applicant-work-experience">
+      <div class="section-heading">
+        <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
+        <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
+        <h6 class="section-title display-4">Work Experience</h6>
+        <p class="section-subtitle">Lates work of the applicant. All fields are required.</p>
+      </div>
+      {% include recruit/components/snippets/applicants/view-mode/applicant-work-experience.html %}
+      {% include recruit/components/snippets/applicants/edit-mode/applicant-work-experience.html %}
+      <div class="section-footer">
+        <a href="#" class="btn btn-link">Cancel</a>
+        <a href="#" class="btn btn-primary">Save Changes</a>
+      </div>
+    </div>
+
+    <div class="section section-success section-editable" id="applicant-education">
+      <div class="section-heading">
+        <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
+        <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
+        <h6 class="section-title display-4">Education</h6>
+        <p class="section-subtitle">Highest Educational Attainment. All fields are required.</p>
+      </div>
+      {% include recruit/components/snippets/applicants/view-mode/applicant-education.html %}
+      {% include recruit/components/snippets/applicants/edit-mode/applicant-education.html %}
+      <div class="section-footer">
+        <a href="#" class="btn btn-link">Cancel</a>
+        <a href="#" class="btn btn-primary">Save Changes</a>
+      </div>
+    </div>
+
+    <div class="section section-success section-editable" id="applicant-trainings-and-seminars">
+      <div class="section-heading">
+        <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
+        <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
+        <h6 class="section-title display-4">Trainings and Seminars</h6>
+        <p class="section-subtitle">Rainings and Seminars attended by the applicant. Optional.</p>
+      </div>
+      {% include recruit/components/snippets/applicants/view-mode/applicant-trainings-and-seminars.html %}
+      {% include recruit/components/snippets/applicants/edit-mode/applicant-trainings-and-seminars.html %}
+      <div class="section-footer">
+        <a href="#" class="btn btn-link">Cancel</a>
+        <a href="#" class="btn btn-primary">Save Changes</a>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="tab-pane" id="references-tab">
+
+    <div class="section section-success section-editable" id="applicant-documents">
+      <div class="section-heading">
+        <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
+        <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
+        <h6 class="section-title display-4">Documents</h6>
+        <p class="section-subtitle">Attach important documents submitted by the applicant such as e.g resume, CV, or biodata. Required.</p>
+      </div>
+      {% include recruit/components/snippets/applicants/view-mode/applicant-work-experience.html %}
+      {% include recruit/components/snippets/applicants/edit-mode/applicant-work-experience.html %}
+      <div class="section-footer">
+        <a href="#" class="btn btn-link">Cancel</a>
+        <a href="#" class="btn btn-primary">Save Changes</a>
+      </div>
+    </div>
+
+    <div class="section section-success section-editable" id="applicant-character-references">
+      <div class="section-heading">
+        <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
+        <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
+        <h6 class="section-title display-4">Character References</h6>
+        <p class="section-subtitle">Recommendation provided by someone by the applicant’s works. Optional.</p>
+      </div>
+      {% include recruit/components/snippets/applicants/view-mode/applicant-education.html %}
+      {% include recruit/components/snippets/applicants/edit-mode/applicant-education.html %}
+      <div class="section-footer">
+        <a href="#" class="btn btn-link">Cancel</a>
+        <a href="#" class="btn btn-primary">Save Changes</a>
+      </div>
+    </div>
+
+    <div class="section section-success section-editable" id="applicant-links">
+      <div class="section-heading">
+        <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
+        <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
+        <h6 class="section-title display-4">Links</h6>
+        <p class="section-subtitle">Social media links or portfolio of the applicant. Optional.</p>
+      </div>
+      {% include recruit/components/snippets/applicants/view-mode/applicant-trainings-and-seminars.html %}
+      {% include recruit/components/snippets/applicants/edit-mode/applicant-trainings-and-seminars.html %}
+      <div class="section-footer">
+        <a href="#" class="btn btn-link">Cancel</a>
+        <a href="#" class="btn btn-primary">Save Changes</a>
+      </div>
+    </div>
+    
+  </div>
+
+  <div class="tab-pane in active" id="job-application-tab">
+
+    <div class="section section-success" id="applicant-job-application-list">
+      <div class="section-heading">
+        <h6 class="section-title display-4">Job Applications</h6>
+      </div>
+      {% include recruit/components/snippets/applicants/view-mode/applicant-job-application-list.html %}
+    </div>
+
+    <div class="section section-success section-editable" id="applicant-job-application-details">
+      <div class="section-heading">
+        <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
+        <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
+        <h6 class="section-title display-4">Customer Service Representative</h6>
+        <ul class="section-subtitle list list-inline">
+          <li>SERORO42717</li>
+          <li class="divider"></li>
+          <li>Sales and Marketing at Ayala Land Inc.</li>
+        </ul>
+      </div>
+      {% include recruit/components/snippets/applicants/view-mode/applicant-job-application-details.html %}
+      {% include recruit/components/snippets/applicants/edit-mode/applicant-job-application-details.html %}
+      <div class="section-footer">
+        <a href="#" class="btn btn-link">Cancel</a>
+        <a href="#" class="btn btn-primary">Save Changes</a>
+      </div>
+    </div>    
+  </div>
 </div>

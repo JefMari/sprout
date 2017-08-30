@@ -931,6 +931,10 @@ li.icon-arrow-right::before {
 li.icon-building-o::before {
   content: "\f0f7"; }
 
+.icon-calendar-o > li::before,
+li.icon-calendar-o::before {
+  content: "\f133"; }
+
 .icon-check > li::before,
 li.icon-check::before {
   content: "\f00c"; }
@@ -5010,6 +5014,7 @@ button.list-group-item-danger {
   margin-bottom: 16px;
   background-color: #FFFFFF;
   border: 2px solid #D9D9D9;
+  padding: 12px;
   border-radius: 8px; }
 
 a.card {
@@ -5022,16 +5027,16 @@ a.card {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     border-color: #6E9B42;
     text-decoration: none; }
+  a.card .card-heading {
+    color: inherit; }
 
-.card-body {
-  padding: 12px; }
-  .card-body::after {
-    display: block;
-    content: "";
-    clear: both; }
+.card-body::after {
+  display: block;
+  content: "";
+  clear: both; }
 
 .card-heading {
-  padding: 12px; }
+  padding-bottom: 12px; }
   .card-heading::after {
     display: block;
     content: "";
@@ -5056,7 +5061,7 @@ a.card {
   margin-top: 4px; }
 
 .card-footer {
-  padding: 12px; }
+  padding-top: 12px; }
   .card-footer::after {
     display: block;
     content: "";
