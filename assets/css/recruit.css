@@ -174,7 +174,8 @@
     height: 24px;
     width: 24px;
     position: absolute;
-    background: #d9d9d9;
+    border: 4px solid #d9d9d9;
+    background-color: #F8F8F8;
     display: inline-block;
     border-radius: 12px;
     margin-top: -14px;
@@ -187,6 +188,7 @@
 
 .nav-wizard .active .indicator {
     background-color: #E57E26;
+    border: 0;
 }
 
 .nav-wizard li a:hover,
@@ -219,6 +221,7 @@
 
 .nav-wizard li.completed .indicator {
     background-color: #6C9B41;
+    border: 0;
 }
 
 .nav-wizard li.completed .indicator::after {
@@ -408,6 +411,10 @@
     background: #d9d9d9;
 }
 
+.timeline-item:last-child::before {
+    display: none;
+}
+
 .timeline-indicator {
     content: '';
     position: absolute;
@@ -434,10 +441,16 @@
     text-align: center;
 }
 
+.current .timeline-indicator,
 .passed .timeline-indicator,
 .skipped .timeline-indicator,
 .failed .timeline-indicator {
     border: 0;
+}
+
+.current .timeline-indicator,
+.timeline-item.current::before {
+    background-color: #d9d9d9;
 }
 
 .passed .timeline-indicator,

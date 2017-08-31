@@ -171,16 +171,27 @@ navigation:
       {% include recruit/components/snippets/applicants/view-mode/applicant-job-application-list.html %}
     </div>
 
+    <div class="heading">
+      <h1 class="heading-title display-3 mar-bottom-2">Customer Service Representative</h1>
+      <div class="row">
+        <div class="col-md-9">    
+          <ul class="heading-subtitle list list-inline">
+            <li>SERORO42717</li>
+            <li class="divider"></li>
+            <li>Sales and Marketing at Ayala Land Inc.</li>
+          </ul>
+        </div>
+        <div class="col-md-3 text-right">
+          <a class="btn btn-primary" href="">Offer Job</a>
+          <a class="btn btn-default" href="">Withdraw Application</a>
+        </div>
+      </div>
+    </div>
     <div class="section section-success section-editable" id="applicant-job-application-details">
       <div class="section-heading">
         <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
         <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
-        <h6 class="section-title display-4">Customer Service Representative</h6>
-        <ul class="section-subtitle list list-inline">
-          <li>SERORO42717</li>
-          <li class="divider"></li>
-          <li>Sales and Marketing at Ayala Land Inc.</li>
-        </ul>
+        <h6 class="section-title display-4">Job Role Details</h6>
       </div>
       {% include recruit/components/snippets/applicants/view-mode/applicant-job-application-details.html %}
       {% include recruit/components/snippets/applicants/edit-mode/applicant-job-application-details.html %}
@@ -189,5 +200,11 @@ navigation:
         <a href="#" class="btn btn-primary">Save Changes</a>
       </div>
     </div>    
+    <div class="section section-success" id="applicant-job-application-timeline">
+      <div class="section-heading">
+        <h6 class="section-title display-4">Timeline</h6>
+      </div>
+      {% include recruit/components/snippets/applicants/view-mode/applicant-job-application-timeline.html %}
+    </div>   
   </div>
 </div>
