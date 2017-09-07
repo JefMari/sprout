@@ -1,0 +1,175 @@
+---
+layout: recruit-wizard
+
+meta-title: Add Job
+
+heading-title: Add Applicant
+
+
+navigation:
+- text: Applicant Information
+  url: applicant-information-tab
+- text: Career Development
+  url: career-development-tab
+- text: References
+  url: references-tab
+- text: Job Application
+  url: job-application-tab
+- text: Save &amp; Done
+  url: applicant-request-confirmation-tab
+
+---
+
+<div class="tab-content">
+
+  <div class="tab-pane fade in active" id="applicant-information-tab">
+
+    <div class="section section-success" id="applicant-information">
+      <div class="section-heading">
+        <h6 class="section-title display-4">Personal Information</h6>
+        <p class="section-subtitle">Basic infromation about the applicant. <span class="text-danger">All fields are required unless stated as optional</span>.</p>
+      </div>
+      {% include recruit/components/snippets/applicants-old/edit-mode/applicant-information.html %}
+    </div>
+
+    <div class="section section-success" id="applicant-contact-details">
+      <div class="section-heading">
+        <h6 class="section-title display-4">Contact Details</h6>
+        <p class="section-subtitle">Contact information of the applicant. All fields are required.</p>
+      </div>
+      {% include recruit/components/snippets/applicants-old/edit-mode/applicant-contact-details.html %}
+    </div>
+    
+    <div class="section section-success" id="applicant-skills-and-tools">
+      <div class="section-heading">
+        <h6 class="section-title display-4">Skills and Tools Used</h6>
+        <p class="section-subtitle">Strength, expertise, and tools that the applicant has. Optional.</p>
+      </div>
+      {% include recruit/components/snippets/applicants-old/edit-mode/applicant-skills-and-tools.html %}
+    </div>
+    
+    <hr class="dashed" />
+
+    <div class="row">
+      <div class="col-md-6">
+        <a class="btn btn-link text-danger" href="">Discard this Applicant</a>
+      </div>
+      <div class="col-md-6 text-right">
+        <a class="btn btn-link" href="">Cancel</a>
+        <a class="btn btn-primary" href="">Save &amp; Continue</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tab-pane fade" id="career-development-tab">
+
+    <div class="section section-success" id="applicant-education">
+      <div class="section-heading">
+        <h6 class="section-title display-4">Education</h6>
+        <p class="section-subtitle">Highest Educational Attainment. All fields are required.</p>
+      </div>
+      {% include recruit/components/snippets/applicants-old/edit-mode/applicant-education.html %}
+    </div>
+
+    <div class="section section-success" id="applicant-work-experience">
+      <div class="section-heading">
+        <h6 class="section-title display-4">Work Experience</h6>
+        <p class="section-subtitle">Lates work of the applicant. All fields are required.</p>
+      </div>
+      {% include recruit/components/snippets/applicants-old/edit-mode/applicant-work-experience.html %}
+    </div>
+
+    <div class="section section-success" id="applicant-trainings-and-seminars">
+      <div class="section-heading">
+        <h6 class="section-title display-4">Trainings and Seminars</h6>
+        <p class="section-subtitle">Rainings and Seminars attended by the applicant. Optional.</p>
+      </div>
+      {% include recruit/components/snippets/applicants-old/edit-mode/applicant-trainings-and-seminars.html %}
+    </div>
+    
+    <hr class="dashed" />
+
+    <div class="row">
+      <div class="col-md-6">
+        <a class="btn btn-link text-danger" href="">Discard this Applicant</a>
+      </div>
+      <div class="col-md-6 text-right">
+        <a class="btn btn-link" href="">Cancel</a>
+        <a class="btn btn-primary" href="">Save &amp; Continue</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tab-pane fade" id="references-tab">
+
+    <div class="section section-success" id="applicant-documents">
+      <div class="section-heading">
+        <h6 class="section-title display-4">Documents</h6>
+        <p class="section-subtitle">Attach important documents submitted by the applicant such as e.g resume, CV, or biodata. Required.</p>
+      </div>
+      {% include recruit/components/snippets/applicants-old/view-mode/applicant-documents.html %}
+    </div>
+
+    <div class="section section-success" id="applicant-character-references">
+      <div class="section-heading">
+        <h6 class="section-title display-4">Character References</h6>
+        <p class="section-subtitle">Recommendation provided by someone by the applicant’s works. Optional.</p>
+      </div>
+      {% include recruit/components/snippets/applicants-old/view-mode/applicant-character-references.html %}
+    </div>
+
+    <div class="section section-success" id="applicant-links">
+      <div class="section-heading">
+        <h6 class="section-title display-4">Links</h6>
+        <p class="section-subtitle">Social media links or portfolio of the applicant. Optional.</p>
+      </div>
+      {% include recruit/components/snippets/applicants-old/view-mode/applicant-links.html %}
+    </div>
+    
+    <hr class="dashed" />
+
+    <div class="row">
+      <div class="col-md-6">
+        <a class="btn btn-link text-danger" href="">Discard this Applicant</a>
+      </div>
+      <div class="col-md-6 text-right">
+        <a class="btn btn-link" href="">Cancel</a>
+        <a class="btn btn-primary" href="">Save &amp; Continue</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="tab-pane fade" id="job-application-tab">
+
+    <hr class="dashed" />
+
+    <div class="row">
+      <div class="col-md-6">
+        <a href="" class="btn btn-link text-danger">Discard this Applicant</a>
+      </div>
+      <div class="col-md-6 text-right">
+        <a class="btn btn-link" href="">Cancel</a>
+        <a class="btn btn-primary" href="">Save &amp; Continue</a>
+      </div>
+    </div>
+
+  </div>
+  
+  <div class="tab-pane fade" id="applicant-request-confirmation-tab">
+
+    <div class="text-center">
+      <h2 class="display-4 text-success mar-bottom-3">Job Request Successfully Submmitted!</h2>
+      <p style="font-size: 15px;">Your Job Request for <strong>[ Job Title ]</strong> has been successfully submmitted<br /> and is now subject for approval.</p>
+      <hr class="dashed" />
+      <a class="btn btn-default" href="">Go back to Job List</a>
+      <a class="btn btn-primary" href="">View Job Request</a>
+      <span class="clearfix"></span>
+      <a class="btn btn-link" href="">Request New Job</a>
+    </div>
+
+  </div>
+
+</div>  

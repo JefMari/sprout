@@ -1,0 +1,28 @@
+---
+layout: recruit
+---
+
+<div class="heading">
+  <div class="container">
+    <span class="hidden" {% if
+      page.url contains '/recruit/jobs/' or
+      page.url contains '/recruit/jobs/profile/' or
+      page.url contains '/recruit/jobs/add-new-job/'
+      %} style="display: block !important" {% endif %}>
+      {% include recruit/components/snippets/jobs/heading-subtitle.html %}
+    </span>
+    <span class="hidden" {% if
+      page.url contains '/recruit/applicants/' or
+      page.url contains '/recruit/applicants/profile/' or
+      page.url contains '/recruit/applicants/add-new-applicants/'
+      %} style="display: block !important" {% endif %}>
+      {% include recruit/components/snippets/applicants/heading-subtitle.html %}
+    </span>
+  </div>
+</div>
+
+<main class="container">
+
+  {{ content }}
+    
+</main>

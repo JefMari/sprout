@@ -8,307 +8,113 @@ heading-title: Applicants
 heading-button: <a href="add-applicant.html" class="btn btn-primary"><span class="fa fa-plus fa-right"></span>Add Applicant</a>
 ---
 
-<ul class="nav nav-sm pull-left" id="search-filter">
-  <li>
-    <a data-toggle="collapse" href="#search-filter-dropdown"><span class="fa fa-search fa-lg fa-right"></span>SEARCH / FILTER</a>
-    <div class="collapse" id="search-filter-dropdown">
-      <form class="" action="" method="">
-        <p class="lead text-success">SEARCH</p>
-        <div class="form-group form-group-lg has-icon left">
-          <input class="form-control" id="search-job-name" type="search" placeholder="Search Job Name">
-          <span class="form-icon"><i class="fa fa-search"></i></span>
-        </div>
-        <p class="lead text-success">FILTER</p>
-        <div class="form-group">
-          <label class="form-label">Status</label>
-          <div data-toggle="buttons">
-            <label class="btn btn-outline-primary btn-sm active">
-              <input type="checkbox">All Applicant
-            </label>
-            <label class="btn btn-outline-primary btn-sm">
-              <input type="checkbox">Processing
-            </label>
-            <label class="btn btn-outline-primary btn-sm">
-              <input type="checkbox">Offered
-            </label>
-            <label class="btn btn-outline-primary btn-sm">
-              <input type="checkbox">Hired
-            </label>
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="">Job Application</label>
-          <input class="form-control" id="search-job-name" type="search" placeholder="Search Job Application">
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="">Company</label>
-          <select class="form-control">
-            <option value="">All Company</option>
-            <option value="">Ayala Land Inc.</option>
-            <option value="">AG Holdings Ltd</option>
-            <option value="">Bank of the Philippine Island</option>
-            <option value="">Globe Telecom</option>
-            <option value="">Manila Water Company Inc.</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="">Department/Division</label>
-          <select class="form-control">
-            <option value="">All Department/Division</option>
-          </select>
-        </div>        <div class="form-group">
-          <label class="form-label" for="">Job Application</label>
-          <input class="form-control" id="search-job-name" type="search" placeholder="Search Job Application">
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="daterange">Date Applied</label>
-          <div class="input-daterange input-group" id="daterange">
-            <input class="form-control" name="start" type="text" placeholder="Start Date">
-            <span class="input-group-addon">to</span>
-            <input class="form-control" name="end" type="text" placeholder="End Date">
-          </div>
-        </div>
-        <hr class="dashed" />
-        <div class="text-right">
-          <a class="btn btn-link" href="">Cancel</a>
-          <a class="btn btn-primary" href="">Search</a>
-        </div>
-      </form>
+<div class="mar-bottom-2">
+  <form class="form-inline">
+    <div class="form-group has-icon left has-reset">
+        <input class="form-control" id="search-job-name" type="search" placeholder="Search Applicants Name">
+        <button type="reset" name="button" class="form-reset">×</button>
+      <span class="form-icon"><i class="fa fa-search"></i></span>
     </div>
-  </li>
-  <li>
-    <div class="btn-group dropup">
-      <button class="btn btn-primary btn-sm" type="button">Filtering is on</button>
-      <button class="btn btn-primary btn-sm dropdown-toggle" type="button"><span class="fa fa-times"></span></button>
-    </div>
-  </li>
-</ul>
-<ul class="nav nav-sm pull-right">
-  <li class="active"><a href="">ALL APPLICANTS</a></li>
-  <li><a href="">PROCESSING</a></li>
-  <li><a href="">OFFERED</a></li>
-  <li><a href="">HIRED</a></li>
-</ul>
+    <button class="btn btn-primary" type="submit">Submit</button>
+  </form>
+</div>
 
 <div class="section section-default" id="applicant-list">
   <div class="table-responsive">
     <table class="table table-hover table-lg">
       <thead>
         <tr>
-          <th class="col-xs=4"><a href="">Applicant Details<span class="fa fa-sort fa-left"></span></a></th>
-          <th class="col-xs-3"><a href="">Application<span class="fa fa-sort fa-left"></span></a></th>
-          <th class="col-xs-2"><a href="">Date Applied<span class="fa fa-sort fa-left"></span></a></th>
-          <th class="col-xs-3"><a href="">Hiring Stage<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-xs-5"><a href="">Applicant Details<span class="fa fa-sort fa-left"></span></a></th>
+          <th class="col-xs-2">Mobile Number</th>
+          <th class="col-xs-3">Email Address</th>
+          <th class="col-xs-2"><a href="">Date Last Applied<span class="fa fa-sort fa-left"></span></a></th>
         </tr>
       </thead>
       <tbody>
         <tr>
           <td>
             <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile.html">Alvin Quinones</a>
-            <p class="text-muted">
+            <div class="text-muted">
               Senior Programmer at BlastAsia, Inc.
-            </p>
-             <ul class="list list-icon list-icon-center list-nospace" style="margin-bottom: 0;">
-              <li class="icon-mobile">0912 345 6789</li>
-              <li class="icon-envelop-o">name@company.com</li>
-            </ul>
+            </div>
           </td>
           <td>
-            Lead Programmer
-            <div class="text-muted">
-              Globe Telecom Inc.
-            </div>
+            0912 345 6789
+          </td>
+          <td>
+              name@company.com
           </td>
           <td>
             July 6, 2017
-          </td>
-          <td>
-            First Interview
-            <ul class="list list-inline text-muted">
-              <li>Tommorow</li>
-            </ul>
-            <div class="dropdown">
-              <a href="" data-toggle="dropdown">Mark as<span class="fa fa-angle-down fa-lg fa-left"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="">List Based on the Process</a></li>
-                <li><a href="">(Mandatory) Offered</a></li>
-                <li><a href="">(Mandatory) Hired</a></li>
-              </ul>
-            </div>
           </td>
         </tr>
         <tr>
           <td>
             <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile.html">Riza Emilia Mendoza</a>
-            <p class="text-muted">
-              HR Manager at Security Bank Corporation
-            </p>
-            <ul class="list list-icon list-icon-center list-nospace" style="margin-bottom: 0;">
-              <li class="icon-mobile">0912 345 6789</li>
-              <li class="icon-envelop-o">name@company.com</li>
-            </ul>
-          </td>
-          <td>
-            Human Resource Manager
             <div class="text-muted">
-              Ayala Land Corporation
+              HR Manager at Security Bank Corporation
             </div>
           </td>
           <td>
-            July 4, 2017
+            0912 345 6789
           </td>
           <td>
-            Second Interview
-            <ul class="list list-inline text-muted">
-              <li>Failed</li>
-              <li class="divider"></li>
-              <li class="dropdown">
-                <a href="" data-toggle="dropdown">Resolve<span class="fa fa-angle-down fa-lg fa-left"></span></a>
-                <ul class="dropdown-menu dropdown-menu-right">
-                  <li><a href="">Continue Application</a></li>
-                  <li><a href="">Withdraw Application</a></li>
-                </ul>
-              </li>
-            </ul>
-            <div class="dropdown">
-              <a href="" data-toggle="dropdown">Mark as<span class="fa fa-angle-down fa-lg fa-left"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="">List Based on the Process</a></li>
-                <li><a href="">(Mandatory) Offered</a></li>
-                <li><a href="">(Mandatory) Hired</a></li>
-              </ul>
-            </div>
+              name@company.com
+          </td>
+          <td>
+            July 6, 2017
           </td>
         </tr>
         <tr>
           <td>
             <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile.html">Lana Karen Carraso</a>
-            <p class="text-muted">
+            <div class="text-muted">
               Accounting Staff at The Worlwide Lifestyle, Inc.
-            </p>
-            <ul class="list list-icon list-icon-center list-nospace" style="margin-bottom: 0;">
-              <li class="icon-mobile">0912 345 6789</li>
-              <li class="icon-envelop-o">name@company.com</li>
-            </ul>
+            </div>
           </td>
           <td>
-            Accounting Officer
-            <div class="text-muted">
-              Honda Cars Makati, Inc.
-            </div>
+            0912 345 6789
+          </td>
+          <td>
+            name@company.com
           </td>
           <td>
             June 29, 2017
           </td>
-          <td>
-            Third Interview
-            <ul class="list list-inline text-muted">
-              <li>No Schedule Yet</li>
-              <li class="divider"></li>
-              <li class="dropdown">
-                <a href="">Set Schedule</a>
-              </li>
-            </ul>
-            <div class="dropdown">
-              <a href="" data-toggle="dropdown">Mark as<span class="fa fa-angle-down fa-lg fa-left"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="">List Based on the Process</a></li>
-                <li><a href="">(Mandatory) Offered</a></li>
-                <li><a href="">(Mandatory) Hired</a></li>
-              </ul>
-            </div>
-          </td>
         </tr>
         <tr>
           <td>
             <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile.html">Shania Leya Abella</a>
-            <p class="text-muted">
+            <div class="text-muted">
               Software Application Developer at Remote Phils.
-            </p>
-            <ul class="list list-icon list-icon-center list-nospace" style="margin-bottom: 0;">
-              <li class="icon-mobile">0912 345 6789</li>
-              <li class="icon-envelop-o">name@company.com</li>
-            </ul>
+            </div>
           </td>
           <td>
-            Mid Application Developer
-            <div class="text-muted">
-              Bank of the Philippine Islands
-            </div>
+            0912 345 6789
+          </td>
+          <td>
+            name@company.com
           </td>
           <td>
             June 28, 2017
-          </td>
-          <td>
-            Hired
-            <ul class="list list-inline text-muted">
-              <li>On Jul 17, 2017</li>
-            </ul>
-            <div class="dropdown">
-              <a href="" data-toggle="dropdown">Mark as<span class="fa fa-angle-down fa-lg fa-left"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="">List Based on the Process</a></li>
-                <li><a href="">(Mandatory) Offered</a></li>
-                <li><a href="">(Mandatory) Hired</a></li>
-              </ul>
-            </div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile.html">Shania Leya Abella</a>
-            <p class="text-muted">
-              Software Application Developer at Remote Phils.
-            </p>
-            <ul class="list list-icon list-icon-center list-nospace" style="margin-bottom: 0;">
-              <li class="icon-mobile">0912 345 6789</li>
-              <li class="icon-envelop-o">name@company.com</li>
-            </ul>
-          </td>
-          <td>
-            Mid Application Developer
-            <div class="text-muted">
-              Bank of the Philippine Islands
-            </div>
-          </td>
-          <td>
-            June 28, 2017
-          </td>
-          <td>
-            Assessment Test
-            <ul class="list list-inline text-muted">
-              <li>No Schedule Yet</li>
-              <li class="divider"></li>
-              <li class="dropdown">
-                <a href="">Set Schedule</a>
-              </li>
-            </ul>
-            <div class="dropdown">
-              <a href="" data-toggle="dropdown">Mark as<span class="fa fa-angle-down fa-lg fa-left"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="">List Based on the Process</a></li>
-                <li><a href="">(Mandatory) Offered</a></li>
-                <li><a href="">(Mandatory) Hired</a></li>
-              </ul>
-            </div>
           </td>
         </tr>
         <tr>
           <td>
             <a class="lead" href="{{ site.baseurl }}/recruit/applicants/profile.html">Justin Videl Sarmiento</a>
-            <p class="text-muted">
+            <div class="text-muted">
               Shift Engineer at Robinsons Land Corp.
-            </p>
-            <ul class="list list-icon list-icon-center list-nospace" style="margin-bottom: 0;">
-              <li class="icon-mobile"><a href="">0912 345 6789</a></li>
-              <li class="icon-envelop-o"><a href="">name@company.com</a></li>
-            </ul>
+            </div>
           </td>
           <td>
-            <a href="">3 Applications</a>
+            0912 345 6789
           </td>
-          <td>-</td>
-          <td>-</td>
+          <td>
+            name@company.com
+          </td>
+          <td>
+            June 28, 2017
+          </td>
         </tr>
       </tbody>
     </table>

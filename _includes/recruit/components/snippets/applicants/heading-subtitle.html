@@ -1,11 +1,18 @@
-<div class="media">
-  <div class="media-left">
-    <img class="media-object rounded-circle" src="{{ site.baseurl }}/assets/images/avatar.png" alt="" width="100">
+<h1 class="heading-title display-3">{{ page.heading-title }}</h1>
+<div class="row">
+  <div class="col-md-8">
+    <p class="heading-subtitle">{{ page.profile-position }} at {{ page.profile-company }}</p>
   </div>
-  <div class="media-content media-content-middle">
-    <div class="media-heading">
-      <h1 class="heading-title display-3">{{ page.heading-title }}</h1>
-      <p class="heading-subtitle">{{ page.heading-subtitle }}</p>           
+  <div class="col-md-4 text-right hidden" style="padding-top: 12px;">
+    <a class="btn btn-primary" href="">Publish</a>
+    <div class="dropdown" style="display: inline-block;">
+      <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+        More<span class="fa fa-angle-down fa-lg fa-left"></span>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-right">
+        <li><a href="#"><span class="fa fa-clone fa-right"></span>Make a Copy</a></li>
+        <li><a href="#"><span class="fa fa-trash-o fa-right"></span>Unpublish Job</a></li>
+      </ul>
     </div>
   </div>
 </div>

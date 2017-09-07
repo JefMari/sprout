@@ -806,14 +806,25 @@ ol {
   .list-bordered > li:last-child {
     border-bottom: none; }
 
-.list-condensed > li {
+.list-sm > li {
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   margin-top: 4px !important;
   margin-bottom: 4px !important; }
-  .list-condensed > li > .list {
+  .list-sm > li > .list {
     margin-top: 4px !important;
     margin-bottom: 4px !important; }
+
+.list-lg > li {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important; }
+  .list-lg > li > .list {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important; }
+.list-lg.list-icon-center > li {
+  padding-left: 40px; }
 
 .list-columns {
   -webkit-column-gap: 30px;
@@ -974,6 +985,10 @@ li.icon-file-pdf-o::before {
 .icon-file-text-o > li::before,
 li.icon-file-text-o::before {
   content: "\f0f6"; }
+
+.icon-graduation-cap > li::before,
+li.icon-graduation-cap::before {
+  content: "\f19d"; }
 
 .icon-globe > li::before,
 li.icon-globe::before {

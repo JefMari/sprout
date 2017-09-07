@@ -405,7 +405,7 @@ ol {
   }
 }
 
-.list-condensed {
+.list-sm {
   > li {
     padding-top: 0 !important;
     padding-bottom: 0 !important;
@@ -414,6 +414,24 @@ ol {
     > .list {
       margin-top: $spacer-4 !important;
       margin-bottom: $spacer-4 !important;
+    }
+  }
+}
+
+.list-lg {
+  > li {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    margin-top: $spacer-8 !important;
+    margin-bottom: $spacer-8 !important;
+    > .list {
+      margin-top: $spacer-8 !important;
+      margin-bottom: $spacer-8 !important;
+    }
+  }
+  &.list-icon-center {
+    > li {
+      padding-left: 40px;
     }
   }
 }
@@ -633,6 +651,13 @@ li.icon-file-pdf-o {
 li.icon-file-text-o {
   &::before {
     content: "\f0f6";
+  }
+}
+
+.icon-graduation-cap  > li,
+li.icon-graduation-cap  {
+  &::before {
+    content: "\f19d";
   }
 }
 
