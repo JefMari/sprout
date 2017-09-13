@@ -18,7 +18,7 @@ $(document).ready(function() {
 
 
 $('[data-toggle="tooltip"]').tooltip()
-
+$('[data-toggle="popover"]').popover()
 
 //
 //
@@ -107,3 +107,15 @@ $('.bootstrapWizard li::after ').css(
 
 
 // $('input.form-control').after('<div class="form-indicator"></div>');
+
+
+
+
+
+
+
+
+
+
+
+

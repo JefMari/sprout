@@ -108,3 +108,15 @@ body {
   position: absolute;
   right: 0;
 }
+
+
+.btn-toggle {
+  padding: 0;
+  height: 28px;
+  position: absolute;
+  right: 0;  
+}
+
+.section .section-heading {
+  position: relative;
+}
