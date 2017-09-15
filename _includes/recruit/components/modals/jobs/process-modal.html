@@ -1,9 +1,9 @@
-<div class="modal fade modal-default" id="process-and-team-modal">
+<div class="modal fade modal-default" id="process-modal">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button class="close" data-dismiss="modal" type="button">&times;</button>
-        <h6 class="modal-title display-5">Create New Process</h6>
+        <h6 class="modal-title display-5">Process</h6>
       </div>
       <div class="modal-body">
         <div class="form-group">
@@ -11,26 +11,12 @@
           <input type="text" name="" value="" class="form-control" placeholder="Enter Process Name">
           <span class="form-text">0/25 character</span>
         </div>
-        <div class="form-group">
+        <div class="form-group form-group-lg">
           <label for="" class="form-label">Team Member</label>
           <div class="input-group">
-            <div class="row">
-              <div class="col-md-4">
-                <select class="form-control" name="">
-                  <option value="" selected disabled>Select Company</option>
-                </select>
-              </div>
-              <div class="col-md-4">
-                <select class="form-control" name="">
-                  <option value="" selected disabled>Select Department/Division</option>
-                </select>
-              </div>
-              <div class="col-md-4">
-                <select class="form-control" name="">
-                  <option value="" selected disabled>Select Team Member</option>
-                </select>
-              </div>
-            </div>
+            <select class="form-control" name="">
+              <option value="" selected disabled>Select Team Member</option>
+            </select>
             <span class="input-group-btn">
               <a href="#" class="btn btn-link">
                 <span class="fa fa-times"></span>
@@ -42,10 +28,10 @@
       </div>
       <div class="modal-footer">
         <span class="pull-left">
-          <a href="#" class="btn btn-link text-danger">Delete Step</a>
+          <a href="#" class="btn btn-link text-danger"><span class="fa fa-right fa-trash-o"></span>Delete Process</a>
         </span>
         <span class="pull-right">
-          <a href="#" class="btn btn-primary">Save Process</a>
+          <a href="#" class="btn btn-primary">Save Changes</a>
         </span>
       </div>
     </div>

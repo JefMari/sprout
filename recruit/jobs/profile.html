@@ -4,6 +4,8 @@ layout: recruit-profile
 meta-title: Senior Software Engineer - Ruby On Rails
 
 heading-title: Senior Software Engineer - Ruby On Rails
+ 
+heading-primary-button: <button class="btn btn-primary" data-toggle="modal" data-target="#job-request-publish-modal" type="button">Publish</button>
 
 profile-job-code: SERORO42717
 profile-department: Sales and Marketing
@@ -143,19 +145,13 @@ navigation:
 
   <div class="tab-pane fade" id="process-and-team-tab">
 
-    <div class="section section-success section-editable" id="job-process">
+    <div class="section section-success" id="job-process">
       <div class="section-heading">
-        <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
-        <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
+        <button class="btn btn-link btn-toggle" data-target="#process-and-team-modal" data-toggle="modal" type="button"><span class="fa fa-plus fa-right"></span>Add Process</button>
         <h6 class="section-title display-4">Process</h6>
         <p class="section-subtitle">The steps the applicant needs to take.</p>
       </div>
-      {% include recruit/components/snippets/jobs/view-mode/job-process.html %}
       {% include recruit/components/snippets/jobs/edit-mode/job-process.html %}
-      <div class="section-footer">
-        <a href="#" class="btn btn-link">Cancel</a>
-        <a href="#" class="btn btn-primary">Save Changes</a>
-      </div>
     </div>
 
     <div class="section section-success" id="job-teams">

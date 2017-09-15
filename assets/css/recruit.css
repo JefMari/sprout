@@ -41,7 +41,7 @@
 
 #job-list .table-responsive,
 #applicant-list .table-responsive {
-  min-height: calc(100vh - 379px);
+  min-height: calc(100vh - 383px);
 }
 
 #job-list table td,
@@ -80,17 +80,17 @@
 
 
 
-#new-job-modal .modal-header {
+#job-request-template-modal .modal-header {
   border-bottom-width: 2px;
 }
 
-#new-job-modal .modal-header .nav {
+#job-request-template-modal .modal-header .nav {
   margin-bottom: -14px;
   margin-left: -12px;
   margin-right: -12px;
 }
 
-#new-job-modal .modal-header .nav  li a {
+#job-request-template-modal .modal-header .nav  li a {
   padding: 12px;
 }
 

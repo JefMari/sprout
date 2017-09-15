@@ -11,14 +11,15 @@
     <span class="badge badge-{{ page.heading-badge-type }} mar-top-2">{{ page.heading-badge-text }}</span>
   </div>
   <div class="col-md-4 text-right" style="padding-top: 12px;">
-    <a class="btn btn-primary" href="">Publish</a>
+    {{ page.heading-danger-button }}
+    {{ page.heading-primary-button }}
     <div class="dropdown" style="display: inline-block;">
       <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
         More<span class="fa fa-angle-down fa-lg fa-left"></span>
       </button>
       <ul class="dropdown-menu dropdown-menu-right">
-        <li><a href="#"><span class="fa fa-clone fa-right"></span>Make a Copy</a></li>
-        <li><a href="#"><span class="fa fa-trash-o fa-right"></span>Unpublish Job</a></li>
+        <li><a href="{{ site.baseurl }}/recruit/jobs/add-job.html"><span class="fa fa-clone fa-right"></span>Make a Copy</a></li>
+        <li><a data-toggle="modal" href="#job-request-unpublish-modal"><span class="fa fa-trash-o fa-right"></span>Unpublish Job</a></li>
       </ul>
     </div>
   </div>

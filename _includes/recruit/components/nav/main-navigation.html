@@ -29,16 +29,24 @@
           %} active {% endif %}">
           <a href="{{ site.baseurl }}/recruit/applicants/">Applicants</a>
         </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Setup<span class="fa fa-angle-down fa-lg fa-left"></span></a>
+        <li class="dropdown hidden{% if
+          page.url contains '/recruit/settings/company.html' or
+          page.url contains '/recruit/settings/templates.html' or
+          page.url contains '/recruit/settings/incentives.html' or
+          page.url contains '/recruit/settings/skills.html'
+          %} active {% endif %}">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Settings<span class="fa fa-angle-down fa-lg fa-left"></span></a>
           <ul class="dropdown-menu">
+            <li class="{% if page.url == '/recruit/settings/user.html' %} active {% endif %}">
+              <a href="{{ site.baseurl }}/recruit/settings/user.html">User</a>
+            </li>
             <li><a href="#">Company</a></li>
             <li><a href="#">Templates</a></li>
             <li><a href="#">Incentives</a></li>
             <li><a href="#">Skills</a></li>
           </ul>
         </li>
-        <li class="dropdown">
+        <li class="dropdown hidden">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reports<span class="fa fa-angle-down fa-lg fa-left"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">Recruitment Funnel</a></li>
@@ -46,9 +54,9 @@
             <li><a href="#">Activity Logs</a></li>
           </ul>
         </li>
-        <li><a class="btn btn-link"><span class="fa fa-search"></span></a></li>
-        <li><a class="btn btn-link"><span class="fa fa-bell-o"></span></a></li>
-        <li class="dropdown">
+        <li class="hidden"><a class="btn btn-link"><span class="fa fa-search"></span></a></li>
+        <li class="hidden"><a class="btn btn-link"><span class="fa fa-bell-o"></span></a></li>
+        <li class="dropdown hidden">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jasper Lepardo<span class="fa fa-angle-down fa-lg fa-left"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#">My Profile</a></li>
@@ -60,6 +68,13 @@
             <li><a href="#">Help</a></li>
             <li><a href="#">Change Password</a></li>
             <li class="divider"></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jasper Lepardo<span class="fa fa-angle-down fa-lg fa-left"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{{ site.baseurl }}/recruit/settings/user.html">Settings</a></li>
             <li><a href="#">Logout</a></li>
           </ul>
         </li>

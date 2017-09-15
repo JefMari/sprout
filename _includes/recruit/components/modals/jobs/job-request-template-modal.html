@@ -1,9 +1,9 @@
-<div class="modal fade modal-default" id="job-request-modal">
+<div class="modal fade modal-default" id="job-request-template-modal">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <button class="close" data-dismiss="modal" type="button">&times;</button>
-        <h6 class="modal-title display-5">Add a Job</h6>
+        <h6 class="modal-title display-5">Add Job</h6>
         <ul class="nav nav-tabs">
           <li class="active"><a href="#tab-template" data-toggle="tab">From a Templates</a></li>
           <li><a href="#tab-job-profile" data-toggle="tab">From a Job Profile</a></li>
@@ -14,7 +14,7 @@
           <div class="tab-pane active" id="tab-template">
             <div class="form-group form-group-lg has-icon left">
               <div class="input-group">
-                <input class="form-control" type="text" placeholder="Search from a Template">
+                <input class="form-control" type="text" placeholder="Search from a template">
                 <span class="form-icon"><i class="fa fa-search"></i></span>
                 <span class="input-group-btn">
                   <button type="submit" class="btn btn-primary btn-lg" role="button">Search</button>
@@ -27,7 +27,7 @@
                   <div class="card-body">
                     <div class="media">
                       <div class="media-left">
-                        <img class="media-object img-circle" src="{{ site.baseurl }}/assets/images/avatar.png" width="50">
+                        <span class="fa fa-file-o fa-3x mar-1"></span>
                       </div>
                       <div class="media-content">
                         <h6>Blank Template</h6>
@@ -126,7 +126,7 @@
           <div class="tab-pane" id="tab-job-profile">
             <div class="form-group form-group-lg has-icon left">
               <div class="input-group">
-                <input class="form-control" type="text" placeholder="Search from a Job Profile">
+                <input class="form-control" type="text" placeholder="Search from a job profile">
                 <span class="form-icon"><i class="fa fa-search"></i></span>
                 <span class="input-group-btn">
                   <button type="submit" class="btn btn-primary btn-lg" role="button">Search</button>

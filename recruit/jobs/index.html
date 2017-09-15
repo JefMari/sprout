@@ -5,7 +5,7 @@ meta-title: Jobs | Sprout Recruit
 
 heading-title: Jobs
 
-heading-button: <button class="btn btn-primary" role="button" data-toggle="modal" data-target="#job-request-modal"><span class="fa fa-plus fa-right"></span>Add Job</button>
+heading-button: <button class="btn btn-primary" role="button" data-toggle="modal" data-target="#job-request-template-modal"><span class="fa fa-plus fa-right"></span>Add Job</button>
 ---
 
 <ul class="nav nav-sm pull-left" id="search-filter">
@@ -26,13 +26,22 @@ heading-button: <button class="btn btn-primary" role="button" data-toggle="modal
               <input type="checkbox">All Jobs
             </label>
             <label class="btn btn-outline-primary btn-sm">
-              <input type="checkbox">Open
-            </label>
-            <label class="btn btn-outline-primary btn-sm">
               <input type="checkbox">For Approval
             </label>
             <label class="btn btn-outline-primary btn-sm">
               <input type="checkbox">For Checking
+            </label>
+            <label class="btn btn-outline-primary btn-sm">
+              <input type="checkbox">Open
+            </label>
+            <label class="btn btn-outline-primary btn-sm">
+              <input type="checkbox">Closed
+            </label>
+            <label class="btn btn-outline-primary btn-sm">
+              <input type="checkbox">Unpublished
+            </label>
+            <label class="btn btn-outline-primary btn-sm">
+              <input type="checkbox">Rejected
             </label>
           </div>
         </div>
@@ -90,12 +99,13 @@ heading-button: <button class="btn btn-primary" role="button" data-toggle="modal
 </ul>
 <ul class="nav nav-sm pull-right">
   <li class="active"><a href="#">ALL JOBS</a></li>
-  <li><a href="#">OPEN</a></li>
   <li><a href="#">FOR APPROVAL</a></li>
   <li><a href="#">FOR CHECKING</a></li>
+  <li><a href="#">OPEN</a></li>
   <li><a href="#">CLOSED</a></li>
+  <li><a href="#">UNPUBLISHED</a></li>
+  <li><a href="#">REJECTED</a></li>
 </ul>
-
 <div class="section section-default" id="job-list">
   <div class="table-responsive">
     <table class="table table-hover table-lg">
@@ -180,28 +190,37 @@ heading-button: <button class="btn btn-primary" role="button" data-toggle="modal
     </table>
   </div>
   <div class="section-footer">
-    <div class="pagination-settings">
-      Results 1 - 10 of 100
-      <span class="dropup mar-left-2">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">5 entries per page<span class="fa fa-angle-up fa-lg fa-left"></span></a>
-        <ul class="dropdown-menu dropdown-menu-right">
-          <li class="dropdown-header">Entries per page:</li>
-          <li class="active"><a href="#">5 items</a></li>
-          <li><a href="#">10 items</a></li>
-          <li><a href="#">25 items</a></li>
-          <li><a href="#">50 items</a></li>
-          <li><a href="#">100 items</a></li>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="pagination-settings">
+          Results 1 - 10 of 100
+          <span class="dropup mar-left-2">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">5 entries per page<span class="fa fa-angle-up fa-lg fa-left"></span></a>
+            <ul class="dropdown-menu dropdown-menu-right">
+              <li class="dropdown-header">Entries per page:</li>
+              <li class="active"><a href="#">5 items</a></li>
+              <li><a href="#">10 items</a></li>
+              <li><a href="#">25 items</a></li>
+              <li><a href="#">50 items</a></li>
+              <li><a href="#">100 items</a></li>
+            </ul>
+          </span>
+        </div>
+      </div>
+      <div class="col-md-6 text-right">
+        <ul class="pagination mar-hor-auto">
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#"><span class="fa fa-angle-right fa-lg"></span></a></li>
+          <li><a href="#"><span class="fa fa-angle-double-right fa-lg"></span></a></li>
         </ul>
-      </span>
+      </div>
     </div>
-    <ul class="pagination mar-hor-auto pull-right">
-      <li class="active"><a href="#">1</a></li>
-      <li><a href="#">2</a></li>
-      <li><a href="#">3</a></li>
-      <li><a href="#">4</a></li>
-      <li><a href="#">5</a></li>
-      <li><a href="#"><span class="fa fa-angle-right fa-lg"></span></a></li>
-      <li><a href="#"><span class="fa fa-angle-double-right fa-lg"></span></a></li>
-    </ul>
   </div>
 </div>
+
+
+

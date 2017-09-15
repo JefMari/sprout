@@ -1,7 +1,7 @@
 ---
 layout: global
 
-style-sheets: recruit
+style-sheets: recruit.css
 ---
 
 <header>
@@ -10,10 +10,17 @@ style-sheets: recruit
 
 {{ content }}
 
-{% include recruit/components/modals/job-request-modal.html %}
-{% include recruit/components/modals/job-template-modal.html %}
-{% include recruit/components/modals/job-application-modal.html %}
-{% include recruit/components/modals/process-and-team-modal.html %}
-{% include recruit/components/modals/assign-recruiter-modal.html %}
-{% include recruit/components/modals/publish-job-request-modal.html %}
-{% include recruit/components/modals/reject-job-request-modal.html %}
+<!-- JOBS -->
+{% include recruit/components/modals/jobs/job-request-template-modal.html %}
+{% include recruit/components/modals/jobs/job-request-template-view-modal.html %}
+
+{% include recruit/components/modals/jobs/job-request-discard-modal.html %}
+{% include recruit/components/modals/jobs/job-request-publish-modal.html %}
+{% include recruit/components/modals/jobs/job-request-reject-modal.html %}
+{% include recruit/components/modals/jobs/job-request-unpublish-modal.html %}
+
+{% include recruit/components/modals/jobs/process-modal.html %}
+{% include recruit/components/modals/jobs/assign-recruiter-modal.html %}
+
+<!-- APPLICANTS -->
+{% include recruit/components/modals/applicants/application-modal.html %}

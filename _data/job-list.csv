@@ -1,0 +1,101 @@
+job-title,department,company,status-type,status-name,date-added,date-needed,processing,offered,hired,hires-needed
+Account Executive,Business Development,Browsetype,success,Open,11/30/2017,11/22/2018,27,4,5,5
+Mechanical Systems Engineer,Engineering,Shuffledrive,default,Closed,09/16/2017,08/29/2018,36,5,1,5
+GIS Technical Architect,Marketing,Izio,default,Closed,11/30/2017,10/05/2018,11,1,4,6
+Office Assistant I,Legal,Vinder,warning,For Checking,11/09/2017,04/01/2018,12,2,2,5
+Dental Hygienist,Services,Kayveo,warning,For Checking,11/03/2017,06/30/2018,31,3,3,5
+Professor,Business Development,Feedbug,default,Unpublished,10/17/2017,06/29/2018,38,5,2,9
+Environmental Specialist,Human Resources,Eabox,warning,For Approval,10/24/2017,08/10/2018,15,2,5,8
+Information Systems Manager,Business Development,Skinder,success,Open,12/12/2017,07/22/2018,24,1,5,5
+Systems Administrator III,Engineering,Eadel,warning,For Checking,11/02/2017,12/18/2018,25,2,1,5
+Occupational Therapist,Research and Development,Jabberstorm,default,Closed,11/07/2017,03/06/2018,11,1,2,8
+Administrative Officer,Engineering,Twitterbridge,default,Closed,12/20/2017,07/12/2018,37,2,2,10
+Engineer I,Services,Jatri,warning,For Checking,12/01/2017,02/20/2018,4,5,1,7
+Senior Sales Associate,Accounting,Talane,default,Unpublished,09/30/2017,02/24/2018,47,5,5,10
+Safety Technician III,Human Resources,Izio,warning,For Checking,11/17/2017,04/21/2018,19,5,1,10
+Nurse Practicioner,Support,Fivespan,warning,For Checking,11/16/2017,07/19/2018,28,1,1,10
+Programmer II,Human Resources,Browsebug,success,Open,11/07/2017,02/18/2018,44,2,5,6
+Web Developer II,Marketing,Katz,success,Open,10/04/2017,10/30/2018,40,2,1,9
+Quality Control Specialist,Accounting,Skippad,default,Rejected,12/30/2017,05/25/2018,4,3,3,6
+Actuary,Product Management,Skiptube,default,Unpublished,10/05/2017,07/15/2018,16,5,4,8
+Recruiter,Product Management,Wikizz,warning,For Approval,11/03/2017,04/26/2018,31,4,1,9
+Marketing Assistant,Engineering,Ainyx,default,Unpublished,12/26/2017,08/04/2018,39,3,2,5
+Pharmacist,Product Management,Oyondu,default,Rejected,10/08/2017,07/14/2018,8,2,3,8
+Desktop Support Technician,Business Development,Miboo,success,Open,11/21/2017,06/22/2018,38,4,2,7
+Electrical Engineer,Services,Roodel,warning,For Approval,10/13/2017,11/21/2018,8,2,3,10
+Tax Accountant,Research and Development,Talane,default,Unpublished,11/13/2017,08/03/2018,41,4,1,6
+Developer III,Product Management,Kwilith,warning,For Checking,09/27/2017,03/17/2018,27,3,1,5
+Engineer III,Services,Dabfeed,success,Open,12/28/2017,08/31/2018,19,3,3,8
+Associate Professor,Legal,Jaxbean,warning,For Checking,10/18/2017,04/04/2018,16,4,2,5
+Assistant Media Planner,Accounting,Vipe,default,Unpublished,12/14/2017,05/27/2018,31,1,5,10
+Chief Design Engineer,Services,Skyvu,default,Closed,09/14/2017,08/15/2018,18,1,2,7
+Sales Representative,Legal,Quamba,default,Rejected,10/22/2017,02/26/2018,39,2,5,10
+Paralegal,Legal,Voonte,default,Rejected,12/29/2017,07/10/2018,30,3,5,7
+Physical Therapy Assistant,Services,Topicware,warning,For Approval,11/07/2017,10/10/2018,24,2,2,8
+Structural Engineer,Support,Quimm,success,Open,09/14/2017,04/23/2018,1,2,1,8
+Senior Quality Engineer,Business Development,Realbridge,default,Unpublished,10/06/2017,10/19/2018,32,1,3,10
+Compensation Analyst,Training,Photolist,default,Rejected,09/20/2017,11/04/2018,37,2,4,8
+Automation Specialist I,Services,Eimbee,warning,For Approval,09/28/2017,04/12/2018,40,1,2,7
+Programmer IV,Business Development,Mydeo,default,Closed,09/23/2017,11/07/2018,13,5,2,7
+Vice President for Accounting,Marketing,Skimia,warning,For Checking,12/01/2017,04/21/2018,19,3,2,8
+Tax Accountant,Training,Roomm,default,Unpublished,12/04/2017,06/22/2018,21,2,5,7
+Desktop Support Technician,Services,Yodel,default,Rejected,10/11/2017,06/21/2018,30,1,1,10
+Computer Systems Analyst I,Training,Ozu,warning,For Checking,12/02/2017,03/14/2018,13,1,3,5
+Media Manager IV,Services,Browseblab,warning,For Approval,12/26/2017,04/05/2018,18,2,1,6
+Operator,Research and Development,Demimbu,default,Unpublished,10/09/2017,06/17/2018,37,5,2,8
+Graphic Designer,Legal,Skilith,warning,For Approval,10/19/2017,04/01/2018,3,2,2,8
+Nuclear Power Engineer,Human Resources,Gigashots,default,Rejected,09/22/2017,01/16/2018,39,4,5,5
+Engineer I,Training,Avamba,success,Open,10/19/2017,10/30/2018,7,4,4,7
+Information Systems Manager,Marketing,Skilith,default,Unpublished,10/03/2017,09/19/2018,5,4,5,9
+Assistant Manager,Business Development,Voomm,success,Open,09/20/2017,11/19/2018,24,3,1,5
+Software Engineer II,Product Management,Mydo,warning,For Approval,09/26/2017,05/20/2018,3,1,1,7
+Analyst Programmer,Sales,Tekfly,warning,For Checking,12/11/2017,11/05/2018,42,2,1,6
+Environmental Specialist,Business Development,Vitz,success,Open,12/04/2017,01/25/2018,14,3,3,6
+Environmental Specialist,Engineering,Oyondu,warning,For Approval,12/08/2017,10/12/2018,30,3,1,10
+Database Administrator I,Business Development,Thoughtworks,default,Unpublished,12/29/2017,06/15/2018,26,2,2,9
+Financial Analyst,Accounting,Zoomcast,default,Closed,11/21/2017,04/19/2018,33,5,1,6
+Paralegal,Support,Wikido,default,Unpublished,12/05/2017,03/17/2018,2,1,1,10
+Speech Pathologist,Support,Divavu,default,Unpublished,10/20/2017,10/10/2018,32,3,2,5
+Human Resources Manager,Engineering,Browsetype,default,Closed,09/16/2017,01/05/2018,42,4,3,10
+Structural Engineer,Business Development,Fivechat,warning,For Checking,09/14/2017,08/03/2018,46,5,2,7
+Sales Representative,Sales,Realcube,default,Closed,09/25/2017,09/20/2018,46,2,2,8
+Design Engineer,Engineering,Trilith,warning,For Checking,09/22/2017,12/25/2018,47,1,1,5
+Analyst Programmer,Legal,Gevee,default,Rejected,12/28/2017,06/10/2018,16,3,4,9
+Social Worker,Research and Development,Zooxo,success,Open,11/30/2017,11/02/2018,38,2,3,7
+Office Assistant III,Human Resources,Brightdog,default,Closed,12/18/2017,07/24/2018,36,5,3,8
+Physical Therapy Assistant,Product Management,Gigashots,success,Open,09/24/2017,06/30/2018,21,2,4,7
+Tax Accountant,Product Management,Fivebridge,warning,For Checking,12/22/2017,08/10/2018,41,2,3,5
+Safety Technician III,Legal,Mynte,success,Open,12/10/2017,11/11/2018,15,1,4,8
+Nuclear Power Engineer,Research and Development,Flashpoint,success,Open,12/11/2017,01/19/2018,27,2,3,10
+Associate Professor,Marketing,Shuffledrive,default,Rejected,11/27/2017,07/12/2018,44,5,4,5
+Administrative Assistant IV,Business Development,Divanoodle,warning,For Checking,10/20/2017,05/10/2018,9,4,4,6
+Paralegal,Training,Youbridge,default,Rejected,12/27/2017,11/23/2018,47,2,3,8
+Senior Quality Engineer,Legal,Rhynoodle,default,Closed,09/22/2017,05/13/2018,15,1,5,10
+Analyst Programmer,Business Development,Tagpad,warning,For Approval,11/24/2017,10/07/2018,23,1,2,6
+Geological Engineer,Accounting,Zoonder,warning,For Checking,09/30/2017,11/11/2018,38,5,1,7
+Financial Analyst,Sales,Gigaclub,warning,For Approval,11/12/2017,04/19/2018,33,3,3,8
+Director of Sales,Human Resources,Photospace,success,Open,12/10/2017,06/27/2018,44,5,1,5
+Automation Specialist IV,Accounting,Flashset,default,Rejected,10/02/2017,07/05/2018,8,1,4,10
+Research Assistant IV,Human Resources,Eazzy,default,Unpublished,10/22/2017,03/17/2018,43,1,4,10
+Civil Engineer,Product Management,Zooveo,default,Closed,11/30/2017,11/02/2018,8,2,2,10
+Marketing Manager,Support,Wikido,default,Rejected,10/25/2017,08/11/2018,30,3,3,5
+Senior Financial Analyst,Engineering,Chatterpoint,warning,For Checking,11/03/2017,12/16/2018,1,4,4,7
+Assistant Professor,Legal,Gevee,default,Unpublished,12/19/2017,10/11/2018,27,3,5,6
+Software Engineer II,Accounting,Trilith,warning,For Approval,09/27/2017,04/15/2018,27,4,5,7
+Analyst Programmer,Engineering,Twimbo,warning,For Approval,12/19/2017,08/26/2018,39,2,2,9
+Accounting Assistant I,Training,Quinu,default,Rejected,10/30/2017,03/18/2018,20,4,5,9
+Information Systems Manager,Sales,Snaptags,warning,For Checking,12/06/2017,03/12/2018,13,2,5,6
+Systems Administrator I,Legal,Vipe,default,Rejected,12/15/2017,11/23/2018,7,5,3,8
+Financial Analyst,Human Resources,Divape,default,Closed,10/15/2017,05/27/2018,5,3,2,10
+Research Assistant IV,Services,Browsezoom,default,Closed,11/05/2017,11/25/2018,37,3,3,5
+Legal Assistant,Legal,Wikido,default,Closed,12/17/2017,11/15/2018,37,2,1,9
+Developer II,Accounting,Jazzy,warning,For Approval,12/14/2017,06/21/2018,38,2,2,7
+Senior Quality Engineer,Product Management,Katz,default,Closed,12/23/2017,11/30/2018,17,5,1,8
+Research Nurse,Product Management,Oyoba,default,Closed,10/13/2017,01/05/2018,14,2,5,5
+Editor,Product Management,Aimbo,warning,For Approval,09/17/2017,09/15/2018,41,3,5,7
+Quality Engineer,Legal,Kwinu,default,Closed,10/11/2017,08/26/2018,37,4,3,8
+Staff Scientist,Legal,Bubbletube,success,Open,10/29/2017,05/21/2018,35,2,2,10
+Electrical Engineer,Legal,Mita,default,Unpublished,12/18/2017,04/05/2018,19,3,3,10
+Professor,Human Resources,Innotype,success,Open,11/18/2017,10/23/2018,14,2,5,6
+Actuary,Engineering,Yabox,success,Open,09/30/2017,05/07/2018,21,1,5,10
+Electrical Engineer,Marketing,Viva,warning,For Approval,12/08/2017,03/09/2018,28,1,5,5

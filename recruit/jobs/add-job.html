@@ -5,7 +5,6 @@ meta-title: Add Job
 
 heading-title: Add Job
 
-
 navigation:
 - text: Job Information
   url: job-information-tab
@@ -104,10 +103,9 @@ navigation:
 
       <div class="row">
         <div class="col-md-6">
-          <a class="btn btn-link text-danger" href="">Discard this Job Post</a>
+          <a class="btn btn-link text-danger" data-toggle="modal" href="#job-request-discard-modal"><span class="fa fa-trash-o fa-right"></span>Discard this Job Post</a>
         </div>
         <div class="col-md-6 text-right">
-          <a class="btn btn-link" href="">Cancel</a>
           <a class="btn btn-primary" href="">Save &amp; Continue</a>
         </div>
       </div>
@@ -128,10 +126,10 @@ navigation:
 
       <div class="row">
         <div class="col-md-6">
-          <a href="" class="btn btn-link text-danger">Discard this Job Post</a>
+          <a class="btn btn-link text-danger" data-toggle="modal" href="#job-request-discard-modal"><span class="fa fa-trash-o fa-right"></span>Discard this Job Post</a>
         </div>
         <div class="col-md-6 text-right">
-          <a href="" class="btn btn-link">Cancel</a>
+          <a href="" class="btn btn-link">Go Back</a>
           <a href="" class="btn btn-primary">Save &amp; Continue</a>
         </div>
       </div>
@@ -160,10 +158,10 @@ navigation:
 
       <div class="row">
         <div class="col-md-6">
-          <a href="" class="btn btn-link text-danger">Discard this Job Post</a>
+          <a class="btn btn-link text-danger" data-toggle="modal" href="#job-request-discard-modal"><span class="fa fa-trash-o fa-right"></span>Discard this Job Post</a>
         </div>
         <div class="col-md-6 text-right">
-          <a href="" class="btn btn-link">Cancel</a>
+          <a href="" class="btn btn-link">Go Back</a>
           <a href="" class="btn btn-primary">Save &amp; Continue</a>
         </div>
       </div>
@@ -183,10 +181,10 @@ navigation:
 
       <div class="row">
         <div class="col-md-6">
-          <a href="" class="btn btn-link text-danger">Discard this Job Post</a>
+          <a class="btn btn-link text-danger" data-toggle="modal" href="#job-request-discard-modal"><span class="fa fa-trash-o fa-right"></span>Discard this Job Post</a>
         </div>
         <div class="col-md-6 text-right">
-          <a href="" class="btn btn-link">Cancel</a>
+          <a href="" class="btn btn-link">Go Back</a>
           <a href="" class="btn btn-primary">Save &amp; Continue</a>
         </div>
       </div>
@@ -199,10 +197,10 @@ navigation:
         <h2 class="display-4 text-success mar-bottom-3">Job Request Successfully Submmitted!</h2>
         <p style="font-size: 15px;">Your Job Request for <strong>[ Job Title ]</strong> has been successfully submmitted<br /> and is now subject for approval.</p>
         <hr class="dashed" />
-        <a href="" class="btn btn-default">Go back to Job List</a>
-        <a href="" class="btn btn-primary">View Job Request</a>
+        <a href="{{ site.baseurl }}/recruit/jobs/" class="btn btn-default">Go back to Job List</a>
+        <a href="{{ site.baseurl }}/recruit/jobs/profile.html" class="btn btn-primary">View Job Request</a>
         <span class="clearfix"></span>
-        <a href="" class="btn btn-link">Request New Job</a>
+        <a href="{{ site.baseurl }}/recruit/jobs/add-job.html" class="btn btn-link">Request New Job</a>
       </div>
 
     </div>
