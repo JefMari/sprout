@@ -1,5 +1,5 @@
 markdown: kramdown
-baseurl: /sprout
+baseurl: ui.hrhub.ph/sprout
 exclude:
   - Gemfile
   - Gemfile.lock

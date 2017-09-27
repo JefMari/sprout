@@ -1,0 +1,208 @@
+---
+layout: recruit-wizard
+
+meta-title: Add Job
+
+heading-title: Add Job
+
+navigation:
+- text: Job Information
+  url: job-information-tab
+- text: Benefits &amp; Perks
+  url: job-benefits-and-perks-tab
+- text: Process &amp; Team
+  url: job-process-and-team-tab
+- text: Justification Notes
+  url: job-justification-notes-tab
+- text: Save &amp; Done
+  url: job-request-confirmation-tab
+
+---
+
+  <div class="tab-content">
+
+    <div class="tab-pane fade in active" id="job-information-tab">
+
+      <div class="section section-success hide">
+        <div class="section-heading">
+          <h6 class="section-title display-4">Job Title</h6>
+          <p class="section-subtitle"></p>
+        </div>
+        <div class="section-body">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="form-group">
+                <label class="form-label" for="">Job Title</label>
+                <input class="form-control" name="" type="text"  value="" placeholder="Enter Job Title">
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="" class="form-label">Date Needed</label>
+                <div class="input-group">
+                  <input class="form-control" name="" type="text"  value="" placeholder="Enter Date Needed">
+                  <span class="input-group-btn">
+                    <button class="btn btn-link" type="button"><span class="fa fa-calendar"></span></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section section-success" id="job-information">
+        <div class="section-heading">
+          <h6 class="section-title display-4">Information</h6>
+          <p class="section-subtitle">Basic information about the job. All fields required.</p>
+        </div>
+        {% include recruit/components/snippets/jobs-new/edit-mode/job-information.html %}
+      </div>
+
+      <div class="section section-success" id="job-working-conditions">
+        <div class="section-heading">
+          <h6 class="section-title display-4">Working Condition</h6>
+          <p class="section-subtitle">Conditions at work, such as work schedule, shift type, environment, and cultural demands. Optional.</p>
+        </div>
+        {% include recruit/components/snippets/jobs-new/edit-mode/job-working-condition.html %}
+      </div>
+
+      <div class="section section-success" id="job-description">
+        <div class="section-heading">
+          <h6 class="section-title display-4">Description</h6>
+          <p class="section-subtitle">An overview or summary of what the job is. Required.</p>
+        </div>
+        {% include recruit/components/snippets/jobs-new/edit-mode/job-description.html %}
+      </div>
+
+      <div class="section section-success" id="job-responsibilities">
+        <div class="section-heading">
+          <h6 class="section-title display-4">Responsibilities</h6>
+          <p class="section-subtitle">A list of tasks that an applicant is expected to do once hired for the job. Required.</p>
+        </div>
+        {% include recruit/components/snippets/jobs-new/edit-mode/job-responsibilities.html %}
+      </div>
+
+      <div class="section section-success" id="job-qualifications">
+        <div class="section-heading">
+          <h6 class="section-title display-4">Qualifications</h6>
+          <p class="section-subtitle">A list of things that an applicant must have in order to be qualify for the job. Required.</p>
+        </div>
+        {% include recruit/components/snippets/jobs-new/edit-mode/job-qualifications.html %}
+      </div>
+
+      <div class="section section-success" id="job-skills">
+        <div class="section-heading">
+          <h6 class="section-title display-4">Skills</h6>
+          <p class="section-subtitle">Strengths and expertise that would be nice for an applicant to have. Optional.</p>
+        </div>
+        {% include recruit/components/snippets/jobs-new/edit-mode/job-skills.html %}
+      </div>
+
+      <hr class="dashed" />
+
+      <div class="row">
+        <div class="col-md-6">
+          <a class="btn btn-link text-danger" data-toggle="modal" href="#job-request-discard-modal"><span class="fa fa-trash-o fa-right"></span>Discard this Job Post</a>
+        </div>
+        <div class="col-md-6 text-right">
+          <a class="btn btn-primary" href="">Save &amp; Continue</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="job-benefits-and-perks-tab">
+
+      <div class="section section-success" id="job-benefits-and-perks">
+        <div class="section-heading">
+          <h6 class="section-title display-4">Benefits &amp; Perks</h6>
+          <p class="section-subtitle">Other monetary benefits outside the basic pay that an applicant will be eligible to, such as transportation allowance, meal allowance, clothing allowance, etc. Optional.</p>
+        </div>
+        {% include recruit/components/snippets/jobs-new/edit-mode/job-benefits-and-perks.html %}
+      </div>
+
+      <hr class="dashed" />
+
+      <div class="row">
+        <div class="col-md-6">
+          <a class="btn btn-link text-danger" data-toggle="modal" href="#job-request-discard-modal"><span class="fa fa-trash-o fa-right"></span>Discard this Job Post</a>
+        </div>
+        <div class="col-md-6 text-right">
+          <a href="" class="btn btn-link">Go Back</a>
+          <a href="" class="btn btn-primary">Save &amp; Continue</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="job-process-and-team-tab">
+
+      <div class="section section-success" id="job-process">
+        <div class="section-heading">
+          <h6 class="section-title display-4">Process</h6>
+          <p class="section-subtitle">The steps the applicant needs to take.</p>
+        </div>
+        {% include recruit/components/snippets/jobs-new/edit-mode/job-process.html %}
+      </div>
+
+      <div class="section section-success" id="job-teams">
+        <div class="section-heading">
+          <h6 class="section-title display-4">Team</h6>
+          <p class="section-subtitle">What you send to the applicants. This is optional.</p>
+        </div>
+        {% include recruit/components/snippets/jobs-new/view-mode/job-team.html %}
+      </div>
+
+      <hr class="dashed" />
+
+      <div class="row">
+        <div class="col-md-6">
+          <a class="btn btn-link text-danger" data-toggle="modal" href="#job-request-discard-modal"><span class="fa fa-trash-o fa-right"></span>Discard this Job Post</a>
+        </div>
+        <div class="col-md-6 text-right">
+          <a href="" class="btn btn-link">Go Back</a>
+          <a href="" class="btn btn-primary">Save &amp; Continue</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="tab-pane fade" id="job-justification-notes-tab">
+
+      <div class="section section-success" id="job-justification-notes">
+        <div class="section-heading">
+          <h6 class="section-title display-4">Justification Notes</h6>
+        </div>
+        {% include recruit/components/snippets/jobs-new/edit-mode/job-justification-notes.html %}
+      </div>
+
+      <hr class="dashed" />
+
+      <div class="row">
+        <div class="col-md-6">
+          <a class="btn btn-link text-danger" data-toggle="modal" href="#job-request-discard-modal"><span class="fa fa-trash-o fa-right"></span>Discard this Job Post</a>
+        </div>
+        <div class="col-md-6 text-right">
+          <a href="" class="btn btn-link">Go Back</a>
+          <a href="" class="btn btn-primary">Save &amp; Continue</a>
+        </div>
+      </div>
+
+    </div>
+    
+    <div class="tab-pane fade" id="job-request-confirmation-tab">
+
+      <div class="text-center">
+        <h2 class="display-4 text-success mar-bottom-3">Job Request Successfully Submmitted!</h2>
+        <p style="font-size: 15px;">Your Job Request for <strong>[ Job Title ]</strong> has been successfully submmitted<br /> and is now subject for approval.</p>
+        <hr class="dashed" />
+        <a href="{{ site.baseurl }}/recruit/jobs-new/" class="btn btn-default">Go back to Job List</a>
+        <a href="{{ site.baseurl }}/recruit/jobs-new/profile.html" class="btn btn-primary">View Job Request</a>
+        <span class="clearfix"></span>
+        <a href="{{ site.baseurl }}/recruit/jobs-new/add-job.html" class="btn btn-link">Request New Job</a>
+      </div>
+
+    </div>
+
+  </div>  

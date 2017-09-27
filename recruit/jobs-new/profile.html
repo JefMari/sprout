@@ -39,23 +39,8 @@ navigation:
         <h6 class="section-title display-4">Information</h6>
         <p class="section-subtitle">Basic information about the job. All fields required.</p>
       </div>
-      {% include recruit/components/snippets/jobs/view-mode/job-information.html %}
-      {% include recruit/components/snippets/jobs/edit-mode/job-information.html %}
-      <div class="section-footer">
-        <a href="#" class="btn btn-link">Cancel</a>
-        <a href="#" class="btn btn-primary">Save Changes</a>
-      </div>
-    </div>
-
-    <div class="section section-success section-editable" id="job-working-conditions">
-      <div class="section-heading">
-        <button class="btn btn-link btn-edit" type="button"><span class="fa fa-pencil"></span></button>
-        <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
-        <h6 class="section-title display-4">Working Condition</h6>
-        <p class="section-subtitle">Conditions at work, such as work schedule, shift type, environment, and cultural demands. Optional.</p>
-      </div>
-      {% include recruit/components/snippets/jobs/view-mode/job-working-condition.html %}
-      {% include recruit/components/snippets/jobs/edit-mode/job-working-condition.html %}
+      {% include recruit/components/snippets/jobs-new/view-mode/job-information.html %}
+      {% include recruit/components/snippets/jobs-new/edit-mode/job-information.html %}
       <div class="section-footer">
         <a href="#" class="btn btn-link">Cancel</a>
         <a href="#" class="btn btn-primary">Save Changes</a>
@@ -69,8 +54,8 @@ navigation:
         <h6 class="section-title display-4">Description</h6>
         <p class="section-subtitle">An overview or summary of what the job is. Required.</p>
       </div>
-      {% include recruit/components/snippets/jobs/view-mode/job-description.html %}
-      {% include recruit/components/snippets/jobs/edit-mode/job-description.html %}
+      {% include recruit/components/snippets/jobs-new/view-mode/job-description.html %}
+      {% include recruit/components/snippets/jobs-new/edit-mode/job-description.html %}
       <div class="section-footer">
         <a href="#" class="btn btn-link">Cancel</a>
         <a href="#" class="btn btn-primary">Save Changes</a>
@@ -84,8 +69,8 @@ navigation:
         <h6 class="section-title display-4">Responsibilities</h6>
         <p class="section-subtitle">A list of tasks that an applicant is expected to do once hired for the job. Required.</p>
       </div>
-      {% include recruit/components/snippets/jobs/view-mode/job-responsibilities.html %}
-      {% include recruit/components/snippets/jobs/edit-mode/job-responsibilities.html %}
+      {% include recruit/components/snippets/jobs-new/view-mode/job-responsibilities.html %}
+      {% include recruit/components/snippets/jobs-new/edit-mode/job-responsibilities.html %}
       <div class="section-footer">
         <a href="#" class="btn btn-link">Cancel</a>
         <a href="#" class="btn btn-primary">Save Changes</a>
@@ -99,8 +84,8 @@ navigation:
         <h6 class="section-title display-4">Qualifications</h6>
         <p class="section-subtitle">A list of things that an applicant must have in order to be qualify for the job. Required.</p>
       </div>
-      {% include recruit/components/snippets/jobs/view-mode/job-qualifications.html %}
-      {% include recruit/components/snippets/jobs/edit-mode/job-qualifications.html %}
+      {% include recruit/components/snippets/jobs-new/view-mode/job-qualifications.html %}
+      {% include recruit/components/snippets/jobs-new/edit-mode/job-qualifications.html %}
       <div class="section-footer">
         <a href="#" class="btn btn-link">Cancel</a>
         <a href="#" class="btn btn-primary">Save Changes</a>
@@ -114,8 +99,8 @@ navigation:
         <h6 class="section-title display-4">Skills</h6>
         <p class="section-subtitle">Strengths and expertise that would be nice for an applicant to have. Optional.</p>
       </div>
-      {% include recruit/components/snippets/jobs/view-mode/job-skills.html %}
-      {% include recruit/components/snippets/jobs/edit-mode/job-skills.html %}
+      {% include recruit/components/snippets/jobs-new/view-mode/job-skills.html %}
+      {% include recruit/components/snippets/jobs-new/edit-mode/job-skills.html %}
       <div class="section-footer">
         <a href="#" class="btn btn-link">Cancel</a>
         <a href="#" class="btn btn-primary">Save Changes</a>
@@ -133,8 +118,8 @@ navigation:
         <h6 class="section-title display-4">Benefits &amp; Perks</h6>
         <p class="section-subtitle">Other monetary benefits outside the basic pay that an applicant will be eligible to, such as transportation allowance, meal allowance, clothing allowance, etc. Optional.</p>
       </div>
-      {% include recruit/components/snippets/jobs/view-mode/job-benefits-and-perks.html %}
-      {% include recruit/components/snippets/jobs/edit-mode/job-benefits-and-perks.html %}
+      {% include recruit/components/snippets/jobs-new/view-mode/job-benefits-and-perks.html %}
+      {% include recruit/components/snippets/jobs-new/edit-mode/job-benefits-and-perks.html %}
       <div class="section-footer">
         <a href="#" class="btn btn-link">Cancel</a>
         <a href="#" class="btn btn-primary">Save Changes</a>
@@ -151,7 +136,7 @@ navigation:
         <h6 class="section-title display-4">Process</h6>
         <p class="section-subtitle">The steps the applicant needs to take.</p>
       </div>
-      {% include recruit/components/snippets/jobs/edit-mode/job-process.html %}
+      {% include recruit/components/snippets/jobs-new/edit-mode/job-process.html %}
     </div>
 
     <div class="section section-success" id="job-teams">
@@ -159,7 +144,7 @@ navigation:
         <h6 class="section-title display-4">Team</h6>
         <p class="section-subtitle">What you send to the applicants. This is optional.</p>
       </div>
-      {% include recruit/components/snippets/jobs/view-mode/job-team.html %}
+      {% include recruit/components/snippets/jobs-new/view-mode/job-team.html %}
     </div>
 
   </div>
@@ -172,8 +157,8 @@ navigation:
         <button class="btn btn-link btn-close" type="button"><span class="fa fa-times"></span></button>
         <h6 class="section-title display-4">Justification Notes</h6>
       </div>
-      {% include recruit/components/snippets/jobs/view-mode/job-justification-notes.html %}
-      {% include recruit/components/snippets/jobs/edit-mode/job-justification-notes.html %}
+      {% include recruit/components/snippets/jobs-new/view-mode/job-justification-notes.html %}
+      {% include recruit/components/snippets/jobs-new/edit-mode/job-justification-notes.html %}
       <div class="section-footer">
         <a href="#" class="btn btn-link">Cancel</a>
         <a href="#" class="btn btn-primary">Save Changes</a>
@@ -189,7 +174,7 @@ navigation:
         <h2 class="section-title display-4">Applicants</h2>
         <!-- <p class="section-subtitle">Sample text</p> -->
       </div>
-      {% include recruit/components/snippets/jobs/view-mode/job-applicants.html %}
+      {% include recruit/components/snippets/jobs-new/view-mode/job-applicants.html %}
     </div>
 
   </div>

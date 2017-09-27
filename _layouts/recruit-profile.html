@@ -6,8 +6,11 @@ layout: recruit
   <div class="container">
     <span class="hidden" {% if
       page.url contains '/recruit/jobs/' or
+      page.url contains '/recruit/jobs-new/' or
       page.url contains '/recruit/jobs/profile/' or
-      page.url contains '/recruit/jobs/add-new-job/'
+      page.url contains '/recruit/jobs-new/profile/' or
+      page.url contains '/recruit/jobs/add-job/' or
+      page.url contains '/recruit/jobs-new/add-job/'
       %} style="display: block !important" {% endif %}>
       {% include recruit/components/snippets/jobs/heading-subtitle.html %}
     </span>

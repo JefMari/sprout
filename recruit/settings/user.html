@@ -3,40 +3,36 @@ layout: recruit-box
 
 meta-title: Company
 
-heading-title: Company
+heading-title: Settings
+
+heading-button: <button class="btn btn-primary" role="button" data-toggle="modal" data-target="#add-user-modal"><span class="fa fa-plus fa-right"></span>Add User</button>
 ---
 
 <div class="section section-success">
-  <div class="section-heading">
-    <button class="btn btn-link btn-toggle" data-target="#job-application-modal" data-toggle="modal" type="button"><span class="fa fa-plus fa-right"></span>Add User</button>
-    <h6 class="section-title display-4">User</h6>
-  </div>
-  <div class="section-body">
-    <table class="table table-hover">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Title</th>
-          <th>Role</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            Jasper Lepardo
-          </td>
-          <td>
-            UI Designer & Front-End Developer
-          </td>
-          <td>
-            Super Admin
-          </td>
-          <td>
-            <a href="">Edit</a>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Access Level</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          Jasper Lepardo
+        </td>
+        <td>
+          UI Designer &amp; Front-End Developer
+        </td>
+        <td>
+          Super Admin
+        </td>
+        <td>
+          <a data-toggle="modal" href="#add-job-modal">Edit</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
 </div>
